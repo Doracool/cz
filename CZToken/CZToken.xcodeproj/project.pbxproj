@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		60B622CC20424F43001DBA43 /* commonSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B622CB20424F43001DBA43 /* commonSet.m */; };
 		60F978D420423FF900E79007 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F978D320423FF900E79007 /* AppDelegate.m */; };
 		60F978D720423FF900E79007 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F978D620423FF900E79007 /* ViewController.m */; };
 		60F978DA20423FF900E79007 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60F978D820423FF900E79007 /* Main.storyboard */; };
@@ -19,6 +20,10 @@
 /* Begin PBXFileReference section */
 		5E4F68D696251ABCA40F72E7 /* libPods-CZToken.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CZToken.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		60B622C820424CB8001DBA43 /* CZToken-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CZToken-Prefix.pch"; sourceTree = "<group>"; };
+		60B622CA20424F43001DBA43 /* commonSet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = commonSet.h; sourceTree = "<group>"; };
+		60B622CB20424F43001DBA43 /* commonSet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = commonSet.m; sourceTree = "<group>"; };
+		60B622CD204251A8001DBA43 /* BasesHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BasesHeader.h; sourceTree = "<group>"; };
+		60B622CE204252E7001DBA43 /* Defines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Defines.h; sourceTree = "<group>"; };
 		60F978CF20423FF800E79007 /* CZToken.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CZToken.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60F978D220423FF800E79007 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = "../New Group/AppDelegate.h"; sourceTree = "<group>"; };
 		60F978D320423FF900E79007 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -57,6 +62,13 @@
 		60B622C120424C29001DBA43 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				60B622C920424EF9001DBA43 /* Configs */,
+				60B622C720424C6E001DBA43 /* Utilites */,
+				60B622C620424C63001DBA43 /* ThirdTools */,
+				60B622C520424C5C001DBA43 /* View */,
+				60B622C420424C52001DBA43 /* Model */,
+				60B622C320424C4B001DBA43 /* Controller */,
+				60B622C220424C39001DBA43 /* Common */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -64,6 +76,8 @@
 		60B622C220424C39001DBA43 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				60B622CA20424F43001DBA43 /* commonSet.h */,
+				60B622CB20424F43001DBA43 /* commonSet.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -103,6 +117,15 @@
 			path = Utilites;
 			sourceTree = "<group>";
 		};
+		60B622C920424EF9001DBA43 /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				60B622CD204251A8001DBA43 /* BasesHeader.h */,
+				60B622CE204252E7001DBA43 /* Defines.h */,
+			);
+			path = Configs;
+			sourceTree = "<group>";
+		};
 		60F978C620423FF800E79007 = {
 			isa = PBXGroup;
 			children = (
@@ -124,12 +147,6 @@
 		60F978D120423FF800E79007 /* CZToken */ = {
 			isa = PBXGroup;
 			children = (
-				60B622C720424C6E001DBA43 /* Utilites */,
-				60B622C620424C63001DBA43 /* ThirdTools */,
-				60B622C520424C5C001DBA43 /* View */,
-				60B622C420424C52001DBA43 /* Model */,
-				60B622C320424C4B001DBA43 /* Controller */,
-				60B622C220424C39001DBA43 /* Common */,
 				60B622C120424C29001DBA43 /* Classes */,
 				60B622C020424C0D001DBA43 /* AppDelegate */,
 				60F978D520423FF900E79007 /* ViewController.h */,
@@ -286,6 +303,7 @@
 				60F978D720423FF900E79007 /* ViewController.m in Sources */,
 				60F978E220423FF900E79007 /* main.m in Sources */,
 				60F978D420423FF900E79007 /* AppDelegate.m in Sources */,
+				60B622CC20424F43001DBA43 /* commonSet.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,6 +440,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3AAV5C4X4L;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "/Users/jlc/Desktop/Other/cz/CZToken/CZToken/CZToken-Prefix.pch";
 				INFOPLIST_FILE = CZToken/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -438,6 +458,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3AAV5C4X4L;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "/Users/jlc/Desktop/Other/cz/CZToken/CZToken/CZToken-Prefix.pch";
 				INFOPLIST_FILE = CZToken/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
