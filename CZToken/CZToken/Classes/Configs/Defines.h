@@ -108,7 +108,7 @@ UIAlertView* alert = [[UIAlertView alloc] initWithTitle:__title message:__messag
 [alert show]; \
 }
 
-#endif /* Defines_h */
+//#endif /* Defines_h */
 
 
 //16进制的.

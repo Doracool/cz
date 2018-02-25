@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "AppDelegate+MainUI.h"
 @interface AppDelegate ()
 
 @end
@@ -17,6 +17,23 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor = [UIColor blackColor];
+    self.mainTab = [self fetchTabbarController];
+    self.window.rootViewController = self.mainTab;
+    
+    [self.window makeKeyAndVisible];
+    // 解决键盘遮挡TextView/TextFiled的工具
+    IQKeyboardManager *manager = [IQKeyboardManager sharedManager];
+    manager.enable = YES;
+    manager.shouldResignOnTouchOutside = YES;
+    manager.shouldToolbarUsesTextFieldTintColor = YES;
+    manager.enableAutoToolbar = YES;
+    
+    if (IOS7) {
+        // 设置状态栏的样式  LightContent 字体为白色
+        [application setStatusBarStyle:UIStatusBarStyleLightContent];
+    }
     return YES;
 }
 

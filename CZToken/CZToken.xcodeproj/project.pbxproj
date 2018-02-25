@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		60B622CC20424F43001DBA43 /* commonSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B622CB20424F43001DBA43 /* commonSet.m */; };
+		60E4015E2042B9CA00EF047E /* UserSourceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E401552042B9C900EF047E /* UserSourceController.m */; };
+		60E4015F2042B9CA00EF047E /* HouseSourceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E401572042B9C900EF047E /* HouseSourceController.m */; };
+		60E401602042B9CA00EF047E /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E401582042B9C900EF047E /* HomeViewController.m */; };
+		60E401612042B9CA00EF047E /* MeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E401592042B9CA00EF047E /* MeController.m */; };
+		60E401622042B9CA00EF047E /* ComputerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E4015C2042B9CA00EF047E /* ComputerController.m */; };
+		60E401652042BA3000EF047E /* CZTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E401632042BA3000EF047E /* CZTabBarController.m */; };
+		60E401682042BE1200EF047E /* AppDelegate+MainUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E401672042BE1200EF047E /* AppDelegate+MainUI.m */; };
+		60E4016B2042BE6000EF047E /* Colours.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E4016A2042BE6000EF047E /* Colours.m */; };
 		60F978D420423FF900E79007 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F978D320423FF900E79007 /* AppDelegate.m */; };
 		60F978D720423FF900E79007 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F978D620423FF900E79007 /* ViewController.m */; };
 		60F978DA20423FF900E79007 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60F978D820423FF900E79007 /* Main.storyboard */; };
@@ -24,6 +32,22 @@
 		60B622CB20424F43001DBA43 /* commonSet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = commonSet.m; sourceTree = "<group>"; };
 		60B622CD204251A8001DBA43 /* BasesHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BasesHeader.h; sourceTree = "<group>"; };
 		60B622CE204252E7001DBA43 /* Defines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Defines.h; sourceTree = "<group>"; };
+		60E401542042B9C800EF047E /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		60E401552042B9C900EF047E /* UserSourceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserSourceController.m; sourceTree = "<group>"; };
+		60E401562042B9C900EF047E /* HouseSourceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HouseSourceController.h; sourceTree = "<group>"; };
+		60E401572042B9C900EF047E /* HouseSourceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HouseSourceController.m; sourceTree = "<group>"; };
+		60E401582042B9C900EF047E /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		60E401592042B9CA00EF047E /* MeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeController.m; sourceTree = "<group>"; };
+		60E4015A2042B9CA00EF047E /* UserSourceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserSourceController.h; sourceTree = "<group>"; };
+		60E4015B2042B9CA00EF047E /* MeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeController.h; sourceTree = "<group>"; };
+		60E4015C2042B9CA00EF047E /* ComputerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComputerController.m; sourceTree = "<group>"; };
+		60E4015D2042B9CA00EF047E /* ComputerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComputerController.h; sourceTree = "<group>"; };
+		60E401632042BA3000EF047E /* CZTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZTabBarController.m; sourceTree = "<group>"; };
+		60E401642042BA3000EF047E /* CZTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZTabBarController.h; sourceTree = "<group>"; };
+		60E401662042BE1200EF047E /* AppDelegate+MainUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+MainUI.h"; sourceTree = "<group>"; };
+		60E401672042BE1200EF047E /* AppDelegate+MainUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+MainUI.m"; sourceTree = "<group>"; };
+		60E401692042BE6000EF047E /* Colours.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Colours.h; sourceTree = "<group>"; };
+		60E4016A2042BE6000EF047E /* Colours.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Colours.m; sourceTree = "<group>"; };
 		60F978CF20423FF800E79007 /* CZToken.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CZToken.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60F978D220423FF800E79007 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = "../New Group/AppDelegate.h"; sourceTree = "<group>"; };
 		60F978D320423FF900E79007 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -53,6 +77,10 @@
 		60B622C020424C0D001DBA43 /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
+				60E401662042BE1200EF047E /* AppDelegate+MainUI.h */,
+				60E401672042BE1200EF047E /* AppDelegate+MainUI.m */,
+				60E401642042BA3000EF047E /* CZTabBarController.h */,
+				60E401632042BA3000EF047E /* CZTabBarController.m */,
 				60F978D220423FF800E79007 /* AppDelegate.h */,
 				60F978D320423FF900E79007 /* AppDelegate.m */,
 			);
@@ -76,6 +104,8 @@
 		60B622C220424C39001DBA43 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				60E401692042BE6000EF047E /* Colours.h */,
+				60E4016A2042BE6000EF047E /* Colours.m */,
 				60B622CA20424F43001DBA43 /* commonSet.h */,
 				60B622CB20424F43001DBA43 /* commonSet.m */,
 			);
@@ -85,6 +115,16 @@
 		60B622C320424C4B001DBA43 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				60E4015D2042B9CA00EF047E /* ComputerController.h */,
+				60E4015C2042B9CA00EF047E /* ComputerController.m */,
+				60E401542042B9C800EF047E /* HomeViewController.h */,
+				60E401582042B9C900EF047E /* HomeViewController.m */,
+				60E401562042B9C900EF047E /* HouseSourceController.h */,
+				60E401572042B9C900EF047E /* HouseSourceController.m */,
+				60E4015B2042B9CA00EF047E /* MeController.h */,
+				60E401592042B9CA00EF047E /* MeController.m */,
+				60E4015A2042B9CA00EF047E /* UserSourceController.h */,
+				60E401552042B9C900EF047E /* UserSourceController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -300,10 +340,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60E401652042BA3000EF047E /* CZTabBarController.m in Sources */,
 				60F978D720423FF900E79007 /* ViewController.m in Sources */,
+				60E4015F2042B9CA00EF047E /* HouseSourceController.m in Sources */,
+				60E401682042BE1200EF047E /* AppDelegate+MainUI.m in Sources */,
 				60F978E220423FF900E79007 /* main.m in Sources */,
 				60F978D420423FF900E79007 /* AppDelegate.m in Sources */,
+				60E4015E2042B9CA00EF047E /* UserSourceController.m in Sources */,
+				60E4016B2042BE6000EF047E /* Colours.m in Sources */,
+				60E401602042B9CA00EF047E /* HomeViewController.m in Sources */,
 				60B622CC20424F43001DBA43 /* commonSet.m in Sources */,
+				60E401612042B9CA00EF047E /* MeController.m in Sources */,
+				60E401622042B9CA00EF047E /* ComputerController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
