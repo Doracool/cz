@@ -24,42 +24,72 @@
                         <state key="normal" title="行情" image="duigou">
                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </state>
+                        <connections>
+                            <action selector="iconClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="CmA-0s-9ue"/>
+                        </connections>
                     </button>
                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BiH-0W-73y">
                         <rect key="frame" x="82" y="0.0" width="82.5" height="71"/>
                         <state key="normal" title="限购"/>
+                        <connections>
+                            <action selector="iconClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="uOK-4X-3Fh"/>
+                        </connections>
                     </button>
                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BbS-cr-9Bo">
                         <rect key="frame" x="164.5" y="-0.5" width="82" height="71"/>
                         <state key="normal" title="贷款"/>
+                        <connections>
+                            <action selector="iconClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="YnY-w3-8Cm"/>
+                        </connections>
                     </button>
                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l6h-CS-uaa">
                         <rect key="frame" x="246.5" y="0.5" width="82.5" height="71"/>
                         <state key="normal" title="税费"/>
+                        <connections>
+                            <action selector="iconClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="XMi-zv-gd7"/>
+                        </connections>
                     </button>
-                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xlD-0n-JWG">
+                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xlD-0n-JWG">
                         <rect key="frame" x="0.0" y="71" width="82" height="70.5"/>
                         <state key="normal" title="赚钱"/>
+                        <connections>
+                            <action selector="iconClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="6rk-cQ-nfE"/>
+                        </connections>
                     </button>
-                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fiO-Jb-302">
+                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fiO-Jb-302">
                         <rect key="frame" x="82.5" y="71" width="82" height="70.5"/>
                         <state key="normal" title="资产"/>
+                        <connections>
+                            <action selector="iconClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="j7n-EL-rud"/>
+                        </connections>
                     </button>
-                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vo5-Qk-Gn4">
+                    <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vo5-Qk-Gn4">
                         <rect key="frame" x="164.5" y="70.5" width="82" height="71"/>
                         <state key="normal" title="客户管理"/>
+                        <connections>
+                            <action selector="iconClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="3DO-sf-iLe"/>
+                        </connections>
                     </button>
-                    <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A0w-MC-Zwf">
+                    <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A0w-MC-Zwf">
                         <rect key="frame" x="246.5" y="71" width="82.5" height="70.5"/>
                         <state key="normal" title="看房记录"/>
+                        <connections>
+                            <action selector="iconClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="AF9-RV-FTu"/>
+                        </connections>
                     </button>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t8N-jP-stZ">
+                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t8N-jP-stZ">
                         <rect key="frame" x="328.5" y="0.5" width="82.5" height="71"/>
                         <state key="normal" title="交易"/>
+                        <connections>
+                            <action selector="iconClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="kId-ak-akq"/>
+                        </connections>
                     </button>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GRE-0e-04L">
+                    <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GRE-0e-04L">
                         <rect key="frame" x="328" y="71" width="82.5" height="70.5"/>
                         <state key="normal" title="我的日程"/>
+                        <connections>
+                            <action selector="iconClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="NOf-ky-ri2"/>
+                        </connections>
                     </button>
                 </subviews>
                 <constraints>
@@ -117,7 +147,7 @@
                 <outlet property="icon8" destination="A0w-MC-Zwf" id="bma-Zb-Xb9"/>
                 <outlet property="icon9" destination="GRE-0e-04L" id="2to-jS-M5D"/>
             </connections>
-            <point key="canvasLocation" x="178" y="72"/>
+            <point key="canvasLocation" x="428" y="36"/>
         </tableViewCell>
     </objects>
     <resources>

@@ -167,7 +167,7 @@
                     </constraints>
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dAV-Mh-YNU">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                    <rect key="frame" x="0.0" y="64" width="375" height="559"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="bG3-RA-FWd"/>
@@ -186,7 +186,7 @@
                 <constraint firstItem="SEA-vs-C4r" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="27" id="GMf-2L-yBt"/>
                 <constraint firstAttribute="trailing" secondItem="IZx-ky-4ZM" secondAttribute="trailing" constant="12" id="I9G-uZ-Qyd"/>
                 <constraint firstItem="IZx-ky-4ZM" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="27" id="NOC-Sd-xxE"/>
-                <constraint firstItem="dAV-Mh-YNU" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="QnV-iU-fLC"/>
+                <constraint firstItem="dAV-Mh-YNU" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="QnV-iU-fLC"/>
                 <constraint firstAttribute="trailing" secondItem="dAV-Mh-YNU" secondAttribute="trailing" id="Rij-Zf-hpM"/>
                 <constraint firstItem="QSP-FO-Kav" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="27" id="Xdg-sb-TBA"/>
                 <constraint firstItem="SEA-vs-C4r" firstAttribute="leading" secondItem="QSP-FO-Kav" secondAttribute="trailing" constant="12" id="YWT-Wo-Hwh"/>
@@ -209,7 +209,7 @@
                 <constraint firstItem="guP-BU-nvl" firstAttribute="top" secondItem="h1s-F2-dWU" secondAttribute="bottom" constant="12" id="zN5-tB-jzf"/>
                 <constraint firstAttribute="trailing" secondItem="chO-EO-4KA" secondAttribute="trailing" constant="12" id="zaA-kp-q7F"/>
             </constraints>
-            <point key="canvasLocation" x="214.5" y="-133.5"/>
+            <point key="canvasLocation" x="209" y="-192"/>
         </view>
     </objects>
 </document>

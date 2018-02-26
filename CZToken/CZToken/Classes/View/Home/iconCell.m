@@ -37,6 +37,11 @@
     [_icon9 setTitleEdgeInsets:UIEdgeInsetsMake(5, -size1.width/3, -5, size1.width/3)];
     // Initialization code
 }
+- (IBAction)iconClick:(UIButton *)sender {
+    NSString *tag = [NSString stringWithFormat:@"%ld",(long)sender.tag];
+    NSDictionary *dic = @{@"tag":tag};
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"icon" object:nil userInfo:dic];
+}
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];

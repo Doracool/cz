@@ -19,7 +19,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self navigationBarHidden];
+//    [self navigationBarHidden];
+    [self leftNavBarItemWithImage:@"duigou"];
+    [self rightNavBarItemWithTitle:@"" AndSel:@selector(addressClick)];
+    UITextField *search = [[UITextField alloc] initWithFrame:CGRectMake(50, 10, screenW-120, 30)];
+    self.navigationItem.titleView = search;
+    search.placeholder = @"哈哈哈";
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(iconClick:) name:@"icon" object:nil];
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -33,7 +39,7 @@
     NewsViewCell *newCell = [[NSBundle mainBundle] loadNibNamed:@"NewsViewCell" owner:self options:nil][0];
     iconCell *iconCell = [[NSBundle mainBundle] loadNibNamed:@"iconCell" owner:self options:nil][0];
     if (indexPath.row == 0) {
-        tableView.rowHeight = 300;
+        tableView.rowHeight = 250;
         return homeCell;
     } else if (indexPath.row == 1 || indexPath.row == 5) {
         tableView.rowHeight = 50;
@@ -47,6 +53,15 @@
     }
     
     return homeCell;
+}
+
+- (void)iconClick:(NSNotification *)notification {
+    NSInteger tag = [notification.userInfo[@"tag"] intValue];
+    NSLog(@"%ld",(long)tag);
+}
+
+- (void)addressClick {
+    
 }
 
 - (void)didReceiveMemoryWarning {

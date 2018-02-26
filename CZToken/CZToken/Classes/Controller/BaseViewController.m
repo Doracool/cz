@@ -20,6 +20,223 @@
 }
 
 /**
+ * 自定义navgationBar左边item（默认pop返回）
+ * image item的图片
+ */
+-(void)leftNavBarItemWithImage:(NSString *)image
+{
+    UIImage *itemImage = [UIImage imageNamed:image];
+    UIButton *itemBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    itemBtn.bounds = CGRectMake( 0, 0, 30, 30 );
+    [itemBtn setImage:itemImage forState:UIControlStateNormal];
+    [itemBtn addTarget:self action:@selector(navigationleft) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *item1 = [[UIBarButtonItem alloc]initWithCustomView:itemBtn];
+    item1.width = 5;
+    
+    self.navigationItem.leftBarButtonItem = item1;
+    
+}
+
+/**
+ * 自定义navgationBar左边item
+ * 纯文字类型
+ */
+-(void)leftNavBarItemWithTitle:(NSString *)title AndSel:(SEL)selector
+{
+    /**
+     * 1、自定义按钮的方式
+     */
+    UIButton *itemBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    itemBtn.bounds = CGRectMake( 0, 0, 70, 30);
+    [itemBtn setTitle:title forState:UIControlStateNormal];
+    [itemBtn.titleLabel setFont:[UIFont systemFontOfSize:17]];
+    [itemBtn setTitleColor:[UIColor colorWithHexString:@"ffffff"] forState:UIControlStateNormal];
+    [itemBtn setTitleColor:[UIColor lightGrayColor] forState:UIControlStateDisabled];
+    [itemBtn setContentHorizontalAlignment:UIControlContentHorizontalAlignmentLeft];
+    [itemBtn addTarget:self action:selector forControlEvents:UIControlEventTouchUpInside];
+    
+    __unused UIBarButtonItem *item1 = [[UIBarButtonItem alloc]initWithCustomView:itemBtn];
+    
+    /**
+     * 2、系统提供的方式
+     */
+    UIBarButtonItem *item2 = [[UIBarButtonItem alloc]initWithTitle:title style:UIBarButtonItemStylePlain target:self action:selector];
+    
+    //设置UIBarButtonItem的字体大小（酱厂--左侧按钮标题大小）
+    NSMutableDictionary *leftTextAttrs=[NSMutableDictionary dictionary];
+    leftTextAttrs[NSFontAttributeName]=[UIFont systemFontOfSize:17];
+    leftTextAttrs[NSForegroundColorAttributeName]= [UIColor colorWithHexString:@"ffffff"];
+    NSMutableDictionary *leftAttrs=[NSMutableDictionary dictionaryWithDictionary:leftTextAttrs];
+    [item2 setTitleTextAttributes:leftAttrs forState:UIControlStateNormal];
+    
+    self.navigationItem.leftBarButtonItem = item2;
+}
+
+/**
+ * 自定义navgationBar左边item
+ * image item的普通状态图片
+ * selector 动态方法
+ */
+-(void)leftNavBarItemWithImage:(NSString *)image AndSel:(SEL)selector
+{
+    UIImage *itemImage = [UIImage imageNamed:image];
+    UIButton *itemBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    itemBtn.bounds = CGRectMake( 0, 0, itemImage.size.width, itemImage.size.height );
+    [itemBtn setImage:itemImage forState:UIControlStateNormal];
+    [itemBtn addTarget:self action:selector forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *item1 = [[UIBarButtonItem alloc]initWithCustomView:itemBtn];
+    
+    //    self.navigationController.interactivePopGestureRecognizer.delegate =(id)self;//解决手势失效的问题
+    self.navigationItem.leftBarButtonItem = item1;
+}
+/**
+ * 自定义navgationBar左边item
+ * norImage item的普通状态图片
+ * selImage item的选中状态图片
+ * selector 动态方法
+ */
+-(void)leftNavBarItemWithImage:(NSString *)norImage SelectImage:(NSString *)selImage AndSel:(SEL)selector
+{
+    UIImage *itemImage = [UIImage imageNamed:norImage];
+    UIImage *selectImage = [UIImage imageNamed:selImage];
+    UIButton *itemBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    itemBtn.bounds = CGRectMake( 0, 0, itemImage.size.width, itemImage.size.height );
+    [itemBtn setImage:itemImage forState:UIControlStateNormal];
+    [itemBtn setImage:selectImage forState:UIControlStateSelected];
+    [itemBtn addTarget:self action:selector forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *item1 = [[UIBarButtonItem alloc]initWithCustomView:itemBtn];
+    
+    self.navigationController.interactivePopGestureRecognizer.delegate =(id)self;//解决手势失效的问题
+    self.navigationItem.leftBarButtonItem = item1;
+}
+
+-(void)rightNavBarItemWithImages:(NSArray*)imgs andSel:(SEL)selector{
+    NSMutableArray *arrays = [NSMutableArray array];
+    
+    //    NSArray *imgs = @[@"ic_collect",@"ic_share",@"ic_report"];
+    
+    for (int i=0; i<imgs.count; i++) {
+        UIImage *itemImage = [UIImage imageNamed:imgs[i]];
+        UIButton *itemBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        itemBtn.bounds = CGRectMake( 0, 0, 22, 22 );
+        itemBtn.tag = imgs.count - i;
+        
+        [itemBtn setImageEdgeInsets:UIEdgeInsetsMake(0, 5, 0, -5)];
+        [itemBtn setImage:itemImage forState:UIControlStateNormal];
+        [itemBtn addTarget:self action:selector forControlEvents:UIControlEventTouchUpInside];
+        UIBarButtonItem *item = [[UIBarButtonItem alloc]initWithCustomView:itemBtn];
+        item.width = -10;
+        [arrays addObject:item];
+    }
+    self.navigationItem.rightBarButtonItems = arrays;
+    
+}
+
+
+/**
+ * 自定义navgationBar右边item
+ * norImage item的普通状态图片
+ * selector 动态方法
+ */
+-(void)rightNavBarItemWithImage:(NSString *)norImage AndSel:(SEL)selector
+{
+    UIImage *itemImage = [UIImage imageNamed:norImage];
+    UIButton *itemBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    itemBtn.bounds = CGRectMake( 0, 0, 30, 30 );
+    [itemBtn setImage:itemImage forState:UIControlStateNormal];
+    [itemBtn addTarget:self action:selector forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *item1 = [[UIBarButtonItem alloc]initWithCustomView:itemBtn];
+    
+    self.navigationItem.rightBarButtonItem = item1;
+}
+
+/**
+ * 自定义navgationBar右边item
+ * norImage item的普通状态图片
+ * selImage item的选中状态图片
+ * selector 动态方法
+ */
+-(void)rightNavBarItemWithImage:(NSString *)norImage HlImage:(NSString *)hlImage AndSel:(SEL)selector
+{
+    UIImage *itemnorImage = [UIImage imageNamed:norImage];
+    UIImage *itemhlImage = [UIImage imageNamed:hlImage];
+    UIButton *itemBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    itemBtn.bounds = CGRectMake( 0, 0, itemnorImage.size.width, itemnorImage.size.height );
+    [itemBtn setImage:itemnorImage forState:UIControlStateNormal];
+    [itemBtn setImage:itemhlImage forState:UIControlStateHighlighted];
+    [itemBtn addTarget:self action:selector forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *item1 = [[UIBarButtonItem alloc]initWithCustomView:itemBtn];
+    
+    self.navigationItem.rightBarButtonItem = item1;
+}
+
+
+-(void)rightNavBarItemWithTitleFaBu:(NSString*)title AndImage:(NSString*)image AndSel:(SEL)selector{
+    UIButton *itemBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    itemBtn.bounds = CGRectMake( 0, 0, 50, 30);
+    [itemBtn setTitle:title forState:UIControlStateNormal];
+    [itemBtn.titleLabel setFont:[UIFont systemFontOfSize:16]];
+    [itemBtn setTitleColor:[UIColor titleNavColor] forState:UIControlStateNormal];
+    [itemBtn setBackgroundImage:[UIImage imageNamed:image] forState:UIControlStateNormal];
+    [itemBtn addTarget:self action:selector forControlEvents:UIControlEventTouchUpInside];
+    [itemBtn setContentHorizontalAlignment:UIControlContentHorizontalAlignmentCenter];
+    UIBarButtonItem *item1 = [[UIBarButtonItem alloc]initWithCustomView:itemBtn];
+    self.navigationItem.rightBarButtonItem = item1;
+}
+
+/**
+ * 自定义右边的NavigationBarItem
+ * 文字类型的item
+ */
+-(void)rightNavBarItemWithTitle:(NSString *)title AndSel:(SEL)selector
+{
+    /**
+     * 1、自定义按钮的方式
+     */
+    UIButton *itemBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    itemBtn.bounds = CGRectMake( 0, 0, 70, 30);
+    [itemBtn setTitle:title forState:UIControlStateNormal];
+    [itemBtn.titleLabel setFont:[UIFont systemFontOfSize:16]];
+    [itemBtn setTitleColor:[UIColor titleNavColor] forState:UIControlStateNormal];
+    //    [itemBtn setTitleColor:[UIColor lightGrayColor] forState:UIControlStateDisabled];
+    [itemBtn addTarget:self action:selector forControlEvents:UIControlEventTouchUpInside];
+    [itemBtn setContentHorizontalAlignment:UIControlContentHorizontalAlignmentRight];
+    UIBarButtonItem *item1 = [[UIBarButtonItem alloc]initWithCustomView:itemBtn];
+    
+    /**
+     * 2、系统提供的方式
+     */
+    //    UIBarButtonItem *item1 = [[UIBarButtonItem alloc]initWithTitle:title style:UIBarButtonItemStylePlain target:self action:selector];
+    self.navigationItem.rightBarButtonItem = item1;
+}
+/**
+ * 自定义右边的NavigationBarItem
+ * 文字类型的item (分为普通标题和选中的标题)
+ */
+-(void)rightNavBarItemWithTitle:(NSString *)title AndSelTitle:(NSString *)selTitle AndSel:(SEL)selector
+{
+    /**
+     * 1、自定义按钮的方式
+     */
+    UIButton *itemBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    itemBtn.bounds = CGRectMake( 0, 0, 70, 30);
+    [itemBtn setTitle:title forState:UIControlStateNormal];
+    [itemBtn setTitle:selTitle forState:UIControlStateSelected];
+    [itemBtn.titleLabel setFont:[UIFont systemFontOfSize:17]];
+    [itemBtn setTitleColor:[UIColor colorWithHexString:@"ffffff"] forState:UIControlStateNormal];
+    [itemBtn setTitleColor:[UIColor lightGrayColor] forState:UIControlStateDisabled];
+    [itemBtn addTarget:self action:selector forControlEvents:UIControlEventTouchUpInside];
+    [itemBtn setContentHorizontalAlignment:UIControlContentHorizontalAlignmentRight];
+    UIBarButtonItem *item1 = [[UIBarButtonItem alloc]initWithCustomView:itemBtn];
+    
+    /**
+     * 2、系统提供的方式
+     */
+    //    UIBarButtonItem *item1 = [[UIBarButtonItem alloc]initWithTitle:title style:UIBarButtonItemStylePlain target:self action:selector];
+    self.navigationItem.rightBarButtonItem = item1;
+}
+
+/**
  * 显示navigationBar
  */
 -(void)navigationBarShow

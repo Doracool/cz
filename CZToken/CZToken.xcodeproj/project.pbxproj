@@ -99,6 +99,71 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6098761D204404CE00243079 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				6098760120439E8000243079 /* HomeViewController.h */,
+				6098760220439E8000243079 /* HomeViewController.m */,
+				6098760320439E8000243079 /* HomeViewController.xib */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		6098761E204404D600243079 /* House */ = {
+			isa = PBXGroup;
+			children = (
+				60E401562042B9C900EF047E /* HouseSourceController.h */,
+				60E401572042B9C900EF047E /* HouseSourceController.m */,
+			);
+			path = House;
+			sourceTree = "<group>";
+		};
+		6098761F204404E000243079 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				60E4015A2042B9CA00EF047E /* UserSourceController.h */,
+				60E401552042B9C900EF047E /* UserSourceController.m */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		60987620204404EA00243079 /* Computer */ = {
+			isa = PBXGroup;
+			children = (
+				60E4015D2042B9CA00EF047E /* ComputerController.h */,
+				60E4015C2042B9CA00EF047E /* ComputerController.m */,
+			);
+			path = Computer;
+			sourceTree = "<group>";
+		};
+		60987621204404F300243079 /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				60E4015B2042B9CA00EF047E /* MeController.h */,
+				60E401592042B9CA00EF047E /* MeController.m */,
+			);
+			path = Me;
+			sourceTree = "<group>";
+		};
+		609876222044052C00243079 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				609876092043A7D700243079 /* HomeIconCell.h */,
+				6098760A2043A7D700243079 /* HomeIconCell.m */,
+				6098760B2043A7D700243079 /* HomeIconCell.xib */,
+				6098760E2043ADE600243079 /* TitleIconCell.h */,
+				6098760F2043ADE600243079 /* TitleIconCell.m */,
+				609876102043ADE600243079 /* TitleIconCell.xib */,
+				609876132043AE8400243079 /* NewsViewCell.h */,
+				609876142043AE8400243079 /* NewsViewCell.m */,
+				609876152043AE8400243079 /* NewsViewCell.xib */,
+				609876182043BAC700243079 /* iconCell.h */,
+				609876192043BAC700243079 /* iconCell.m */,
+				6098761A2043BAC700243079 /* iconCell.xib */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		60B622C020424C0D001DBA43 /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
@@ -140,17 +205,11 @@
 		60B622C320424C4B001DBA43 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				60E4015D2042B9CA00EF047E /* ComputerController.h */,
-				60E4015C2042B9CA00EF047E /* ComputerController.m */,
-				60E401562042B9C900EF047E /* HouseSourceController.h */,
-				60E401572042B9C900EF047E /* HouseSourceController.m */,
-				60E4015B2042B9CA00EF047E /* MeController.h */,
-				60E401592042B9CA00EF047E /* MeController.m */,
-				60E4015A2042B9CA00EF047E /* UserSourceController.h */,
-				60E401552042B9C900EF047E /* UserSourceController.m */,
-				6098760120439E8000243079 /* HomeViewController.h */,
-				6098760220439E8000243079 /* HomeViewController.m */,
-				6098760320439E8000243079 /* HomeViewController.xib */,
+				60987621204404F300243079 /* Me */,
+				60987620204404EA00243079 /* Computer */,
+				6098761F204404E000243079 /* User */,
+				6098761E204404D600243079 /* House */,
+				6098761D204404CE00243079 /* Home */,
 				6098760620439F4700243079 /* BaseViewController.h */,
 				6098760720439F4700243079 /* BaseViewController.m */,
 			);
@@ -167,18 +226,7 @@
 		60B622C520424C5C001DBA43 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				609876092043A7D700243079 /* HomeIconCell.h */,
-				6098760A2043A7D700243079 /* HomeIconCell.m */,
-				6098760B2043A7D700243079 /* HomeIconCell.xib */,
-				6098760E2043ADE600243079 /* TitleIconCell.h */,
-				6098760F2043ADE600243079 /* TitleIconCell.m */,
-				609876102043ADE600243079 /* TitleIconCell.xib */,
-				609876132043AE8400243079 /* NewsViewCell.h */,
-				609876142043AE8400243079 /* NewsViewCell.m */,
-				609876152043AE8400243079 /* NewsViewCell.xib */,
-				609876182043BAC700243079 /* iconCell.h */,
-				609876192043BAC700243079 /* iconCell.m */,
-				6098761A2043BAC700243079 /* iconCell.xib */,
+				609876222044052C00243079 /* Home */,
 			);
 			path = View;
 			sourceTree = "<group>";
