@@ -1,5 +1,5 @@
 //
-//  HomeViewController.h
+//  TitleIconCell.h
 //  CZToken
 //
 //  Created by jlc on 2018/2/26.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HomeViewController : BaseViewController
+@interface TitleIconCell : UITableViewCell
 
 @end

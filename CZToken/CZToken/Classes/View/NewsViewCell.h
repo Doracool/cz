@@ -1,5 +1,5 @@
 //
-//  HomeViewController.h
+//  NewsViewCell.h
 //  CZToken
 //
 //  Created by jlc on 2018/2/26.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HomeViewController : BaseViewController
+@interface NewsViewCell : UITableViewCell
 
 @end

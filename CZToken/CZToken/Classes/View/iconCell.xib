@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="142" id="KGk-i7-Jjw" customClass="iconCell">
+            <rect key="frame" x="0.0" y="0.0" width="411" height="142"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="411" height="141.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1kF-u4-4UK">
+                        <rect key="frame" x="0.0" y="0.5" width="82" height="71"/>
+                        <state key="normal" title="行情" image="duigou">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                    </button>
+                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BiH-0W-73y">
+                        <rect key="frame" x="82" y="0.0" width="82.5" height="71"/>
+                        <state key="normal" title="限购"/>
+                    </button>
+                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BbS-cr-9Bo">
+                        <rect key="frame" x="164.5" y="-0.5" width="82" height="71"/>
+                        <state key="normal" title="贷款"/>
+                    </button>
+                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l6h-CS-uaa">
+                        <rect key="frame" x="246.5" y="0.5" width="82.5" height="71"/>
+                        <state key="normal" title="税费"/>
+                    </button>
+                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xlD-0n-JWG">
+                        <rect key="frame" x="0.0" y="71" width="82" height="70.5"/>
+                        <state key="normal" title="赚钱"/>
+                    </button>
+                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fiO-Jb-302">
+                        <rect key="frame" x="82.5" y="71" width="82" height="70.5"/>
+                        <state key="normal" title="资产"/>
+                    </button>
+                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vo5-Qk-Gn4">
+                        <rect key="frame" x="164.5" y="70.5" width="82" height="71"/>
+                        <state key="normal" title="客户管理"/>
+                    </button>
+                    <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A0w-MC-Zwf">
+                        <rect key="frame" x="246.5" y="71" width="82.5" height="70.5"/>
+                        <state key="normal" title="看房记录"/>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t8N-jP-stZ">
+                        <rect key="frame" x="328.5" y="0.5" width="82.5" height="71"/>
+                        <state key="normal" title="交易"/>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GRE-0e-04L">
+                        <rect key="frame" x="328" y="71" width="82.5" height="70.5"/>
+                        <state key="normal" title="我的日程"/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="A0w-MC-Zwf" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="1/2" id="1Zo-Bh-qpS"/>
+                    <constraint firstItem="l6h-CS-uaa" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" multiplier="7/5" id="2Ne-ha-8f9"/>
+                    <constraint firstItem="xlD-0n-JWG" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" multiplier="3/2" id="3Jy-Vk-bc7"/>
+                    <constraint firstItem="vo5-Qk-Gn4" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="1/2" id="4WR-3s-i8t"/>
+                    <constraint firstItem="BiH-0W-73y" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="1/2" id="7GT-vO-7qi"/>
+                    <constraint firstItem="fiO-Jb-302" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="1/2" id="8CO-Y8-RAt"/>
+                    <constraint firstItem="A0w-MC-Zwf" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" multiplier="3/2" id="9aY-sf-ZBz"/>
+                    <constraint firstItem="fiO-Jb-302" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" multiplier="3/5" id="Cpw-0g-YZE"/>
+                    <constraint firstItem="1kF-u4-4UK" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" multiplier="1/5" id="GIA-TQ-1Zm"/>
+                    <constraint firstItem="fiO-Jb-302" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="1/5" id="GkU-Yk-YU9"/>
+                    <constraint firstItem="BbS-cr-9Bo" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="HJg-hG-Kd6"/>
+                    <constraint firstItem="xlD-0n-JWG" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" multiplier="1/5" id="Hep-a9-Dci"/>
+                    <constraint firstItem="GRE-0e-04L" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" multiplier="9/5" id="Hfp-ub-BK0"/>
+                    <constraint firstItem="A0w-MC-Zwf" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" multiplier="7/5" id="Oqx-9M-yvs"/>
+                    <constraint firstItem="1kF-u4-4UK" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" multiplier="1/2" id="PiU-cE-dPZ"/>
+                    <constraint firstItem="fiO-Jb-302" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" multiplier="3/2" id="QY7-bX-HrH"/>
+                    <constraint firstItem="l6h-CS-uaa" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="1/5" id="Qs6-OH-Avs"/>
+                    <constraint firstItem="A0w-MC-Zwf" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="1/5" id="S8i-Zs-1Kx"/>
+                    <constraint firstItem="BiH-0W-73y" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" multiplier="1/2" id="X9f-t1-ZDk"/>
+                    <constraint firstItem="vo5-Qk-Gn4" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" multiplier="3/2" id="YHO-ow-dcr"/>
+                    <constraint firstItem="1kF-u4-4UK" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="1/2" id="Yql-Nl-iph"/>
+                    <constraint firstItem="GRE-0e-04L" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" multiplier="3/2" id="aT4-gh-0NZ"/>
+                    <constraint firstItem="t8N-jP-stZ" firstAttribute="width" secondItem="l6h-CS-uaa" secondAttribute="width" id="bG4-NU-wbU"/>
+                    <constraint firstItem="vo5-Qk-Gn4" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="dNW-Ut-iwh"/>
+                    <constraint firstItem="BbS-cr-9Bo" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="1/5" id="eHK-EP-bxp"/>
+                    <constraint firstItem="l6h-CS-uaa" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" multiplier="1/2" id="eO2-su-fPn"/>
+                    <constraint firstItem="l6h-CS-uaa" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="1/2" id="faP-Fd-J3E"/>
+                    <constraint firstItem="GRE-0e-04L" firstAttribute="width" secondItem="A0w-MC-Zwf" secondAttribute="width" id="fej-Wh-YGh"/>
+                    <constraint firstItem="t8N-jP-stZ" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" multiplier="1/2" id="g09-O8-ZfK"/>
+                    <constraint firstItem="vo5-Qk-Gn4" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="1/5" id="njY-xU-Wm5"/>
+                    <constraint firstItem="xlD-0n-JWG" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="1/2" id="o80-un-llD"/>
+                    <constraint firstItem="xlD-0n-JWG" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="1/5" id="oT4-FY-JuC"/>
+                    <constraint firstItem="BiH-0W-73y" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" multiplier="3/5" id="pB2-dM-59M"/>
+                    <constraint firstItem="BbS-cr-9Bo" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="1/2" id="qpN-j5-KBe"/>
+                    <constraint firstItem="t8N-jP-stZ" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" multiplier="9/5" id="rDn-sJ-E1A"/>
+                    <constraint firstItem="BiH-0W-73y" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="1/5" id="spP-tc-Thc"/>
+                    <constraint firstItem="t8N-jP-stZ" firstAttribute="height" secondItem="l6h-CS-uaa" secondAttribute="height" id="t5d-bL-nJc"/>
+                    <constraint firstItem="1kF-u4-4UK" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="1/5" id="wjf-eQ-z9f"/>
+                    <constraint firstItem="BbS-cr-9Bo" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" multiplier="1/2" id="wkc-2n-Ovq"/>
+                    <constraint firstItem="GRE-0e-04L" firstAttribute="height" secondItem="A0w-MC-Zwf" secondAttribute="height" id="xEO-Dy-cu9"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="icon" destination="1kF-u4-4UK" id="DcW-Je-Qfi"/>
+                <outlet property="icon1" destination="BiH-0W-73y" id="D2E-be-jd5"/>
+                <outlet property="icon2" destination="BbS-cr-9Bo" id="1jx-Co-LGo"/>
+                <outlet property="icon3" destination="l6h-CS-uaa" id="BuP-k3-xBt"/>
+                <outlet property="icon4" destination="t8N-jP-stZ" id="tez-SC-5Fs"/>
+                <outlet property="icon5" destination="xlD-0n-JWG" id="qbK-Wm-xWR"/>
+                <outlet property="icon6" destination="fiO-Jb-302" id="bXP-vY-3Rp"/>
+                <outlet property="icon7" destination="vo5-Qk-Gn4" id="S1S-kD-c6K"/>
+                <outlet property="icon8" destination="A0w-MC-Zwf" id="bma-Zb-Xb9"/>
+                <outlet property="icon9" destination="GRE-0e-04L" id="2to-jS-M5D"/>
+            </connections>
+            <point key="canvasLocation" x="178" y="72"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="duigou" width="20" height="20"/>
+    </resources>
+</document>

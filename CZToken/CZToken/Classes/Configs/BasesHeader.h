@@ -20,7 +20,7 @@
 #import "Defines.h"
 #import "Colours.h"
 /***************** 加载公共常量 *********************/
-
+#import "BaseViewController.h"
 
 /***************** 加载第三方类库 *********************/
 #import "SDWebImageManager.h"
