@@ -18,6 +18,8 @@
 		609876172043AE8400243079 /* NewsViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 609876152043AE8400243079 /* NewsViewCell.xib */; };
 		6098761B2043BAC700243079 /* iconCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 609876192043BAC700243079 /* iconCell.m */; };
 		6098761C2043BAC700243079 /* iconCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6098761A2043BAC700243079 /* iconCell.xib */; };
+		60987626204405F700243079 /* XgViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60987624204405F700243079 /* XgViewController.m */; };
+		60987627204405F700243079 /* XgViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60987625204405F700243079 /* XgViewController.xib */; };
 		60B622CC20424F43001DBA43 /* commonSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B622CB20424F43001DBA43 /* commonSet.m */; };
 		60E4015E2042B9CA00EF047E /* UserSourceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E401552042B9C900EF047E /* UserSourceController.m */; };
 		60E4015F2042B9CA00EF047E /* HouseSourceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E401572042B9C900EF047E /* HouseSourceController.m */; };
@@ -54,6 +56,9 @@
 		609876182043BAC700243079 /* iconCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iconCell.h; sourceTree = "<group>"; };
 		609876192043BAC700243079 /* iconCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iconCell.m; sourceTree = "<group>"; };
 		6098761A2043BAC700243079 /* iconCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = iconCell.xib; sourceTree = "<group>"; };
+		60987623204405F700243079 /* XgViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XgViewController.h; sourceTree = "<group>"; };
+		60987624204405F700243079 /* XgViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XgViewController.m; sourceTree = "<group>"; };
+		60987625204405F700243079 /* XgViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XgViewController.xib; sourceTree = "<group>"; };
 		60B622C820424CB8001DBA43 /* CZToken-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CZToken-Prefix.pch"; sourceTree = "<group>"; };
 		60B622CA20424F43001DBA43 /* commonSet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = commonSet.h; sourceTree = "<group>"; };
 		60B622CB20424F43001DBA43 /* commonSet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = commonSet.m; sourceTree = "<group>"; };
@@ -105,6 +110,9 @@
 				6098760120439E8000243079 /* HomeViewController.h */,
 				6098760220439E8000243079 /* HomeViewController.m */,
 				6098760320439E8000243079 /* HomeViewController.xib */,
+				60987623204405F700243079 /* XgViewController.h */,
+				60987624204405F700243079 /* XgViewController.m */,
+				60987625204405F700243079 /* XgViewController.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -373,6 +381,7 @@
 				60F978DC20423FF900E79007 /* Assets.xcassets in Resources */,
 				609876122043ADE600243079 /* TitleIconCell.xib in Resources */,
 				60F978DA20423FF900E79007 /* Main.storyboard in Resources */,
+				60987627204405F700243079 /* XgViewController.xib in Resources */,
 				6098761C2043BAC700243079 /* iconCell.xib in Resources */,
 				6098760520439E8000243079 /* HomeViewController.xib in Resources */,
 			);
@@ -434,6 +443,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				60E401652042BA3000EF047E /* CZTabBarController.m in Sources */,
+				60987626204405F700243079 /* XgViewController.m in Sources */,
 				609876162043AE8400243079 /* NewsViewCell.m in Sources */,
 				6098760C2043A7D700243079 /* HomeIconCell.m in Sources */,
 				609876112043ADE600243079 /* TitleIconCell.m in Sources */,

@@ -83,4 +83,16 @@
  * 隐藏navigationBar
  */
 -(void)navigationBarHidden;
+
+
+/**
+ * 显示tabBar
+ */
+-(void)tabbarShow;
+
+
+/**
+ * 隐藏tabBar
+ */
+-(void)tabbarHidden;
 @end

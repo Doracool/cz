@@ -7,6 +7,7 @@
 //
 
 #import "BaseViewController.h"
+#import "AppDelegate.h"
 
 @interface BaseViewController ()
 
@@ -17,6 +18,63 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    NSArray *tipsArr = @[@"",@""];
+    [self backBarButtonItem:@"duigou"];
+}
+
+- (void)hideTabBar {
+    
+    AppDelegate * app = (AppDelegate*)[UIApplication sharedApplication].delegate;
+    [app.mainTab czTabBarHidden:YES animated:YES];
+    
+    if (self.tabBarController.tabBar.hidden == YES) {
+        return;
+    }
+    UIView *contentView;
+    if ( [[self.tabBarController.view.subviews objectAtIndex:0] isKindOfClass:[UITabBar class]] )
+        contentView = [self.tabBarController.view.subviews objectAtIndex:1];
+    else
+        contentView = [self.tabBarController.view.subviews objectAtIndex:0];
+    contentView.frame = CGRectMake(contentView.bounds.origin.x,  contentView.bounds.origin.y,  contentView.bounds.size.width, contentView.bounds.size.height + self.tabBarController.tabBar.frame.size.height);
+    self.tabBarController.tabBar.hidden = YES;
+    
+}
+- (void)showTabBar
+{
+    AppDelegate * app = (AppDelegate*)[UIApplication sharedApplication].delegate;
+    [app.mainTab czTabBarHidden:NO animated:YES];
+    
+    if (self.tabBarController.tabBar.hidden == NO)
+    {
+        return;
+    }
+    UIView *contentView;
+    if ([[self.tabBarController.view.subviews objectAtIndex:0] isKindOfClass:[UITabBar class]])
+        
+        contentView = [self.tabBarController.view.subviews objectAtIndex:1];
+    else
+        
+        contentView = [self.tabBarController.view.subviews objectAtIndex:0];
+    contentView.frame = CGRectMake(contentView.bounds.origin.x, contentView.bounds.origin.y,  contentView.bounds.size.width, contentView.bounds.size.height - self.tabBarController.tabBar.frame.size.height);
+    self.tabBarController.tabBar.hidden = NO;
+}
+
+-(void)backBtnAction{
+    [self.navigationController  popViewControllerAnimated:YES];
+}
+
+-(void)backBarButtonItem:(NSString *)image{
+    
+    UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 60, 30)];
+    btn.backgroundColor = [UIColor clearColor];
+    [btn addTarget:self action:@selector(backBtnAction) forControlEvents:UIControlEventTouchUpInside];
+    UIImageView *iv = [[UIImageView alloc]initWithFrame:CGRectMake(0, 5, 22, 22)];
+    iv.backgroundColor = [UIColor clearColor];
+    iv.image = [UIImage imageNamed:image];
+    [btn addSubview:iv];
+    UIBarButtonItem *item = [[UIBarButtonItem alloc]initWithCustomView:btn];
+    self.navigationItem.leftBarButtonItem = item;
+    
 }
 
 /**
@@ -253,6 +311,27 @@
     if (self.navigationController.navigationBarHidden == NO) {
         self.navigationController.navigationBarHidden = YES;
     }
+}
+
+/**
+ * 显示tabBar
+ */
+-(void)tabbarShow
+{
+    
+    [self showTabBar];
+    //    self.tabBarController.tabBar.hidden = NO;
+    
+}
+
+/**
+ * 隐藏tabBar
+ */
+-(void)tabbarHidden
+{
+    [self hideTabBar];
+    //    self.tabBarController.tabBar.hidden = YES;
+    
 }
 
 - (void)didReceiveMemoryWarning {

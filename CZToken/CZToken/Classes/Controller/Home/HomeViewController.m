@@ -11,6 +11,8 @@
 #import "TitleIconCell.h"
 #import "NewsViewCell.h"
 #import "iconCell.h"
+
+#import "XgViewController.h"
 @interface HomeViewController ()
 
 @end
@@ -58,6 +60,9 @@
 - (void)iconClick:(NSNotification *)notification {
     NSInteger tag = [notification.userInfo[@"tag"] intValue];
     NSLog(@"%ld",(long)tag);
+    XgViewController *xg = [[XgViewController alloc] init];
+    
+    [self.navigationController pushViewController:xg animated:YES];
 }
 
 - (void)addressClick {
