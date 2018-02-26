@@ -288,7 +288,7 @@
     self.line.frame = CGRectMake(0, 0, self.frame.size.width, 0.5);
     self.backgroundImageView.frame = CGRectMake(0, 0.5, self.frame.size.width, self.frame.size.height - 0.5);
     
-    NSUInteger count = self.buttonArray.count%2 == 0 ? self.buttonArray.count:self.buttonArray.count+1;
+    NSUInteger count = self.buttonArray.count%2 == 0 ? self.buttonArray.count:self.buttonArray.count;
     
     /** 中间按钮的宽高 */
     CGFloat centerButtonWH = 60;
@@ -333,7 +333,7 @@
 @implementation CZButton
 
 
-+ (instancetype)xm_shareButton{
++ (instancetype)cz_shareButton{
     
     return [[self alloc] init];
 }
