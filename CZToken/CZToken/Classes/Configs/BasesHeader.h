@@ -15,6 +15,7 @@
 
 #import <AFNetworking.h>
 #import "MJExtension.h"
+#import <Masonry.h>
 
 /***************** 加载公共常量 *********************/
 #import "Defines.h"
