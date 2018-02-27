@@ -8,12 +8,14 @@
 
 #import "loansViewController.h"
 #import "daikuan.h"
+#import "zige.h"
 @interface loansViewController ()<UITableViewDelegate,UITableViewDataSource>{
     UIButton *jsBtn;
     UILabel *jsjg;
     UILabel *kded;
     UILabel *bz;
     daikuan *shangdai;
+    zige *zigeView;
 }
 @property (nonatomic, strong) UIScrollView *baseScroll;
 @property (nonatomic, strong) UIView *firstView;
@@ -56,6 +58,9 @@
     _baseScroll.showsHorizontalScrollIndicator = NO;
     _firstView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, screenW, screenH)];
     [_baseScroll addSubview:_firstView];
+    zigeView = [[NSBundle mainBundle] loadNibNamed:@"zige" owner:self options:nil][0];
+    zigeView.frame = CGRectMake(0, 0, screenW, screenH-104);
+    [_firstView addSubview:zigeView];
     _firstView.backgroundColor = [UIColor redColor];
     
     _secondView = [[UIView alloc] initWithFrame:CGRectMake(screenW*2, 0, screenW, screenH-104)];

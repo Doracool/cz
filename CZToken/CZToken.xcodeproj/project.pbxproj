@@ -20,6 +20,8 @@
 		6082BAD02044FCA300F82B31 /* ZFJSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 6082BACF2044FCA300F82B31 /* ZFJSegmentedControl.m */; };
 		6082BAD22045588A00F82B31 /* daikuan.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6082BAD12045588A00F82B31 /* daikuan.xib */; };
 		6082BAD5204558A400F82B31 /* daikuan.m in Sources */ = {isa = PBXBuildFile; fileRef = 6082BAD4204558A400F82B31 /* daikuan.m */; };
+		6082BAD720455E0F00F82B31 /* zige.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6082BAD620455E0F00F82B31 /* zige.xib */; };
+		6082BADA20455E1F00F82B31 /* zige.m in Sources */ = {isa = PBXBuildFile; fileRef = 6082BAD920455E1F00F82B31 /* zige.m */; };
 		6098760420439E8000243079 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6098760220439E8000243079 /* HomeViewController.m */; };
 		6098760520439E8000243079 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6098760320439E8000243079 /* HomeViewController.xib */; };
 		6098760820439F4700243079 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6098760720439F4700243079 /* BaseViewController.m */; };
@@ -73,6 +75,9 @@
 		6082BAD12045588A00F82B31 /* daikuan.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = daikuan.xib; sourceTree = "<group>"; };
 		6082BAD3204558A400F82B31 /* daikuan.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = daikuan.h; sourceTree = "<group>"; };
 		6082BAD4204558A400F82B31 /* daikuan.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = daikuan.m; sourceTree = "<group>"; };
+		6082BAD620455E0F00F82B31 /* zige.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = zige.xib; sourceTree = "<group>"; };
+		6082BAD820455E1F00F82B31 /* zige.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = zige.h; sourceTree = "<group>"; };
+		6082BAD920455E1F00F82B31 /* zige.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = zige.m; sourceTree = "<group>"; };
 		6098760120439E8000243079 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		6098760220439E8000243079 /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		6098760320439E8000243079 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
@@ -226,6 +231,9 @@
 				6082BAD12045588A00F82B31 /* daikuan.xib */,
 				6082BAD3204558A400F82B31 /* daikuan.h */,
 				6082BAD4204558A400F82B31 /* daikuan.m */,
+				6082BAD620455E0F00F82B31 /* zige.xib */,
+				6082BAD820455E1F00F82B31 /* zige.h */,
+				6082BAD920455E1F00F82B31 /* zige.m */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -438,6 +446,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6082BAD720455E0F00F82B31 /* zige.xib in Resources */,
 				6082BACC2044F84100F82B31 /* loansViewController.xib in Resources */,
 				6082BAC72044EB3900F82B31 /* XgContentTableViewCell.xib in Resources */,
 				609876172043AE8400243079 /* NewsViewCell.xib in Resources */,
@@ -511,6 +520,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6082BAB82044E28C00F82B31 /* UIView+TTExtension.m in Sources */,
+				6082BADA20455E1F00F82B31 /* zige.m in Sources */,
 				60E401652042BA3000EF047E /* CZTabBarController.m in Sources */,
 				60987626204405F700243079 /* XgViewController.m in Sources */,
 				609876162043AE8400243079 /* NewsViewCell.m in Sources */,
