@@ -50,6 +50,8 @@
 		60F978DF20423FF900E79007 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60F978DD20423FF900E79007 /* LaunchScreen.storyboard */; };
 		60F978E220423FF900E79007 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F978E120423FF900E79007 /* main.m */; };
 		AA6D2A9B724FAEC47113B680 /* libPods-CZToken.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E4F68D696251ABCA40F72E7 /* libPods-CZToken.a */; };
+		D4C7D5A9204597010008F09A /* yuegongCellOne.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C7D5A7204597010008F09A /* yuegongCellOne.m */; };
+		D4C7D5AA204597010008F09A /* yuegongCellOne.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4C7D5A8204597010008F09A /* yuegongCellOne.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -129,6 +131,9 @@
 		60F978E120423FF900E79007 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		63AE435D0F5CF73E52226419 /* Pods-CZToken.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CZToken.release.xcconfig"; path = "Pods/Target Support Files/Pods-CZToken/Pods-CZToken.release.xcconfig"; sourceTree = "<group>"; };
 		ADCB27ACA71D600386FDB063 /* Pods-CZToken.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CZToken.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CZToken/Pods-CZToken.debug.xcconfig"; sourceTree = "<group>"; };
+		D4C7D5A6204597010008F09A /* yuegongCellOne.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = yuegongCellOne.h; sourceTree = "<group>"; };
+		D4C7D5A7204597010008F09A /* yuegongCellOne.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = yuegongCellOne.m; sourceTree = "<group>"; };
+		D4C7D5A8204597010008F09A /* yuegongCellOne.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = yuegongCellOne.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,6 +239,9 @@
 				6082BAD620455E0F00F82B31 /* zige.xib */,
 				6082BAD820455E1F00F82B31 /* zige.h */,
 				6082BAD920455E1F00F82B31 /* zige.m */,
+				D4C7D5A6204597010008F09A /* yuegongCellOne.h */,
+				D4C7D5A7204597010008F09A /* yuegongCellOne.m */,
+				D4C7D5A8204597010008F09A /* yuegongCellOne.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -449,6 +457,7 @@
 				6082BAD720455E0F00F82B31 /* zige.xib in Resources */,
 				6082BACC2044F84100F82B31 /* loansViewController.xib in Resources */,
 				6082BAC72044EB3900F82B31 /* XgContentTableViewCell.xib in Resources */,
+				D4C7D5AA204597010008F09A /* yuegongCellOne.xib in Resources */,
 				609876172043AE8400243079 /* NewsViewCell.xib in Resources */,
 				60F978DF20423FF900E79007 /* LaunchScreen.storyboard in Resources */,
 				6082BAC22044EAF500F82B31 /* xgTitleViewCell.xib in Resources */,
@@ -534,6 +543,7 @@
 				60E401682042BE1200EF047E /* AppDelegate+MainUI.m in Sources */,
 				6082BAD02044FCA300F82B31 /* ZFJSegmentedControl.m in Sources */,
 				60F978E220423FF900E79007 /* main.m in Sources */,
+				D4C7D5A9204597010008F09A /* yuegongCellOne.m in Sources */,
 				60F978D420423FF900E79007 /* AppDelegate.m in Sources */,
 				60E4015E2042B9CA00EF047E /* UserSourceController.m in Sources */,
 				60E4016B2042BE6000EF047E /* Colours.m in Sources */,
