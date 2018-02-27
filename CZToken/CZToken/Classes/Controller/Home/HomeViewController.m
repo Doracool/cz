@@ -13,6 +13,7 @@
 #import "iconCell.h"
 
 #import "XgViewController.h"
+#import "loansViewController.h"
 @interface HomeViewController ()
 
 @end
@@ -60,9 +61,14 @@
 - (void)iconClick:(NSNotification *)notification {
     NSInteger tag = [notification.userInfo[@"tag"] intValue];
     NSLog(@"%ld",(long)tag);
-    XgViewController *xg = [[XgViewController alloc] init];
+    if (tag == 2) {
+        XgViewController *xg = [[XgViewController alloc] init];
+        [self.navigationController pushViewController:xg animated:YES];
+    } else if (tag == 3) {
+        loansViewController *loans = [[loansViewController alloc] init];
+        [self.navigationController pushViewController:loans animated:YES];
+    }
     
-    [self.navigationController pushViewController:xg animated:YES];
 }
 
 - (void)addressClick {

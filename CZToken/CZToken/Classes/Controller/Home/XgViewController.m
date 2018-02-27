@@ -7,9 +7,11 @@
 //
 
 #import "XgViewController.h"
-
+#import "XgShareViewController.h"
 @interface XgViewController ()
 
+@property (strong, nonatomic) IBOutlet NSLayoutConstraint *viewHeight;
+@property (strong, nonatomic) IBOutlet TTChooseBtnView *tipsView;
 @end
 
 @implementation XgViewController
@@ -17,7 +19,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self tabbarHidden];
+    NSArray *tips = @[@"上海单身",@"上海家庭一方上海户口",@"上海家庭双方上海户口",@"外地人",@"在读博士或以上高学历",@"父母外地未成年子女",@"驻沪军官",@"港澳同胞",@"台湾同胞",@"外籍人士"];
+    NSArray *tags = @[@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10"];
+    NSMutableArray *arr = [NSMutableArray arrayWithCapacity:0];
+    [arr addObjectsFromArray:tips];
+    TTChooseBtnView *view = [[TTChooseBtnView alloc] initWithFrame:CGRectMake(12, 10, screenW-24, 50) andTags:tips andTitleColor:[UIColor lineColor] andFonts:13];
+    _viewHeight.constant = view.frame.size.height + 10;
+    [_tipsView addSubview:view];
     // Do any additional setup after loading the view from its nib.
+}
+- (IBAction)calculateAction:(UIButton *)sender {
+    XgShareViewController *share = [[XgShareViewController alloc] init];
+    [self.navigationController pushViewController:share animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

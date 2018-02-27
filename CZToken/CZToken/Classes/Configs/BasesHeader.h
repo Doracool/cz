@@ -19,6 +19,9 @@
 /***************** 加载公共常量 *********************/
 #import "Defines.h"
 #import "Colours.h"
+#import "TTChooseBtnView.h"
+#import "UIView+TTExtension.h"
+
 /***************** 加载公共常量 *********************/
 #import "BaseViewController.h"
 
@@ -26,6 +29,7 @@
 #import "SDWebImageManager.h"
 #import "SDImageCache.h"
 #import "UIImageView+WebCache.h"
+#import "ZFJSegmentedControl.h"
 
 #import "MJRefresh.h"
 #import <IQKeyboardManager.h>
