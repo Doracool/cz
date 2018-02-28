@@ -9,6 +9,7 @@
 #import "SignController.h"
 #import "jjrViewController.h"
 #import "rzyzViewController.h"
+#import "rzshViewController.h"
 @interface SignController ()
 @property (strong, nonatomic) IBOutlet UIButton *typeOne;
 @property (strong, nonatomic) IBOutlet UIButton *typeTwo;
@@ -30,7 +31,8 @@
         rzyzViewController *rzyz = [[rzyzViewController alloc] init];
         [self.navigationController pushViewController:rzyz animated:YES];
     } else if (sender.tag == 2) {
-        
+        rzshViewController *rzsh = [[rzshViewController alloc] init];
+        [self.navigationController pushViewController:rzsh animated:YES];
     }
     
 }

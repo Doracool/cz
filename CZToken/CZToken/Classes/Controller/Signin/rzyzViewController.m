@@ -21,7 +21,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 4;
+    return 9;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -30,10 +30,34 @@
     if (cell == nil) {
         cell = [[NSBundle mainBundle] loadNibNamed:@"textCell" owner:self options:nil][0];
     }
-    
-    if (indexPath.row == 3) {
+    if (indexPath.row == 0) {
+        cell.text.text = @"城区";
+        tableView.rowHeight = 50;
+    } else if (indexPath.row == 1) {
+        cell.text.text = @"商圈";
+        tableView.rowHeight = 50;
+    } else if (indexPath.row == 2) {
+        cell.text.text = @"楼盘字典";
+        tableView.rowHeight = 50;
+    } else if (indexPath.row == 3) {
+        cell.text.text = @"栋座";
+        tableView.rowHeight = 50;
+    } else if (indexPath.row == 4) {
+        cell.text.text = @"单元";
+        tableView.rowHeight = 50;
+    } else if (indexPath.row == 5) {
+        cell.text.text = @"房号";
+        tableView.rowHeight = 50;
+    } else if (indexPath.row == 6) {
+        cell.text.text = @"楼层";
+        tableView.rowHeight = 50;
+    } else if (indexPath.row == 7) {
+        cell.text.text = @"总层";
+        tableView.rowHeight = 50;
+    }
+    if (indexPath.row == 8) {
         UpImgCell *imgCell = [[NSBundle mainBundle] loadNibNamed:@"UpImgCell" owner:self options:nil][0];
-        tableView.rowHeight = 300;
+        tableView.rowHeight = 350;
         return imgCell;
     }
     return cell;

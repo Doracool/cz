@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -51,17 +51,30 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aB3-B0-cpO">
+                        <rect key="frame" x="30" y="362" width="341" height="40"/>
+                        <color key="backgroundColor" red="0.96235281230000003" green="0.42924373589999998" blue="0.4080162148" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="aQh-Y1-gVe"/>
+                        </constraints>
+                        <state key="normal" title="确定">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="Cva-Fp-iko" firstAttribute="leading" secondItem="4RK-Wh-TZN" secondAttribute="trailing" constant="5" id="1LU-sd-mWP"/>
                     <constraint firstItem="NPF-Jg-sGV" firstAttribute="top" secondItem="ECv-oG-cK5" secondAttribute="bottom" constant="30" id="6OQ-bE-fIN"/>
                     <constraint firstItem="jlB-hY-yuZ" firstAttribute="top" secondItem="NPF-Jg-sGV" secondAttribute="bottom" constant="20" id="E6C-gA-uK1"/>
                     <constraint firstItem="Cva-Fp-iko" firstAttribute="centerY" secondItem="4RK-Wh-TZN" secondAttribute="centerY" id="SKU-ji-FKP"/>
+                    <constraint firstAttribute="trailing" secondItem="aB3-B0-cpO" secondAttribute="trailing" constant="30" id="Tuv-9C-C9j"/>
                     <constraint firstItem="NPF-Jg-sGV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="U59-PI-zn0"/>
                     <constraint firstItem="ECv-oG-cK5" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="U77-vE-dTv"/>
                     <constraint firstAttribute="trailing" secondItem="NPF-Jg-sGV" secondAttribute="trailing" constant="30" id="WT9-fI-G6e"/>
                     <constraint firstItem="4RK-Wh-TZN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="dqk-iw-rMg"/>
                     <constraint firstItem="4RK-Wh-TZN" firstAttribute="top" secondItem="jlB-hY-yuZ" secondAttribute="bottom" constant="30" id="f4l-gU-Mgd"/>
+                    <constraint firstItem="aB3-B0-cpO" firstAttribute="top" secondItem="Cva-Fp-iko" secondAttribute="bottom" constant="30" id="kyh-O5-q4h"/>
+                    <constraint firstItem="aB3-B0-cpO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="phf-Gw-wac"/>
                     <constraint firstItem="jlB-hY-yuZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="tPx-eK-cyr"/>
                     <constraint firstAttribute="trailing" secondItem="jlB-hY-yuZ" secondAttribute="trailing" constant="30" id="vMs-cG-V3p"/>
                     <constraint firstItem="ECv-oG-cK5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="yyA-ny-dza"/>
