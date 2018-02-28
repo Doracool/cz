@@ -19,6 +19,7 @@ PODS:
   - MBProgressHUD (1.0.0)
   - MJExtension (3.0.13)
   - MJRefresh (3.1.12)
+  - RCRunkeeperSwitch (0.0.1)
   - SDWebImage (4.0.0):
     - SDWebImage/Core (= 4.0.0)
   - SDWebImage/Core (4.0.0)
@@ -31,6 +32,7 @@ DEPENDENCIES:
   - MBProgressHUD (~> 1.0.0)
   - MJExtension
   - MJRefresh
+  - RCRunkeeperSwitch
   - SDWebImage (~> 4.0)
   - SVProgressHUD
 
@@ -41,9 +43,10 @@ SPEC CHECKSUMS:
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   MJExtension: 5932755f451458eefa24239358817f8d291240c7
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
+  RCRunkeeperSwitch: bf8fe3fabb9297b7f9f22cd5f8b31dc386995494
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
 
-PODFILE CHECKSUM: 66addbcddfee2f80e905f1295b7d64efb6d88db2
+PODFILE CHECKSUM: 52367c40d2bcff36dd69902a969141bcf36b4abf
 
 COCOAPODS: 1.2.0
