@@ -7,7 +7,7 @@
 //
 
 #import "zsViewController.h"
-
+#import "SignController.h"
 @interface zsViewController ()
 
 @end
@@ -17,6 +17,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+}
+- (IBAction)SignAction:(UIButton *)sender {
+    SignController *sign = [[SignController alloc] init];
+    [self.navigationController pushViewController:sign animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -114,6 +114,9 @@
                                         <constraint firstAttribute="height" constant="40" id="8t0-ji-Oea"/>
                                     </constraints>
                                     <state key="normal" title="激活成为诚信会员"/>
+                                    <connections>
+                                        <action selector="SignAction:" destination="-1" eventType="touchUpInside" id="emg-6t-eY1"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -170,6 +173,7 @@
                 <constraint firstAttribute="bottom" secondItem="sSY-XR-ubq" secondAttribute="bottom" id="ZD8-OF-1IA"/>
                 <constraint firstAttribute="trailing" secondItem="sSY-XR-ubq" secondAttribute="trailing" id="vy2-hW-vmJ"/>
             </constraints>
+            <point key="canvasLocation" x="-96" y="121"/>
         </view>
     </objects>
 </document>

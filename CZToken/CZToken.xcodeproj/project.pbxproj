@@ -16,6 +16,10 @@
 		6044465B204655E9008F09C7 /* cxMoneyController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60444659204655E9008F09C7 /* cxMoneyController.xib */; };
 		6044465F20465D63008F09C7 /* zsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6044465D20465D63008F09C7 /* zsViewController.m */; };
 		6044466020465D63008F09C7 /* zsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6044465E20465D63008F09C7 /* zsViewController.xib */; };
+		604446642046818E008F09C7 /* SignController.m in Sources */ = {isa = PBXBuildFile; fileRef = 604446622046818E008F09C7 /* SignController.m */; };
+		604446652046818E008F09C7 /* SignController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 604446632046818E008F09C7 /* SignController.xib */; };
+		6044466920468F2B008F09C7 /* jjrViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6044466720468F2B008F09C7 /* jjrViewController.m */; };
+		6044466A20468F2B008F09C7 /* jjrViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6044466820468F2B008F09C7 /* jjrViewController.xib */; };
 		6082BAB52044DEE900F82B31 /* TTChooseBtnView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6082BAB42044DEE900F82B31 /* TTChooseBtnView.m */; };
 		6082BAB82044E28C00F82B31 /* UIView+TTExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6082BAB72044E28C00F82B31 /* UIView+TTExtension.m */; };
 		6082BABC2044EAA700F82B31 /* XgShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6082BABA2044EAA700F82B31 /* XgShareViewController.m */; };
@@ -79,6 +83,12 @@
 		6044465C20465D63008F09C7 /* zsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = zsViewController.h; sourceTree = "<group>"; };
 		6044465D20465D63008F09C7 /* zsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = zsViewController.m; sourceTree = "<group>"; };
 		6044465E20465D63008F09C7 /* zsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = zsViewController.xib; sourceTree = "<group>"; };
+		604446612046818E008F09C7 /* SignController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignController.h; sourceTree = "<group>"; };
+		604446622046818E008F09C7 /* SignController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignController.m; sourceTree = "<group>"; };
+		604446632046818E008F09C7 /* SignController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignController.xib; sourceTree = "<group>"; };
+		6044466620468F2B008F09C7 /* jjrViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = jjrViewController.h; sourceTree = "<group>"; };
+		6044466720468F2B008F09C7 /* jjrViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = jjrViewController.m; sourceTree = "<group>"; };
+		6044466820468F2B008F09C7 /* jjrViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = jjrViewController.xib; sourceTree = "<group>"; };
 		6082BAB32044DEE900F82B31 /* TTChooseBtnView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTChooseBtnView.h; sourceTree = "<group>"; };
 		6082BAB42044DEE900F82B31 /* TTChooseBtnView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTChooseBtnView.m; sourceTree = "<group>"; };
 		6082BAB62044E28B00F82B31 /* UIView+TTExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+TTExtension.h"; sourceTree = "<group>"; };
@@ -193,6 +203,12 @@
 				6044465C20465D63008F09C7 /* zsViewController.h */,
 				6044465D20465D63008F09C7 /* zsViewController.m */,
 				6044465E20465D63008F09C7 /* zsViewController.xib */,
+				604446612046818E008F09C7 /* SignController.h */,
+				604446622046818E008F09C7 /* SignController.m */,
+				604446632046818E008F09C7 /* SignController.xib */,
+				6044466620468F2B008F09C7 /* jjrViewController.h */,
+				6044466720468F2B008F09C7 /* jjrViewController.m */,
+				6044466820468F2B008F09C7 /* jjrViewController.xib */,
 			);
 			path = Signin;
 			sourceTree = "<group>";
@@ -508,6 +524,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6082BAD720455E0F00F82B31 /* zige.xib in Resources */,
+				604446652046818E008F09C7 /* SignController.xib in Resources */,
 				6082BACC2044F84100F82B31 /* loansViewController.xib in Resources */,
 				6082BAC72044EB3900F82B31 /* XgContentTableViewCell.xib in Resources */,
 				6044465120464B00008F09C7 /* foreSigninController.xib in Resources */,
@@ -521,6 +538,7 @@
 				6098760D2043A7D700243079 /* HomeIconCell.xib in Resources */,
 				60F978DC20423FF900E79007 /* Assets.xcassets in Resources */,
 				609876122043ADE600243079 /* TitleIconCell.xib in Resources */,
+				6044466A20468F2B008F09C7 /* jjrViewController.xib in Resources */,
 				60F978DA20423FF900E79007 /* Main.storyboard in Resources */,
 				6082BAD22045588A00F82B31 /* daikuan.xib in Resources */,
 				60987627204405F700243079 /* XgViewController.xib in Resources */,
@@ -606,6 +624,7 @@
 				D4C7D5A9204597010008F09A /* yuegongCellOne.m in Sources */,
 				60F978D420423FF900E79007 /* AppDelegate.m in Sources */,
 				60E4015E2042B9CA00EF047E /* UserSourceController.m in Sources */,
+				6044466920468F2B008F09C7 /* jjrViewController.m in Sources */,
 				60E4016B2042BE6000EF047E /* Colours.m in Sources */,
 				6044465A204655E9008F09C7 /* cxMoneyController.m in Sources */,
 				60B622CC20424F43001DBA43 /* commonSet.m in Sources */,
@@ -615,6 +634,7 @@
 				6082BABC2044EAA700F82B31 /* XgShareViewController.m in Sources */,
 				6044465020464B00008F09C7 /* foreSigninController.m in Sources */,
 				6082BACB2044F84100F82B31 /* loansViewController.m in Sources */,
+				604446642046818E008F09C7 /* SignController.m in Sources */,
 				60E401622042B9CA00EF047E /* ComputerController.m in Sources */,
 				6082BAC62044EB3900F82B31 /* XgContentTableViewCell.m in Sources */,
 				6098760420439E8000243079 /* HomeViewController.m in Sources */,

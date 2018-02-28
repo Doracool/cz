@@ -1,28 +1,30 @@
 //
-//  cxMoneyController.m
+//  SignController.m
 //  CZToken
 //
 //  Created by jlc on 2018/2/28.
 //  Copyright © 2018年 NYHZ. All rights reserved.
 //
 
-#import "cxMoneyController.h"
-#import "zsViewController.h"
-@interface cxMoneyController ()
+#import "SignController.h"
+#import "jjrViewController.h"
+@interface SignController ()
+@property (strong, nonatomic) IBOutlet UIButton *typeOne;
+@property (strong, nonatomic) IBOutlet UIButton *typeTwo;
+@property (strong, nonatomic) IBOutlet UIButton *typeThree;
 
 @end
 
-@implementation cxMoneyController
+@implementation SignController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 }
-- (IBAction)SignAction:(UIButton *)sender {
-    zsViewController *zs = [[zsViewController alloc] init];
-    [self.navigationController pushViewController:zs animated:YES];
+- (IBAction)changeType:(UIButton *)sender {
+    jjrViewController *jjr = [[jjrViewController alloc] init];
+    [self.navigationController pushViewController:jjr animated:YES];
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
