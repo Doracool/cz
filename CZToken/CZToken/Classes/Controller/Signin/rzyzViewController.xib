@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="rzyzViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bZL-ir-84v">
+                    <rect key="frame" x="0.0" y="64" width="375" height="40"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2vj-W3-cXn">
+                            <rect key="frame" x="10" y="5" width="5" height="30"/>
+                            <color key="backgroundColor" red="1" green="0.32508540000000002" blue="0.19246339840000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="5" id="Orp-a5-Amr"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="物业信息" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oYR-87-Wnz">
+                            <rect key="frame" x="20" y="10" width="70" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="oYR-87-Wnz" firstAttribute="centerY" secondItem="2vj-W3-cXn" secondAttribute="centerY" id="2dr-LP-Uic"/>
+                        <constraint firstAttribute="height" constant="40" id="Rsh-dm-dgi"/>
+                        <constraint firstAttribute="bottom" secondItem="2vj-W3-cXn" secondAttribute="bottom" constant="5" id="efI-O4-C58"/>
+                        <constraint firstItem="oYR-87-Wnz" firstAttribute="leading" secondItem="2vj-W3-cXn" secondAttribute="trailing" constant="5" id="fxk-yW-QIf"/>
+                        <constraint firstItem="2vj-W3-cXn" firstAttribute="leading" secondItem="bZL-ir-84v" secondAttribute="leading" constant="10" id="lqR-aF-FCr"/>
+                        <constraint firstItem="2vj-W3-cXn" firstAttribute="top" secondItem="bZL-ir-84v" secondAttribute="top" constant="5" id="yeK-cr-Ugq"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ymy-gv-g41">
+                    <rect key="frame" x="0.0" y="104" width="375" height="563"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="1Ye-fE-Zu4"/>
+                        <outlet property="delegate" destination="-1" id="8do-LU-FLI"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="ymy-gv-g41" secondAttribute="trailing" id="57T-kx-KoT"/>
+                <constraint firstItem="bZL-ir-84v" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="9sB-zl-b65"/>
+                <constraint firstAttribute="bottom" secondItem="ymy-gv-g41" secondAttribute="bottom" id="EdC-x6-vBg"/>
+                <constraint firstItem="ymy-gv-g41" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="GTH-Ld-mTk"/>
+                <constraint firstItem="ymy-gv-g41" firstAttribute="top" secondItem="bZL-ir-84v" secondAttribute="bottom" id="LQZ-e3-amm"/>
+                <constraint firstItem="bZL-ir-84v" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="Syl-T5-9qa"/>
+                <constraint firstAttribute="trailing" secondItem="bZL-ir-84v" secondAttribute="trailing" id="sVt-Cr-eUT"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

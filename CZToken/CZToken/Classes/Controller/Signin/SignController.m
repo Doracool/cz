@@ -8,6 +8,7 @@
 
 #import "SignController.h"
 #import "jjrViewController.h"
+#import "rzyzViewController.h"
 @interface SignController ()
 @property (strong, nonatomic) IBOutlet UIButton *typeOne;
 @property (strong, nonatomic) IBOutlet UIButton *typeTwo;
@@ -22,8 +23,16 @@
     // Do any additional setup after loading the view from its nib.
 }
 - (IBAction)changeType:(UIButton *)sender {
-    jjrViewController *jjr = [[jjrViewController alloc] init];
-    [self.navigationController pushViewController:jjr animated:YES];
+    if (sender.tag == 0) {
+        jjrViewController *jjr = [[jjrViewController alloc] init];
+        [self.navigationController pushViewController:jjr animated:YES];
+    } else if (sender.tag == 1) {
+        rzyzViewController *rzyz = [[rzyzViewController alloc] init];
+        [self.navigationController pushViewController:rzyz animated:YES];
+    } else if (sender.tag == 2) {
+        
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning {

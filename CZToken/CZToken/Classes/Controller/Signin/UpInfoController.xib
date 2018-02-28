@@ -28,7 +28,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="384" height="800"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hEK-bS-tOY">
-                                    <rect key="frame" x="30" y="250" width="324" height="300"/>
+                                    <rect key="frame" x="30" y="100" width="324" height="300"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GR6-sc-02G">
                                             <rect key="frame" x="0.0" y="0.0" width="324" height="100"/>
@@ -109,20 +109,20 @@
                                     </constraints>
                                 </view>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fsh-aE-2On">
-                                    <rect key="frame" x="30" y="565" width="30" height="30"/>
+                                    <rect key="frame" x="30" y="415" width="30" height="30"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="30" id="wsE-Dc-YC1"/>
                                         <constraint firstAttribute="height" constant="30" id="yDl-ZT-HkS"/>
                                     </constraints>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="信息安全保护中，自动水印保护您的资料" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wg6-vw-fSU">
-                                    <rect key="frame" x="65" y="573" width="221" height="14.5"/>
+                                    <rect key="frame" x="65" y="423" width="221" height="14.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tLY-gl-alW">
-                                    <rect key="frame" x="30" y="687.5" width="324" height="40"/>
+                                    <rect key="frame" x="30" y="537.5" width="324" height="40"/>
                                     <color key="backgroundColor" red="1" green="0.32508540000000002" blue="0.19246339840000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="40" id="K5a-Yh-43q"/>
@@ -139,7 +139,7 @@
                                 <constraint firstAttribute="height" constant="800" id="995-g2-LfD"/>
                                 <constraint firstItem="fsh-aE-2On" firstAttribute="top" secondItem="hEK-bS-tOY" secondAttribute="bottom" constant="15" id="F4g-JQ-fhw"/>
                                 <constraint firstItem="tLY-gl-alW" firstAttribute="centerX" secondItem="HTe-vc-erq" secondAttribute="centerX" id="Iew-fh-uBF"/>
-                                <constraint firstItem="hEK-bS-tOY" firstAttribute="top" secondItem="HTe-vc-erq" secondAttribute="top" constant="250" id="NZQ-v9-5RS"/>
+                                <constraint firstItem="hEK-bS-tOY" firstAttribute="top" secondItem="HTe-vc-erq" secondAttribute="top" constant="100" id="NZQ-v9-5RS"/>
                                 <constraint firstItem="Wg6-vw-fSU" firstAttribute="leading" secondItem="fsh-aE-2On" secondAttribute="trailing" constant="5" id="T6n-ur-Wop"/>
                                 <constraint firstAttribute="trailing" secondItem="tLY-gl-alW" secondAttribute="trailing" constant="30" id="WwR-XO-v0y"/>
                                 <constraint firstItem="tLY-gl-alW" firstAttribute="leading" secondItem="HTe-vc-erq" secondAttribute="leading" constant="30" id="c01-CB-8c3"/>

@@ -20,6 +20,12 @@
 		604446652046818E008F09C7 /* SignController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 604446632046818E008F09C7 /* SignController.xib */; };
 		6044466920468F2B008F09C7 /* jjrViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6044466720468F2B008F09C7 /* jjrViewController.m */; };
 		6044466A20468F2B008F09C7 /* jjrViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6044466820468F2B008F09C7 /* jjrViewController.xib */; };
+		6044466E20469EE3008F09C7 /* textCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6044466C20469EE3008F09C7 /* textCell.m */; };
+		6044466F20469EE3008F09C7 /* textCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6044466D20469EE3008F09C7 /* textCell.xib */; };
+		604446732046A037008F09C7 /* rzyzViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 604446712046A037008F09C7 /* rzyzViewController.m */; };
+		604446742046A037008F09C7 /* rzyzViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 604446722046A037008F09C7 /* rzyzViewController.xib */; };
+		604446782046B32C008F09C7 /* UpImgCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 604446762046B32C008F09C7 /* UpImgCell.m */; };
+		604446792046B32C008F09C7 /* UpImgCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 604446772046B32C008F09C7 /* UpImgCell.xib */; };
 		6082BAB52044DEE900F82B31 /* TTChooseBtnView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6082BAB42044DEE900F82B31 /* TTChooseBtnView.m */; };
 		6082BAB82044E28C00F82B31 /* UIView+TTExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6082BAB72044E28C00F82B31 /* UIView+TTExtension.m */; };
 		6082BABC2044EAA700F82B31 /* XgShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6082BABA2044EAA700F82B31 /* XgShareViewController.m */; };
@@ -89,6 +95,15 @@
 		6044466620468F2B008F09C7 /* jjrViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = jjrViewController.h; sourceTree = "<group>"; };
 		6044466720468F2B008F09C7 /* jjrViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = jjrViewController.m; sourceTree = "<group>"; };
 		6044466820468F2B008F09C7 /* jjrViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = jjrViewController.xib; sourceTree = "<group>"; };
+		6044466B20469EE3008F09C7 /* textCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = textCell.h; sourceTree = "<group>"; };
+		6044466C20469EE3008F09C7 /* textCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = textCell.m; sourceTree = "<group>"; };
+		6044466D20469EE3008F09C7 /* textCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = textCell.xib; sourceTree = "<group>"; };
+		604446702046A037008F09C7 /* rzyzViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = rzyzViewController.h; sourceTree = "<group>"; };
+		604446712046A037008F09C7 /* rzyzViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = rzyzViewController.m; sourceTree = "<group>"; };
+		604446722046A037008F09C7 /* rzyzViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = rzyzViewController.xib; sourceTree = "<group>"; };
+		604446752046B32C008F09C7 /* UpImgCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UpImgCell.h; sourceTree = "<group>"; };
+		604446762046B32C008F09C7 /* UpImgCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UpImgCell.m; sourceTree = "<group>"; };
+		604446772046B32C008F09C7 /* UpImgCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpImgCell.xib; sourceTree = "<group>"; };
 		6082BAB32044DEE900F82B31 /* TTChooseBtnView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTChooseBtnView.h; sourceTree = "<group>"; };
 		6082BAB42044DEE900F82B31 /* TTChooseBtnView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTChooseBtnView.m; sourceTree = "<group>"; };
 		6082BAB62044E28B00F82B31 /* UIView+TTExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+TTExtension.h"; sourceTree = "<group>"; };
@@ -209,6 +224,9 @@
 				6044466620468F2B008F09C7 /* jjrViewController.h */,
 				6044466720468F2B008F09C7 /* jjrViewController.m */,
 				6044466820468F2B008F09C7 /* jjrViewController.xib */,
+				604446702046A037008F09C7 /* rzyzViewController.h */,
+				604446712046A037008F09C7 /* rzyzViewController.m */,
+				604446722046A037008F09C7 /* rzyzViewController.xib */,
 			);
 			path = Signin;
 			sourceTree = "<group>";
@@ -307,6 +325,12 @@
 				D4C7D5A6204597010008F09A /* yuegongCellOne.h */,
 				D4C7D5A7204597010008F09A /* yuegongCellOne.m */,
 				D4C7D5A8204597010008F09A /* yuegongCellOne.xib */,
+				6044466B20469EE3008F09C7 /* textCell.h */,
+				6044466C20469EE3008F09C7 /* textCell.m */,
+				6044466D20469EE3008F09C7 /* textCell.xib */,
+				604446752046B32C008F09C7 /* UpImgCell.h */,
+				604446762046B32C008F09C7 /* UpImgCell.m */,
+				604446772046B32C008F09C7 /* UpImgCell.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -531,6 +555,7 @@
 				D4C7D5AA204597010008F09A /* yuegongCellOne.xib in Resources */,
 				6044466020465D63008F09C7 /* zsViewController.xib in Resources */,
 				609876172043AE8400243079 /* NewsViewCell.xib in Resources */,
+				6044466F20469EE3008F09C7 /* textCell.xib in Resources */,
 				6044465B204655E9008F09C7 /* cxMoneyController.xib in Resources */,
 				60F978DF20423FF900E79007 /* LaunchScreen.storyboard in Resources */,
 				6082BAC22044EAF500F82B31 /* xgTitleViewCell.xib in Resources */,
@@ -543,6 +568,8 @@
 				6082BAD22045588A00F82B31 /* daikuan.xib in Resources */,
 				60987627204405F700243079 /* XgViewController.xib in Resources */,
 				6082BABD2044EAA700F82B31 /* XgShareViewController.xib in Resources */,
+				604446792046B32C008F09C7 /* UpImgCell.xib in Resources */,
+				604446742046A037008F09C7 /* rzyzViewController.xib in Resources */,
 				6098761C2043BAC700243079 /* iconCell.xib in Resources */,
 				6098760520439E8000243079 /* HomeViewController.xib in Resources */,
 			);
@@ -625,7 +652,9 @@
 				60F978D420423FF900E79007 /* AppDelegate.m in Sources */,
 				60E4015E2042B9CA00EF047E /* UserSourceController.m in Sources */,
 				6044466920468F2B008F09C7 /* jjrViewController.m in Sources */,
+				604446732046A037008F09C7 /* rzyzViewController.m in Sources */,
 				60E4016B2042BE6000EF047E /* Colours.m in Sources */,
+				604446782046B32C008F09C7 /* UpImgCell.m in Sources */,
 				6044465A204655E9008F09C7 /* cxMoneyController.m in Sources */,
 				60B622CC20424F43001DBA43 /* commonSet.m in Sources */,
 				6082BAC12044EAF500F82B31 /* xgTitleViewCell.m in Sources */,
@@ -633,6 +662,7 @@
 				60E401612042B9CA00EF047E /* MeController.m in Sources */,
 				6082BABC2044EAA700F82B31 /* XgShareViewController.m in Sources */,
 				6044465020464B00008F09C7 /* foreSigninController.m in Sources */,
+				6044466E20469EE3008F09C7 /* textCell.m in Sources */,
 				6082BACB2044F84100F82B31 /* loansViewController.m in Sources */,
 				604446642046818E008F09C7 /* SignController.m in Sources */,
 				60E401622042B9CA00EF047E /* ComputerController.m in Sources */,
