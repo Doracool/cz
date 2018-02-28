@@ -37,6 +37,8 @@
 #import <IQKeyboardReturnKeyHandler.h>
 #import <IQKeyboardManagerConstants.h>
 #import <SVProgressHUD.h>
+#import <RCRunkeeperSwitch.h>
+#import "DVSwitch.h"
 
 /***************** 加载公共常量 *********************/
 

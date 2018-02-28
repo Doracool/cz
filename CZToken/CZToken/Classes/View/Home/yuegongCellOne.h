@@ -10,4 +10,13 @@
 
 @interface yuegongCellOne : UITableViewCell
 
+@property (strong, nonatomic) IBOutlet UIView *dklbView;
+@property (strong, nonatomic) IBOutlet UIView *hkfsView;
+@property (strong, nonatomic) IBOutlet UITextField *dkjeTF;
+@property (strong, nonatomic) IBOutlet UITextField *dkqxTF;
+@property (strong, nonatomic) IBOutlet UITextField *lvTfOne;
+@property (strong, nonatomic) IBOutlet UITextField *LvYearTF;
+@property (strong, nonatomic) IBOutlet UILabel *syLabel;
+@property (strong, nonatomic) IBOutlet UILabel *gjjLabel;
+@property (strong, nonatomic) IBOutlet UIButton *jsBtn;
 @end

@@ -9,6 +9,8 @@
 #import "loansViewController.h"
 #import "daikuan.h"
 #import "zige.h"
+
+#import "yuegongCellOne.h"
 @interface loansViewController ()<UITableViewDelegate,UITableViewDataSource>{
     UIButton *jsBtn;
     UILabel *jsjg;
@@ -63,9 +65,14 @@
     [_firstView addSubview:zigeView];
     _firstView.backgroundColor = [UIColor redColor];
     
-    _secondView = [[UIView alloc] initWithFrame:CGRectMake(screenW*2, 0, screenW, screenH-104)];
+    _secondView = [[UIView alloc] initWithFrame:CGRectMake(screenW, 0, screenW, screenH-104)];
     [_baseScroll addSubview:_secondView];
     
+    
+    _myTableView = [[UITableView alloc] initWithFrame:CGRectMake(screenW*2, 0, screenW, screenH-104) style:UITableViewStylePlain];
+    [_baseScroll addSubview:_myTableView];
+    _myTableView.delegate = self;
+    _myTableView.dataSource = self;
     
 //    _secondView.backgroundColor = [UIColor yellowColor];
     [self createSecond];
@@ -80,7 +87,23 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return nil;
+    yuegongCellOne *yuegong = [[NSBundle mainBundle] loadNibNamed:@"yuegongCellOne" owner:self options:nil][0];
+    tableView.rowHeight = 400;
+    DVSwitch *typeOne = [[DVSwitch alloc] initWithStringsArray:@[@"商业",@"公积金",@"组合"]];
+    typeOne.frame = yuegong.dklbView.frame;
+    [yuegong.dklbView addSubview:typeOne];
+    typeOne.frame = CGRectMake(0, 0, yuegong.dklbView.width-20, yuegong.dklbView.height);
+    [typeOne setPressedHandler:^(NSUInteger index) {
+        NSLog(@"switch to index: %lu",(unsigned long)index);
+    }];
+    
+    DVSwitch *typeTwo = [[DVSwitch alloc] initWithStringsArray:@[@"等额本息",@"等额本金"]];
+    [yuegong.hkfsView addSubview:typeTwo];
+    typeTwo.frame = CGRectMake(0, 0, yuegong.hkfsView.width-20, yuegong.hkfsView.height);
+    [typeTwo setPressedHandler:^(NSUInteger index) {
+        NSLog(@"switch is %lu",(unsigned long)index);
+    }];
+    return yuegong;
 }
 
 - (void)createSecond {
