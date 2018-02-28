@@ -14,6 +14,8 @@
 
 #import "XgViewController.h"
 #import "loansViewController.h"
+#import "foreSigninController.h"
+#import "UpInfoController.h"
 @interface HomeViewController ()
 
 @end
@@ -67,6 +69,9 @@
     } else if (tag == 3) {
         loansViewController *loans = [[loansViewController alloc] init];
         [self.navigationController pushViewController:loans animated:YES];
+    } else if (tag == 1) {
+        foreSigninController *signin = [[foreSigninController alloc] init];
+        [self.navigationController pushViewController:signin animated:YES];
     }
     
 }

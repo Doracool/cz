@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		6044464B204642EE008F09C7 /* DVSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 60444649204642EE008F09C7 /* DVSwitch.m */; };
+		6044465020464B00008F09C7 /* foreSigninController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6044464E20464B00008F09C7 /* foreSigninController.m */; };
+		6044465120464B00008F09C7 /* foreSigninController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6044464F20464B00008F09C7 /* foreSigninController.xib */; };
+		6044465520464FEB008F09C7 /* UpInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6044465320464FEB008F09C7 /* UpInfoController.m */; };
+		6044465620464FEB008F09C7 /* UpInfoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6044465420464FEB008F09C7 /* UpInfoController.xib */; };
+		6044465A204655E9008F09C7 /* cxMoneyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60444658204655E9008F09C7 /* cxMoneyController.m */; };
+		6044465B204655E9008F09C7 /* cxMoneyController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60444659204655E9008F09C7 /* cxMoneyController.xib */; };
+		6044465F20465D63008F09C7 /* zsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6044465D20465D63008F09C7 /* zsViewController.m */; };
+		6044466020465D63008F09C7 /* zsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6044465E20465D63008F09C7 /* zsViewController.xib */; };
 		6082BAB52044DEE900F82B31 /* TTChooseBtnView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6082BAB42044DEE900F82B31 /* TTChooseBtnView.m */; };
 		6082BAB82044E28C00F82B31 /* UIView+TTExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6082BAB72044E28C00F82B31 /* UIView+TTExtension.m */; };
 		6082BABC2044EAA700F82B31 /* XgShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6082BABA2044EAA700F82B31 /* XgShareViewController.m */; };
@@ -59,6 +67,18 @@
 		5E4F68D696251ABCA40F72E7 /* libPods-CZToken.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CZToken.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		60444649204642EE008F09C7 /* DVSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVSwitch.m; sourceTree = "<group>"; };
 		6044464A204642EE008F09C7 /* DVSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVSwitch.h; sourceTree = "<group>"; };
+		6044464D20464B00008F09C7 /* foreSigninController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = foreSigninController.h; sourceTree = "<group>"; };
+		6044464E20464B00008F09C7 /* foreSigninController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = foreSigninController.m; sourceTree = "<group>"; };
+		6044464F20464B00008F09C7 /* foreSigninController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = foreSigninController.xib; sourceTree = "<group>"; };
+		6044465220464FEB008F09C7 /* UpInfoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UpInfoController.h; sourceTree = "<group>"; };
+		6044465320464FEB008F09C7 /* UpInfoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UpInfoController.m; sourceTree = "<group>"; };
+		6044465420464FEB008F09C7 /* UpInfoController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpInfoController.xib; sourceTree = "<group>"; };
+		60444657204655E9008F09C7 /* cxMoneyController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cxMoneyController.h; sourceTree = "<group>"; };
+		60444658204655E9008F09C7 /* cxMoneyController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = cxMoneyController.m; sourceTree = "<group>"; };
+		60444659204655E9008F09C7 /* cxMoneyController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = cxMoneyController.xib; sourceTree = "<group>"; };
+		6044465C20465D63008F09C7 /* zsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = zsViewController.h; sourceTree = "<group>"; };
+		6044465D20465D63008F09C7 /* zsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = zsViewController.m; sourceTree = "<group>"; };
+		6044465E20465D63008F09C7 /* zsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = zsViewController.xib; sourceTree = "<group>"; };
 		6082BAB32044DEE900F82B31 /* TTChooseBtnView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTChooseBtnView.h; sourceTree = "<group>"; };
 		6082BAB42044DEE900F82B31 /* TTChooseBtnView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTChooseBtnView.m; sourceTree = "<group>"; };
 		6082BAB62044E28B00F82B31 /* UIView+TTExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+TTExtension.h"; sourceTree = "<group>"; };
@@ -156,6 +176,25 @@
 			children = (
 			);
 			path = DVSwitch;
+			sourceTree = "<group>";
+		};
+		6044464C20464ABE008F09C7 /* Signin */ = {
+			isa = PBXGroup;
+			children = (
+				6044464D20464B00008F09C7 /* foreSigninController.h */,
+				6044464E20464B00008F09C7 /* foreSigninController.m */,
+				6044464F20464B00008F09C7 /* foreSigninController.xib */,
+				6044465220464FEB008F09C7 /* UpInfoController.h */,
+				6044465320464FEB008F09C7 /* UpInfoController.m */,
+				6044465420464FEB008F09C7 /* UpInfoController.xib */,
+				60444657204655E9008F09C7 /* cxMoneyController.h */,
+				60444658204655E9008F09C7 /* cxMoneyController.m */,
+				60444659204655E9008F09C7 /* cxMoneyController.xib */,
+				6044465C20465D63008F09C7 /* zsViewController.h */,
+				6044465D20465D63008F09C7 /* zsViewController.m */,
+				6044465E20465D63008F09C7 /* zsViewController.xib */,
+			);
+			path = Signin;
 			sourceTree = "<group>";
 		};
 		6082BACD2044FC7000F82B31 /* SFJSegment */ = {
@@ -297,6 +336,7 @@
 		60B622C320424C4B001DBA43 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				6044464C20464ABE008F09C7 /* Signin */,
 				60987621204404F300243079 /* Me */,
 				60987620204404EA00243079 /* Computer */,
 				6098761F204404E000243079 /* User */,
@@ -470,10 +510,14 @@
 				6082BAD720455E0F00F82B31 /* zige.xib in Resources */,
 				6082BACC2044F84100F82B31 /* loansViewController.xib in Resources */,
 				6082BAC72044EB3900F82B31 /* XgContentTableViewCell.xib in Resources */,
+				6044465120464B00008F09C7 /* foreSigninController.xib in Resources */,
 				D4C7D5AA204597010008F09A /* yuegongCellOne.xib in Resources */,
+				6044466020465D63008F09C7 /* zsViewController.xib in Resources */,
 				609876172043AE8400243079 /* NewsViewCell.xib in Resources */,
+				6044465B204655E9008F09C7 /* cxMoneyController.xib in Resources */,
 				60F978DF20423FF900E79007 /* LaunchScreen.storyboard in Resources */,
 				6082BAC22044EAF500F82B31 /* xgTitleViewCell.xib in Resources */,
+				6044465620464FEB008F09C7 /* UpInfoController.xib in Resources */,
 				6098760D2043A7D700243079 /* HomeIconCell.xib in Resources */,
 				60F978DC20423FF900E79007 /* Assets.xcassets in Resources */,
 				609876122043ADE600243079 /* TitleIconCell.xib in Resources */,
@@ -551,21 +595,25 @@
 				609876112043ADE600243079 /* TitleIconCell.m in Sources */,
 				60F978D720423FF900E79007 /* ViewController.m in Sources */,
 				6098761B2043BAC700243079 /* iconCell.m in Sources */,
+				6044465520464FEB008F09C7 /* UpInfoController.m in Sources */,
 				6082BAB52044DEE900F82B31 /* TTChooseBtnView.m in Sources */,
 				6082BAD5204558A400F82B31 /* daikuan.m in Sources */,
 				60E4015F2042B9CA00EF047E /* HouseSourceController.m in Sources */,
 				60E401682042BE1200EF047E /* AppDelegate+MainUI.m in Sources */,
 				6082BAD02044FCA300F82B31 /* ZFJSegmentedControl.m in Sources */,
 				60F978E220423FF900E79007 /* main.m in Sources */,
+				6044465F20465D63008F09C7 /* zsViewController.m in Sources */,
 				D4C7D5A9204597010008F09A /* yuegongCellOne.m in Sources */,
 				60F978D420423FF900E79007 /* AppDelegate.m in Sources */,
 				60E4015E2042B9CA00EF047E /* UserSourceController.m in Sources */,
 				60E4016B2042BE6000EF047E /* Colours.m in Sources */,
+				6044465A204655E9008F09C7 /* cxMoneyController.m in Sources */,
 				60B622CC20424F43001DBA43 /* commonSet.m in Sources */,
 				6082BAC12044EAF500F82B31 /* xgTitleViewCell.m in Sources */,
 				6098760820439F4700243079 /* BaseViewController.m in Sources */,
 				60E401612042B9CA00EF047E /* MeController.m in Sources */,
 				6082BABC2044EAA700F82B31 /* XgShareViewController.m in Sources */,
+				6044465020464B00008F09C7 /* foreSigninController.m in Sources */,
 				6082BACB2044F84100F82B31 /* loansViewController.m in Sources */,
 				60E401622042B9CA00EF047E /* ComputerController.m in Sources */,
 				6082BAC62044EB3900F82B31 /* XgContentTableViewCell.m in Sources */,
