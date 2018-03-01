@@ -75,6 +75,7 @@
 		D4C7D5AF2046E3E70008F09A /* rzshViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4C7D5AD2046E3E70008F09A /* rzshViewController.xib */; };
 		D4C7D5B32046E7A40008F09A /* loginController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C7D5B12046E7A40008F09A /* loginController.m */; };
 		D4C7D5B42046E7A40008F09A /* loginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4C7D5B22046E7A40008F09A /* loginController.xib */; };
+		D4C7D5BA2047DD270008F09A /* DOPDropDownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C7D5B92047DD270008F09A /* DOPDropDownMenu.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -192,6 +193,8 @@
 		D4C7D5B02046E7A40008F09A /* loginController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = loginController.h; sourceTree = "<group>"; };
 		D4C7D5B12046E7A40008F09A /* loginController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = loginController.m; sourceTree = "<group>"; };
 		D4C7D5B22046E7A40008F09A /* loginController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = loginController.xib; sourceTree = "<group>"; };
+		D4C7D5B82047DD270008F09A /* DOPDropDownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOPDropDownMenu.h; sourceTree = "<group>"; };
+		D4C7D5B92047DD270008F09A /* DOPDropDownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOPDropDownMenu.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +212,8 @@
 		60444648204642DD008F09C7 /* DVSwitch */ = {
 			isa = PBXGroup;
 			children = (
+				6044464A204642EE008F09C7 /* DVSwitch.h */,
+				60444649204642EE008F09C7 /* DVSwitch.m */,
 			);
 			path = DVSwitch;
 			sourceTree = "<group>";
@@ -422,9 +427,8 @@
 		60B622C620424C63001DBA43 /* ThirdTools */ = {
 			isa = PBXGroup;
 			children = (
+				D4C7D5B72047DCEB0008F09A /* DOPDrop */,
 				60444648204642DD008F09C7 /* DVSwitch */,
-				6044464A204642EE008F09C7 /* DVSwitch.h */,
-				60444649204642EE008F09C7 /* DVSwitch.m */,
 				6082BACD2044FC7000F82B31 /* SFJSegment */,
 				6082BAB32044DEE900F82B31 /* TTChooseBtnView.h */,
 				6082BAB42044DEE900F82B31 /* TTChooseBtnView.m */,
@@ -500,6 +504,15 @@
 				63AE435D0F5CF73E52226419 /* Pods-CZToken.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		D4C7D5B72047DCEB0008F09A /* DOPDrop */ = {
+			isa = PBXGroup;
+			children = (
+				D4C7D5B82047DD270008F09A /* DOPDropDownMenu.h */,
+				D4C7D5B92047DD270008F09A /* DOPDropDownMenu.m */,
+			);
+			path = DOPDrop;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -680,6 +693,7 @@
 				6098760820439F4700243079 /* BaseViewController.m in Sources */,
 				60E401612042B9CA00EF047E /* MeController.m in Sources */,
 				D4C7D5AE2046E3E70008F09A /* rzshViewController.m in Sources */,
+				D4C7D5BA2047DD270008F09A /* DOPDropDownMenu.m in Sources */,
 				6082BABC2044EAA700F82B31 /* XgShareViewController.m in Sources */,
 				6044465020464B00008F09C7 /* foreSigninController.m in Sources */,
 				6044466E20469EE3008F09C7 /* textCell.m in Sources */,
