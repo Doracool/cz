@@ -69,6 +69,8 @@
 		60F978DF20423FF900E79007 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60F978DD20423FF900E79007 /* LaunchScreen.storyboard */; };
 		60F978E220423FF900E79007 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F978E120423FF900E79007 /* main.m */; };
 		AA6D2A9B724FAEC47113B680 /* libPods-CZToken.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E4F68D696251ABCA40F72E7 /* libPods-CZToken.a */; };
+		D422578520483169003D146B /* HouseDetailsController.m in Sources */ = {isa = PBXBuildFile; fileRef = D422578320483169003D146B /* HouseDetailsController.m */; };
+		D422578620483169003D146B /* HouseDetailsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D422578420483169003D146B /* HouseDetailsController.xib */; };
 		D4C7D5A9204597010008F09A /* yuegongCellOne.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C7D5A7204597010008F09A /* yuegongCellOne.m */; };
 		D4C7D5AA204597010008F09A /* yuegongCellOne.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4C7D5A8204597010008F09A /* yuegongCellOne.xib */; };
 		D4C7D5AE2046E3E70008F09A /* rzshViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C7D5AC2046E3E70008F09A /* rzshViewController.m */; };
@@ -76,6 +78,8 @@
 		D4C7D5B32046E7A40008F09A /* loginController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C7D5B12046E7A40008F09A /* loginController.m */; };
 		D4C7D5B42046E7A40008F09A /* loginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4C7D5B22046E7A40008F09A /* loginController.xib */; };
 		D4C7D5BA2047DD270008F09A /* DOPDropDownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C7D5B92047DD270008F09A /* DOPDropDownMenu.m */; };
+		D4C7D5BF2047E1EE0008F09A /* houseSourceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C7D5BD2047E1EE0008F09A /* houseSourceCell.m */; };
+		D4C7D5C02047E1EE0008F09A /* houseSourceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4C7D5BE2047E1EE0008F09A /* houseSourceCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -184,6 +188,9 @@
 		60F978E120423FF900E79007 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		63AE435D0F5CF73E52226419 /* Pods-CZToken.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CZToken.release.xcconfig"; path = "Pods/Target Support Files/Pods-CZToken/Pods-CZToken.release.xcconfig"; sourceTree = "<group>"; };
 		ADCB27ACA71D600386FDB063 /* Pods-CZToken.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CZToken.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CZToken/Pods-CZToken.debug.xcconfig"; sourceTree = "<group>"; };
+		D422578220483169003D146B /* HouseDetailsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HouseDetailsController.h; sourceTree = "<group>"; };
+		D422578320483169003D146B /* HouseDetailsController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HouseDetailsController.m; sourceTree = "<group>"; };
+		D422578420483169003D146B /* HouseDetailsController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HouseDetailsController.xib; sourceTree = "<group>"; };
 		D4C7D5A6204597010008F09A /* yuegongCellOne.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = yuegongCellOne.h; sourceTree = "<group>"; };
 		D4C7D5A7204597010008F09A /* yuegongCellOne.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = yuegongCellOne.m; sourceTree = "<group>"; };
 		D4C7D5A8204597010008F09A /* yuegongCellOne.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = yuegongCellOne.xib; sourceTree = "<group>"; };
@@ -195,6 +202,9 @@
 		D4C7D5B22046E7A40008F09A /* loginController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = loginController.xib; sourceTree = "<group>"; };
 		D4C7D5B82047DD270008F09A /* DOPDropDownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOPDropDownMenu.h; sourceTree = "<group>"; };
 		D4C7D5B92047DD270008F09A /* DOPDropDownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOPDropDownMenu.m; sourceTree = "<group>"; };
+		D4C7D5BC2047E1EE0008F09A /* houseSourceCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = houseSourceCell.h; sourceTree = "<group>"; };
+		D4C7D5BD2047E1EE0008F09A /* houseSourceCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = houseSourceCell.m; sourceTree = "<group>"; };
+		D4C7D5BE2047E1EE0008F09A /* houseSourceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = houseSourceCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -285,6 +295,9 @@
 			children = (
 				60E401562042B9C900EF047E /* HouseSourceController.h */,
 				60E401572042B9C900EF047E /* HouseSourceController.m */,
+				D422578220483169003D146B /* HouseDetailsController.h */,
+				D422578320483169003D146B /* HouseDetailsController.m */,
+				D422578420483169003D146B /* HouseDetailsController.xib */,
 			);
 			path = House;
 			sourceTree = "<group>";
@@ -419,6 +432,7 @@
 		60B622C520424C5C001DBA43 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D4C7D5BB2047E1C10008F09A /* House */,
 				609876222044052C00243079 /* Home */,
 			);
 			path = View;
@@ -515,6 +529,16 @@
 			path = DOPDrop;
 			sourceTree = "<group>";
 		};
+		D4C7D5BB2047E1C10008F09A /* House */ = {
+			isa = PBXGroup;
+			children = (
+				D4C7D5BC2047E1EE0008F09A /* houseSourceCell.h */,
+				D4C7D5BD2047E1EE0008F09A /* houseSourceCell.m */,
+				D4C7D5BE2047E1EE0008F09A /* houseSourceCell.xib */,
+			);
+			path = House;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -593,6 +617,7 @@
 				6098760D2043A7D700243079 /* HomeIconCell.xib in Resources */,
 				60F978DC20423FF900E79007 /* Assets.xcassets in Resources */,
 				609876122043ADE600243079 /* TitleIconCell.xib in Resources */,
+				D4C7D5C02047E1EE0008F09A /* houseSourceCell.xib in Resources */,
 				6044466A20468F2B008F09C7 /* jjrViewController.xib in Resources */,
 				60F978DA20423FF900E79007 /* Main.storyboard in Resources */,
 				6082BAD22045588A00F82B31 /* daikuan.xib in Resources */,
@@ -602,6 +627,7 @@
 				604446792046B32C008F09C7 /* UpImgCell.xib in Resources */,
 				604446742046A037008F09C7 /* rzyzViewController.xib in Resources */,
 				6098761C2043BAC700243079 /* iconCell.xib in Resources */,
+				D422578620483169003D146B /* HouseDetailsController.xib in Resources */,
 				6098760520439E8000243079 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -680,6 +706,7 @@
 				60F978E220423FF900E79007 /* main.m in Sources */,
 				6044465F20465D63008F09C7 /* zsViewController.m in Sources */,
 				D4C7D5A9204597010008F09A /* yuegongCellOne.m in Sources */,
+				D4C7D5BF2047E1EE0008F09A /* houseSourceCell.m in Sources */,
 				60F978D420423FF900E79007 /* AppDelegate.m in Sources */,
 				60E4015E2042B9CA00EF047E /* UserSourceController.m in Sources */,
 				6044466920468F2B008F09C7 /* jjrViewController.m in Sources */,
@@ -693,6 +720,7 @@
 				6098760820439F4700243079 /* BaseViewController.m in Sources */,
 				60E401612042B9CA00EF047E /* MeController.m in Sources */,
 				D4C7D5AE2046E3E70008F09A /* rzshViewController.m in Sources */,
+				D422578520483169003D146B /* HouseDetailsController.m in Sources */,
 				D4C7D5BA2047DD270008F09A /* DOPDropDownMenu.m in Sources */,
 				6082BABC2044EAA700F82B31 /* XgShareViewController.m in Sources */,
 				6044465020464B00008F09C7 /* foreSigninController.m in Sources */,

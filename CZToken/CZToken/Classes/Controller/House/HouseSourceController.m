@@ -7,14 +7,16 @@
 //
 
 #import "HouseSourceController.h"
-
-@interface HouseSourceController ()<DOPDropDownMenuDelegate,DOPDropDownMenuDataSource>
+#import "houseSourceCell.h"
+#import "HouseDetailsController.h"
+@interface HouseSourceController ()<DOPDropDownMenuDelegate,DOPDropDownMenuDataSource,UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) NSArray *arr1;
 @property (nonatomic, strong) NSArray *arr2;
 @property (nonatomic, strong) NSArray *arr3;
 @property (nonatomic, strong) NSArray *arr4;
 
 @property (nonatomic, weak) DOPDropDownMenu *menu;
+@property (nonatomic, strong) UITableView *myTableView;
 @end
 
 @implementation HouseSourceController
@@ -27,7 +29,7 @@
     self.arr3 = @[@"czx",@"qew",@"sdfad",@"sfd"];
     self.arr4 = @[@"gfd",@"gdfs",@"rew",@"ter"];
     
-    DOPDropDownMenu *menu = [[DOPDropDownMenu alloc] initWithOrigin:CGPointMake(0, 100) andHeight:40];
+    DOPDropDownMenu *menu = [[DOPDropDownMenu alloc] initWithOrigin:CGPointMake(0, 64) andHeight:40];
     menu.delegate = self;
     menu.dataSource = self;
     [self.view addSubview:menu];
@@ -36,7 +38,13 @@
     _menu.finishedBlock = ^(DOPIndexPath *indexPath) {
         
     };
-    [menu selectIndexPath:[DOPIndexPath indexPathWithCol:0 row:0 item:0  ]];
+    [menu selectIndexPath:[DOPIndexPath indexPathWithCol:0 row:0 item:0]];
+    
+    _myTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 104, screenW, screenH-104) style:UITableViewStylePlain];
+    [self.view addSubview:_myTableView];
+    _myTableView.delegate = self;
+    _myTableView.dataSource = self;
+    _myTableView.rowHeight = 120;
     // Do any additional setup after loading the view.
 }
 
@@ -67,6 +75,24 @@
     } else {
         return self.arr4[indexPath.row];
     }
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 10;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *identifier = @"cell";
+    houseSourceCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    if (cell == nil) {
+        cell = [[NSBundle mainBundle] loadNibNamed:@"houseSourceCell" owner:self options:nil][0];
+    }
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    HouseDetailsController *details = [[HouseDetailsController alloc] init];
+    [self.navigationController pushViewController:details animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
