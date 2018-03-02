@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -268,12 +268,18 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xge-I7-OUo">
-                                    <rect key="frame" x="20" y="526" width="152.5" height="30"/>
+                                    <rect key="frame" x="20" y="526" width="152.5" height="40"/>
                                     <color key="backgroundColor" red="0.96235281230000003" green="0.42924373589999998" blue="0.4080162148" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="40" id="NT5-hU-0Y6"/>
+                                    </constraints>
                                     <state key="normal" title="看业主"/>
+                                    <connections>
+                                        <action selector="lookOwner:" destination="-1" eventType="touchUpInside" id="4oO-RP-kbd"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mff-9o-hGX">
-                                    <rect key="frame" x="202.5" y="526" width="152.5" height="30"/>
+                                    <rect key="frame" x="202.5" y="526" width="152.5" height="40"/>
                                     <color key="backgroundColor" red="0.96235281230000003" green="0.42924373589999998" blue="0.4080162148" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <state key="normal" title="跟 进"/>
                                 </button>
@@ -286,6 +292,7 @@
                                 <constraint firstItem="sdY-nr-f7D" firstAttribute="top" secondItem="xTx-Fq-8pg" secondAttribute="bottom" constant="5" id="2Nx-R2-0Sf"/>
                                 <constraint firstItem="ZlU-9g-gtv" firstAttribute="leading" secondItem="KAG-0n-CLy" secondAttribute="leading" id="2ug-BJ-KeC"/>
                                 <constraint firstItem="bG8-yU-DBf" firstAttribute="centerY" secondItem="NJy-UC-2QD" secondAttribute="centerY" id="43O-UD-7jl"/>
+                                <constraint firstItem="mff-9o-hGX" firstAttribute="height" secondItem="Xge-I7-OUo" secondAttribute="height" id="5BP-6B-X7d"/>
                                 <constraint firstAttribute="trailing" secondItem="ZlU-9g-gtv" secondAttribute="trailing" id="5Ip-WK-Yrb"/>
                                 <constraint firstItem="aa7-65-gC2" firstAttribute="centerY" secondItem="Xyq-kJ-Hhw" secondAttribute="centerY" id="5pY-AQ-REj"/>
                                 <constraint firstItem="Zna-UD-AjZ" firstAttribute="centerY" secondItem="0WI-rU-ReC" secondAttribute="centerY" id="6HH-Zd-lKj"/>

@@ -1,26 +1,27 @@
 //
-//  HouseDetailsController.m
+//  writeLogController.m
 //  CZToken
 //
-//  Created by 周帅杰 on 2018/3/1.
+//  Created by jlc on 2018/3/2.
 //  Copyright © 2018年 NYHZ. All rights reserved.
 //
 
-#import "HouseDetailsController.h"
-#import "lookOwnerController.h"
-@interface HouseDetailsController ()
+#import "writeLogController.h"
 
+@interface writeLogController ()
+
+@property (strong, nonatomic) IBOutlet UITextView *content;
 @end
 
-@implementation HouseDetailsController
+@implementation writeLogController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _content.layer.cornerRadius = 5.0f;
+    _content.layer.borderWidth = 1.0f;
+    _content.layer.borderColor = [UIColor lineColor].CGColor;
+    _content.layer.masksToBounds = YES;
     // Do any additional setup after loading the view from its nib.
-}
-- (IBAction)lookOwner:(UIButton *)sender {
-    lookOwnerController *owner = [[lookOwnerController alloc] init];
-    [self.navigationController pushViewController:owner animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		602B68C02048EE6700748562 /* lookOwnerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 602B68BE2048EE6700748562 /* lookOwnerController.m */; };
+		602B68C12048EE6700748562 /* lookOwnerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 602B68BF2048EE6700748562 /* lookOwnerController.xib */; };
+		602B68C52048F0C300748562 /* OwnerInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 602B68C32048F0C300748562 /* OwnerInfoCell.m */; };
+		602B68C62048F0C300748562 /* OwnerInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 602B68C42048F0C300748562 /* OwnerInfoCell.xib */; };
+		602B68CA2048F67700748562 /* writeLogController.m in Sources */ = {isa = PBXBuildFile; fileRef = 602B68C82048F67700748562 /* writeLogController.m */; };
+		602B68CB2048F67700748562 /* writeLogController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 602B68C92048F67700748562 /* writeLogController.xib */; };
 		6044464B204642EE008F09C7 /* DVSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 60444649204642EE008F09C7 /* DVSwitch.m */; };
 		6044465020464B00008F09C7 /* foreSigninController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6044464E20464B00008F09C7 /* foreSigninController.m */; };
 		6044465120464B00008F09C7 /* foreSigninController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6044464F20464B00008F09C7 /* foreSigninController.xib */; };
@@ -84,6 +90,15 @@
 
 /* Begin PBXFileReference section */
 		5E4F68D696251ABCA40F72E7 /* libPods-CZToken.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CZToken.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		602B68BD2048EE6700748562 /* lookOwnerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lookOwnerController.h; sourceTree = "<group>"; };
+		602B68BE2048EE6700748562 /* lookOwnerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = lookOwnerController.m; sourceTree = "<group>"; };
+		602B68BF2048EE6700748562 /* lookOwnerController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = lookOwnerController.xib; sourceTree = "<group>"; };
+		602B68C22048F0C200748562 /* OwnerInfoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OwnerInfoCell.h; sourceTree = "<group>"; };
+		602B68C32048F0C300748562 /* OwnerInfoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OwnerInfoCell.m; sourceTree = "<group>"; };
+		602B68C42048F0C300748562 /* OwnerInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OwnerInfoCell.xib; sourceTree = "<group>"; };
+		602B68C72048F67700748562 /* writeLogController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = writeLogController.h; sourceTree = "<group>"; };
+		602B68C82048F67700748562 /* writeLogController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = writeLogController.m; sourceTree = "<group>"; };
+		602B68C92048F67700748562 /* writeLogController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = writeLogController.xib; sourceTree = "<group>"; };
 		60444649204642EE008F09C7 /* DVSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVSwitch.m; sourceTree = "<group>"; };
 		6044464A204642EE008F09C7 /* DVSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVSwitch.h; sourceTree = "<group>"; };
 		6044464D20464B00008F09C7 /* foreSigninController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = foreSigninController.h; sourceTree = "<group>"; };
@@ -298,6 +313,12 @@
 				D422578220483169003D146B /* HouseDetailsController.h */,
 				D422578320483169003D146B /* HouseDetailsController.m */,
 				D422578420483169003D146B /* HouseDetailsController.xib */,
+				602B68BD2048EE6700748562 /* lookOwnerController.h */,
+				602B68BE2048EE6700748562 /* lookOwnerController.m */,
+				602B68BF2048EE6700748562 /* lookOwnerController.xib */,
+				602B68C72048F67700748562 /* writeLogController.h */,
+				602B68C82048F67700748562 /* writeLogController.m */,
+				602B68C92048F67700748562 /* writeLogController.xib */,
 			);
 			path = House;
 			sourceTree = "<group>";
@@ -535,6 +556,9 @@
 				D4C7D5BC2047E1EE0008F09A /* houseSourceCell.h */,
 				D4C7D5BD2047E1EE0008F09A /* houseSourceCell.m */,
 				D4C7D5BE2047E1EE0008F09A /* houseSourceCell.xib */,
+				602B68C22048F0C200748562 /* OwnerInfoCell.h */,
+				602B68C32048F0C300748562 /* OwnerInfoCell.m */,
+				602B68C42048F0C300748562 /* OwnerInfoCell.xib */,
 			);
 			path = House;
 			sourceTree = "<group>";
@@ -602,6 +626,7 @@
 			files = (
 				6082BAD720455E0F00F82B31 /* zige.xib in Resources */,
 				604446652046818E008F09C7 /* SignController.xib in Resources */,
+				602B68C12048EE6700748562 /* lookOwnerController.xib in Resources */,
 				6082BACC2044F84100F82B31 /* loansViewController.xib in Resources */,
 				6082BAC72044EB3900F82B31 /* XgContentTableViewCell.xib in Resources */,
 				6044465120464B00008F09C7 /* foreSigninController.xib in Resources */,
@@ -623,12 +648,14 @@
 				6082BAD22045588A00F82B31 /* daikuan.xib in Resources */,
 				D4C7D5AF2046E3E70008F09A /* rzshViewController.xib in Resources */,
 				60987627204405F700243079 /* XgViewController.xib in Resources */,
+				602B68CB2048F67700748562 /* writeLogController.xib in Resources */,
 				6082BABD2044EAA700F82B31 /* XgShareViewController.xib in Resources */,
 				604446792046B32C008F09C7 /* UpImgCell.xib in Resources */,
 				604446742046A037008F09C7 /* rzyzViewController.xib in Resources */,
 				6098761C2043BAC700243079 /* iconCell.xib in Resources */,
 				D422578620483169003D146B /* HouseDetailsController.xib in Resources */,
 				6098760520439E8000243079 /* HomeViewController.xib in Resources */,
+				602B68C62048F0C300748562 /* OwnerInfoCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -689,6 +716,7 @@
 			files = (
 				6082BAB82044E28C00F82B31 /* UIView+TTExtension.m in Sources */,
 				6082BADA20455E1F00F82B31 /* zige.m in Sources */,
+				602B68C52048F0C300748562 /* OwnerInfoCell.m in Sources */,
 				6044464B204642EE008F09C7 /* DVSwitch.m in Sources */,
 				60E401652042BA3000EF047E /* CZTabBarController.m in Sources */,
 				60987626204405F700243079 /* XgViewController.m in Sources */,
@@ -699,6 +727,7 @@
 				6098761B2043BAC700243079 /* iconCell.m in Sources */,
 				6044465520464FEB008F09C7 /* UpInfoController.m in Sources */,
 				6082BAB52044DEE900F82B31 /* TTChooseBtnView.m in Sources */,
+				602B68C02048EE6700748562 /* lookOwnerController.m in Sources */,
 				6082BAD5204558A400F82B31 /* daikuan.m in Sources */,
 				60E4015F2042B9CA00EF047E /* HouseSourceController.m in Sources */,
 				60E401682042BE1200EF047E /* AppDelegate+MainUI.m in Sources */,
@@ -717,6 +746,7 @@
 				6044465A204655E9008F09C7 /* cxMoneyController.m in Sources */,
 				60B622CC20424F43001DBA43 /* commonSet.m in Sources */,
 				6082BAC12044EAF500F82B31 /* xgTitleViewCell.m in Sources */,
+				602B68CA2048F67700748562 /* writeLogController.m in Sources */,
 				6098760820439F4700243079 /* BaseViewController.m in Sources */,
 				60E401612042B9CA00EF047E /* MeController.m in Sources */,
 				D4C7D5AE2046E3E70008F09A /* rzshViewController.m in Sources */,
@@ -867,7 +897,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3AAV5C4X4L;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "/Users/ighibli/Desktop/我的/cz/CZToken/CZToken/CZToken-Prefix.pch";
+				GCC_PREFIX_HEADER = "/Users/jlc/Desktop/Other/cz/CZToken/CZToken/CZToken-Prefix.pch";
 				INFOPLIST_FILE = CZToken/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -885,7 +915,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3AAV5C4X4L;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "/Users/ighibli/Desktop/我的/cz/CZToken/CZToken/CZToken-Prefix.pch";
+				GCC_PREFIX_HEADER = "/Users/jlc/Desktop/Other/cz/CZToken/CZToken/CZToken-Prefix.pch";
 				INFOPLIST_FILE = CZToken/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
