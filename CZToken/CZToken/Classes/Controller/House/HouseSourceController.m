@@ -9,12 +9,13 @@
 #import "HouseSourceController.h"
 #import "houseSourceCell.h"
 #import "HouseDetailsController.h"
+#import "addHouseInfoController.h"
 @interface HouseSourceController ()<DOPDropDownMenuDelegate,DOPDropDownMenuDataSource,UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) NSArray *arr1;
 @property (nonatomic, strong) NSArray *arr2;
 @property (nonatomic, strong) NSArray *arr3;
 @property (nonatomic, strong) NSArray *arr4;
-
+@property (nonatomic, strong) UIButton *add;
 @property (nonatomic, weak) DOPDropDownMenu *menu;
 @property (nonatomic, strong) UITableView *myTableView;
 @end
@@ -24,7 +25,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    self.arr1 = @[@"1",@"2",@"3",@"4"];
+    self.arr1 = @[@"1阿萨德",@"爱迪生2",@"恶趣味3",@"爱的4"];
     self.arr2 = @[@"22",@"33",@"44",@"5"];
     self.arr3 = @[@"czx",@"qew",@"sdfad",@"sfd"];
     self.arr4 = @[@"gfd",@"gdfs",@"rew",@"ter"];
@@ -46,6 +47,19 @@
     _myTableView.dataSource = self;
     _myTableView.rowHeight = 120;
     // Do any additional setup after loading the view.
+    self.add = [[UIButton alloc] initWithFrame:CGRectMake(screenW-50, screenH-150, 30, 30)];
+    [self.view addSubview:self.add];
+    [_add setTitle:@"+" forState:UIControlStateNormal];
+    [_add setBackgroundColor:[UIColor redColor]];
+    _add.layer.cornerRadius = 15.0f;
+    _add.layer.masksToBounds = YES;
+    [_add setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [_add addTarget:self action:@selector(addHouse) forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void)addHouse {
+    addHouseInfoController *add = [[addHouseInfoController alloc] init];
+    [self.navigationController pushViewController:add animated:YES];
 }
 
 - (NSInteger)numberOfColumnsInMenu:(DOPDropDownMenu *)menu {

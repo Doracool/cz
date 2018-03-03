@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LogListController">
             <connections>
+                <outlet property="myTableView" destination="qai-E5-bfN" id="k7e-1o-TJ8"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,8 +20,18 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6RT-vE-4Md">
+                    <rect key="frame" x="0.0" y="40" width="375" height="8"/>
+                    <color key="backgroundColor" red="0.77651131149999997" green="0.77648186679999998" blue="0.77650189400000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="8" id="n9c-Yu-fKC"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qai-E5-bfN">
-                    <rect key="frame" x="0.0" y="110" width="375" height="407"/>
+                    <rect key="frame" x="0.0" y="48" width="375" height="469"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="fGr-YQ-mbh"/>
@@ -33,19 +44,23 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="LxN-Eq-g0d"/>
                     </constraints>
-                    <state key="normal" title="Button"/>
+                    <state key="normal" title="写跟进"/>
                 </button>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstAttribute="trailing" secondItem="6RT-vE-4Md" secondAttribute="trailing" id="AeC-Lx-P1d"/>
+                <constraint firstItem="6RT-vE-4Md" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="DuR-1O-cXA"/>
                 <constraint firstItem="7JW-Vd-HiA" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="Kf5-8s-bBi"/>
-                <constraint firstItem="qai-E5-bfN" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="110" id="Shg-sC-B0z"/>
+                <constraint firstItem="qai-E5-bfN" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="48" id="Shg-sC-B0z"/>
                 <constraint firstAttribute="trailing" secondItem="7JW-Vd-HiA" secondAttribute="trailing" constant="30" id="Y06-cc-R1y"/>
                 <constraint firstItem="7JW-Vd-HiA" firstAttribute="top" secondItem="qai-E5-bfN" secondAttribute="bottom" constant="50" id="ffA-z3-d4G"/>
                 <constraint firstAttribute="trailing" secondItem="qai-E5-bfN" secondAttribute="trailing" id="gJK-8Q-sAe"/>
+                <constraint firstItem="6RT-vE-4Md" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="40" id="jfx-oO-7W4"/>
                 <constraint firstAttribute="bottom" secondItem="qai-E5-bfN" secondAttribute="bottom" constant="150" id="w0T-Uq-TxI"/>
                 <constraint firstItem="qai-E5-bfN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="zdI-kj-uKS"/>
             </constraints>
+            <point key="canvasLocation" x="-8" y="58"/>
         </view>
     </objects>
 </document>

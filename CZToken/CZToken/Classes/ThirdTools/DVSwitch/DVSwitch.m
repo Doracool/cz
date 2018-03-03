@@ -49,12 +49,15 @@
     
     self.strings = strings;
     self.cornerRadius = 15.0f;
-    self.sliderOffset = 1.0f;
-    
-    self.backgroundColor = [UIColor colorWithRed:255/255.0 green:83/255.0 blue:49/255.0 alpha:1.0];
-    self.sliderColor = [UIColor whiteColor];
-    self.labelTextColorInsideSlider = [UIColor redColor];
-    self.labelTextColorOutsideSlider = [UIColor whiteColor];
+//    self.sliderOffset = 1.0f;
+    self.layer.borderColor = [UIColor colorWithRed:255/255.0 green:83/255.0 blue:49/255.0 alpha:1.0].CGColor;
+    self.layer.borderWidth = 1.0f;
+    self.layer.cornerRadius = 15.0f;
+    self.layer.masksToBounds = YES;
+    self.backgroundColor = [UIColor whiteColor];
+    self.sliderColor = [UIColor colorWithRed:255/255.0 green:83/255.0 blue:49/255.0 alpha:1.0];
+    self.labelTextColorInsideSlider = [UIColor whiteColor];
+    self.labelTextColorOutsideSlider = [UIColor colorWithRed:255/255.0 green:83/255.0 blue:49/255.0 alpha:1.0];
     
     self.backgroundView = [[UIView alloc] init];
     self.backgroundView.backgroundColor = self.backgroundColor;

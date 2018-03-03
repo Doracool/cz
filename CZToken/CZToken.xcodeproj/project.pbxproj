@@ -15,6 +15,14 @@
 		602B68CB2048F67700748562 /* writeLogController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 602B68C92048F67700748562 /* writeLogController.xib */; };
 		602B68CF204929E200748562 /* LogListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 602B68CD204929E200748562 /* LogListController.m */; };
 		602B68D0204929E200748562 /* LogListController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 602B68CE204929E200748562 /* LogListController.xib */; };
+		604353F0204A822A002E24C9 /* logListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 604353EE204A822A002E24C9 /* logListCell.m */; };
+		604353F1204A822A002E24C9 /* logListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 604353EF204A822A002E24C9 /* logListCell.xib */; };
+		604353F5204A8644002E24C9 /* payForSeeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 604353F3204A8644002E24C9 /* payForSeeController.m */; };
+		604353F6204A8644002E24C9 /* payForSeeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 604353F4204A8644002E24C9 /* payForSeeController.xib */; };
+		604353FA204A883A002E24C9 /* addHouseInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 604353F8204A883A002E24C9 /* addHouseInfoController.m */; };
+		604353FB204A883A002E24C9 /* addHouseInfoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 604353F9204A883A002E24C9 /* addHouseInfoController.xib */; };
+		604353FF204A9820002E24C9 /* addHouseDetailsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 604353FD204A9820002E24C9 /* addHouseDetailsController.m */; };
+		60435400204A9820002E24C9 /* addHouseDetailsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 604353FE204A9820002E24C9 /* addHouseDetailsController.xib */; };
 		6044464B204642EE008F09C7 /* DVSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 60444649204642EE008F09C7 /* DVSwitch.m */; };
 		6044465020464B00008F09C7 /* foreSigninController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6044464E20464B00008F09C7 /* foreSigninController.m */; };
 		6044465120464B00008F09C7 /* foreSigninController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6044464F20464B00008F09C7 /* foreSigninController.xib */; };
@@ -104,6 +112,18 @@
 		602B68CC204929E200748562 /* LogListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LogListController.h; sourceTree = "<group>"; };
 		602B68CD204929E200748562 /* LogListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LogListController.m; sourceTree = "<group>"; };
 		602B68CE204929E200748562 /* LogListController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LogListController.xib; sourceTree = "<group>"; };
+		604353ED204A822A002E24C9 /* logListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = logListCell.h; sourceTree = "<group>"; };
+		604353EE204A822A002E24C9 /* logListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = logListCell.m; sourceTree = "<group>"; };
+		604353EF204A822A002E24C9 /* logListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = logListCell.xib; sourceTree = "<group>"; };
+		604353F2204A8644002E24C9 /* payForSeeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = payForSeeController.h; sourceTree = "<group>"; };
+		604353F3204A8644002E24C9 /* payForSeeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = payForSeeController.m; sourceTree = "<group>"; };
+		604353F4204A8644002E24C9 /* payForSeeController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = payForSeeController.xib; sourceTree = "<group>"; };
+		604353F7204A883A002E24C9 /* addHouseInfoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = addHouseInfoController.h; sourceTree = "<group>"; };
+		604353F8204A883A002E24C9 /* addHouseInfoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = addHouseInfoController.m; sourceTree = "<group>"; };
+		604353F9204A883A002E24C9 /* addHouseInfoController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = addHouseInfoController.xib; sourceTree = "<group>"; };
+		604353FC204A9820002E24C9 /* addHouseDetailsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = addHouseDetailsController.h; sourceTree = "<group>"; };
+		604353FD204A9820002E24C9 /* addHouseDetailsController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = addHouseDetailsController.m; sourceTree = "<group>"; };
+		604353FE204A9820002E24C9 /* addHouseDetailsController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = addHouseDetailsController.xib; sourceTree = "<group>"; };
 		60444649204642EE008F09C7 /* DVSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVSwitch.m; sourceTree = "<group>"; };
 		6044464A204642EE008F09C7 /* DVSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVSwitch.h; sourceTree = "<group>"; };
 		6044464D20464B00008F09C7 /* foreSigninController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = foreSigninController.h; sourceTree = "<group>"; };
@@ -327,6 +347,15 @@
 				602B68CC204929E200748562 /* LogListController.h */,
 				602B68CD204929E200748562 /* LogListController.m */,
 				602B68CE204929E200748562 /* LogListController.xib */,
+				604353F2204A8644002E24C9 /* payForSeeController.h */,
+				604353F3204A8644002E24C9 /* payForSeeController.m */,
+				604353F4204A8644002E24C9 /* payForSeeController.xib */,
+				604353F7204A883A002E24C9 /* addHouseInfoController.h */,
+				604353F8204A883A002E24C9 /* addHouseInfoController.m */,
+				604353F9204A883A002E24C9 /* addHouseInfoController.xib */,
+				604353FC204A9820002E24C9 /* addHouseDetailsController.h */,
+				604353FD204A9820002E24C9 /* addHouseDetailsController.m */,
+				604353FE204A9820002E24C9 /* addHouseDetailsController.xib */,
 			);
 			path = House;
 			sourceTree = "<group>";
@@ -567,6 +596,9 @@
 				602B68C22048F0C200748562 /* OwnerInfoCell.h */,
 				602B68C32048F0C300748562 /* OwnerInfoCell.m */,
 				602B68C42048F0C300748562 /* OwnerInfoCell.xib */,
+				604353ED204A822A002E24C9 /* logListCell.h */,
+				604353EE204A822A002E24C9 /* logListCell.m */,
+				604353EF204A822A002E24C9 /* logListCell.xib */,
 			);
 			path = House;
 			sourceTree = "<group>";
@@ -632,6 +664,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				604353F1204A822A002E24C9 /* logListCell.xib in Resources */,
 				6082BAD720455E0F00F82B31 /* zige.xib in Resources */,
 				604446652046818E008F09C7 /* SignController.xib in Resources */,
 				602B68C12048EE6700748562 /* lookOwnerController.xib in Resources */,
@@ -654,7 +687,9 @@
 				6044466A20468F2B008F09C7 /* jjrViewController.xib in Resources */,
 				60F978DA20423FF900E79007 /* Main.storyboard in Resources */,
 				6082BAD22045588A00F82B31 /* daikuan.xib in Resources */,
+				60435400204A9820002E24C9 /* addHouseDetailsController.xib in Resources */,
 				D4C7D5AF2046E3E70008F09A /* rzshViewController.xib in Resources */,
+				604353FB204A883A002E24C9 /* addHouseInfoController.xib in Resources */,
 				60987627204405F700243079 /* XgViewController.xib in Resources */,
 				602B68CB2048F67700748562 /* writeLogController.xib in Resources */,
 				602B68D0204929E200748562 /* LogListController.xib in Resources */,
@@ -665,6 +700,7 @@
 				D422578620483169003D146B /* HouseDetailsController.xib in Resources */,
 				6098760520439E8000243079 /* HomeViewController.xib in Resources */,
 				602B68C62048F0C300748562 /* OwnerInfoCell.xib in Resources */,
+				604353F6204A8644002E24C9 /* payForSeeController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -729,6 +765,7 @@
 				6044464B204642EE008F09C7 /* DVSwitch.m in Sources */,
 				60E401652042BA3000EF047E /* CZTabBarController.m in Sources */,
 				60987626204405F700243079 /* XgViewController.m in Sources */,
+				604353F0204A822A002E24C9 /* logListCell.m in Sources */,
 				609876162043AE8400243079 /* NewsViewCell.m in Sources */,
 				6098760C2043A7D700243079 /* HomeIconCell.m in Sources */,
 				609876112043ADE600243079 /* TitleIconCell.m in Sources */,
@@ -736,6 +773,7 @@
 				6098761B2043BAC700243079 /* iconCell.m in Sources */,
 				6044465520464FEB008F09C7 /* UpInfoController.m in Sources */,
 				6082BAB52044DEE900F82B31 /* TTChooseBtnView.m in Sources */,
+				604353F5204A8644002E24C9 /* payForSeeController.m in Sources */,
 				602B68C02048EE6700748562 /* lookOwnerController.m in Sources */,
 				6082BAD5204558A400F82B31 /* daikuan.m in Sources */,
 				60E4015F2042B9CA00EF047E /* HouseSourceController.m in Sources */,
@@ -743,6 +781,7 @@
 				602B68CF204929E200748562 /* LogListController.m in Sources */,
 				6082BAD02044FCA300F82B31 /* ZFJSegmentedControl.m in Sources */,
 				60F978E220423FF900E79007 /* main.m in Sources */,
+				604353FF204A9820002E24C9 /* addHouseDetailsController.m in Sources */,
 				6044465F20465D63008F09C7 /* zsViewController.m in Sources */,
 				D4C7D5A9204597010008F09A /* yuegongCellOne.m in Sources */,
 				D4C7D5BF2047E1EE0008F09A /* houseSourceCell.m in Sources */,
@@ -755,6 +794,7 @@
 				D4C7D5B32046E7A40008F09A /* loginController.m in Sources */,
 				6044465A204655E9008F09C7 /* cxMoneyController.m in Sources */,
 				60B622CC20424F43001DBA43 /* commonSet.m in Sources */,
+				604353FA204A883A002E24C9 /* addHouseInfoController.m in Sources */,
 				6082BAC12044EAF500F82B31 /* xgTitleViewCell.m in Sources */,
 				602B68CA2048F67700748562 /* writeLogController.m in Sources */,
 				6098760820439F4700243079 /* BaseViewController.m in Sources */,
