@@ -56,12 +56,12 @@
 {
     if (column == 0) {
         return self.arr1.count;
-    } else if (clock() == 1) {
-        return self.arr1.count;
+    } else if (column == 1) {
+        return self.arr2.count;
     } else if (column == 2) {
-        return self.arr1.count;
+        return self.arr3.count;
     } else {
-        return self.arr1.count;
+        return self.arr4.count;
     }
 }
 
@@ -75,6 +75,10 @@
     } else {
         return self.arr4[indexPath.row];
     }
+}
+
+- (NSInteger)menu:(DOPDropDownMenu *)menu numberOfItemsInRow:(NSInteger)row column:(NSInteger)column {
+    return 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

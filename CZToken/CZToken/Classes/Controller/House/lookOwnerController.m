@@ -9,6 +9,7 @@
 #import "lookOwnerController.h"
 #import "OwnerInfoCell.h"
 #import "writeLogController.h"
+#import "LogListController.h"
 @interface lookOwnerController ()
 @property (strong, nonatomic) IBOutlet UITableView *myTableView;
 
@@ -36,7 +37,10 @@
 }
 
 - (IBAction)writeContent:(UIButton *)sender {
-    writeLogController *log = [[writeLogController alloc] init];
+    
+    LogListController *log = [[LogListController alloc] init];
+
+//    writeLogController *log = [[writeLogController alloc] init];
     [self.navigationController pushViewController:log animated:YES];
 }
 
