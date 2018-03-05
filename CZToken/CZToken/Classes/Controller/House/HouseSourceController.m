@@ -10,6 +10,7 @@
 #import "houseSourceCell.h"
 #import "HouseDetailsController.h"
 #import "addHouseInfoController.h"
+#import "userSearchController.h"
 @interface HouseSourceController ()<DOPDropDownMenuDelegate,DOPDropDownMenuDataSource,UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) NSArray *arr1;
 @property (nonatomic, strong) NSArray *arr2;
@@ -110,6 +111,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     HouseDetailsController *details = [[HouseDetailsController alloc] init];
+//    userSearchController *search = [[userSearchController alloc] init];
     [self.navigationController pushViewController:details animated:YES];
 }
 

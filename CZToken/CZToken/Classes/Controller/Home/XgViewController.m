@@ -20,7 +20,6 @@
     [super viewDidLoad];
     [self tabbarHidden];
     NSArray *tips = @[@"上海单身",@"上海家庭一方上海户口",@"上海家庭双方上海户口",@"外地人",@"在读博士或以上高学历",@"父母外地未成年子女",@"驻沪军官",@"港澳同胞",@"台湾同胞",@"外籍人士"];
-    NSArray *tags = @[@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10"];
     NSMutableArray *arr = [NSMutableArray arrayWithCapacity:0];
     [arr addObjectsFromArray:tips];
     TTChooseBtnView *view = [[TTChooseBtnView alloc] initWithFrame:CGRectMake(12, 10, screenW-24, 50) andTags:tips andTitleColor:[UIColor lineColor] andFonts:13];
