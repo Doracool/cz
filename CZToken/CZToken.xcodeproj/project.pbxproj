@@ -121,6 +121,8 @@
 		AA6D2A9B724FAEC47113B680 /* libPods-CZToken.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E4F68D696251ABCA40F72E7 /* libPods-CZToken.a */; };
 		D422578520483169003D146B /* HouseDetailsController.m in Sources */ = {isa = PBXBuildFile; fileRef = D422578320483169003D146B /* HouseDetailsController.m */; };
 		D422578620483169003D146B /* HouseDetailsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D422578420483169003D146B /* HouseDetailsController.xib */; };
+		D422578A204D8053003D146B /* houseImpInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4225788204D8053003D146B /* houseImpInfoController.m */; };
+		D422578B204D8053003D146B /* houseImpInfoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4225789204D8053003D146B /* houseImpInfoController.xib */; };
 		D4C7D5A9204597010008F09A /* yuegongCellOne.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C7D5A7204597010008F09A /* yuegongCellOne.m */; };
 		D4C7D5AA204597010008F09A /* yuegongCellOne.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4C7D5A8204597010008F09A /* yuegongCellOne.xib */; };
 		D4C7D5AE2046E3E70008F09A /* rzshViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C7D5AC2046E3E70008F09A /* rzshViewController.m */; };
@@ -317,6 +319,9 @@
 		D422578220483169003D146B /* HouseDetailsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HouseDetailsController.h; sourceTree = "<group>"; };
 		D422578320483169003D146B /* HouseDetailsController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HouseDetailsController.m; sourceTree = "<group>"; };
 		D422578420483169003D146B /* HouseDetailsController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HouseDetailsController.xib; sourceTree = "<group>"; };
+		D4225787204D8053003D146B /* houseImpInfoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = houseImpInfoController.h; sourceTree = "<group>"; };
+		D4225788204D8053003D146B /* houseImpInfoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = houseImpInfoController.m; sourceTree = "<group>"; };
+		D4225789204D8053003D146B /* houseImpInfoController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = houseImpInfoController.xib; sourceTree = "<group>"; };
 		D4C7D5A6204597010008F09A /* yuegongCellOne.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = yuegongCellOne.h; sourceTree = "<group>"; };
 		D4C7D5A7204597010008F09A /* yuegongCellOne.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = yuegongCellOne.m; sourceTree = "<group>"; };
 		D4C7D5A8204597010008F09A /* yuegongCellOne.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = yuegongCellOne.xib; sourceTree = "<group>"; };
@@ -462,6 +467,9 @@
 				6021A315204D3D0800FF189E /* houseAddressController.h */,
 				6021A316204D3D0800FF189E /* houseAddressController.m */,
 				6021A317204D3D0800FF189E /* houseAddressController.xib */,
+				D4225787204D8053003D146B /* houseImpInfoController.h */,
+				D4225788204D8053003D146B /* houseImpInfoController.m */,
+				D4225789204D8053003D146B /* houseImpInfoController.xib */,
 			);
 			path = House;
 			sourceTree = "<group>";
@@ -813,6 +821,7 @@
 				604353F1204A822A002E24C9 /* logListCell.xib in Resources */,
 				6021A2EA204CDBC000FF189E /* houseDetaiseCellOne.xib in Resources */,
 				6082BAD720455E0F00F82B31 /* zige.xib in Resources */,
+				D422578B204D8053003D146B /* houseImpInfoController.xib in Resources */,
 				604446652046818E008F09C7 /* SignController.xib in Resources */,
 				602B68C12048EE6700748562 /* lookOwnerController.xib in Resources */,
 				6082BACC2044F84100F82B31 /* loansViewController.xib in Resources */,
@@ -976,6 +985,7 @@
 				D422578520483169003D146B /* HouseDetailsController.m in Sources */,
 				D4C7D5BA2047DD270008F09A /* DOPDropDownMenu.m in Sources */,
 				6082BABC2044EAA700F82B31 /* XgShareViewController.m in Sources */,
+				D422578A204D8053003D146B /* houseImpInfoController.m in Sources */,
 				6044465020464B00008F09C7 /* foreSigninController.m in Sources */,
 				6044466E20469EE3008F09C7 /* textCell.m in Sources */,
 				6021A304204CF64000FF189E /* LPCarouselView.m in Sources */,
@@ -1127,7 +1137,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3AAV5C4X4L;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "/Users/jlc/Desktop/Other/cz/CZToken/CZToken/CZToken-Prefix.pch";
+				GCC_PREFIX_HEADER = "/Users/ighibli/Desktop/我的/cz/CZToken/CZToken/CZToken-Prefix.pch";
 				INFOPLIST_FILE = CZToken/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1145,7 +1155,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3AAV5C4X4L;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "/Users/jlc/Desktop/Other/cz/CZToken/CZToken/CZToken-Prefix.pch";
+				GCC_PREFIX_HEADER = "/Users/ighibli/Desktop/我的/cz/CZToken/CZToken/CZToken-Prefix.pch";
 				INFOPLIST_FILE = CZToken/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
