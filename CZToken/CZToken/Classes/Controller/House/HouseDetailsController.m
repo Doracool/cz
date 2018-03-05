@@ -13,6 +13,7 @@
 #import "houseDetailsTextCell.h"
 #import "houseDetailsInfoCell.h"
 #import "houseSignCell.h"
+#import "houseInfoMoreCell.h"
 @interface HouseDetailsController ()
 
 @end
@@ -46,8 +47,11 @@
         tableView.rowHeight = 300;
         return cell;
     } else if (indexPath.row == 2) {
-        houseDetailsTextCell *cell = [[NSBundle mainBundle] loadNibNamed:@"houseDetailsTextCell" owner:self options:nil][0];
-        tableView.rowHeight = 100;
+        houseInfoMoreCell *cell = [[NSBundle mainBundle] loadNibNamed:@"houseInfoMoreCell" owner:self options:nil][0];
+        
+        
+//        houseDetailsTextCell *cell = [[NSBundle mainBundle] loadNibNamed:@"houseDetailsTextCell" owner:self options:nil][0];
+        tableView.rowHeight = 330;
         return cell;
 //        houseSignCell *cell = [[NSBundle mainBundle] loadNibNamed:@"houseSignCell" owner:self options:nil][0];
 //        tableView.rowHeight = 100;

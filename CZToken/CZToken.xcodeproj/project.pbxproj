@@ -25,6 +25,20 @@
 		6021A2FE204CE50F00FF189E /* houseSignCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6021A2FC204CE50F00FF189E /* houseSignCell.xib */; };
 		6021A304204CF64000FF189E /* LPCarouselView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6021A301204CF63F00FF189E /* LPCarouselView.m */; };
 		6021A305204CF64000FF189E /* LPCarouselViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6021A303204CF63F00FF189E /* LPCarouselViewCell.m */; };
+		6021A309204D246C00FF189E /* buyHouseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6021A307204D246C00FF189E /* buyHouseCell.m */; };
+		6021A30A204D246C00FF189E /* buyHouseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6021A308204D246C00FF189E /* buyHouseCell.xib */; };
+		6021A30E204D253F00FF189E /* houseInfoMoreCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6021A30C204D253F00FF189E /* houseInfoMoreCell.m */; };
+		6021A30F204D253F00FF189E /* houseInfoMoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6021A30D204D253F00FF189E /* houseInfoMoreCell.xib */; };
+		6021A313204D32A000FF189E /* HouseRankCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6021A311204D32A000FF189E /* HouseRankCell.m */; };
+		6021A314204D32A000FF189E /* HouseRankCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6021A312204D32A000FF189E /* HouseRankCell.xib */; };
+		6021A318204D3D0800FF189E /* houseAddressController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6021A316204D3D0800FF189E /* houseAddressController.m */; };
+		6021A319204D3D0800FF189E /* houseAddressController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6021A317204D3D0800FF189E /* houseAddressController.xib */; };
+		6021A31D204D3DC400FF189E /* sourceAddressCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6021A31B204D3DC400FF189E /* sourceAddressCell.m */; };
+		6021A31E204D3DC400FF189E /* sourceAddressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6021A31C204D3DC400FF189E /* sourceAddressCell.xib */; };
+		6021A322204D4C2A00FF189E /* UserlinkCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6021A320204D4C2A00FF189E /* UserlinkCell.m */; };
+		6021A323204D4C2A00FF189E /* UserlinkCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6021A321204D4C2A00FF189E /* UserlinkCell.xib */; };
+		6021A327204D510100FF189E /* addLinkCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6021A325204D510100FF189E /* addLinkCell.m */; };
+		6021A328204D510100FF189E /* addLinkCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6021A326204D510100FF189E /* addLinkCell.xib */; };
 		602B68C02048EE6700748562 /* lookOwnerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 602B68BE2048EE6700748562 /* lookOwnerController.m */; };
 		602B68C12048EE6700748562 /* lookOwnerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 602B68BF2048EE6700748562 /* lookOwnerController.xib */; };
 		602B68C52048F0C300748562 /* OwnerInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 602B68C32048F0C300748562 /* OwnerInfoCell.m */; };
@@ -148,6 +162,27 @@
 		6021A301204CF63F00FF189E /* LPCarouselView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPCarouselView.m; sourceTree = "<group>"; };
 		6021A302204CF63F00FF189E /* LPCarouselViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPCarouselViewCell.h; sourceTree = "<group>"; };
 		6021A303204CF63F00FF189E /* LPCarouselViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPCarouselViewCell.m; sourceTree = "<group>"; };
+		6021A306204D246C00FF189E /* buyHouseCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = buyHouseCell.h; sourceTree = "<group>"; };
+		6021A307204D246C00FF189E /* buyHouseCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = buyHouseCell.m; sourceTree = "<group>"; };
+		6021A308204D246C00FF189E /* buyHouseCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = buyHouseCell.xib; sourceTree = "<group>"; };
+		6021A30B204D253F00FF189E /* houseInfoMoreCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = houseInfoMoreCell.h; sourceTree = "<group>"; };
+		6021A30C204D253F00FF189E /* houseInfoMoreCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = houseInfoMoreCell.m; sourceTree = "<group>"; };
+		6021A30D204D253F00FF189E /* houseInfoMoreCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = houseInfoMoreCell.xib; sourceTree = "<group>"; };
+		6021A310204D32A000FF189E /* HouseRankCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HouseRankCell.h; sourceTree = "<group>"; };
+		6021A311204D32A000FF189E /* HouseRankCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HouseRankCell.m; sourceTree = "<group>"; };
+		6021A312204D32A000FF189E /* HouseRankCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HouseRankCell.xib; sourceTree = "<group>"; };
+		6021A315204D3D0800FF189E /* houseAddressController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = houseAddressController.h; sourceTree = "<group>"; };
+		6021A316204D3D0800FF189E /* houseAddressController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = houseAddressController.m; sourceTree = "<group>"; };
+		6021A317204D3D0800FF189E /* houseAddressController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = houseAddressController.xib; sourceTree = "<group>"; };
+		6021A31A204D3DC400FF189E /* sourceAddressCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sourceAddressCell.h; sourceTree = "<group>"; };
+		6021A31B204D3DC400FF189E /* sourceAddressCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = sourceAddressCell.m; sourceTree = "<group>"; };
+		6021A31C204D3DC400FF189E /* sourceAddressCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = sourceAddressCell.xib; sourceTree = "<group>"; };
+		6021A31F204D4C2A00FF189E /* UserlinkCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserlinkCell.h; sourceTree = "<group>"; };
+		6021A320204D4C2A00FF189E /* UserlinkCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserlinkCell.m; sourceTree = "<group>"; };
+		6021A321204D4C2A00FF189E /* UserlinkCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserlinkCell.xib; sourceTree = "<group>"; };
+		6021A324204D510100FF189E /* addLinkCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = addLinkCell.h; sourceTree = "<group>"; };
+		6021A325204D510100FF189E /* addLinkCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = addLinkCell.m; sourceTree = "<group>"; };
+		6021A326204D510100FF189E /* addLinkCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = addLinkCell.xib; sourceTree = "<group>"; };
 		602B68BD2048EE6700748562 /* lookOwnerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lookOwnerController.h; sourceTree = "<group>"; };
 		602B68BE2048EE6700748562 /* lookOwnerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = lookOwnerController.m; sourceTree = "<group>"; };
 		602B68BF2048EE6700748562 /* lookOwnerController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = lookOwnerController.xib; sourceTree = "<group>"; };
@@ -424,6 +459,9 @@
 				6021A2D7204CCA5C00FF189E /* userSearchController.h */,
 				6021A2D8204CCA5C00FF189E /* userSearchController.m */,
 				6021A2D9204CCA5C00FF189E /* userSearchController.xib */,
+				6021A315204D3D0800FF189E /* houseAddressController.h */,
+				6021A316204D3D0800FF189E /* houseAddressController.m */,
+				6021A317204D3D0800FF189E /* houseAddressController.xib */,
 			);
 			path = House;
 			sourceTree = "<group>";
@@ -689,6 +727,24 @@
 				6021A2FA204CE50F00FF189E /* houseSignCell.h */,
 				6021A2FB204CE50F00FF189E /* houseSignCell.m */,
 				6021A2FC204CE50F00FF189E /* houseSignCell.xib */,
+				6021A306204D246C00FF189E /* buyHouseCell.h */,
+				6021A307204D246C00FF189E /* buyHouseCell.m */,
+				6021A308204D246C00FF189E /* buyHouseCell.xib */,
+				6021A30B204D253F00FF189E /* houseInfoMoreCell.h */,
+				6021A30C204D253F00FF189E /* houseInfoMoreCell.m */,
+				6021A30D204D253F00FF189E /* houseInfoMoreCell.xib */,
+				6021A310204D32A000FF189E /* HouseRankCell.h */,
+				6021A311204D32A000FF189E /* HouseRankCell.m */,
+				6021A312204D32A000FF189E /* HouseRankCell.xib */,
+				6021A31A204D3DC400FF189E /* sourceAddressCell.h */,
+				6021A31B204D3DC400FF189E /* sourceAddressCell.m */,
+				6021A31C204D3DC400FF189E /* sourceAddressCell.xib */,
+				6021A31F204D4C2A00FF189E /* UserlinkCell.h */,
+				6021A320204D4C2A00FF189E /* UserlinkCell.m */,
+				6021A321204D4C2A00FF189E /* UserlinkCell.xib */,
+				6021A324204D510100FF189E /* addLinkCell.h */,
+				6021A325204D510100FF189E /* addLinkCell.m */,
+				6021A326204D510100FF189E /* addLinkCell.xib */,
 			);
 			path = House;
 			sourceTree = "<group>";
@@ -768,9 +824,11 @@
 				609876172043AE8400243079 /* NewsViewCell.xib in Resources */,
 				6044466F20469EE3008F09C7 /* textCell.xib in Resources */,
 				D4C7D5B42046E7A40008F09A /* loginController.xib in Resources */,
+				6021A31E204D3DC400FF189E /* sourceAddressCell.xib in Resources */,
 				6021A2E5204CD93E00FF189E /* affirmCell.xib in Resources */,
 				6021A2DB204CCA5D00FF189E /* userSearchController.xib in Resources */,
 				6021A2F4204CE0BB00FF189E /* houseDetailsTextCell.xib in Resources */,
+				6021A314204D32A000FF189E /* HouseRankCell.xib in Resources */,
 				6044465B204655E9008F09C7 /* cxMoneyController.xib in Resources */,
 				60F978DF20423FF900E79007 /* LaunchScreen.storyboard in Resources */,
 				6082BAC22044EAF500F82B31 /* xgTitleViewCell.xib in Resources */,
@@ -791,12 +849,17 @@
 				602B68CB2048F67700748562 /* writeLogController.xib in Resources */,
 				602B68D0204929E200748562 /* LogListController.xib in Resources */,
 				6082BABD2044EAA700F82B31 /* XgShareViewController.xib in Resources */,
+				6021A328204D510100FF189E /* addLinkCell.xib in Resources */,
 				6021A2FE204CE50F00FF189E /* houseSignCell.xib in Resources */,
 				6039C067204AB08800A7FD99 /* houseAuditController.xib in Resources */,
 				604446792046B32C008F09C7 /* UpImgCell.xib in Resources */,
 				604446742046A037008F09C7 /* rzyzViewController.xib in Resources */,
+				6021A30F204D253F00FF189E /* houseInfoMoreCell.xib in Resources */,
+				6021A319204D3D0800FF189E /* houseAddressController.xib in Resources */,
 				6098761C2043BAC700243079 /* iconCell.xib in Resources */,
+				6021A323204D4C2A00FF189E /* UserlinkCell.xib in Resources */,
 				D422578620483169003D146B /* HouseDetailsController.xib in Resources */,
+				6021A30A204D246C00FF189E /* buyHouseCell.xib in Resources */,
 				6098760520439E8000243079 /* HomeViewController.xib in Resources */,
 				602B68C62048F0C300748562 /* OwnerInfoCell.xib in Resources */,
 				604353F6204A8644002E24C9 /* payForSeeController.xib in Resources */,
@@ -859,6 +922,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6082BAB82044E28C00F82B31 /* UIView+TTExtension.m in Sources */,
+				6021A318204D3D0800FF189E /* houseAddressController.m in Sources */,
 				6021A2DA204CCA5C00FF189E /* userSearchController.m in Sources */,
 				6082BADA20455E1F00F82B31 /* zige.m in Sources */,
 				602B68C52048F0C300748562 /* OwnerInfoCell.m in Sources */,
@@ -870,6 +934,7 @@
 				6039C066204AB08800A7FD99 /* houseAuditController.m in Sources */,
 				6098760C2043A7D700243079 /* HomeIconCell.m in Sources */,
 				609876112043ADE600243079 /* TitleIconCell.m in Sources */,
+				6021A309204D246C00FF189E /* buyHouseCell.m in Sources */,
 				60F978D720423FF900E79007 /* ViewController.m in Sources */,
 				6098761B2043BAC700243079 /* iconCell.m in Sources */,
 				6044465520464FEB008F09C7 /* UpInfoController.m in Sources */,
@@ -899,6 +964,7 @@
 				6044465A204655E9008F09C7 /* cxMoneyController.m in Sources */,
 				60B622CC20424F43001DBA43 /* commonSet.m in Sources */,
 				6021A2F8204CE12700FF189E /* houseDetailsInfoCell.m in Sources */,
+				6021A327204D510100FF189E /* addLinkCell.m in Sources */,
 				6021A2E4204CD93E00FF189E /* affirmCell.m in Sources */,
 				604353FA204A883A002E24C9 /* addHouseInfoController.m in Sources */,
 				6082BAC12044EAF500F82B31 /* xgTitleViewCell.m in Sources */,
@@ -906,6 +972,7 @@
 				6098760820439F4700243079 /* BaseViewController.m in Sources */,
 				60E401612042B9CA00EF047E /* MeController.m in Sources */,
 				D4C7D5AE2046E3E70008F09A /* rzshViewController.m in Sources */,
+				6021A30E204D253F00FF189E /* houseInfoMoreCell.m in Sources */,
 				D422578520483169003D146B /* HouseDetailsController.m in Sources */,
 				D4C7D5BA2047DD270008F09A /* DOPDropDownMenu.m in Sources */,
 				6082BABC2044EAA700F82B31 /* XgShareViewController.m in Sources */,
@@ -913,12 +980,15 @@
 				6044466E20469EE3008F09C7 /* textCell.m in Sources */,
 				6021A304204CF64000FF189E /* LPCarouselView.m in Sources */,
 				6082BACB2044F84100F82B31 /* loansViewController.m in Sources */,
+				6021A322204D4C2A00FF189E /* UserlinkCell.m in Sources */,
 				6021A2EE204CDCDD00FF189E /* houseDetailsCellTwo.m in Sources */,
 				604446642046818E008F09C7 /* SignController.m in Sources */,
 				6021A2FD204CE50F00FF189E /* houseSignCell.m in Sources */,
 				60E401622042B9CA00EF047E /* ComputerController.m in Sources */,
 				6021A2E9204CDBC000FF189E /* houseDetaiseCellOne.m in Sources */,
 				6082BAC62044EB3900F82B31 /* XgContentTableViewCell.m in Sources */,
+				6021A313204D32A000FF189E /* HouseRankCell.m in Sources */,
+				6021A31D204D3DC400FF189E /* sourceAddressCell.m in Sources */,
 				6098760420439E8000243079 /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

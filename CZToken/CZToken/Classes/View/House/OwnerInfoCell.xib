@@ -11,11 +11,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="200" id="KGk-i7-Jjw" customClass="OwnerInfoCell">
-            <rect key="frame" x="0.0" y="0.0" width="387" height="200"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="82" id="KGk-i7-Jjw" customClass="OwnerInfoCell">
+            <rect key="frame" x="0.0" y="0.0" width="387" height="82"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="387" height="199.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="387" height="81.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YPu-2K-w5q">
@@ -62,61 +62,23 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="证件" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gfb-PM-u56">
-                        <rect key="frame" x="8" y="79" width="27" height="16"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                        <color key="textColor" red="0.77651131149999997" green="0.77648186679999998" blue="0.77650189400000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="身份证" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HcJ-Ka-1AP">
-                        <rect key="frame" x="55" y="79" width="40" height="16"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="备注" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xsp-wi-thS">
-                        <rect key="frame" x="8" y="110" width="27" height="16"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                        <color key="textColor" red="0.77651131149999997" green="0.77648186679999998" blue="0.77650189400000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="为编写" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XXG-jr-O5O">
-                        <rect key="frame" x="55" y="110" width="40" height="16"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4pm-Xj-LHn">
-                        <rect key="frame" x="265" y="41" width="46" height="30"/>
-                        <state key="normal" title="看电话"/>
-                    </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ooq-k4-Z1k">
-                        <rect key="frame" x="326" y="41" width="31" height="30"/>
-                        <state key="normal" title="回拨"/>
+                        <rect key="frame" x="295" y="41" width="62" height="30"/>
+                        <state key="normal" title="拨打电话"/>
                     </button>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="xsp-wi-thS" firstAttribute="top" secondItem="Gfb-PM-u56" secondAttribute="bottom" constant="15" id="13I-tO-bsg"/>
-                    <constraint firstItem="Ooq-k4-Z1k" firstAttribute="leading" secondItem="4pm-Xj-LHn" secondAttribute="trailing" constant="15" id="1XV-ZJ-JEz"/>
                     <constraint firstItem="o7Y-af-Nd0" firstAttribute="top" secondItem="7jF-Bt-IQN" secondAttribute="bottom" constant="8" id="38R-iu-zhv"/>
                     <constraint firstItem="j6H-t3-gpO" firstAttribute="centerY" secondItem="iEI-Af-dhj" secondAttribute="centerY" id="8BY-cN-fpF"/>
                     <constraint firstItem="o7Y-af-Nd0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="8U2-0Y-fBR"/>
                     <constraint firstItem="7jF-Bt-IQN" firstAttribute="top" secondItem="iEI-Af-dhj" secondAttribute="bottom" constant="8" id="GMb-Sd-ikg"/>
                     <constraint firstItem="j6H-t3-gpO" firstAttribute="leading" secondItem="iEI-Af-dhj" secondAttribute="trailing" constant="10" id="Idw-8u-8Je"/>
-                    <constraint firstItem="HcJ-Ka-1AP" firstAttribute="centerY" secondItem="Gfb-PM-u56" secondAttribute="centerY" id="Phi-Gt-8TR"/>
                     <constraint firstItem="Ooq-k4-Z1k" firstAttribute="centerY" secondItem="Cgp-XM-OTv" secondAttribute="centerY" id="ToW-y8-iOe"/>
-                    <constraint firstItem="Gfb-PM-u56" firstAttribute="top" secondItem="o7Y-af-Nd0" secondAttribute="bottom" constant="15" id="W0D-rC-hQR"/>
-                    <constraint firstItem="xsp-wi-thS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="WgA-Yf-th6"/>
-                    <constraint firstItem="XXG-jr-O5O" firstAttribute="centerY" secondItem="xsp-wi-thS" secondAttribute="centerY" id="XHu-oW-ZT7"/>
                     <constraint firstItem="iEI-Af-dhj" firstAttribute="top" secondItem="YPu-2K-w5q" secondAttribute="bottom" constant="8" id="bdx-10-reI"/>
-                    <constraint firstItem="Gfb-PM-u56" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="gNJ-An-iW7"/>
-                    <constraint firstItem="XXG-jr-O5O" firstAttribute="leading" secondItem="HcJ-Ka-1AP" secondAttribute="leading" id="gkD-Oj-KeL"/>
                     <constraint firstAttribute="trailing" secondItem="Ooq-k4-Z1k" secondAttribute="trailing" constant="30" id="hM8-HO-vdy"/>
-                    <constraint firstItem="4pm-Xj-LHn" firstAttribute="centerY" secondItem="Ooq-k4-Z1k" secondAttribute="centerY" id="hdL-Bf-Xcz"/>
                     <constraint firstItem="YPu-2K-w5q" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="jRS-Lb-7iq"/>
                     <constraint firstItem="YPu-2K-w5q" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="lft-K1-dqV"/>
                     <constraint firstItem="Cgp-XM-OTv" firstAttribute="centerY" secondItem="o7Y-af-Nd0" secondAttribute="centerY" id="mGu-d2-XtK"/>
-                    <constraint firstItem="HcJ-Ka-1AP" firstAttribute="leading" secondItem="Cgp-XM-OTv" secondAttribute="leading" id="mKu-IM-vfQ"/>
                     <constraint firstAttribute="trailing" secondItem="7jF-Bt-IQN" secondAttribute="trailing" id="oLD-ca-5fA"/>
                     <constraint firstItem="iEI-Af-dhj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="pRv-57-4wp"/>
                     <constraint firstItem="Cgp-XM-OTv" firstAttribute="leading" secondItem="o7Y-af-Nd0" secondAttribute="trailing" constant="20" id="s7M-vl-Wyb"/>
@@ -124,7 +86,7 @@
                     <constraint firstItem="7jF-Bt-IQN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="xBC-LK-yda"/>
                 </constraints>
             </tableViewCellContentView>
-            <point key="canvasLocation" x="58.5" y="130"/>
+            <point key="canvasLocation" x="58.5" y="71"/>
         </tableViewCell>
     </objects>
 </document>
