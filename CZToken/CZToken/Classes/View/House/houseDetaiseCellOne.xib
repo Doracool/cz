@@ -97,7 +97,10 @@
                     <constraint firstItem="OCF-Zu-ab9" firstAttribute="centerY" secondItem="9rz-zX-XBp" secondAttribute="centerY" id="z6g-x7-lcG"/>
                 </constraints>
             </tableViewCellContentView>
-            <point key="canvasLocation" x="20.5" y="76.5"/>
+            <connections>
+                <outlet property="headerView" destination="jdn-Lo-pxi" id="uoI-DF-eqx"/>
+            </connections>
+            <point key="canvasLocation" x="-66" y="63"/>
         </tableViewCell>
     </objects>
 </document>

@@ -23,6 +23,8 @@
 		6021A2F9204CE12700FF189E /* houseDetailsInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6021A2F7204CE12700FF189E /* houseDetailsInfoCell.xib */; };
 		6021A2FD204CE50F00FF189E /* houseSignCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6021A2FB204CE50F00FF189E /* houseSignCell.m */; };
 		6021A2FE204CE50F00FF189E /* houseSignCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6021A2FC204CE50F00FF189E /* houseSignCell.xib */; };
+		6021A304204CF64000FF189E /* LPCarouselView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6021A301204CF63F00FF189E /* LPCarouselView.m */; };
+		6021A305204CF64000FF189E /* LPCarouselViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6021A303204CF63F00FF189E /* LPCarouselViewCell.m */; };
 		602B68C02048EE6700748562 /* lookOwnerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 602B68BE2048EE6700748562 /* lookOwnerController.m */; };
 		602B68C12048EE6700748562 /* lookOwnerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 602B68BF2048EE6700748562 /* lookOwnerController.xib */; };
 		602B68C52048F0C300748562 /* OwnerInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 602B68C32048F0C300748562 /* OwnerInfoCell.m */; };
@@ -142,6 +144,10 @@
 		6021A2FA204CE50F00FF189E /* houseSignCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = houseSignCell.h; sourceTree = "<group>"; };
 		6021A2FB204CE50F00FF189E /* houseSignCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = houseSignCell.m; sourceTree = "<group>"; };
 		6021A2FC204CE50F00FF189E /* houseSignCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = houseSignCell.xib; sourceTree = "<group>"; };
+		6021A300204CF63F00FF189E /* LPCarouselView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPCarouselView.h; sourceTree = "<group>"; };
+		6021A301204CF63F00FF189E /* LPCarouselView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPCarouselView.m; sourceTree = "<group>"; };
+		6021A302204CF63F00FF189E /* LPCarouselViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPCarouselViewCell.h; sourceTree = "<group>"; };
+		6021A303204CF63F00FF189E /* LPCarouselViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPCarouselViewCell.m; sourceTree = "<group>"; };
 		602B68BD2048EE6700748562 /* lookOwnerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lookOwnerController.h; sourceTree = "<group>"; };
 		602B68BE2048EE6700748562 /* lookOwnerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = lookOwnerController.m; sourceTree = "<group>"; };
 		602B68BF2048EE6700748562 /* lookOwnerController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = lookOwnerController.xib; sourceTree = "<group>"; };
@@ -304,6 +310,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6021A2FF204CF63F00FF189E /* LPCarouselView */ = {
+			isa = PBXGroup;
+			children = (
+				6021A300204CF63F00FF189E /* LPCarouselView.h */,
+				6021A301204CF63F00FF189E /* LPCarouselView.m */,
+				6021A302204CF63F00FF189E /* LPCarouselViewCell.h */,
+				6021A303204CF63F00FF189E /* LPCarouselViewCell.m */,
+			);
+			path = LPCarouselView;
+			sourceTree = "<group>";
+		};
 		60444648204642DD008F09C7 /* DVSwitch */ = {
 			isa = PBXGroup;
 			children = (
@@ -550,6 +567,7 @@
 		60B622C620424C63001DBA43 /* ThirdTools */ = {
 			isa = PBXGroup;
 			children = (
+				6021A2FF204CF63F00FF189E /* LPCarouselView */,
 				D4C7D5B72047DCEB0008F09A /* DOPDrop */,
 				60444648204642DD008F09C7 /* DVSwitch */,
 				6082BACD2044FC7000F82B31 /* SFJSegment */,
@@ -862,6 +880,7 @@
 				60E4015F2042B9CA00EF047E /* HouseSourceController.m in Sources */,
 				60E401682042BE1200EF047E /* AppDelegate+MainUI.m in Sources */,
 				602B68CF204929E200748562 /* LogListController.m in Sources */,
+				6021A305204CF64000FF189E /* LPCarouselViewCell.m in Sources */,
 				6082BAD02044FCA300F82B31 /* ZFJSegmentedControl.m in Sources */,
 				60F978E220423FF900E79007 /* main.m in Sources */,
 				604353FF204A9820002E24C9 /* addHouseDetailsController.m in Sources */,
@@ -892,6 +911,7 @@
 				6082BABC2044EAA700F82B31 /* XgShareViewController.m in Sources */,
 				6044465020464B00008F09C7 /* foreSigninController.m in Sources */,
 				6044466E20469EE3008F09C7 /* textCell.m in Sources */,
+				6021A304204CF64000FF189E /* LPCarouselView.m in Sources */,
 				6082BACB2044F84100F82B31 /* loansViewController.m in Sources */,
 				6021A2EE204CDCDD00FF189E /* houseDetailsCellTwo.m in Sources */,
 				604446642046818E008F09C7 /* SignController.m in Sources */,

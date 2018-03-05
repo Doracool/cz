@@ -18,7 +18,23 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DtQ-zu-8UB">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="qKf-I8-z6J"/>
+                        <outlet property="delegate" destination="-1" id="EQq-tU-JVX"/>
+                    </connections>
+                </tableView>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="DtQ-zu-8UB" secondAttribute="trailing" id="BTE-ek-oIw"/>
+                <constraint firstAttribute="bottom" secondItem="DtQ-zu-8UB" secondAttribute="bottom" id="DrY-Mm-1vb"/>
+                <constraint firstItem="DtQ-zu-8UB" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Imw-MT-AvV"/>
+                <constraint firstItem="DtQ-zu-8UB" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="NJ9-iR-n8A"/>
+            </constraints>
             <point key="canvasLocation" x="-180" y="44"/>
         </view>
     </objects>

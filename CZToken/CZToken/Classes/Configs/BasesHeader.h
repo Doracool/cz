@@ -40,6 +40,7 @@
 #import <RCRunkeeperSwitch.h>
 #import "DVSwitch.h"
 #import "DOPDropDownMenu.h"
+#import "LPCarouselView.h"
 
 /***************** 加载公共常量 *********************/
 

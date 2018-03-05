@@ -10,4 +10,5 @@
 
 @interface houseDetaiseCellOne : UITableViewCell
 
+@property (strong, nonatomic) IBOutlet UIView *headerView;
 @end

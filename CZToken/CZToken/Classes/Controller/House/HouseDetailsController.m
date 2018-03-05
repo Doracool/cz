@@ -8,6 +8,11 @@
 
 #import "HouseDetailsController.h"
 #import "lookOwnerController.h"
+#import "houseDetaiseCellOne.h"
+#import "houseDetailsCellTwo.h"
+#import "houseDetailsTextCell.h"
+#import "houseDetailsInfoCell.h"
+#import "houseSignCell.h"
 @interface HouseDetailsController ()
 
 @end
@@ -18,9 +23,41 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 }
-- (IBAction)lookOwner:(UIButton *)sender {
-    lookOwnerController *owner = [[lookOwnerController alloc] init];
-    [self.navigationController pushViewController:owner animated:YES];
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 7;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row == 0) {
+        houseDetaiseCellOne *cell = [[NSBundle mainBundle] loadNibNamed:@"houseDetaiseCellOne" owner:self options:nil][0];
+        LPCarouselView *header = [LPCarouselView carouselViewWithFrame:CGRectMake(0, 0, screenW, 150) placeholderImage:[UIImage imageNamed:@""] images:^NSArray *{
+            return @[@"123",@"321"];
+        } titles:^NSArray *{
+            return nil;
+        } selectedBlock:^(NSInteger index) {
+            
+        }];
+        [cell.headerView addSubview:header];
+        tableView.rowHeight = 240;
+        return cell;
+    } else if (indexPath.row == 1) {
+        houseDetailsCellTwo *cell = [[NSBundle mainBundle] loadNibNamed:@"houseDetailsCellTwo" owner:self options:nil][0];
+        tableView.rowHeight = 300;
+        return cell;
+    } else if (indexPath.row == 2) {
+        houseDetailsTextCell *cell = [[NSBundle mainBundle] loadNibNamed:@"houseDetailsTextCell" owner:self options:nil][0];
+        tableView.rowHeight = 100;
+        return cell;
+//        houseSignCell *cell = [[NSBundle mainBundle] loadNibNamed:@"houseSignCell" owner:self options:nil][0];
+//        tableView.rowHeight = 100;
+//        return cell;
+    } else {
+        houseDetailsInfoCell *cell = [[NSBundle mainBundle] loadNibNamed:@"houseDetailsInfoCell" owner:self options:nil][0];
+        tableView.rowHeight = 90;
+        return cell;
+    }
+    return nil;
 }
 
 - (void)didReceiveMemoryWarning {
