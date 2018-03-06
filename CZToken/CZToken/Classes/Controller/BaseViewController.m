@@ -71,6 +71,7 @@
     iv.backgroundColor = [UIColor clearColor];
     iv.image = [UIImage imageNamed:image];
     [btn addSubview:iv];
+    self.fd_prefersNavigationBarHidden = NO;
     UIBarButtonItem *item = [[UIBarButtonItem alloc]initWithCustomView:btn];
     self.navigationItem.leftBarButtonItem = item;
     

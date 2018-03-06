@@ -41,6 +41,7 @@
 #import "DVSwitch.h"
 #import "DOPDropDownMenu.h"
 #import "LPCarouselView.h"
+#import <UINavigationController+FDFullscreenPopGesture.h>
 
 /***************** 加载公共常量 *********************/
 
