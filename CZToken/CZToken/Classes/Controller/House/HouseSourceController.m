@@ -12,6 +12,8 @@
 #import "addHouseInfoController.h"
 #import "userSearchController.h"
 #import "houseAddressController.h"
+#import "baseAuditController.h"
+
 @interface HouseSourceController ()<DOPDropDownMenuDelegate,DOPDropDownMenuDataSource,UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) NSArray *arr1;
 @property (nonatomic, strong) NSArray *arr2;
@@ -114,7 +116,8 @@
     HouseDetailsController *details = [[HouseDetailsController alloc] init];
 //    userSearchController *search = [[userSearchController alloc] init];
     houseAddressController *address = [[houseAddressController alloc] init];
-    [self.navigationController pushViewController:address animated:YES];
+    baseAuditController *audit = [[baseAuditController alloc] init];
+    [self.navigationController pushViewController:details animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
