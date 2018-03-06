@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface houseAddressController : UIViewController
+@interface houseAddressController : BaseViewController
 
 @end

@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface houseImpInfoController : UIViewController
+@interface houseImpInfoController : BaseViewController
 
+@property (weak, nonatomic) IBOutlet UIButton *beforeBtn;
+@property (weak, nonatomic) IBOutlet UIButton *nextBtn;
 @end

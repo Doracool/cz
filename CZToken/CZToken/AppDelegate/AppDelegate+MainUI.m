@@ -22,7 +22,7 @@
     [self appAppearanceConfig];
     NSMutableArray * array = [[NSMutableArray alloc]initWithObjects:[UIImage imageNamed:@"duigou"],[UIImage imageNamed:@"duigou"],[UIImage imageNamed:@"duigou"],[UIImage imageNamed:@"duigou"],[UIImage imageNamed:@"duigou"], nil];
     NSMutableArray * selectedArray = [[NSMutableArray alloc]initWithObjects:[UIImage imageNamed:@"duigou"],[UIImage imageNamed:@"duigou"],[UIImage imageNamed:@"duigou"],[UIImage imageNamed:@"duigou"],[UIImage imageNamed:@"duigou"], nil];
-    NSMutableArray * titles = [NSMutableArray arrayWithObjects:@"摄影",@"旅行",@"约拍",@"我的",@"我的", nil];
+    NSMutableArray * titles = [NSMutableArray arrayWithObjects:@"学习",@"房源",@"客源",@"计算器",@"我的", nil];
     
     HomeViewController *vc1 = [[HomeViewController alloc] init];
     HouseSourceController *vc2 = [[HouseSourceController alloc] init];

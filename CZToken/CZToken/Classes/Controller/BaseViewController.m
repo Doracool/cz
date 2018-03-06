@@ -95,6 +95,10 @@
     
 }
 
+- (void)navigationleft {
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
 /**
  * 自定义navgationBar左边item
  * 纯文字类型

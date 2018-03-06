@@ -16,8 +16,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self leftNavBarItemWithImage:@"duigou"];
     // Do any additional setup after loading the view from its nib.
 }
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [self tabbarShow];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self tabbarHidden];
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

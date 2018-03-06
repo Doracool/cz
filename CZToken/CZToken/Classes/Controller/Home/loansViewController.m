@@ -34,7 +34,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self tabbarHidden];
     NSArray *array = @[@"资格",@"额度",@"月供"];
     ZFJSegmentedControl *zvc = [[ZFJSegmentedControl alloc] initwithTitleArr:array iconArr:nil SCType:SCType_Underline];
     [self.view addSubview:zvc];
@@ -80,7 +79,15 @@
     // Do any additional setup after loading the view from its nib.
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self tabbarHidden];
+}
 
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [self tabbarShow];
+}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 3;

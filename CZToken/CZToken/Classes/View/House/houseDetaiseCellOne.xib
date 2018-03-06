@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -19,57 +19,57 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jdn-Lo-pxi">
-                        <rect key="frame" x="0.0" y="0.0" width="411" height="150"/>
+                        <rect key="frame" x="0.0" y="0.0" width="411" height="200"/>
                         <color key="backgroundColor" red="0.96942806240000001" green="0.96097981929999998" blue="0.96457290650000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="150" id="Obu-BI-7hz"/>
+                            <constraint firstAttribute="height" constant="200" id="Obu-BI-7hz"/>
                         </constraints>
                     </view>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9rz-zX-XBp">
-                        <rect key="frame" x="15" y="165" width="15" height="15"/>
+                        <rect key="frame" x="15" y="215" width="15" height="15"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="15" id="E0M-AB-GN0"/>
                             <constraint firstAttribute="width" constant="15" id="N5z-oH-iRS"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OCF-Zu-ab9">
-                        <rect key="frame" x="45" y="162" width="42" height="21"/>
+                        <rect key="frame" x="45" y="212" width="42" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0sj-mD-01V">
-                        <rect key="frame" x="102" y="162" width="42" height="21"/>
+                        <rect key="frame" x="102" y="212" width="42" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oid-5A-0Z6">
-                        <rect key="frame" x="15" y="188" width="296" height="30"/>
+                        <rect key="frame" x="15" y="238" width="296" height="30"/>
                         <color key="backgroundColor" red="0.96942806240000001" green="0.96097981929999998" blue="0.96457290650000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="30" id="1HY-le-cxH"/>
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="650万元" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Vv-TU-Mb8">
-                        <rect key="frame" x="350" y="165" width="51" height="16"/>
+                        <rect key="frame" x="350" y="215" width="51" height="16"/>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="300人关注" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qka-wb-QRT">
-                        <rect key="frame" x="351" y="186" width="50" height="12"/>
+                        <rect key="frame" x="351" y="236" width="50" height="12"/>
                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aot-U3-zGg">
-                        <rect key="frame" x="371" y="203" width="30" height="26"/>
+                        <rect key="frame" x="371" y="253" width="30" height="26"/>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                         <state key="normal" title="转发"/>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U7C-e7-7BH">
-                        <rect key="frame" x="326" y="203" width="30" height="26"/>
+                        <rect key="frame" x="326" y="253" width="30" height="26"/>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                         <state key="normal" title="关注"/>
                     </button>

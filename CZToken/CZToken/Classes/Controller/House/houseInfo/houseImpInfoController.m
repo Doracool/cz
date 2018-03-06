@@ -7,7 +7,7 @@
 //
 
 #import "houseImpInfoController.h"
-
+#import "houseImgController.h"
 @interface houseImpInfoController ()
 
 @end
@@ -17,6 +17,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [self tabbarShow];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self tabbarHidden];
+}
+- (IBAction)beforeAction:(UIButton *)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+- (IBAction)nextAction:(UIButton *)sender {
+    houseImgController *img = [[houseImgController alloc] init];
+    [self.navigationController pushViewController:img animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

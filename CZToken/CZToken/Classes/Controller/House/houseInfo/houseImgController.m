@@ -7,7 +7,7 @@
 //
 
 #import "houseImgController.h"
-
+#import "houseSuccController.h"
 @interface houseImgController ()
 
 @end
@@ -17,6 +17,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+}
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [self tabbarShow];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self tabbarHidden];
+}
+- (IBAction)beforeAction:(UIButton *)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+- (IBAction)nextAction:(UIButton *)sender {
+    houseSuccController *succ = [[houseSuccController alloc] init];
+    [self.navigationController pushViewController:succ animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

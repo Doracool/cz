@@ -10,4 +10,5 @@
 
 @interface houseSignCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UIButton *signInBtn;
 @end

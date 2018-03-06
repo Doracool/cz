@@ -13,6 +13,7 @@
 #import "userSearchController.h"
 #import "houseAddressController.h"
 #import "baseAuditController.h"
+#import "houseAddressController.h"
 
 @interface HouseSourceController ()<DOPDropDownMenuDelegate,DOPDropDownMenuDataSource,UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) NSArray *arr1;
@@ -28,11 +29,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     self.view.backgroundColor = [UIColor whiteColor];
-    self.arr1 = @[@"1阿萨德",@"爱迪生2",@"恶趣味3",@"爱的4"];
-    self.arr2 = @[@"22",@"33",@"44",@"5"];
-    self.arr3 = @[@"czx",@"qew",@"sdfad",@"sfd"];
-    self.arr4 = @[@"gfd",@"gdfs",@"rew",@"ter"];
+    self.arr1 = @[@"区域",@"爱迪生2",@"恶趣味3",@"爱的4"];
+    self.arr2 = @[@"排序",@"33",@"44",@"5"];
+    self.arr3 = @[@"类型",@"qew",@"sdfad",@"sfd"];
+    self.arr4 = @[@"更多",@"gdfs",@"rew",@"ter"];
     
     DOPDropDownMenu *menu = [[DOPDropDownMenu alloc] initWithOrigin:CGPointMake(0, 64) andHeight:40];
     menu.delegate = self;
@@ -61,8 +63,13 @@
     [_add addTarget:self action:@selector(addHouse) forControlEvents:UIControlEventTouchUpInside];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self navigationBarHidden];
+}
+
 - (void)addHouse {
-    addHouseInfoController *add = [[addHouseInfoController alloc] init];
+    houseAddressController *add = [[houseAddressController alloc] init];
     [self.navigationController pushViewController:add animated:YES];
 }
 
