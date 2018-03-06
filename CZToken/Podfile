@@ -16,4 +16,5 @@ pod 'IQKeyboardManager'
 pod 'Masonry'
 pod 'RCRunkeeperSwitch'
 pod 'FDFullscreenPopGesture', '1.1'
+pod 'WebViewJavascriptBridge', '~> 6.0'
 end

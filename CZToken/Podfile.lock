@@ -25,6 +25,7 @@ PODS:
     - SDWebImage/Core (= 4.0.0)
   - SDWebImage/Core (4.0.0)
   - SVProgressHUD (2.1.2)
+  - WebViewJavascriptBridge (6.0.2)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
@@ -37,6 +38,7 @@ DEPENDENCIES:
   - RCRunkeeperSwitch
   - SDWebImage (~> 4.0)
   - SVProgressHUD
+  - WebViewJavascriptBridge (~> 6.0)
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
@@ -49,7 +51,8 @@ SPEC CHECKSUMS:
   RCRunkeeperSwitch: bf8fe3fabb9297b7f9f22cd5f8b31dc386995494
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
+  WebViewJavascriptBridge: 791ee0e26d1bf15efe5fb7fb9666a71a19b89d77
 
-PODFILE CHECKSUM: 2b5b4cfce6645342e0a71dfdc47583af01ae4330
+PODFILE CHECKSUM: 988b75b53c4ac5e47054fdf5cd62d172f3d57979
 
 COCOAPODS: 1.2.0
