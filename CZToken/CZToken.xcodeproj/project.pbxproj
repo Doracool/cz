@@ -127,6 +127,8 @@
 		60B79E49204E3B3A0006FE70 /* AuditSuccController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60B79E47204E3B3A0006FE70 /* AuditSuccController.xib */; };
 		60B79E4D204E45A60006FE70 /* houseAddressCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B79E4B204E45A60006FE70 /* houseAddressCell.m */; };
 		60B79E4E204E45A60006FE70 /* houseAddressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60B79E4C204E45A60006FE70 /* houseAddressCell.xib */; };
+		60B79E52204E73580006FE70 /* refundMoneyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B79E50204E73580006FE70 /* refundMoneyController.m */; };
+		60B79E53204E73580006FE70 /* refundMoneyController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60B79E51204E73580006FE70 /* refundMoneyController.xib */; };
 		60E4015E2042B9CA00EF047E /* UserSourceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E401552042B9C900EF047E /* UserSourceController.m */; };
 		60E4015F2042B9CA00EF047E /* HouseSourceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E401572042B9C900EF047E /* HouseSourceController.m */; };
 		60E401612042B9CA00EF047E /* MeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E401592042B9CA00EF047E /* MeController.m */; };
@@ -345,6 +347,9 @@
 		60B79E4A204E45A60006FE70 /* houseAddressCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = houseAddressCell.h; sourceTree = "<group>"; };
 		60B79E4B204E45A60006FE70 /* houseAddressCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = houseAddressCell.m; sourceTree = "<group>"; };
 		60B79E4C204E45A60006FE70 /* houseAddressCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = houseAddressCell.xib; sourceTree = "<group>"; };
+		60B79E4F204E73580006FE70 /* refundMoneyController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = refundMoneyController.h; sourceTree = "<group>"; };
+		60B79E50204E73580006FE70 /* refundMoneyController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = refundMoneyController.m; sourceTree = "<group>"; };
+		60B79E51204E73580006FE70 /* refundMoneyController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = refundMoneyController.xib; sourceTree = "<group>"; };
 		60E401552042B9C900EF047E /* UserSourceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserSourceController.m; sourceTree = "<group>"; };
 		60E401562042B9C900EF047E /* HouseSourceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HouseSourceController.h; sourceTree = "<group>"; };
 		60E401572042B9C900EF047E /* HouseSourceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HouseSourceController.m; sourceTree = "<group>"; };
@@ -729,6 +734,9 @@
 				60B79E45204E3B3A0006FE70 /* AuditSuccController.h */,
 				60B79E46204E3B3A0006FE70 /* AuditSuccController.m */,
 				60B79E47204E3B3A0006FE70 /* AuditSuccController.xib */,
+				60B79E4F204E73580006FE70 /* refundMoneyController.h */,
+				60B79E50204E73580006FE70 /* refundMoneyController.m */,
+				60B79E51204E73580006FE70 /* refundMoneyController.xib */,
 			);
 			path = houseAudit;
 			sourceTree = "<group>";
@@ -988,6 +996,7 @@
 				60B79E39204E36F80006FE70 /* impAuditController.xib in Resources */,
 				60B79E44204E39060006FE70 /* imgAudtiController.xib in Resources */,
 				6021A319204D3D0800FF189E /* houseAddressController.xib in Resources */,
+				60B79E53204E73580006FE70 /* refundMoneyController.xib in Resources */,
 				6098761C2043BAC700243079 /* iconCell.xib in Resources */,
 				6021A323204D4C2A00FF189E /* UserlinkCell.xib in Resources */,
 				D422578620483169003D146B /* HouseDetailsController.xib in Resources */,
@@ -1075,6 +1084,7 @@
 				609876112043ADE600243079 /* TitleIconCell.m in Sources */,
 				6021A309204D246C00FF189E /* buyHouseCell.m in Sources */,
 				60F978D720423FF900E79007 /* ViewController.m in Sources */,
+				60B79E52204E73580006FE70 /* refundMoneyController.m in Sources */,
 				6098761B2043BAC700243079 /* iconCell.m in Sources */,
 				60B79E2D204E337A0006FE70 /* doublebtnCell.m in Sources */,
 				6044465520464FEB008F09C7 /* UpInfoController.m in Sources */,
