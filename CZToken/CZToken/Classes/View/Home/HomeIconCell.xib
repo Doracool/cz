@@ -176,7 +176,10 @@
                     <constraint firstItem="KoV-jw-ZTz" firstAttribute="top" secondItem="iXF-XG-L8y" secondAttribute="bottom" constant="12" id="tc3-8T-m0O"/>
                 </constraints>
             </tableViewCellContentView>
-            <point key="canvasLocation" x="63" y="44.5"/>
+            <connections>
+                <outlet property="iconImg" destination="iXF-XG-L8y" id="RVs-jx-YHG"/>
+            </connections>
+            <point key="canvasLocation" x="-99" y="46"/>
         </tableViewCell>
     </objects>
 </document>
