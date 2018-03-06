@@ -72,6 +72,16 @@
     } else if (tag == 1) {
         foreSigninController *signin = [[foreSigninController alloc] init];
         [self.navigationController pushViewController:signin animated:YES];
+    } else {
+        ZHPickView *pickView = [[ZHPickView alloc] init];
+//        [pickView setDataViewWithItem:@[@"item1",@"item2",@"item3"] title:@"DataTitle"];
+        [pickView setDateViewWithTitle:@"Date"];
+        [pickView showPickView:self];
+        pickView.block = ^(NSString *selectedStr)
+        {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"You have chooseed:" message:selectedStr delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+            [alert show];
+        };
     }
     
 }

@@ -14,6 +14,7 @@
     CGFloat widthSpace;
     CGFloat Top;
     CGFloat heightSpace;
+    NSInteger count;
 }
 @property (nonatomic, strong) UIView *tagsView;
 @property (nonatomic, strong) UIColor *titlesColor;
@@ -27,6 +28,7 @@
     widthSpace = 10;
     Top = 0;
     heightSpace = 25;
+    count = tags.count;
     _chooseTagsArr = [NSMutableArray arrayWithCapacity:0];
     self = [super initWithFrame:frame];
     _tagsView = [[UIView alloc] initWithFrame:frame];
@@ -57,6 +59,20 @@
 }
 
 - (void)chooseTags:(UIButton *)sender {
+    // 单选
+    for (NSInteger i = 0 ; i < count ; i++) {
+        if (sender.tag == i) {
+            [sender setBackgroundColor:[UIColor redColor]];
+            [sender setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+            continue;
+        }
+        UIButton *other = (UIButton *)self.subviews[i];
+        
+        [other setBackgroundColor:[UIColor whiteColor]];
+        [other setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        
+    }
+    /*
     if (![_chooseTagsArr containsObject:[NSString stringWithFormat:@"%ld",sender.tag]]) {
         [sender setBackgroundColor:[UIColor redColor]];
         [sender setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
@@ -67,6 +83,7 @@
         [sender setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     }
     [self.delegate chooseTagsArr:_chooseTagsArr];
+     */
 }
 
 @end

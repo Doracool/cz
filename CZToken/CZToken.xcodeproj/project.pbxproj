@@ -147,6 +147,7 @@
 		D422578620483169003D146B /* HouseDetailsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D422578420483169003D146B /* HouseDetailsController.xib */; };
 		D422578A204D8053003D146B /* houseImpInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4225788204D8053003D146B /* houseImpInfoController.m */; };
 		D422578B204D8053003D146B /* houseImpInfoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4225789204D8053003D146B /* houseImpInfoController.xib */; };
+		D422578F204EE9F0003D146B /* ZHPickView.m in Sources */ = {isa = PBXBuildFile; fileRef = D422578D204EE9EF003D146B /* ZHPickView.m */; };
 		D4C7D5A9204597010008F09A /* yuegongCellOne.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C7D5A7204597010008F09A /* yuegongCellOne.m */; };
 		D4C7D5AA204597010008F09A /* yuegongCellOne.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4C7D5A8204597010008F09A /* yuegongCellOne.xib */; };
 		D4C7D5AE2046E3E70008F09A /* rzshViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C7D5AC2046E3E70008F09A /* rzshViewController.m */; };
@@ -382,6 +383,8 @@
 		D4225787204D8053003D146B /* houseImpInfoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = houseImpInfoController.h; sourceTree = "<group>"; };
 		D4225788204D8053003D146B /* houseImpInfoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = houseImpInfoController.m; sourceTree = "<group>"; };
 		D4225789204D8053003D146B /* houseImpInfoController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = houseImpInfoController.xib; sourceTree = "<group>"; };
+		D422578D204EE9EF003D146B /* ZHPickView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHPickView.m; sourceTree = "<group>"; };
+		D422578E204EE9F0003D146B /* ZHPickView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHPickView.h; sourceTree = "<group>"; };
 		D4C7D5A6204597010008F09A /* yuegongCellOne.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = yuegongCellOne.h; sourceTree = "<group>"; };
 		D4C7D5A7204597010008F09A /* yuegongCellOne.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = yuegongCellOne.m; sourceTree = "<group>"; };
 		D4C7D5A8204597010008F09A /* yuegongCellOne.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = yuegongCellOne.xib; sourceTree = "<group>"; };
@@ -669,6 +672,7 @@
 		60B622C620424C63001DBA43 /* ThirdTools */ = {
 			isa = PBXGroup;
 			children = (
+				D422578C204EE9DF003D146B /* ZHPick */,
 				6021A2FF204CF63F00FF189E /* LPCarouselView */,
 				D4C7D5B72047DCEB0008F09A /* DOPDrop */,
 				60444648204642DD008F09C7 /* DVSwitch */,
@@ -807,6 +811,15 @@
 				63AE435D0F5CF73E52226419 /* Pods-CZToken.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		D422578C204EE9DF003D146B /* ZHPick */ = {
+			isa = PBXGroup;
+			children = (
+				D422578E204EE9F0003D146B /* ZHPickView.h */,
+				D422578D204EE9EF003D146B /* ZHPickView.m */,
+			);
+			path = ZHPick;
 			sourceTree = "<group>";
 		};
 		D4C7D5B72047DCEB0008F09A /* DOPDrop */ = {
@@ -1123,6 +1136,7 @@
 				602B68CA2048F67700748562 /* writeLogController.m in Sources */,
 				6098760820439F4700243079 /* BaseViewController.m in Sources */,
 				60E401612042B9CA00EF047E /* MeController.m in Sources */,
+				D422578F204EE9F0003D146B /* ZHPickView.m in Sources */,
 				D4C7D5AE2046E3E70008F09A /* rzshViewController.m in Sources */,
 				6021A30E204D253F00FF189E /* houseInfoMoreCell.m in Sources */,
 				D422578520483169003D146B /* HouseDetailsController.m in Sources */,
