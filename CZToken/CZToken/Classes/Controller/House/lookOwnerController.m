@@ -20,6 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     _myTableView.rowHeight = 100;
+    _myTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -40,8 +41,14 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *identifier = @"cell";
     OwnerInfoCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     if (cell == nil) {
         cell = [[NSBundle mainBundle] loadNibNamed:@"OwnerInfoCell" owner:self options:nil][0];
+        cell.name.text = @"张先森";
+        cell.phoneNum.text = @"189****5642";
+        cell.callbtn.layer.cornerRadius = 3.0f;
+        cell.callbtn.layer.masksToBounds = YES;
+        [cell.callbtn addTarget:self action:@selector(callAction:) forControlEvents:UIControlEventTouchUpInside];
     }
     return cell;
 }
@@ -52,6 +59,10 @@
 
 //    writeLogController *log = [[writeLogController alloc] init];
     [self.navigationController pushViewController:log animated:YES];
+}
+
+- (void)callAction:(UIButton *)sender {
+    
 }
 
 - (void)didReceiveMemoryWarning {

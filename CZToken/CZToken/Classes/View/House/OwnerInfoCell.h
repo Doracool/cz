@@ -10,4 +10,7 @@
 
 @interface OwnerInfoCell : UITableViewCell
 
+@property (strong, nonatomic) IBOutlet UILabel *name;
+@property (strong, nonatomic) IBOutlet UILabel *phoneNum;
+@property (strong, nonatomic) IBOutlet UIButton *callbtn;
 @end

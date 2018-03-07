@@ -21,6 +21,29 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gTe-Yx-ahp">
+                    <rect key="frame" x="20" y="577" width="152.5" height="40"/>
+                    <color key="backgroundColor" red="0.89411764709999997" green="0.26274509800000001" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="Opx-py-Vj8"/>
+                    </constraints>
+                    <state key="normal" title="看业主">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MXa-xZ-ajC">
+                    <rect key="frame" x="202" y="577" width="152.5" height="40"/>
+                    <color key="backgroundColor" red="0.89411764709999997" green="0.26274509800000001" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="vCa-Zp-WDl"/>
+                    </constraints>
+                    <state key="normal" title="跟进">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="writeContent:" destination="-1" eventType="touchUpInside" id="51N-nt-hzL"/>
+                    </connections>
+                </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="首次录入" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rg3-i0-Rp4">
                     <rect key="frame" x="8" y="72" width="49.5" height="14.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -88,32 +111,13 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vKM-QM-GqC">
-                    <rect key="frame" x="0.0" y="64" width="375" height="453"/>
+                    <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="AoJ-VG-JQ9"/>
                         <outlet property="delegate" destination="-1" id="tnI-3y-A74"/>
                     </connections>
                 </tableView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gTe-Yx-ahp">
-                    <rect key="frame" x="20" y="577" width="152.5" height="40"/>
-                    <color key="backgroundColor" red="1" green="0.32508540000000002" blue="0.19246339840000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="40" id="Opx-py-Vj8"/>
-                    </constraints>
-                    <state key="normal" title="看业主"/>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MXa-xZ-ajC">
-                    <rect key="frame" x="202.5" y="577" width="152.5" height="40"/>
-                    <color key="backgroundColor" red="1" green="0.32508540000000002" blue="0.19246339840000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="40" id="vCa-Zp-WDl"/>
-                    </constraints>
-                    <state key="normal" title="跟进"/>
-                    <connections>
-                        <action selector="writeContent:" destination="-1" eventType="touchUpInside" id="51N-nt-hzL"/>
-                    </connections>
-                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -129,7 +133,7 @@
                 <constraint firstItem="rg3-i0-Rp4" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="72" id="KWT-gN-neo"/>
                 <constraint firstAttribute="trailing" secondItem="MXa-xZ-ajC" secondAttribute="trailing" constant="20" id="L2K-kN-Wna"/>
                 <constraint firstItem="aRQ-UO-Lp2" firstAttribute="leading" secondItem="GPP-VW-tk2" secondAttribute="trailing" constant="5" id="LYk-t7-nwR"/>
-                <constraint firstAttribute="bottom" secondItem="vKM-QM-GqC" secondAttribute="bottom" constant="150" id="SMD-vF-q3k"/>
+                <constraint firstAttribute="bottom" secondItem="vKM-QM-GqC" secondAttribute="bottom" id="SMD-vF-q3k"/>
                 <constraint firstItem="vKM-QM-GqC" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="ScA-k2-PHE"/>
                 <constraint firstItem="DHL-H7-tiR" firstAttribute="leading" secondItem="Ymr-r9-jSE" secondAttribute="trailing" constant="5" id="VYV-nM-t4B"/>
                 <constraint firstItem="DHL-H7-tiR" firstAttribute="centerY" secondItem="Ymr-r9-jSE" secondAttribute="centerY" id="bXH-ZQ-ilz"/>

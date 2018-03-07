@@ -8,6 +8,7 @@
 
 #import "LogListController.h"
 #import "logListCell.h"
+#import "writeLogController.h"
 @interface LogListController ()<DOPDropDownMenuDelegate,DOPDropDownMenuDataSource>
 
 @property (strong, nonatomic) IBOutlet UITableView *myTableView;
@@ -31,7 +32,7 @@
     DOPDropDownMenu *menu = [[DOPDropDownMenu alloc] initWithOrigin:CGPointMake(0, 64) andHeight:40];
     menu.delegate = self;
     menu.dataSource = self;
-    [self.view addSubview:menu];
+//    [self.view addSubview:menu];
     _menu = menu;
     
 //    _menu.finishedBlock = ^(DOPIndexPath *indexPath) {
@@ -42,6 +43,15 @@
     // Do any additional setup after loading the view from its nib.
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self tabbarHidden];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [self tabbarShow];
+}
 
 - (NSInteger)numberOfColumnsInMenu:(DOPDropDownMenu *)menu
 {
@@ -88,6 +98,10 @@
         cell = [[NSBundle mainBundle] loadNibNamed:@"logListCell" owner:self options:nil][0];
     }
     return cell;
+}
+- (IBAction)writeLogAction:(UIButton *)sender {
+    writeLogController *write = [[writeLogController alloc] init];
+    [self.navigationController pushViewController:write animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

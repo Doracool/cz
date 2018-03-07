@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface writeLogController : UIViewController
+@interface writeLogController : BaseViewController
 
 @end

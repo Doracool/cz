@@ -92,7 +92,12 @@
                     <constraint firstItem="7jF-Bt-IQN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="xBC-LK-yda"/>
                 </constraints>
             </tableViewCellContentView>
-            <point key="canvasLocation" x="58.5" y="71"/>
+            <connections>
+                <outlet property="callbtn" destination="Ooq-k4-Z1k" id="JYa-ue-kVj"/>
+                <outlet property="name" destination="j6H-t3-gpO" id="dwF-c2-kNq"/>
+                <outlet property="phoneNum" destination="Cgp-XM-OTv" id="Twi-kT-zM2"/>
+            </connections>
+            <point key="canvasLocation" x="-89" y="70"/>
         </tableViewCell>
     </objects>
 </document>

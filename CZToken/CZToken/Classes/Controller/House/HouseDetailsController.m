@@ -19,6 +19,7 @@
 #import "foreSigninController.h"
 #import "houseAddressController.h"
 #import "lookOwnerController.h"
+#import "LogListController.h"
 @interface HouseDetailsController ()
 @property (assign) BOOL selected;
 @property (strong, nonatomic) IBOutlet UITableView *myTableView;
@@ -218,7 +219,8 @@
 }
 
 - (void)followHouseAction:(UIButton *)sender {
-    
+    LogListController *logList = [[LogListController alloc] init];
+    [self.navigationController pushViewController:logList animated:YES];
 }
 
 - (void)signInAction {
