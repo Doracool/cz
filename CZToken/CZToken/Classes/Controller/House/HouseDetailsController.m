@@ -20,6 +20,7 @@
 #import "houseAddressController.h"
 #import "lookOwnerController.h"
 #import "LogListController.h"
+#import "refundMoneyController.h"
 @interface HouseDetailsController ()
 @property (assign) BOOL selected;
 @property (strong, nonatomic) IBOutlet UITableView *myTableView;
@@ -145,6 +146,8 @@
         [moreCell.moreBtn addTarget:self action:@selector(openOrClose:) forControlEvents:UIControlEventTouchUpInside];
         [moreCell.seeBtn addTarget:self action:@selector(seeAction:) forControlEvents:UIControlEventTouchUpInside];
         [moreCell.followBtn addTarget:self action:@selector(followHouseAction:) forControlEvents:UIControlEventTouchUpInside];
+        [moreCell.changeBtn addTarget:self action:@selector(changeInfoAction:) forControlEvents:UIControlEventTouchUpInside];
+        [moreCell.moneyBtn addTarget:self action:@selector(moneyAction:) forControlEvents:UIControlEventTouchUpInside];
         moreCell.selectionStyle = UITableViewCellSelectionStyleNone;
         return moreCell;
         
@@ -221,6 +224,15 @@
 - (void)followHouseAction:(UIButton *)sender {
     LogListController *logList = [[LogListController alloc] init];
     [self.navigationController pushViewController:logList animated:YES];
+}
+
+- (void)changeInfoAction:(UIButton *)sender {
+    
+}
+
+- (void)moneyAction:(UIButton *)sender {
+    refundMoneyController *refund = [[refundMoneyController alloc] init];
+    [self.navigationController pushViewController:refund animated:YES];
 }
 
 - (void)signInAction {
