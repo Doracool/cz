@@ -16,6 +16,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _beforeBtn.layer.borderWidth = 1.0f;
+    _beforeBtn.layer.borderColor = [UIColor colorWithHexString:@"c9c9c9"].CGColor;
     // Do any additional setup after loading the view from its nib.
 }
 - (void)viewWillDisappear:(BOOL)animated {

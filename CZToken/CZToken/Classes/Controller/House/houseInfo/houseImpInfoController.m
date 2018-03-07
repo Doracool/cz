@@ -16,7 +16,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setBaseView];
     // Do any additional setup after loading the view from its nib.
+}
+
+- (void)setBaseView {
+    NSArray *tips = @[@"复式",@"带天井",@"带露台"];
+    TTChooseBtnView *view = [[TTChooseBtnView alloc] initWithFrame:CGRectMake(12, 0, screenW-24, 30) andTags:tips andTitleColor:[UIColor lineColor] andFonts:13];
+//    _tsViewWidth.constant = view.frame.size.width;
+    [_tsView addSubview:view];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {

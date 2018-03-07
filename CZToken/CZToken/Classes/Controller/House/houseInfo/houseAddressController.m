@@ -11,6 +11,7 @@
 #import "UserlinkCell.h"
 #import "addLinkCell.h"
 #import "houseImpInfoController.h"
+#import "houseImpTwoController.h"
 @interface houseAddressController ()
 @property (strong, nonatomic) IBOutlet UITableView *myTableView;
 @property (nonatomic, assign) NSInteger rows;
@@ -45,6 +46,8 @@
         return cell;
     } else if (indexPath.row == _rows-1) {
         addLinkCell *cell = [[NSBundle mainBundle] loadNibNamed:@"addLinkCell" owner:self options:nil][0];
+        cell.addBtn.layer.borderWidth = 1.0f;
+        cell.addBtn.layer.borderColor = [UIColor colorWithHexString:@"444444"].CGColor;
         [cell.addBtn addTarget:self action:@selector(addLinkAction) forControlEvents:UIControlEventTouchUpInside];
         [cell.nextBtn addTarget:self action:@selector(nextAction) forControlEvents:UIControlEventTouchUpInside];
         tableView.rowHeight = 150;
@@ -65,6 +68,7 @@
 
 - (void)nextAction {
     houseImpInfoController *impInfo = [[houseImpInfoController alloc] init];
+    houseImpTwoController *impTwo = [[houseImpTwoController alloc] init];
     [self.navigationController pushViewController:impInfo animated:YES];
 }
 

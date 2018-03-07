@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface houseImpTwoController : UIViewController
+@interface houseImpTwoController : BaseViewController
+@property (strong, nonatomic) IBOutlet UIView *tsView;
 
+@property (strong, nonatomic) IBOutlet UIView *beforeBtn;
+@property (strong, nonatomic) IBOutlet UIView *nextBtn;
 @end

@@ -10,6 +10,8 @@
 
 @interface houseImpInfoController : BaseViewController
 
+@property (strong, nonatomic) IBOutlet NSLayoutConstraint *tsViewWidth;
+@property (strong, nonatomic) IBOutlet UIView *tsView;
 @property (weak, nonatomic) IBOutlet UIButton *beforeBtn;
 @property (weak, nonatomic) IBOutlet UIButton *nextBtn;
 @end

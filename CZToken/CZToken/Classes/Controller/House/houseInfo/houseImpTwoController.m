@@ -16,7 +16,29 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setBaseView];
     // Do any additional setup after loading the view from its nib.
+}
+
+- (void)setBaseView {
+    NSArray *tips = @[@"复式",@"带天井",@"带露台"];
+    TTChooseBtnView *view = [[TTChooseBtnView alloc] initWithFrame:CGRectMake(12, 0, screenW-24, 30) andTags:tips andTitleColor:[UIColor lineColor] andFonts:13];
+    [_tsView addSubview:view];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [self tabbarShow];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self tabbarHidden];
+}
+- (IBAction)beforeAction:(UIButton *)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+- (IBAction)nextAction:(UIButton *)sender {
 }
 
 - (void)didReceiveMemoryWarning {
