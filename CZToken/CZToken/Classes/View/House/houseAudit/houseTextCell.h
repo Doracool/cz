@@ -12,4 +12,5 @@
 
 @property (strong, nonatomic) IBOutlet UILabel *myText;
 @property (strong, nonatomic) IBOutlet UILabel *myContent;
+@property (weak, nonatomic) IBOutlet UILabel *line;
 @end

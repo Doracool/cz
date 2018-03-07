@@ -19,6 +19,16 @@
     // Do any additional setup after loading the view from its nib.
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self tabbarHidden];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [self tabbarShow];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

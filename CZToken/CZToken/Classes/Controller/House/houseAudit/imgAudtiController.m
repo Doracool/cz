@@ -10,6 +10,8 @@
 #import "houseTextCell.h"
 #import "doublebtnCell.h"
 #import "houseImgCell.h"
+#import "auditHeadCell.h"
+#import "AuditSuccController.h"
 @interface imgAudtiController ()
 
 @end
@@ -21,17 +23,38 @@
     // Do any additional setup after loading the view from its nib.
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self tabbarHidden];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [self tabbarShow];
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 4;
+    return 5;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     houseImgCell *cell = [[NSBundle mainBundle] loadNibNamed:@"houseImgCell" owner:self options:nil][0];
     doublebtnCell *btnCell = [[NSBundle mainBundle] loadNibNamed:@"doublebtnCell" owner:self options:nil][0];
-    if (indexPath.row == 3) {
+    if (indexPath.row == 4) {
         tableView.rowHeight = 150;
+        btnCell.selectionStyle = UITableViewCellSelectionStyleNone;
+        btnCell.leftBtn.layer.borderColor = [UIColor colorWithHexString:@"333333"].CGColor;
+        btnCell.leftBtn.layer.borderWidth = 1.0f;
+        [btnCell.leftBtn setTitle:@"审核不通过" forState:UIControlStateNormal];
+        [btnCell.leftBtn setTitleColor:[UIColor colorWithHexString:@"333333"] forState:UIControlStateNormal];
+        [btnCell.rightBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [btnCell.rightBtn setTitle:@"审核通过" forState:UIControlStateNormal];
         [btnCell.rightBtn addTarget:self action:@selector(pass) forControlEvents:UIControlEventTouchUpInside];
         return btnCell;
+    } else if (indexPath.row == 0) {
+        auditHeadCell *cell = [[NSBundle mainBundle] loadNibNamed:@"auditHeadCell" owner:self options:nil][0];
+        tableView.rowHeight = 150;
+        return cell;
     } else {
         tableView.rowHeight =180;
         cell.myText.text = @"户型图";
@@ -40,7 +63,8 @@
 }
 
 - (void)pass {
-    
+    AuditSuccController *succ = [[AuditSuccController alloc] init];
+    [self.navigationController pushViewController:succ animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

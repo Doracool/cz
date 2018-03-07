@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface impAuditController : UIViewController
+@interface impAuditController : BaseViewController
 
 @end

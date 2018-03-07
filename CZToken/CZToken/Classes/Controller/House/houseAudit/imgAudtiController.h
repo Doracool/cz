@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface imgAudtiController : UIViewController
+@interface imgAudtiController : BaseViewController
 
 @end
