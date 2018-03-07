@@ -18,6 +18,7 @@
 #import "HouseRankCell.h"
 #import "foreSigninController.h"
 #import "houseAddressController.h"
+#import "lookOwnerController.h"
 @interface HouseDetailsController ()
 @property (assign) BOOL selected;
 @property (strong, nonatomic) IBOutlet UITableView *myTableView;
@@ -212,7 +213,8 @@
 }
 
 - (void)seeAction:(UIButton *)sender {
-    
+    lookOwnerController *lookOwner = [[lookOwnerController alloc] init];
+    [self.navigationController pushViewController:lookOwner animated:YES];
 }
 
 - (void)followHouseAction:(UIButton *)sender {

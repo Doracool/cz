@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface lookOwnerController : UIViewController
+@interface lookOwnerController : BaseViewController
 
 @end

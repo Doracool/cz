@@ -88,7 +88,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vKM-QM-GqC">
-                    <rect key="frame" x="0.0" y="112" width="375" height="405"/>
+                    <rect key="frame" x="0.0" y="64" width="375" height="453"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="AoJ-VG-JQ9"/>
@@ -130,6 +130,7 @@
                 <constraint firstAttribute="trailing" secondItem="MXa-xZ-ajC" secondAttribute="trailing" constant="20" id="L2K-kN-Wna"/>
                 <constraint firstItem="aRQ-UO-Lp2" firstAttribute="leading" secondItem="GPP-VW-tk2" secondAttribute="trailing" constant="5" id="LYk-t7-nwR"/>
                 <constraint firstAttribute="bottom" secondItem="vKM-QM-GqC" secondAttribute="bottom" constant="150" id="SMD-vF-q3k"/>
+                <constraint firstItem="vKM-QM-GqC" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="ScA-k2-PHE"/>
                 <constraint firstItem="DHL-H7-tiR" firstAttribute="leading" secondItem="Ymr-r9-jSE" secondAttribute="trailing" constant="5" id="VYV-nM-t4B"/>
                 <constraint firstItem="DHL-H7-tiR" firstAttribute="centerY" secondItem="Ymr-r9-jSE" secondAttribute="centerY" id="bXH-ZQ-ilz"/>
                 <constraint firstItem="Ymr-r9-jSE" firstAttribute="leading" secondItem="KH6-fL-Ev6" secondAttribute="trailing" constant="5" id="bz3-Jh-mst"/>
@@ -147,9 +148,9 @@
                 <constraint firstItem="Ymr-r9-jSE" firstAttribute="centerY" secondItem="KH6-fL-Ev6" secondAttribute="centerY" id="sIq-bw-Ly6"/>
                 <constraint firstItem="gTe-Yx-ahp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="ufG-mO-dqM"/>
                 <constraint firstItem="GPP-VW-tk2" firstAttribute="leading" secondItem="Ymr-r9-jSE" secondAttribute="leading" id="v4u-vI-e0t"/>
-                <constraint firstItem="vKM-QM-GqC" firstAttribute="top" secondItem="PTh-bK-JvC" secondAttribute="bottom" constant="5" id="z7h-j8-WVd"/>
                 <constraint firstItem="aRQ-UO-Lp2" firstAttribute="centerY" secondItem="GPP-VW-tk2" secondAttribute="centerY" id="zOm-T1-tMR"/>
             </constraints>
+            <point key="canvasLocation" x="26.5" y="51.5"/>
         </view>
     </objects>
 </document>

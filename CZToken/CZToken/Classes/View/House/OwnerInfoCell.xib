@@ -19,29 +19,29 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YPu-2K-w5q">
-                        <rect key="frame" x="0.0" y="0.0" width="387" height="5"/>
-                        <color key="backgroundColor" red="0.77651131149999997" green="0.77648186679999998" blue="0.77650189400000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <rect key="frame" x="0.0" y="0.0" width="387" height="10"/>
+                        <color key="backgroundColor" red="0.83921568629999999" green="0.83921568629999999" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="5" id="eWE-yG-HGn"/>
+                            <constraint firstAttribute="height" constant="10" id="eWE-yG-HGn"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="业主" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iEI-Af-dhj">
-                        <rect key="frame" x="8" y="13" width="31" height="18"/>
+                        <rect key="frame" x="8" y="18" width="31" height="18"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="张先森" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j6H-t3-gpO">
-                        <rect key="frame" x="49" y="13" width="46" height="18"/>
+                        <rect key="frame" x="49" y="18" width="46" height="18"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7jF-Bt-IQN">
-                        <rect key="frame" x="0.0" y="39" width="387" height="1"/>
+                        <rect key="frame" x="0.0" y="44" width="387" height="1"/>
                         <color key="backgroundColor" red="0.77651131149999997" green="0.77648186679999998" blue="0.77650189400000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="1" id="6ab-Q1-dRY"/>
@@ -51,24 +51,30 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="电话" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o7Y-af-Nd0">
-                        <rect key="frame" x="8" y="48" width="27" height="16"/>
+                        <rect key="frame" x="8" y="60" width="27" height="16"/>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <color key="textColor" red="0.77651131149999997" green="0.77648186679999998" blue="0.77650189400000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="189****1365" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cgp-XM-OTv">
-                        <rect key="frame" x="55" y="48" width="77" height="16"/>
+                        <rect key="frame" x="55" y="60" width="77" height="16"/>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ooq-k4-Z1k">
-                        <rect key="frame" x="295" y="41" width="62" height="30"/>
-                        <state key="normal" title="拨打电话"/>
+                        <rect key="frame" x="277" y="53" width="80" height="30"/>
+                        <color key="backgroundColor" red="0.89411764709999997" green="0.26274509800000001" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="80" id="RAV-Cb-LeA"/>
+                        </constraints>
+                        <state key="normal" title="拨打电话">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
                     </button>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="o7Y-af-Nd0" firstAttribute="top" secondItem="7jF-Bt-IQN" secondAttribute="bottom" constant="8" id="38R-iu-zhv"/>
+                    <constraint firstItem="o7Y-af-Nd0" firstAttribute="top" secondItem="7jF-Bt-IQN" secondAttribute="bottom" constant="15" id="38R-iu-zhv"/>
                     <constraint firstItem="j6H-t3-gpO" firstAttribute="centerY" secondItem="iEI-Af-dhj" secondAttribute="centerY" id="8BY-cN-fpF"/>
                     <constraint firstItem="o7Y-af-Nd0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="8U2-0Y-fBR"/>
                     <constraint firstItem="7jF-Bt-IQN" firstAttribute="top" secondItem="iEI-Af-dhj" secondAttribute="bottom" constant="8" id="GMb-Sd-ikg"/>
