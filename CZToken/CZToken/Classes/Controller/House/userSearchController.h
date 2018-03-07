@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface userSearchController : UIViewController
+@interface userSearchController : BaseViewController
 
 @end

@@ -17,6 +17,9 @@
 @property (assign, nonatomic) id<TTTagsDelegate> delegate;
 - (id)initWithFrame:(CGRect)frame andTags:(NSArray *)tags andTitleColor:(UIColor *)color andFonts:(CGFloat)font;
 
+- (id)initWithFrame:(CGRect)frame andTags:(NSArray *)tags andTitleColor:(UIColor *)color andFonts:(CGFloat)font withFixed:(NSString *)fix;
+
+
 - (id)initWithFrame:(CGRect)frame andTags:(NSArray *)tags andTitleColor:(UIColor *)color andborderColor:(UIColor *)borderColor andFonts:(CGFloat)font;
 
 @end

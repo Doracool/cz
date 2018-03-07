@@ -136,10 +136,10 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     HouseDetailsController *details = [[HouseDetailsController alloc] init];
-//    userSearchController *search = [[userSearchController alloc] init];
+    userSearchController *search = [[userSearchController alloc] init];
     houseAddressController *address = [[houseAddressController alloc] init];
     baseAuditController *audit = [[baseAuditController alloc] init];
-    [self.navigationController pushViewController:audit animated:YES];
+    [self.navigationController pushViewController:search animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
