@@ -139,7 +139,7 @@
 //    userSearchController *search = [[userSearchController alloc] init];
     houseAddressController *address = [[houseAddressController alloc] init];
     baseAuditController *audit = [[baseAuditController alloc] init];
-    [self.navigationController pushViewController:details animated:YES];
+    [self.navigationController pushViewController:audit animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
