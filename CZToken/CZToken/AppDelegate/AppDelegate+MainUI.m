@@ -38,7 +38,7 @@
     
     self.mainTab = [[CZTabBarController alloc] initWithTabBarSelectedImages:selectedArray normalImages:array titles:titles];
     self.mainTab.viewControllers = @[nav1,nav2,nav3,nav4,nav5];
-    self.mainTab.textColor = [UIColor navbackgroundColor];
+    self.mainTab.textColor = [UIColor whiteColor];
     self.window.rootViewController = self.mainTab;
     
     return self.mainTab;
@@ -125,7 +125,7 @@
 
 - (void)appAppearanceConfig {
     // 设置UINavigationBar颜色
-    [[UINavigationBar appearance] setBarTintColor:[UIColor redColor]];
+    [[UINavigationBar appearance] setBarTintColor:[UIColor navbackgroundColor]];
     [[UINavigationBar appearance] setTintColor:[UIColor titleNavColor]];
     
     // 设置TITLE的字体颜色

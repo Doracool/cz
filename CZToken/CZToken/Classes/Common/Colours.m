@@ -1404,7 +1404,7 @@ static CGFloat (^RAD)(CGFloat) = ^CGFloat (CGFloat degree){
 }
 //导航背景颜色
 + (UIColor *)navbackgroundColor{
-    return [self colorWithHexString:@"ffd800"];
+    return [self colorWithHexString:@"E44349"];
 }
 /**
  * 导航字体的颜色以及导航返回按钮的颜色

@@ -58,14 +58,15 @@
     CGFloat standOutHeight = 0;
     CGFloat tabBarHeight = 49;
     UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, -standOutHeight,kScreenWidth , tabBarHeight +standOutHeight)];// ScreenW设备的宽
+    imageView.backgroundColor = [UIColor navbackgroundColor];
     CAShapeLayer *layer = [CAShapeLayer layer];
     UIBezierPath *path = [UIBezierPath bezierPath];
     [path moveToPoint:CGPointMake(0, 0)];
     [path addLineToPoint:CGPointMake(kScreenWidth, 0)];
     
     layer.path = path.CGPath;
-    layer.fillColor = [UIColor redColor].CGColor;// 整个背景的颜色
-    layer.strokeColor = [UIColor yellowColor].CGColor;//边框线条的颜色
+    layer.fillColor = [UIColor whiteColor].CGColor;// 整个背景的颜色
+    layer.strokeColor = [UIColor whiteColor].CGColor;//边框线条的颜色
     layer.lineWidth = 1;//边框线条的宽
     // 在要画背景的view上 addSublayer:
     [imageView.layer addSublayer:layer];
@@ -263,7 +264,7 @@
 -(void)setTextColor:(UIColor *)textColor{
     _textColor = textColor;
     for (CZButton * button in self.buttonArray) {
-        [button setTitleColor:[UIColor  orangeColor] forState:UIControlStateNormal];
+        [button setTitleColor:[UIColor  whiteColor] forState:UIControlStateNormal];
         [button setTitleColor:textColor forState:UIControlStateSelected];
     }
 }
