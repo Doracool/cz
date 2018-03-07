@@ -58,6 +58,41 @@
     return self;
 }
 
+- (id)initWithFrame:(CGRect)frame andTags:(NSArray *)tags andTitleColor:(UIColor *)color andborderColor:(UIColor *)borderColor andFonts:(CGFloat)font {
+    Left = 0;
+    widthSpace = 10;
+    Top = 0;
+    heightSpace = 20;
+    count = tags.count;
+    _chooseTagsArr = [NSMutableArray arrayWithCapacity:0];
+    self = [super initWithFrame:frame];
+    _tagsView = [[UIView alloc] initWithFrame:frame];
+    for (NSInteger i = 0; i < tags.count; i++) {
+        NSString *contentText = tags[i];
+        NSDictionary *attributes = @{NSFontAttributeName:[UIFont systemFontOfSize:font]};
+        CGSize size = [contentText boundingRectWithSize:CGSizeMake(frame.size.width, 10000) options:NSStringDrawingUsesLineFragmentOrigin attributes:attributes context:nil].size;
+        if (kScreenWidth - 32 - Left < size.width) {
+            Left = 0;
+            Top = Top + heightSpace + 10;
+        }
+        UIButton *tags = [[UIButton alloc] initWithFrame:CGRectMake(Left, Top, size.width +5, heightSpace)];
+        [self addSubview:tags];
+        _titlesColor = color;
+        tags.titleLabel.font = [UIFont systemFontOfSize:font];
+        [tags setTitle:contentText forState:UIControlStateNormal];
+        [tags setTitleColor:_titlesColor forState:UIControlStateNormal];
+        tags.layer.borderColor = borderColor.CGColor;
+        tags.layer.borderWidth = 1.0f;
+        tags.layer.cornerRadius = 2.0f;
+        tags.layer.masksToBounds = YES;
+        Left = Left + size.width + 5 + widthSpace;
+    }
+    self.height = Top + heightSpace + 10;
+    return self;
+}
+
+
+
 - (void)chooseTags:(UIButton *)sender {
     // 单选
     for (NSInteger i = 0 ; i < count ; i++) {

@@ -52,6 +52,7 @@
     _myTableView.delegate = self;
     _myTableView.dataSource = self;
     _myTableView.rowHeight = 120;
+    _myTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     // Do any additional setup after loading the view.
     self.add = [[UIButton alloc] initWithFrame:CGRectMake(screenW-50, screenH-150, 30, 30)];
     [self.view addSubview:self.add];
@@ -115,6 +116,20 @@
     houseSourceCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     if (cell == nil) {
         cell = [[NSBundle mainBundle] loadNibNamed:@"houseSourceCell" owner:self options:nil][0];
+        cell.iconImg.image = [UIImage imageNamed:@"01"];
+        cell.chatBtn.width = 40;
+        cell.chatBtn.layer.borderWidth = 1.0f;
+        cell.chatBtn.layer.borderColor = [UIColor colorWithHexString:@"59A89F"].CGColor;
+        cell.chatBtn.layer.cornerRadius = 2.0f;
+        
+        
+        NSArray *tips = @[@"上海单身",@"上海户口"];
+        NSMutableArray *arr = [NSMutableArray arrayWithCapacity:0];
+        [arr addObjectsFromArray:tips];
+        TTChooseBtnView *view = [[TTChooseBtnView alloc] initWithFrame:CGRectMake(0, 0, screenW-24, 40) andTags:tips andTitleColor:[UIColor colorWithHexString:@"666666"] andborderColor:[UIColor colorWithHexString:@"333333"] andFonts:13.f];
+        [cell.typeView addSubview:view];
+        
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     return cell;
 }

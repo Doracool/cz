@@ -11,4 +11,12 @@
 @interface houseDetaiseCellOne : UITableViewCell
 
 @property (strong, nonatomic) IBOutlet UIView *headerView;
+@property (strong, nonatomic) IBOutlet UIImageView *typeImg;
+@property (strong, nonatomic) IBOutlet UILabel *xiaoqu;
+@property (strong, nonatomic) IBOutlet UILabel *renzheng;
+@property (strong, nonatomic) IBOutlet UIView *typeView;
+@property (strong, nonatomic) IBOutlet UILabel *price;
+@property (strong, nonatomic) IBOutlet UILabel *liulan;
+@property (strong, nonatomic) IBOutlet UIButton *star;
+@property (strong, nonatomic) IBOutlet UIButton *follow;
 @end

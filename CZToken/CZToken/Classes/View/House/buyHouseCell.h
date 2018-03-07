@@ -10,4 +10,5 @@
 
 @interface buyHouseCell : UITableViewCell
 
+@property (strong, nonatomic) IBOutlet UIButton *buyBtn;
 @end

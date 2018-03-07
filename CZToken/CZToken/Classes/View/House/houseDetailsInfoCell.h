@@ -10,4 +10,12 @@
 
 @interface houseDetailsInfoCell : UITableViewCell
 
+@property (strong, nonatomic) IBOutlet UIImageView *iconImg;
+@property (strong, nonatomic) IBOutlet UILabel *name;
+@property (strong, nonatomic) IBOutlet UILabel *company;
+@property (strong, nonatomic) IBOutlet UILabel *sxd;
+@property (strong, nonatomic) IBOutlet UILabel *cxz;
+@property (strong, nonatomic) IBOutlet UILabel *zyz;
+@property (strong, nonatomic) IBOutlet UIButton *lxtBtn;
+@property (strong, nonatomic) IBOutlet UIButton *dhtBtn;
 @end
