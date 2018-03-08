@@ -36,9 +36,29 @@
     self.arr3 = @[@"类型",@"qew",@"sdfad",@"sfd"];
     self.arr4 = @[@"更多",@"gdfs",@"rew",@"ter"];
     
+    UITextField *search = [[UITextField alloc] initWithFrame:CGRectMake(15, 25, screenW-120, 35)];
+    [self.view addSubview:search];
+    search.placeholder = @"  🔍请输入小区名称";
+    search.layer.borderColor = [UIColor lineColor].CGColor;
+    search.layer.borderWidth = 1.0f;
+    search.layer.cornerRadius = 2.0f;
+    search.layer.masksToBounds = YES;
+    
+    UIButton *searchBtn = [[UIButton alloc] initWithFrame:CGRectMake(screenW-90, 25, 80, 35)];
+    [self.view addSubview:searchBtn];
+    [searchBtn setTitle:@"搜索" forState:UIControlStateNormal];
+    [searchBtn setBackgroundColor:[UIColor navbackgroundColor]];
+    [searchBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    searchBtn.layer.cornerRadius = 5.0f;
+    searchBtn.layer.masksToBounds = YES;
+    [searchBtn addTarget:self action:@selector(searchAction:) forControlEvents:UIControlEventTouchUpInside];
+    
+    
+    
     DOPDropDownMenu *menu = [[DOPDropDownMenu alloc] initWithOrigin:CGPointMake(0, 64) andHeight:40];
     menu.delegate = self;
     menu.dataSource = self;
+    menu.backgroundColor = [UIColor colorWithHexString:@"f2f2f2"];
     [self.view addSubview:menu];
     _menu = menu;
     
@@ -136,9 +156,14 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     HouseDetailsController *details = [[HouseDetailsController alloc] init];
-    userSearchController *search = [[userSearchController alloc] init];
+    
     houseAddressController *address = [[houseAddressController alloc] init];
     baseAuditController *audit = [[baseAuditController alloc] init];
+    [self.navigationController pushViewController:address animated:YES];
+}
+
+- (void)searchAction:(UIButton *)sender {
+    userSearchController *search = [[userSearchController alloc] init];
     [self.navigationController pushViewController:search animated:YES];
 }
 
