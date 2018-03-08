@@ -41,6 +41,8 @@
 		6021A328204D510100FF189E /* addLinkCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6021A326204D510100FF189E /* addLinkCell.xib */; };
 		602385472050C1E600B2FA4F /* houseAddressComCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 602385452050C1E600B2FA4F /* houseAddressComCell.m */; };
 		602385482050C1E600B2FA4F /* houseAddressComCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 602385462050C1E600B2FA4F /* houseAddressComCell.xib */; };
+		6023854C2050E10900B2FA4F /* addUserInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6023854A2050E10900B2FA4F /* addUserInfoController.m */; };
+		6023854D2050E10900B2FA4F /* addUserInfoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6023854B2050E10900B2FA4F /* addUserInfoController.xib */; };
 		602B68C02048EE6700748562 /* lookOwnerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 602B68BE2048EE6700748562 /* lookOwnerController.m */; };
 		602B68C12048EE6700748562 /* lookOwnerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 602B68BF2048EE6700748562 /* lookOwnerController.xib */; };
 		602B68C52048F0C300748562 /* OwnerInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 602B68C32048F0C300748562 /* OwnerInfoCell.m */; };
@@ -217,6 +219,9 @@
 		602385442050C1E600B2FA4F /* houseAddressComCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = houseAddressComCell.h; sourceTree = "<group>"; };
 		602385452050C1E600B2FA4F /* houseAddressComCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = houseAddressComCell.m; sourceTree = "<group>"; };
 		602385462050C1E600B2FA4F /* houseAddressComCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = houseAddressComCell.xib; sourceTree = "<group>"; };
+		602385492050E10900B2FA4F /* addUserInfoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = addUserInfoController.h; sourceTree = "<group>"; };
+		6023854A2050E10900B2FA4F /* addUserInfoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = addUserInfoController.m; sourceTree = "<group>"; };
+		6023854B2050E10900B2FA4F /* addUserInfoController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = addUserInfoController.xib; sourceTree = "<group>"; };
 		602B68BD2048EE6700748562 /* lookOwnerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lookOwnerController.h; sourceTree = "<group>"; };
 		602B68BE2048EE6700748562 /* lookOwnerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = lookOwnerController.m; sourceTree = "<group>"; };
 		602B68BF2048EE6700748562 /* lookOwnerController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = lookOwnerController.xib; sourceTree = "<group>"; };
@@ -473,6 +478,9 @@
 				D4C7D5B02046E7A40008F09A /* loginController.h */,
 				D4C7D5B12046E7A40008F09A /* loginController.m */,
 				D4C7D5B22046E7A40008F09A /* loginController.xib */,
+				602385492050E10900B2FA4F /* addUserInfoController.h */,
+				6023854A2050E10900B2FA4F /* addUserInfoController.m */,
+				6023854B2050E10900B2FA4F /* addUserInfoController.xib */,
 			);
 			path = Signin;
 			sourceTree = "<group>";
@@ -1006,6 +1014,7 @@
 				6021A2F9204CE12700FF189E /* houseDetailsInfoCell.xib in Resources */,
 				6044466A20468F2B008F09C7 /* jjrViewController.xib in Resources */,
 				60F978DA20423FF900E79007 /* Main.storyboard in Resources */,
+				6023854D2050E10900B2FA4F /* addUserInfoController.xib in Resources */,
 				6082BAD22045588A00F82B31 /* daikuan.xib in Resources */,
 				60435400204A9820002E24C9 /* addHouseDetailsController.xib in Resources */,
 				D4C7D5AF2046E3E70008F09A /* rzshViewController.xib in Resources */,
@@ -1129,6 +1138,7 @@
 				6021A305204CF64000FF189E /* LPCarouselViewCell.m in Sources */,
 				6082BAD02044FCA300F82B31 /* ZFJSegmentedControl.m in Sources */,
 				60B79E33204E34200006FE70 /* baseAuditController.m in Sources */,
+				6023854C2050E10900B2FA4F /* addUserInfoController.m in Sources */,
 				60F978E220423FF900E79007 /* main.m in Sources */,
 				604353FF204A9820002E24C9 /* addHouseDetailsController.m in Sources */,
 				6044465F20465D63008F09C7 /* zsViewController.m in Sources */,

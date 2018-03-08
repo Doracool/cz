@@ -8,6 +8,7 @@
 
 #import "foreSigninController.h"
 #import "UpInfoController.h"
+#import "addUserInfoController.h"
 @interface foreSigninController ()
 @property (strong, nonatomic) IBOutlet UITextField *phone;
 @property (strong, nonatomic) IBOutlet UITextField *code;
@@ -26,6 +27,16 @@
     // Do any additional setup after loading the view from its nib.
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self tabbarHidden];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [self tabbarShow];
+}
+
 - (void)setBaseView {
     _codeBtn.layer.cornerRadius = 5.0f;
     _codeBtn.layer.masksToBounds = YES;
@@ -37,8 +48,10 @@
     
 }
 - (IBAction)signinAction:(UIButton *)sender {
+    addUserInfoController *user = [[addUserInfoController alloc] init];
+    
     UpInfoController *upinfo = [[UpInfoController alloc] init];
-    [self.navigationController pushViewController:upinfo animated:YES];
+    [self.navigationController pushViewController:user animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

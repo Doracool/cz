@@ -18,6 +18,18 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 }
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self tabbarHidden];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [self tabbarShow];
+}
+
+
 - (IBAction)SignAction:(UIButton *)sender {
     zsViewController *zs = [[zsViewController alloc] init];
     [self.navigationController pushViewController:zs animated:YES];

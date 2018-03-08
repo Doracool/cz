@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UpInfoController : UIViewController
+@interface UpInfoController : BaseViewController
 
 @end

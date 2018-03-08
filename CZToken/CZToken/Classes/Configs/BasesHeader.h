@@ -43,6 +43,8 @@
 #import "LPCarouselView.h"
 #import <UINavigationController+FDFullscreenPopGesture.h>
 #import "ZHPickView.h"
+#import "TZImagePickerController.h"
+#import "TZImageManager.h"
 
 /***************** 加载公共常量 *********************/
 

@@ -25,6 +25,7 @@ PODS:
     - SDWebImage/Core (= 4.0.0)
   - SDWebImage/Core (4.0.0)
   - SVProgressHUD (2.1.2)
+  - TZImagePickerController (1.7.9)
   - WebViewJavascriptBridge (6.0.2)
 
 DEPENDENCIES:
@@ -38,6 +39,7 @@ DEPENDENCIES:
   - RCRunkeeperSwitch
   - SDWebImage (~> 4.0)
   - SVProgressHUD
+  - TZImagePickerController
   - WebViewJavascriptBridge (~> 6.0)
 
 SPEC CHECKSUMS:
@@ -51,8 +53,9 @@ SPEC CHECKSUMS:
   RCRunkeeperSwitch: bf8fe3fabb9297b7f9f22cd5f8b31dc386995494
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
+  TZImagePickerController: 0a8ff228d287ebdd7d485e8c42a2a932894f1fba
   WebViewJavascriptBridge: 791ee0e26d1bf15efe5fb7fb9666a71a19b89d77
 
-PODFILE CHECKSUM: 988b75b53c4ac5e47054fdf5cd62d172f3d57979
+PODFILE CHECKSUM: a6e4deb43e1602d259217f1d70b70fbe0a2bf6a0
 
 COCOAPODS: 1.2.0

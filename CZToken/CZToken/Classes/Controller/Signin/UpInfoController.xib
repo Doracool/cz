@@ -13,30 +13,34 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UpInfoController">
             <connections>
+                <outlet property="imgBtn" destination="GR6-sc-02G" id="zxW-NE-nje"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="384" height="911"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pfz-i0-YJY">
-                    <rect key="frame" x="0.0" y="0.0" width="384" height="911"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HTe-vc-erq">
-                            <rect key="frame" x="0.0" y="0.0" width="384" height="800"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="800"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hEK-bS-tOY">
-                                    <rect key="frame" x="30" y="100" width="324" height="300"/>
+                                    <rect key="frame" x="30" y="100" width="315" height="300"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GR6-sc-02G">
-                                            <rect key="frame" x="0.0" y="0.0" width="324" height="100"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="315" height="100"/>
                                             <color key="backgroundColor" red="0.49019607840000001" green="0.83137254900000002" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <state key="normal" title="Button"/>
+                                            <connections>
+                                                <action selector="addImgAction:" destination="-1" eventType="touchUpInside" id="bAf-Zg-5Da"/>
+                                            </connections>
                                         </button>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u4Q-5m-Rpt">
-                                            <rect key="frame" x="20" y="120" width="284" height="35"/>
+                                            <rect key="frame" x="20" y="120" width="275" height="35"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xvB-XM-Zjz">
                                                     <rect key="frame" x="0.0" y="0.0" width="35" height="35"/>
@@ -45,7 +49,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入真实姓名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="af7-sL-4fD">
-                                                    <rect key="frame" x="35" y="0.0" width="249" height="35"/>
+                                                    <rect key="frame" x="35" y="0.0" width="240" height="35"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -64,7 +68,7 @@
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1DY-5q-hHk">
-                                            <rect key="frame" x="20" y="175" width="284" height="35"/>
+                                            <rect key="frame" x="20" y="175" width="275" height="35"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ad5-fg-0aG">
                                                     <rect key="frame" x="0.0" y="0.0" width="35" height="35"/>
@@ -73,7 +77,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入身份证号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9jf-PY-NJv">
-                                                    <rect key="frame" x="35" y="0.0" width="249" height="35"/>
+                                                    <rect key="frame" x="35" y="0.0" width="240" height="35"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -122,12 +126,14 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tLY-gl-alW">
-                                    <rect key="frame" x="30" y="537.5" width="324" height="40"/>
-                                    <color key="backgroundColor" red="1" green="0.32508540000000002" blue="0.19246339840000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <rect key="frame" x="30" y="537.5" width="315" height="40"/>
+                                    <color key="backgroundColor" red="0.89411764709999997" green="0.26274509800000001" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="40" id="K5a-Yh-43q"/>
                                     </constraints>
-                                    <state key="normal" title="确认提交"/>
+                                    <state key="normal" title="确认提交">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
                                     <connections>
                                         <action selector="signinAction:" destination="-1" eventType="touchUpInside" id="GyW-N4-7N9"/>
                                     </connections>

@@ -25,6 +25,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 //    [self navigationBarHidden];
+    [self.navigationController.navigationBar setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
+    [self.navigationController.navigationBar setShadowImage:[[UIImage alloc] init]];
     [self leftNavBarItemWithImage:@"duigou"];
     [self rightNavBarItemWithTitle:@"" AndSel:@selector(addressClick)];
     UITextField *search = [[UITextField alloc] initWithFrame:CGRectMake(50, 10, screenW-120, 30)];

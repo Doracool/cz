@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface foreSigninController : UIViewController
+@interface foreSigninController : BaseViewController
 
 @end

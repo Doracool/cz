@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface cxMoneyController : UIViewController
+@interface cxMoneyController : BaseViewController
 
 @end
