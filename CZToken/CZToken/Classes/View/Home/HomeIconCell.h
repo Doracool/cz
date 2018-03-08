@@ -11,4 +11,5 @@
 @interface HomeIconCell : UITableViewCell
 
 @property (strong, nonatomic) IBOutlet UIButton *iconImg;
+@property (strong, nonatomic) IBOutlet UIView *scoreView;
 @end

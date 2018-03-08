@@ -439,6 +439,13 @@
 			path = LPCarouselView;
 			sourceTree = "<group>";
 		};
+		6023854E20512A5000B2FA4F /* Map */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
 		60444648204642DD008F09C7 /* DVSwitch */ = {
 			isa = PBXGroup;
 			children = (
@@ -690,6 +697,7 @@
 		60B622C620424C63001DBA43 /* ThirdTools */ = {
 			isa = PBXGroup;
 			children = (
+				6023854E20512A5000B2FA4F /* Map */,
 				D422578C204EE9DF003D146B /* ZHPick */,
 				6021A2FF204CF63F00FF189E /* LPCarouselView */,
 				D4C7D5B72047DCEB0008F09A /* DOPDrop */,
@@ -1324,6 +1332,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3AAV5C4X4L;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CZToken/Classes/ThirdTools/Map",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "/Users/jlc/Desktop/Other/cz/CZToken/CZToken/CZToken-Prefix.pch";
 				INFOPLIST_FILE = CZToken/Info.plist;
@@ -1342,6 +1354,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3AAV5C4X4L;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CZToken/Classes/ThirdTools/Map",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "/Users/jlc/Desktop/Other/cz/CZToken/CZToken/CZToken-Prefix.pch";
 				INFOPLIST_FILE = CZToken/Info.plist;

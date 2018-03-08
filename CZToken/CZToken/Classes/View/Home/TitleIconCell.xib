@@ -15,22 +15,58 @@
             <rect key="frame" x="0.0" y="0.0" width="430" height="40"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="430" height="39.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="430" height="40"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="头条" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pHw-ZO-Zez">
-                        <rect key="frame" x="197.5" y="10" width="35" height="21"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AQR-A6-1ge">
+                        <rect key="frame" x="170" y="11" width="90" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="90" id="gFv-84-FfN"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                        <state key="normal" title=" 肯军头条" image="小通知">
+                            <color key="titleColor" red="0.89411764709999997" green="0.26274509800000001" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </state>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gYN-E0-AKt">
+                        <rect key="frame" x="15" y="19.5" width="140" height="1"/>
+                        <color key="backgroundColor" red="0.95374357700000001" green="0.94529616829999996" blue="0.94888889789999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="JJL-IY-o07"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bIp-dq-I0a">
+                        <rect key="frame" x="275" y="19.5" width="140" height="1"/>
+                        <color key="backgroundColor" red="0.95374357700000001" green="0.94529616829999996" blue="0.94888889789999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="DvV-ot-ZSs"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="pHw-ZO-Zez" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="6Tx-QJ-ril"/>
-                    <constraint firstItem="pHw-ZO-Zez" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="MKx-GN-n6W"/>
+                    <constraint firstItem="gYN-E0-AKt" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="31V-zW-sWB"/>
+                    <constraint firstItem="bIp-dq-I0a" firstAttribute="centerY" secondItem="AQR-A6-1ge" secondAttribute="centerY" id="6IV-Eb-kl7"/>
+                    <constraint firstItem="AQR-A6-1ge" firstAttribute="leading" secondItem="gYN-E0-AKt" secondAttribute="trailing" constant="15" id="AOD-he-1RX"/>
+                    <constraint firstItem="AQR-A6-1ge" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="AUg-JP-f7q"/>
+                    <constraint firstItem="bIp-dq-I0a" firstAttribute="leading" secondItem="AQR-A6-1ge" secondAttribute="trailing" constant="15" id="Pbh-jg-2Qx"/>
+                    <constraint firstItem="gYN-E0-AKt" firstAttribute="centerY" secondItem="AQR-A6-1ge" secondAttribute="centerY" id="QPO-Dr-eG7"/>
+                    <constraint firstItem="AQR-A6-1ge" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="eax-mW-zkQ"/>
+                    <constraint firstAttribute="trailing" secondItem="bIp-dq-I0a" secondAttribute="trailing" constant="15" id="z66-oT-Kef"/>
                 </constraints>
             </tableViewCellContentView>
-            <point key="canvasLocation" x="80" y="39"/>
+            <connections>
+                <outlet property="titleName" destination="AQR-A6-1ge" id="y1p-fs-lrh"/>
+            </connections>
+            <point key="canvasLocation" x="-82" y="31"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="小通知" width="16" height="12"/>
+    </resources>
 </document>

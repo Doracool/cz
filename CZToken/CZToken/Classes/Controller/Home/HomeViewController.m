@@ -17,6 +17,10 @@
 #import "foreSigninController.h"
 #import "UpInfoController.h"
 @interface HomeViewController ()
+{
+    UIImageView *barImageView;
+}
+@property (strong, nonatomic) IBOutlet UITableView *myTableView;
 
 @end
 
@@ -24,9 +28,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    [self navigationBarHidden];
-    [self.navigationController.navigationBar setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
-    [self.navigationController.navigationBar setShadowImage:[[UIImage alloc] init]];
+    _myTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    barImageView = self.navigationController.navigationBar.subviews.firstObject;
+    barImageView.alpha = 0;
     [self leftNavBarItemWithImage:@"duigou"];
     [self rightNavBarItemWithTitle:@"" AndSel:@selector(addressClick)];
     UITextField *search = [[UITextField alloc] initWithFrame:CGRectMake(50, 10, screenW-120, 30)];
@@ -42,17 +46,44 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     HomeIconCell *homeCell = [[NSBundle mainBundle] loadNibNamed:@"HomeIconCell" owner:self options:nil][0];
+    homeCell.selectionStyle = UITableViewCellSelectionStyleNone;
     TitleIconCell *titleCell = [[NSBundle mainBundle] loadNibNamed:@"TitleIconCell" owner:self options:nil][0];
+    titleCell.selectionStyle = UITableViewCellSelectionStyleNone;
     NewsViewCell *newCell = [[NSBundle mainBundle] loadNibNamed:@"NewsViewCell" owner:self options:nil][0];
+    newCell.selectionStyle = UITableViewCellSelectionStyleNone;
     iconCell *iconCell = [[NSBundle mainBundle] loadNibNamed:@"iconCell" owner:self options:nil][0];
+    iconCell.selectionStyle = UITableViewCellSelectionStyleNone;
     if (indexPath.row == 0) {
-        tableView.rowHeight = 250;
+        tableView.rowHeight = 280;
+        homeCell.iconImg.layer.cornerRadius = screenW/10;
+        homeCell.scoreView.layer.cornerRadius = 10.0f;
+        homeCell.scoreView.layer.masksToBounds = YES;
+        homeCell.layer.shadowOpacity = 0.8;
+        homeCell.layer.shadowOffset = CGSizeMake(3, 3);
+        homeCell.layer.shadowRadius = 10.0f;
+        homeCell.iconImg.layer.masksToBounds = YES;
         return homeCell;
     } else if (indexPath.row == 1 || indexPath.row == 5) {
         tableView.rowHeight = 50;
+        if (indexPath.row == 5) {
+            [titleCell.titleName setTitle:@"应用中心" forState:UIControlStateNormal];
+            [titleCell.titleName setImage:[UIImage imageNamed:@"yyzx"] forState:UIControlStateNormal];
+        }
         return titleCell;
-    } else if (indexPath.row == 2 || indexPath.row == 3 || indexPath.row == 4) {
-        tableView.rowHeight = 80;
+    } else if (indexPath.row == 2) {
+        newCell.myNewsImg.image = [UIImage imageNamed:@"03"];
+        
+        tableView.rowHeight = 90;
+        return newCell;
+    } else if (indexPath.row == 3) {
+        newCell.myNewsImg.image = [UIImage imageNamed:@"04"];
+        
+        tableView.rowHeight = 90;
+        return newCell;
+    } else if (indexPath.row == 4) {
+        newCell.myNewsImg.image = [UIImage imageNamed:@"05"];
+        
+        tableView.rowHeight = 90;
         return newCell;
     } else if (indexPath.row == 6) {
         tableView.rowHeight = screenW/2;
@@ -87,6 +118,15 @@
     }
     
 }
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    CGFloat min = 0;
+    CGFloat max = 64;
+    CGFloat offset = scrollView.contentOffset.y;
+    CGFloat alpha = (offset - min) / (max - min);
+    barImageView.alpha = alpha;
+}
+
 
 - (void)addressClick {
     

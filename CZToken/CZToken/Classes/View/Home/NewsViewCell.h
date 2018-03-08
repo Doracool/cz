@@ -10,4 +10,9 @@
 
 @interface NewsViewCell : UITableViewCell
 
+@property (strong, nonatomic) IBOutlet UIImageView *myNewsImg;
+@property (strong, nonatomic) IBOutlet UILabel *titleLabel;
+@property (strong, nonatomic) IBOutlet UILabel *time;
+@property (strong, nonatomic) IBOutlet UILabel *myDetails;
+@property (strong, nonatomic) IBOutlet UILabel *myType;
 @end

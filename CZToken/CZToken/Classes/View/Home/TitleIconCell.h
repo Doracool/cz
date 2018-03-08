@@ -10,4 +10,5 @@
 
 @interface TitleIconCell : UITableViewCell
 
+@property (strong, nonatomic) IBOutlet UIButton *titleName;
 @end

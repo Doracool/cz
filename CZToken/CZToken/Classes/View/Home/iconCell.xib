@@ -21,72 +21,100 @@
                 <subviews>
                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1kF-u4-4UK">
                         <rect key="frame" x="0.0" y="0.5" width="82" height="71"/>
-                        <state key="normal" title="行情" image="duigou">
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <state key="normal" title="行情" image="行情icon">
                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </state>
                         <connections>
                             <action selector="iconClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="CmA-0s-9ue"/>
                         </connections>
                     </button>
-                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BiH-0W-73y">
-                        <rect key="frame" x="82" y="0.0" width="82.5" height="71"/>
-                        <state key="normal" title="限购"/>
+                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BiH-0W-73y">
+                        <rect key="frame" x="83" y="0.5" width="82" height="71"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <state key="normal" title="限购" image="限购icon">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
                         <connections>
                             <action selector="iconClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="uOK-4X-3Fh"/>
                         </connections>
                     </button>
-                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BbS-cr-9Bo">
+                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BbS-cr-9Bo">
                         <rect key="frame" x="164.5" y="-0.5" width="82" height="71"/>
-                        <state key="normal" title="贷款"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <state key="normal" title="贷款" image="贷款icon">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
                         <connections>
                             <action selector="iconClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="YnY-w3-8Cm"/>
                         </connections>
                     </button>
-                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l6h-CS-uaa">
-                        <rect key="frame" x="246.5" y="0.5" width="82.5" height="71"/>
-                        <state key="normal" title="税费"/>
+                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l6h-CS-uaa">
+                        <rect key="frame" x="247.5" y="0.0" width="82" height="71"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <state key="normal" title="税费" image="税费icon">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
                         <connections>
                             <action selector="iconClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="XMi-zv-gd7"/>
                         </connections>
                     </button>
-                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xlD-0n-JWG">
-                        <rect key="frame" x="0.0" y="71" width="82" height="70.5"/>
-                        <state key="normal" title="赚钱"/>
+                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xlD-0n-JWG">
+                        <rect key="frame" x="0.5" y="71.5" width="82" height="71"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <state key="normal" title="赚钱" image="赚钱icon">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
                         <connections>
                             <action selector="iconClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="6rk-cQ-nfE"/>
                         </connections>
                     </button>
-                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fiO-Jb-302">
-                        <rect key="frame" x="82.5" y="71" width="82" height="70.5"/>
-                        <state key="normal" title="资产"/>
+                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fiO-Jb-302">
+                        <rect key="frame" x="82.5" y="71" width="82" height="71"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <state key="normal" title="资产" image="资产icon">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
                         <connections>
                             <action selector="iconClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="j7n-EL-rud"/>
                         </connections>
                     </button>
-                    <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vo5-Qk-Gn4">
-                        <rect key="frame" x="164.5" y="70.5" width="82" height="71"/>
-                        <state key="normal" title="客户管理"/>
+                    <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vo5-Qk-Gn4">
+                        <rect key="frame" x="165" y="71" width="82" height="71"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <state key="normal" title="客户管理" image="客户管理icon">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
                         <connections>
                             <action selector="iconClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="3DO-sf-iLe"/>
                         </connections>
                     </button>
-                    <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A0w-MC-Zwf">
-                        <rect key="frame" x="246.5" y="71" width="82.5" height="70.5"/>
-                        <state key="normal" title="看房记录"/>
+                    <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A0w-MC-Zwf">
+                        <rect key="frame" x="247.5" y="71.5" width="82" height="71"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <state key="normal" title="看房记录" image="销售拜访icon">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
                         <connections>
                             <action selector="iconClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="AF9-RV-FTu"/>
                         </connections>
                     </button>
-                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t8N-jP-stZ">
-                        <rect key="frame" x="328.5" y="0.5" width="82.5" height="71"/>
-                        <state key="normal" title="交易"/>
+                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t8N-jP-stZ">
+                        <rect key="frame" x="329" y="0.0" width="82" height="71"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <state key="normal" title="交易" image="交易icon">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
                         <connections>
                             <action selector="iconClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="kId-ak-akq"/>
                         </connections>
                     </button>
-                    <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GRE-0e-04L">
-                        <rect key="frame" x="328" y="71" width="82.5" height="70.5"/>
-                        <state key="normal" title="我的日程"/>
+                    <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GRE-0e-04L">
+                        <rect key="frame" x="329" y="71.5" width="82" height="71"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <state key="normal" title="我的日程" image="日程icon">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
                         <connections>
                             <action selector="iconClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="NOf-ky-ri2"/>
                         </connections>
@@ -151,6 +179,15 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="duigou" width="20" height="20"/>
+        <image name="交易icon" width="26" height="22"/>
+        <image name="客户管理icon" width="31" height="22"/>
+        <image name="日程icon" width="28" height="28"/>
+        <image name="税费icon" width="21" height="24"/>
+        <image name="行情icon" width="21" height="22"/>
+        <image name="贷款icon" width="31" height="29"/>
+        <image name="资产icon" width="25" height="25"/>
+        <image name="赚钱icon" width="34" height="34"/>
+        <image name="销售拜访icon" width="32" height="23"/>
+        <image name="限购icon" width="25" height="26"/>
     </resources>
 </document>

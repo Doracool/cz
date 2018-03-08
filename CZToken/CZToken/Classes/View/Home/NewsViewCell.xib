@@ -17,48 +17,48 @@
             <rect key="frame" x="0.0" y="0.0" width="429" height="136"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="429" height="135.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="429" height="136"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9V8-Ac-fRl">
-                        <rect key="frame" x="13" y="16" width="103.5" height="103.5"/>
+                        <rect key="frame" x="13" y="11" width="113.5" height="113.5"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="9V8-Ac-fRl" secondAttribute="height" multiplier="1:1" id="pM3-FD-WTa"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="这就是一个不重要的标题" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bF8-Jl-cMH">
-                        <rect key="frame" x="128.5" y="16" width="168.5" height="18"/>
+                        <rect key="frame" x="138.5" y="11" width="168.5" height="18"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                        <nil key="textColor"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="这就是个时间" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uv7-0T-dm4">
-                        <rect key="frame" x="128" y="59.5" width="86" height="17"/>
+                        <rect key="frame" x="138" y="59.5" width="86" height="17"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <nil key="textColor"/>
+                        <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="egL-hb-Hcb">
-                        <rect key="frame" x="234" y="53.5" width="30" height="29"/>
+                        <rect key="frame" x="244" y="53.5" width="30" height="29"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <state key="normal" title="评论"/>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="这是一个小标题" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TsH-gL-hgN">
-                        <rect key="frame" x="128" y="103.5" width="93" height="16"/>
+                        <rect key="frame" x="138" y="108.5" width="93" height="16"/>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                        <nil key="textColor"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="标题" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eW7-hs-9ec">
-                        <rect key="frame" x="380" y="16" width="29" height="17"/>
+                        <rect key="frame" x="380" y="11" width="29" height="17"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <nil key="textColor"/>
+                        <color key="textColor" red="0.89411764709999997" green="0.26274509800000001" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="bF8-Jl-cMH" firstAttribute="leading" secondItem="9V8-Ac-fRl" secondAttribute="trailing" constant="12" id="0Cc-ZZ-Urw"/>
-                    <constraint firstItem="9V8-Ac-fRl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="8" id="1oA-lQ-Uft"/>
+                    <constraint firstItem="9V8-Ac-fRl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="3" id="1oA-lQ-Uft"/>
                     <constraint firstItem="9V8-Ac-fRl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="5" id="2yO-iY-yOq"/>
                     <constraint firstItem="bF8-Jl-cMH" firstAttribute="top" secondItem="9V8-Ac-fRl" secondAttribute="top" id="6D1-Nw-fFY"/>
                     <constraint firstItem="eW7-hs-9ec" firstAttribute="top" secondItem="bF8-Jl-cMH" secondAttribute="top" id="JTa-e6-D1J"/>
@@ -66,14 +66,21 @@
                     <constraint firstItem="9V8-Ac-fRl" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="NZC-JI-Qr2"/>
                     <constraint firstAttribute="trailingMargin" secondItem="eW7-hs-9ec" secondAttribute="trailing" constant="12" id="OAq-I0-snl"/>
                     <constraint firstItem="TsH-gL-hgN" firstAttribute="bottom" secondItem="9V8-Ac-fRl" secondAttribute="bottom" id="XG1-SS-RDr"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="9V8-Ac-fRl" secondAttribute="bottom" constant="8" id="XkN-7A-oXu"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="9V8-Ac-fRl" secondAttribute="bottom" constant="3" id="XkN-7A-oXu"/>
                     <constraint firstItem="egL-hb-Hcb" firstAttribute="leading" secondItem="uv7-0T-dm4" secondAttribute="trailing" constant="20" id="cT9-lz-WCG"/>
                     <constraint firstItem="uv7-0T-dm4" firstAttribute="leading" secondItem="bF8-Jl-cMH" secondAttribute="leading" id="dDz-oE-6FW"/>
                     <constraint firstItem="uv7-0T-dm4" firstAttribute="centerY" secondItem="9V8-Ac-fRl" secondAttribute="centerY" id="usj-As-9KT"/>
                     <constraint firstItem="TsH-gL-hgN" firstAttribute="leading" secondItem="uv7-0T-dm4" secondAttribute="leading" id="x38-6R-5DV"/>
                 </constraints>
             </tableViewCellContentView>
-            <point key="canvasLocation" x="79.5" y="98"/>
+            <connections>
+                <outlet property="myDetails" destination="TsH-gL-hgN" id="BM6-zZ-nmc"/>
+                <outlet property="myNewsImg" destination="9V8-Ac-fRl" id="fWA-Jj-pi3"/>
+                <outlet property="myType" destination="eW7-hs-9ec" id="Qw6-d8-A2G"/>
+                <outlet property="time" destination="uv7-0T-dm4" id="etB-6Q-lUY"/>
+                <outlet property="titleLabel" destination="bF8-Jl-cMH" id="7K7-bx-nhG"/>
+            </connections>
+            <point key="canvasLocation" x="-222" y="12"/>
         </tableViewCell>
     </objects>
 </document>

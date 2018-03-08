@@ -20,9 +20,9 @@
 
 - (CZTabBarController *)fetchTabbarController {
     [self appAppearanceConfig];
-    NSMutableArray * array = [[NSMutableArray alloc]initWithObjects:[UIImage imageNamed:@"duigou"],[UIImage imageNamed:@"duigou"],[UIImage imageNamed:@"duigou"],[UIImage imageNamed:@"duigou"],[UIImage imageNamed:@"duigou"], nil];
-    NSMutableArray * selectedArray = [[NSMutableArray alloc]initWithObjects:[UIImage imageNamed:@"duigou"],[UIImage imageNamed:@"duigou"],[UIImage imageNamed:@"duigou"],[UIImage imageNamed:@"duigou"],[UIImage imageNamed:@"duigou"], nil];
-    NSMutableArray * titles = [NSMutableArray arrayWithObjects:@"学习",@"房源",@"客源",@"计算器",@"我的", nil];
+    NSMutableArray * array = [[NSMutableArray alloc]initWithObjects:[UIImage imageNamed:@"学习未选中"],[UIImage imageNamed:@"房源"],[UIImage imageNamed:@"客源"],[UIImage imageNamed:@"计算器"],[UIImage imageNamed:@"个人"], nil];
+    NSMutableArray * selectedArray = [[NSMutableArray alloc]initWithObjects:[UIImage imageNamed:@"学习"],[UIImage imageNamed:@"房源选中"],[UIImage imageNamed:@"客源选中"],[UIImage imageNamed:@"计算器选中"],[UIImage imageNamed:@"个人选中"], nil];
+    NSMutableArray * titles = [NSMutableArray arrayWithObjects:@"学习",@"房源",@"客源",@"计算器",@"个人", nil];
     
     HomeViewController *vc1 = [[HomeViewController alloc] init];
     HouseSourceController *vc2 = [[HouseSourceController alloc] init];
@@ -36,7 +36,7 @@
     UINavigationController *nav4 = [[UINavigationController alloc] initWithRootViewController:vc4];
     UINavigationController *nav5 = [[UINavigationController alloc] initWithRootViewController:vc5];
     
-    self.mainTab = [[CZTabBarController alloc] initWithTabBarSelectedImages:selectedArray normalImages:array titles:titles];
+    self.mainTab = [[CZTabBarController alloc] initWithTabBarSelectedImages:array normalImages:selectedArray titles:titles];
     self.mainTab.viewControllers = @[nav1,nav2,nav3,nav4,nav5];
     self.mainTab.textColor = [UIColor whiteColor];
     self.window.rootViewController = self.mainTab;

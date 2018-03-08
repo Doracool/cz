@@ -31,6 +31,7 @@
     manager.shouldResignOnTouchOutside = YES;
     manager.shouldToolbarUsesTextFieldTintColor = YES;
     manager.enableAutoToolbar = YES;
+    //定位
     
     if (IOS7) {
         // 设置状态栏的样式  LightContent 字体为白色
