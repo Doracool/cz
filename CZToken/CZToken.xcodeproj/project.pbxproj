@@ -65,6 +65,8 @@
 		6041A76920526DF000EDB119 /* homeHistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6041A76720526DF000EDB119 /* homeHistoryCell.xib */; };
 		6041A76D20526EEB00EDB119 /* homeHotSeaCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6041A76B20526EEB00EDB119 /* homeHotSeaCell.m */; };
 		6041A76E20526EEB00EDB119 /* homeHotSeaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6041A76C20526EEB00EDB119 /* homeHotSeaCell.xib */; };
+		6041A77020528FFD00EDB119 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6041A76F20528FFD00EDB119 /* libresolv.tbd */; };
+		6041A7722052901200EDB119 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6041A7712052900700EDB119 /* SystemConfiguration.framework */; };
 		604353F0204A822A002E24C9 /* logListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 604353EE204A822A002E24C9 /* logListCell.m */; };
 		604353F1204A822A002E24C9 /* logListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 604353EF204A822A002E24C9 /* logListCell.xib */; };
 		604353F5204A8644002E24C9 /* payForSeeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 604353F3204A8644002E24C9 /* payForSeeController.m */; };
@@ -266,6 +268,8 @@
 		6041A76A20526EEB00EDB119 /* homeHotSeaCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = homeHotSeaCell.h; sourceTree = "<group>"; };
 		6041A76B20526EEB00EDB119 /* homeHotSeaCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = homeHotSeaCell.m; sourceTree = "<group>"; };
 		6041A76C20526EEB00EDB119 /* homeHotSeaCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = homeHotSeaCell.xib; sourceTree = "<group>"; };
+		6041A76F20528FFD00EDB119 /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
+		6041A7712052900700EDB119 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		604353ED204A822A002E24C9 /* logListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = logListCell.h; sourceTree = "<group>"; };
 		604353EE204A822A002E24C9 /* logListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = logListCell.m; sourceTree = "<group>"; };
 		604353EF204A822A002E24C9 /* logListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = logListCell.xib; sourceTree = "<group>"; };
@@ -448,7 +452,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6041A7722052901200EDB119 /* SystemConfiguration.framework in Frameworks */,
 				AA6D2A9B724FAEC47113B680 /* libPods-CZToken.a in Frameworks */,
+				6041A77020528FFD00EDB119 /* libresolv.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -879,6 +885,8 @@
 		73D7B805941FD54F52B249C7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6041A7712052900700EDB119 /* SystemConfiguration.framework */,
+				6041A76F20528FFD00EDB119 /* libresolv.tbd */,
 				5E4F68D696251ABCA40F72E7 /* libPods-CZToken.a */,
 			);
 			name = Frameworks;

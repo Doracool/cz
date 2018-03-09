@@ -52,6 +52,9 @@
 #import <BaiduMapAPI_Search/BMKGeocodeSearch.h>
 #import <BaiduMapAPI_Search/BMKSearchComponent.h>
 
+// ali oss
+#import <AliyunOSSiOS/OSSService.h>
+
 
 /***************** 加载公共常量 *********************/
 
