@@ -19,4 +19,5 @@ pod 'FDFullscreenPopGesture', '1.1'
 pod 'WebViewJavascriptBridge', '~> 6.0'
 pod 'TZImagePickerController'
 pod 'BaiduMapKit'
+pod 'AliyunOSSiOS'
 end
