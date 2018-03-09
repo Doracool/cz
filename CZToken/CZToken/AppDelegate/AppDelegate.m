@@ -9,7 +9,9 @@
 #import "AppDelegate.h"
 #import "AppDelegate+MainUI.h"
 @interface AppDelegate ()
-
+{
+    BMKMapManager *_mapManager;
+}
 @end
 
 @implementation AppDelegate
@@ -32,6 +34,12 @@
     manager.shouldToolbarUsesTextFieldTintColor = YES;
     manager.enableAutoToolbar = YES;
     //定位
+    _mapManager = [[BMKMapManager alloc] init];
+    BOOL ret = [_mapManager start:@"aObcO5txyFHZUG6wqy5l7b4nx589Quzc" generalDelegate:nil];
+    if (!ret) {
+        NSLog(@"集成失败");
+    }
+    
     
     if (IOS7) {
         // 设置状态栏的样式  LightContent 字体为白色

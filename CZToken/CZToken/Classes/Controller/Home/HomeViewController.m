@@ -16,10 +16,14 @@
 #import "loansViewController.h"
 #import "foreSigninController.h"
 #import "UpInfoController.h"
-@interface HomeViewController ()
+
+
+@interface HomeViewController ()<BMKLocationServiceDelegate,BMKGeoCodeSearchDelegate>
 {
     UIImageView *barImageView;
 }
+@property (nonatomic, strong) BMKLocationService *locService;
+@property (nonatomic, strong) BMKGeoCodeSearch *geocodesearch;
 @property (strong, nonatomic) IBOutlet UITableView *myTableView;
 
 @end
@@ -31,14 +35,62 @@
     _myTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     barImageView = self.navigationController.navigationBar.subviews.firstObject;
     barImageView.alpha = 0;
-    [self leftNavBarItemWithImage:@"duigou"];
-    [self rightNavBarItemWithTitle:@"" AndSel:@selector(addressClick)];
+    [self leftNavBarItemWithImage:@"dw"];
+    [self rightNavBarItemWithImage:@"tz" AndSel:@selector(addressClick)];
     UITextField *search = [[UITextField alloc] initWithFrame:CGRectMake(50, 10, screenW-120, 30)];
     self.navigationItem.titleView = search;
     search.placeholder = @"哈哈哈";
+    search.backgroundColor = [UIColor colorWithRed:1 green:1 blue:1 alpha:0.3];
+    search.layer.cornerRadius = 4.0f;
+    search.layer.masksToBounds = YES;
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(iconClick:) name:@"icon" object:nil];
+    
+    // dingwei
+    self.locService = [[BMKLocationService alloc] init];
+    [_locService startUserLocationService];
+    self.locService.delegate = self;
+    _geocodesearch = [[BMKGeoCodeSearch alloc] init];
+    _geocodesearch.delegate = self;
     // Do any additional setup after loading the view from its nib.
 }
+
+
+- (void)didUpdateBMKUserLocation:(BMKUserLocation *)userLocation{
+    //地理反编码
+    BMKReverseGeoCodeOption *geoOption = [[BMKReverseGeoCodeOption alloc] init];
+    geoOption.reverseGeoPoint = userLocation.location.coordinate;
+    BOOL flag = [_geocodesearch reverseGeoCode:geoOption];
+    if (flag) {
+        NSLog(@"成功");
+        [_locService stopUserLocationService];
+    }else{
+        NSLog(@"失败");
+    }
+    NSLog(@"didUpdateUserLocation 维度 %f,经度 %f",userLocation.location.coordinate.latitude,userLocation.location.coordinate.longitude);
+    
+    CLGeocoder *geocoder = [[CLGeocoder alloc] init];
+    [geocoder reverseGeocodeLocation:userLocation.location completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
+        if (placemarks.count > 0) {
+            CLPlacemark *placemark = [placemarks objectAtIndex:0];
+            if (placemark != nil) {
+                NSString *city = placemark.locality;
+                // 获取当前的城市
+                [self leftNavBarItemWithTitle:city AndSel:@selector(addressClick)];
+            }
+        }
+    }];
+}
+
+- (void)onGetReverseGeoCodeResult:(BMKGeoCodeSearch *)searcher result:(BMKReverseGeoCodeResult *)result errorCode:(BMKSearchErrorCode)error{
+    //addressDetail:     层次化地址信息
+    //address:    地址名称
+    //businessCircle:  商圈名称
+    // location:  地址坐标
+    //  poiList:   地址周边POI信息，成员类型为BMKPoiInfo
+    NSLog(@"address%@-----%@",result.addressDetail,result.address);
+//    [self.navigationItem.leftBarButtonItem setTitle:result.address];
+}
+
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return 7;

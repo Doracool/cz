@@ -51,7 +51,7 @@
     addUserInfoController *user = [[addUserInfoController alloc] init];
     
     UpInfoController *upinfo = [[UpInfoController alloc] init];
-    [self.navigationController pushViewController:user animated:YES];
+    [self.navigationController pushViewController:upinfo animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

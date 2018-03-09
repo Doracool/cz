@@ -45,6 +45,13 @@
 #import "ZHPickView.h"
 #import "TZImagePickerController.h"
 #import "TZImageManager.h"
+#import <BaiduMapAPI_Base/BMKBaseComponent.h>
+#import <BaiduMapAPI_Map/BMKMapComponent.h>//引入地图功能所有的头文件
+#import <BaiduMapAPI_Utils/BMKUtilsComponent.h>
+#import <BaiduMapAPI_Location/BMKLocationComponent.h>//引入定位功能所有的头文件
+#import <BaiduMapAPI_Search/BMKGeocodeSearch.h>
+#import <BaiduMapAPI_Search/BMKSearchComponent.h>
+
 
 /***************** 加载公共常量 *********************/
 

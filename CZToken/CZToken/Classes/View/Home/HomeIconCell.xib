@@ -21,7 +21,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="570" height="412.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="01" translatesAutoresizingMaskIntoConstraints="NO" id="bzq-Gj-dcU">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sybg" translatesAutoresizingMaskIntoConstraints="NO" id="bzq-Gj-dcU">
                         <rect key="frame" x="0.0" y="0.0" width="570" height="372.5"/>
                         <color key="backgroundColor" red="0.89411764709999997" green="0.26274509800000001" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </imageView>
@@ -191,7 +191,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="01" width="500" height="338"/>
         <image name="02" width="300" height="300"/>
+        <image name="sybg" width="1125" height="629"/>
     </resources>
 </document>
