@@ -1,5 +1,5 @@
 //
-//  MeController.h
+//  meMoreActionCell.h
 //  CZToken
 //
 //  Created by jlc on 2018/3/9.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MeController : UIViewController
+@interface meMoreActionCell : UITableViewCell
 
 @end

@@ -2,7 +2,7 @@
 //  MeController.m
 //  CZToken
 //
-//  Created by jlc on 2018/2/25.
+//  Created by jlc on 2018/3/9.
 //  Copyright © 2018年 NYHZ. All rights reserved.
 //
 
@@ -16,8 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
-    // Do any additional setup after loading the view.
+    // Do any additional setup after loading the view from its nib.
 }
 
 - (void)didReceiveMemoryWarning {
