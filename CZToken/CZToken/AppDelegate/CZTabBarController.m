@@ -224,8 +224,7 @@
         CZButton * button = [CZButton cz_shareButton];
         [button setImage:self.unSelectedImages[i] forState:UIControlStateNormal];
         [button setImage:self.selectedImages[i] forState:UIControlStateSelected];
-        
-        [button setTitle:self.titles[i] forState:UIControlStateNormal];
+//        [button setTitle:self.titles[i] forState:UIControlStateNormal];
         [button setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
         button.titleLabel.font = [UIFont systemFontOfSize:11];
         

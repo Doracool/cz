@@ -58,9 +58,9 @@
         homeCell.iconImg.layer.cornerRadius = screenW/10;
         homeCell.scoreView.layer.cornerRadius = 10.0f;
         homeCell.scoreView.layer.masksToBounds = YES;
-        homeCell.layer.shadowOpacity = 0.8;
-        homeCell.layer.shadowOffset = CGSizeMake(3, 3);
-        homeCell.layer.shadowRadius = 10.0f;
+        homeCell.scoreView.layer.shadowOpacity = 0.8;
+        homeCell.scoreView.layer.shadowOffset = CGSizeMake(-3, -3);
+        homeCell.scoreView.layer.shadowRadius = 10.0f;
         homeCell.iconImg.layer.masksToBounds = YES;
         return homeCell;
     } else if (indexPath.row == 1 || indexPath.row == 5) {
@@ -69,20 +69,23 @@
             [titleCell.titleName setTitle:@"应用中心" forState:UIControlStateNormal];
             [titleCell.titleName setImage:[UIImage imageNamed:@"yyzx"] forState:UIControlStateNormal];
         }
+        NSMutableAttributedString * attributeStr = [[NSMutableAttributedString alloc] initWithString:titleCell.titleName.titleLabel.text];
+        [attributeStr addAttribute:NSObliquenessAttributeName value:@(0.3) range:NSMakeRange(0, 4)];
+        titleCell.titleName.titleLabel.attributedText = attributeStr;
         return titleCell;
     } else if (indexPath.row == 2) {
         newCell.myNewsImg.image = [UIImage imageNamed:@"03"];
-        
+        newCell.myType.text = @"置业安家";
         tableView.rowHeight = 90;
         return newCell;
     } else if (indexPath.row == 3) {
         newCell.myNewsImg.image = [UIImage imageNamed:@"04"];
-        
+        newCell.myType.text = @"新房首发";
         tableView.rowHeight = 90;
         return newCell;
     } else if (indexPath.row == 4) {
         newCell.myNewsImg.image = [UIImage imageNamed:@"05"];
-        
+        newCell.myType.text = @"精品租房";
         tableView.rowHeight = 90;
         return newCell;
     } else if (indexPath.row == 6) {

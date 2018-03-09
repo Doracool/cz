@@ -10,4 +10,5 @@
 
 @interface meMoreActionCell : UITableViewCell
 
+@property (strong, nonatomic) IBOutlet UILabel *myTitle;
 @end

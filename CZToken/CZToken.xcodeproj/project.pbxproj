@@ -53,6 +53,14 @@
 		602B68D0204929E200748562 /* LogListController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 602B68CE204929E200748562 /* LogListController.xib */; };
 		6039C066204AB08800A7FD99 /* houseAuditController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6039C064204AB08800A7FD99 /* houseAuditController.m */; };
 		6039C067204AB08800A7FD99 /* houseAuditController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6039C065204AB08800A7FD99 /* houseAuditController.xib */; };
+		6041A7542052208C00EDB119 /* MeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6041A7522052208C00EDB119 /* MeController.m */; };
+		6041A7552052208C00EDB119 /* MeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6041A7532052208C00EDB119 /* MeController.xib */; };
+		6041A759205223DA00EDB119 /* meHeadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6041A757205223DA00EDB119 /* meHeadCell.m */; };
+		6041A75A205223DA00EDB119 /* meHeadCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6041A758205223DA00EDB119 /* meHeadCell.xib */; };
+		6041A75E2052257900EDB119 /* meScoreCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6041A75C2052257900EDB119 /* meScoreCell.m */; };
+		6041A75F2052257900EDB119 /* meScoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6041A75D2052257900EDB119 /* meScoreCell.xib */; };
+		6041A7632052267B00EDB119 /* meMoreActionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6041A7612052267B00EDB119 /* meMoreActionCell.m */; };
+		6041A7642052267B00EDB119 /* meMoreActionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6041A7622052267B00EDB119 /* meMoreActionCell.xib */; };
 		604353F0204A822A002E24C9 /* logListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 604353EE204A822A002E24C9 /* logListCell.m */; };
 		604353F1204A822A002E24C9 /* logListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 604353EF204A822A002E24C9 /* logListCell.xib */; };
 		604353F5204A8644002E24C9 /* payForSeeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 604353F3204A8644002E24C9 /* payForSeeController.m */; };
@@ -137,7 +145,6 @@
 		60B79E53204E73580006FE70 /* refundMoneyController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60B79E51204E73580006FE70 /* refundMoneyController.xib */; };
 		60E4015E2042B9CA00EF047E /* UserSourceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E401552042B9C900EF047E /* UserSourceController.m */; };
 		60E4015F2042B9CA00EF047E /* HouseSourceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E401572042B9C900EF047E /* HouseSourceController.m */; };
-		60E401612042B9CA00EF047E /* MeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E401592042B9CA00EF047E /* MeController.m */; };
 		60E401622042B9CA00EF047E /* ComputerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E4015C2042B9CA00EF047E /* ComputerController.m */; };
 		60E401652042BA3000EF047E /* CZTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E401632042BA3000EF047E /* CZTabBarController.m */; };
 		60E401682042BE1200EF047E /* AppDelegate+MainUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E401672042BE1200EF047E /* AppDelegate+MainUI.m */; };
@@ -237,6 +244,18 @@
 		6039C063204AB08800A7FD99 /* houseAuditController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = houseAuditController.h; sourceTree = "<group>"; };
 		6039C064204AB08800A7FD99 /* houseAuditController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = houseAuditController.m; sourceTree = "<group>"; };
 		6039C065204AB08800A7FD99 /* houseAuditController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = houseAuditController.xib; sourceTree = "<group>"; };
+		6041A7512052208C00EDB119 /* MeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeController.h; sourceTree = "<group>"; };
+		6041A7522052208C00EDB119 /* MeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeController.m; sourceTree = "<group>"; };
+		6041A7532052208C00EDB119 /* MeController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MeController.xib; sourceTree = "<group>"; };
+		6041A756205223DA00EDB119 /* meHeadCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = meHeadCell.h; sourceTree = "<group>"; };
+		6041A757205223DA00EDB119 /* meHeadCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = meHeadCell.m; sourceTree = "<group>"; };
+		6041A758205223DA00EDB119 /* meHeadCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = meHeadCell.xib; sourceTree = "<group>"; };
+		6041A75B2052257900EDB119 /* meScoreCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = meScoreCell.h; sourceTree = "<group>"; };
+		6041A75C2052257900EDB119 /* meScoreCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = meScoreCell.m; sourceTree = "<group>"; };
+		6041A75D2052257900EDB119 /* meScoreCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = meScoreCell.xib; sourceTree = "<group>"; };
+		6041A7602052267B00EDB119 /* meMoreActionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = meMoreActionCell.h; sourceTree = "<group>"; };
+		6041A7612052267B00EDB119 /* meMoreActionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = meMoreActionCell.m; sourceTree = "<group>"; };
+		6041A7622052267B00EDB119 /* meMoreActionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = meMoreActionCell.xib; sourceTree = "<group>"; };
 		604353ED204A822A002E24C9 /* logListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = logListCell.h; sourceTree = "<group>"; };
 		604353EE204A822A002E24C9 /* logListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = logListCell.m; sourceTree = "<group>"; };
 		604353EF204A822A002E24C9 /* logListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = logListCell.xib; sourceTree = "<group>"; };
@@ -369,9 +388,7 @@
 		60E401552042B9C900EF047E /* UserSourceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserSourceController.m; sourceTree = "<group>"; };
 		60E401562042B9C900EF047E /* HouseSourceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HouseSourceController.h; sourceTree = "<group>"; };
 		60E401572042B9C900EF047E /* HouseSourceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HouseSourceController.m; sourceTree = "<group>"; };
-		60E401592042B9CA00EF047E /* MeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeController.m; sourceTree = "<group>"; };
 		60E4015A2042B9CA00EF047E /* UserSourceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserSourceController.h; sourceTree = "<group>"; };
-		60E4015B2042B9CA00EF047E /* MeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeController.h; sourceTree = "<group>"; };
 		60E4015C2042B9CA00EF047E /* ComputerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComputerController.m; sourceTree = "<group>"; };
 		60E4015D2042B9CA00EF047E /* ComputerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComputerController.h; sourceTree = "<group>"; };
 		60E401632042BA3000EF047E /* CZTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZTabBarController.m; sourceTree = "<group>"; };
@@ -444,6 +461,22 @@
 			children = (
 			);
 			path = Map;
+			sourceTree = "<group>";
+		};
+		6041A7502052204900EDB119 /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				6041A756205223DA00EDB119 /* meHeadCell.h */,
+				6041A757205223DA00EDB119 /* meHeadCell.m */,
+				6041A758205223DA00EDB119 /* meHeadCell.xib */,
+				6041A75B2052257900EDB119 /* meScoreCell.h */,
+				6041A75C2052257900EDB119 /* meScoreCell.m */,
+				6041A75D2052257900EDB119 /* meScoreCell.xib */,
+				6041A7602052267B00EDB119 /* meMoreActionCell.h */,
+				6041A7612052267B00EDB119 /* meMoreActionCell.m */,
+				6041A7622052267B00EDB119 /* meMoreActionCell.xib */,
+			);
+			path = Me;
 			sourceTree = "<group>";
 		};
 		60444648204642DD008F09C7 /* DVSwitch */ = {
@@ -579,8 +612,9 @@
 		60987621204404F300243079 /* Me */ = {
 			isa = PBXGroup;
 			children = (
-				60E4015B2042B9CA00EF047E /* MeController.h */,
-				60E401592042B9CA00EF047E /* MeController.m */,
+				6041A7512052208C00EDB119 /* MeController.h */,
+				6041A7522052208C00EDB119 /* MeController.m */,
+				6041A7532052208C00EDB119 /* MeController.xib */,
 			);
 			path = Me;
 			sourceTree = "<group>";
@@ -688,6 +722,7 @@
 		60B622C520424C5C001DBA43 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				6041A7502052204900EDB119 /* Me */,
 				D4C7D5BB2047E1C10008F09A /* House */,
 				609876222044052C00243079 /* Home */,
 			);
@@ -1017,6 +1052,7 @@
 				60F978DC20423FF900E79007 /* Assets.xcassets in Resources */,
 				60B79E1E204E2EEC0006FE70 /* houseImgController.xib in Resources */,
 				60B79E3F204E38620006FE70 /* houseImgCell.xib in Resources */,
+				6041A7642052267B00EDB119 /* meMoreActionCell.xib in Resources */,
 				609876122043ADE600243079 /* TitleIconCell.xib in Resources */,
 				D4C7D5C02047E1EE0008F09A /* houseSourceCell.xib in Resources */,
 				6021A2F9204CE12700FF189E /* houseDetailsInfoCell.xib in Resources */,
@@ -1036,6 +1072,7 @@
 				6021A328204D510100FF189E /* addLinkCell.xib in Resources */,
 				6021A2FE204CE50F00FF189E /* houseSignCell.xib in Resources */,
 				60B79E29204E32AE0006FE70 /* houseTextCell.xib in Resources */,
+				6041A7552052208C00EDB119 /* MeController.xib in Resources */,
 				60B79E49204E3B3A0006FE70 /* AuditSuccController.xib in Resources */,
 				6039C067204AB08800A7FD99 /* houseAuditController.xib in Resources */,
 				604446792046B32C008F09C7 /* UpImgCell.xib in Resources */,
@@ -1044,6 +1081,8 @@
 				60B79E39204E36F80006FE70 /* impAuditController.xib in Resources */,
 				60B79E44204E39060006FE70 /* imgAudtiController.xib in Resources */,
 				6021A319204D3D0800FF189E /* houseAddressController.xib in Resources */,
+				6041A75F2052257900EDB119 /* meScoreCell.xib in Resources */,
+				6041A75A205223DA00EDB119 /* meHeadCell.xib in Resources */,
 				60B79E53204E73580006FE70 /* refundMoneyController.xib in Resources */,
 				6098761C2043BAC700243079 /* iconCell.xib in Resources */,
 				6021A323204D4C2A00FF189E /* UserlinkCell.xib in Resources */,
@@ -1116,6 +1155,7 @@
 				60B79E18204E24640006FE70 /* houseImpTwoController.m in Sources */,
 				6021A2DA204CCA5C00FF189E /* userSearchController.m in Sources */,
 				6082BADA20455E1F00F82B31 /* zige.m in Sources */,
+				6041A75E2052257900EDB119 /* meScoreCell.m in Sources */,
 				602B68C52048F0C300748562 /* OwnerInfoCell.m in Sources */,
 				6044464B204642EE008F09C7 /* DVSwitch.m in Sources */,
 				60E401652042BA3000EF047E /* CZTabBarController.m in Sources */,
@@ -1129,6 +1169,7 @@
 				60B79E1D204E2EEC0006FE70 /* houseImgController.m in Sources */,
 				6098760C2043A7D700243079 /* HomeIconCell.m in Sources */,
 				60B79E3E204E38620006FE70 /* houseImgCell.m in Sources */,
+				6041A7632052267B00EDB119 /* meMoreActionCell.m in Sources */,
 				609876112043ADE600243079 /* TitleIconCell.m in Sources */,
 				6021A309204D246C00FF189E /* buyHouseCell.m in Sources */,
 				60F978D720423FF900E79007 /* ViewController.m in Sources */,
@@ -1164,6 +1205,7 @@
 				6044465A204655E9008F09C7 /* cxMoneyController.m in Sources */,
 				60B622CC20424F43001DBA43 /* commonSet.m in Sources */,
 				60B79E43204E39060006FE70 /* imgAudtiController.m in Sources */,
+				6041A759205223DA00EDB119 /* meHeadCell.m in Sources */,
 				6021A2F8204CE12700FF189E /* houseDetailsInfoCell.m in Sources */,
 				6021A327204D510100FF189E /* addLinkCell.m in Sources */,
 				6021A2E4204CD93E00FF189E /* affirmCell.m in Sources */,
@@ -1171,9 +1213,9 @@
 				6082BAC12044EAF500F82B31 /* xgTitleViewCell.m in Sources */,
 				602B68CA2048F67700748562 /* writeLogController.m in Sources */,
 				6098760820439F4700243079 /* BaseViewController.m in Sources */,
-				60E401612042B9CA00EF047E /* MeController.m in Sources */,
 				D422578F204EE9F0003D146B /* ZHPickView.m in Sources */,
 				D4C7D5AE2046E3E70008F09A /* rzshViewController.m in Sources */,
+				6041A7542052208C00EDB119 /* MeController.m in Sources */,
 				6021A30E204D253F00FF189E /* houseInfoMoreCell.m in Sources */,
 				D422578520483169003D146B /* HouseDetailsController.m in Sources */,
 				D4C7D5BA2047DD270008F09A /* DOPDropDownMenu.m in Sources */,

@@ -15,16 +15,16 @@
             <rect key="frame" x="0.0" y="0.0" width="430" height="40"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="430" height="40"/>
+                <rect key="frame" x="0.0" y="0.0" width="430" height="39.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AQR-A6-1ge">
-                        <rect key="frame" x="170" y="11" width="90" height="18"/>
+                        <rect key="frame" x="170" y="11.5" width="90" height="18"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="90" id="gFv-84-FfN"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
-                        <state key="normal" title=" 肯军头条" image="小通知">
+                        <fontDescription key="fontDescription" name="MicrosoftYaHei" family="Microsoft YaHei" pointSize="15"/>
+                        <state key="normal" title="肯君头条" image="小通知">
                             <color key="titleColor" red="0.89411764709999997" green="0.26274509800000001" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         </state>
                     </button>

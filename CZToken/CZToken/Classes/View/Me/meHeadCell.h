@@ -10,4 +10,5 @@
 
 @interface meHeadCell : UITableViewCell
 
+@property (strong, nonatomic) IBOutlet UILabel *moneyLabel;
 @end
