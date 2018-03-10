@@ -49,11 +49,11 @@
     // 初始化 在这里写入 AccessKey  SecretKey
     id<OSSCredentialProvider> credential = [[OSSPlainTextAKSKPairCredentialProvider alloc] initWithPlainTextAccessKey:AccessKey secretKey:SecretKey];
     // 配置域名 类似 http://oss-cn-hangzhou.aliyuncs.com 就是域名访问
-    OSSClient *client = [[OSSClient alloc] initWithEndpoint:@"" credentialProvider:credential];
+    OSSClient *client = [[OSSClient alloc] initWithEndpoint:@"http://oss-cn-shanghai.aliyuncs.com" credentialProvider:credential];
     // 任务执行
     OSSPutObjectRequest *put = [OSSPutObjectRequest new];
     // 阿里云控制台-对象存储OSS下你所要存储的Bucket的名称
-    put.bucketName = @"";
+    put.bucketName = @"chengzhi-oss";
     // 存储路径以及图片保存的名称
     NSString *imageName;
     put.objectKey = imageName;
@@ -210,6 +210,16 @@
     _selectedAssets = [NSMutableArray arrayWithArray:assets];
     _isSelectOriginalPhoto = isSelectOriginalPhoto;
     
+    if (_selectedPhotos.count > 0) {
+       UIImage *avatar = photos[0];
+        UIImage *waterAva = [self returnphoto:avatar];
+        [aliyunOssUpImage asyncUploadImage:waterAva complete:^(NSArray<NSString *> *names, UploadImageState state) {
+            NSLog(@"%@",names);
+        }];
+        
+    }
+    
+    
 //    [self submitToUploadPictures];
     UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, screenW, 400)];
     [_imgBtn addSubview:imgView];
@@ -226,8 +236,6 @@
         UIImage *img = photos[0];
         int w = img.size.width;
         int h = img.size.height;
-        int logoWidth = logo.size.width;
-        int logoHeight = logo.size.height;
         
         CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
         
@@ -242,6 +250,24 @@
     }
     // 1.打印图片名字
     [self printAssetsName:assets];
+}
+
+- (UIImage *)returnphoto:(UIImage *)photos {
+    UIImage *logo = [UIImage imageNamed:@"chengzhi-watermark"];
+    UIImage *img = photos;
+    int w = img.size.width;
+    int h = img.size.height;
+    
+    CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
+    
+    CGContextRef context = CGBitmapContextCreate(NULL, w, h, 8, 4*w, colorSpace, kCGImageAlphaPremultipliedFirst);
+    CGContextDrawImage(context, CGRectMake(0, 0, w, h), img.CGImage);
+    CGContextDrawImage(context, CGRectMake(0, 0, w, h), [logo CGImage]);
+    CGImageRef imageMasked = CGBitmapContextCreateImage(context);
+    CGContextRelease(context);
+    CGColorSpaceRelease(colorSpace);
+    UIImage *myImg = [UIImage imageWithCGImage:imageMasked];
+    return myImg;
 }
 
 #pragma mark - Private

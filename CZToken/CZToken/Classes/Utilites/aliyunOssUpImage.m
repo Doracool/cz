@@ -12,9 +12,9 @@
 // 需要的信息
 //static NSString *const AccessKey = @"";
 //static NSString *const SecretKey = @"";
-static NSString *const BucketName = @"";
-static NSString *const AliyunHost = @"";
-static NSString *KTempFolder  = @"";
+static NSString *const BucketName = @"chengzhi-oss";
+static NSString *const AliyunHost = @"http://oss-cn-shanghai.aliyuncs.com";
+static NSString *KTempFolder  = @"Member/IdentityImage";
 
 + (void)asyncUploadImage:(UIImage *)image complete:(void (^)(NSArray<NSString *> *, UploadImageState))complete {
     [self uploadImages:@[image] isAsync:YES complete:complete];
@@ -50,7 +50,14 @@ static NSString *KTempFolder  = @"";
                 put.bucketName = BucketName;
                 
                 // 文件路径名称
-                NSString *imageName = [KTempFolder stringByAppendingPathComponent:[[NSUUID UUID].UUIDString stringByAppendingString:@".jpg"]];
+                
+                NSString* date;
+                NSDateFormatter * formatter = [[NSDateFormatter alloc ] init];
+                [formatter setDateFormat:@"mmssSSS"];
+                date = [formatter stringFromDate:[NSDate date]];
+                
+                NSString *imageName = [KTempFolder stringByAppendingPathComponent:[[NSUUID UUID].UUIDString stringByAppendingString:[NSString stringWithFormat:@"_IMG%@",date]]];
+                imageName = [imageName stringByAppendingString:@".jpg"];
                 put.objectKey = imageName;
                 put.contentType = @"image/jpeg";
                 
@@ -92,6 +99,24 @@ static NSString *KTempFolder  = @"";
             complete([NSArray arrayWithArray:callBackNames], UploadImageSuccess);
         }
     }
+}
+
+/**
+ *  返回当前时间
+ *
+ *  @return 
+ */
+- (NSString *)getTimeNow
+{
+    NSString* date;
+    NSDateFormatter * formatter = [[NSDateFormatter alloc ] init];
+    [formatter setDateFormat:@"YYYYMMddhhmmssSSS"];
+    date = [formatter stringFromDate:[NSDate date]];
+    //取出个随机数
+    int last = arc4random() % 10000;
+    NSString *timeNow = [[NSString alloc] initWithFormat:@"%@-%i", date,last];
+    NSLog(@"%@", timeNow);
+    return timeNow;
 }
 
 @end
