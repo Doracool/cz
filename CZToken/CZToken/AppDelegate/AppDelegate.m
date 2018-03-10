@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "AppDelegate+MainUI.h"
-@interface AppDelegate ()
+@interface AppDelegate ()<WXApiDelegate>
 {
     BMKMapManager *_mapManager;
 }
@@ -39,7 +39,8 @@
     if (!ret) {
         NSLog(@"集成失败");
     }
-    
+    // 微信
+    [WXApi registerApp:KWeChatKey];
     
     if (IOS7) {
         // 设置状态栏的样式  LightContent 字体为白色
@@ -48,6 +49,14 @@
     return YES;
 }
 
+- (void)onResp:(BaseResp *)resp {
+    if ([resp isKindOfClass:[PayResp class]]) {
+        PayResp *payResult = (PayResp *)resp;
+        [[NSNotificationCenter defaultCenter] postNotificationName:WXPAY_NOTIFICATION object:self userInfo:[NSDictionary dictionaryWithObject:payResult forKey:@"wxPayReturn"]];
+    } else if ([resp isKindOfClass:[SendAuthResp class]]) {
+        // 第三方登录
+    }
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

@@ -29,6 +29,7 @@ PODS:
   - SVProgressHUD (2.1.2)
   - TZImagePickerController (1.7.9)
   - WebViewJavascriptBridge (6.0.2)
+  - WechatOpenSDK (1.7.7)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
@@ -45,6 +46,7 @@ DEPENDENCIES:
   - SVProgressHUD
   - TZImagePickerController
   - WebViewJavascriptBridge (~> 6.0)
+  - WechatOpenSDK
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
@@ -61,7 +63,8 @@ SPEC CHECKSUMS:
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
   TZImagePickerController: 0a8ff228d287ebdd7d485e8c42a2a932894f1fba
   WebViewJavascriptBridge: 791ee0e26d1bf15efe5fb7fb9666a71a19b89d77
+  WechatOpenSDK: cbd332148eb792d444ed4eec94f421d98f2046ee
 
-PODFILE CHECKSUM: cb32600841f28428b0c83beaff94ab0d79895050
+PODFILE CHECKSUM: e24eb6c1fea64992bf4184d1b79435a65f0aec13
 
 COCOAPODS: 1.2.0

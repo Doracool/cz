@@ -95,4 +95,9 @@
  * 隐藏tabBar
  */
 -(void)tabbarHidden;
+
+/**
+ * 手机号验证
+ */
+- (BOOL)isValidateMobile:(NSString *)mobile;
 @end

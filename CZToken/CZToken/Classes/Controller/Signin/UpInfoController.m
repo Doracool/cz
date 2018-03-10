@@ -22,6 +22,7 @@
     BOOL _isSelectOriginalPhoto;
 }
 @property (strong, nonatomic) IBOutlet UIButton *imgBtn;
+@property (strong, nonatomic) IBOutlet UIView *headView;
 @property (nonatomic, strong) UIImagePickerController *imagePicker;
 @end
 
@@ -29,6 +30,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _headView.layer.cornerRadius = 5.0f;
+    _headView.layer.masksToBounds = YES;
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -40,6 +43,36 @@
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     [self tabbarShow];
+}
+
+- (void)test {
+    // 初始化 在这里写入 AccessKey  SecretKey
+    id<OSSCredentialProvider> credential = [[OSSPlainTextAKSKPairCredentialProvider alloc] initWithPlainTextAccessKey:AccessKey secretKey:SecretKey];
+    // 配置域名 类似 http://oss-cn-hangzhou.aliyuncs.com 就是域名访问
+    OSSClient *client = [[OSSClient alloc] initWithEndpoint:@"" credentialProvider:credential];
+    // 任务执行
+    OSSPutObjectRequest *put = [OSSPutObjectRequest new];
+    // 阿里云控制台-对象存储OSS下你所要存储的Bucket的名称
+    put.bucketName = @"";
+    // 存储路径以及图片保存的名称
+    NSString *imageName;
+    put.objectKey = imageName;
+    
+    // 设置文件上传格式（告诉浏览器是图片，不然默认是下载）
+    put.contentType = @"image/jpeg";
+    
+    // 阻塞直到上传完成
+    OSSTask *putTask = [client putObject:put];
+    [putTask waitUntilFinished];
+    
+    // 上传成功或失败
+    
+    if (!putTask.error) {
+        NSLog(@"upload object success!");
+    } else {
+        NSLog(@"upload object failed, error:%@",putTask.error);
+    }
+    
 }
 
 #pragma mark --UIActionSheetDelegate
@@ -178,15 +211,35 @@
     _isSelectOriginalPhoto = isSelectOriginalPhoto;
     
 //    [self submitToUploadPictures];
-//    UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 150, 80)];
-//    [_imgBtn addSubview:imgView];
+    UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, screenW, 400)];
+    [_imgBtn addSubview:imgView];
 //    if (_selectedPhotos.count > 0) {
 //        imgView.image = _selectedPhotos[0];
 //    }
 //    if (_selectedAssets.count > 0) {
 //        imgView.image = _selectedAssets[0];
 //    }
-    
+    if (_selectedPhotos.count > 0) {
+        
+        // 加水印
+        UIImage *logo = [UIImage imageNamed:@"chengzhi-watermark"];
+        UIImage *img = photos[0];
+        int w = img.size.width;
+        int h = img.size.height;
+        int logoWidth = logo.size.width;
+        int logoHeight = logo.size.height;
+        
+        CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
+        
+        CGContextRef context = CGBitmapContextCreate(NULL, w, h, 8, 4*w, colorSpace, kCGImageAlphaPremultipliedFirst);
+        CGContextDrawImage(context, CGRectMake(0, 0, w, h), img.CGImage);
+        CGContextDrawImage(context, CGRectMake(0, 0, w, h), [logo CGImage]);
+        CGImageRef imageMasked = CGBitmapContextCreateImage(context);
+        CGContextRelease(context);
+        CGColorSpaceRelease(colorSpace);
+        UIImage *myImg = [UIImage imageWithCGImage:imageMasked];
+        imgView.image = myImg;
+    }
     // 1.打印图片名字
     [self printAssetsName:assets];
 }

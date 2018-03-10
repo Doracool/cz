@@ -96,6 +96,9 @@
 		604446792046B32C008F09C7 /* UpImgCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 604446772046B32C008F09C7 /* UpImgCell.xib */; };
 		6062BAB4204FF30D00258BFA /* auditHeadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6062BAB2204FF30D00258BFA /* auditHeadCell.m */; };
 		6062BAB5204FF30D00258BFA /* auditHeadCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6062BAB3204FF30D00258BFA /* auditHeadCell.xib */; };
+		6069A8382053620D00EEA1F0 /* aliyunOssUpImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 6069A8372053620D00EEA1F0 /* aliyunOssUpImage.m */; };
+		6069A83C20537CB800EEA1F0 /* WXpayData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6069A83B20537CB800EEA1F0 /* WXpayData.m */; };
+		6069A83F20537DAE00EEA1F0 /* NSDictionary+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 6069A83E20537DAE00EEA1F0 /* NSDictionary+Utility.m */; };
 		6082BAB52044DEE900F82B31 /* TTChooseBtnView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6082BAB42044DEE900F82B31 /* TTChooseBtnView.m */; };
 		6082BAB82044E28C00F82B31 /* UIView+TTExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6082BAB72044E28C00F82B31 /* UIView+TTExtension.m */; };
 		6082BABC2044EAA700F82B31 /* XgShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6082BABA2044EAA700F82B31 /* XgShareViewController.m */; };
@@ -314,6 +317,13 @@
 		6062BAB1204FF30D00258BFA /* auditHeadCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = auditHeadCell.h; sourceTree = "<group>"; };
 		6062BAB2204FF30D00258BFA /* auditHeadCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = auditHeadCell.m; sourceTree = "<group>"; };
 		6062BAB3204FF30D00258BFA /* auditHeadCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = auditHeadCell.xib; sourceTree = "<group>"; };
+		6069A8362053620D00EEA1F0 /* aliyunOssUpImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = aliyunOssUpImage.h; sourceTree = "<group>"; };
+		6069A8372053620D00EEA1F0 /* aliyunOssUpImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = aliyunOssUpImage.m; sourceTree = "<group>"; };
+		6069A83A20537CB800EEA1F0 /* WXpayData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXpayData.h; sourceTree = "<group>"; };
+		6069A83B20537CB800EEA1F0 /* WXpayData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXpayData.m; sourceTree = "<group>"; };
+		6069A83D20537DAD00EEA1F0 /* NSDictionary+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Utility.h"; sourceTree = "<group>"; };
+		6069A83E20537DAE00EEA1F0 /* NSDictionary+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Utility.m"; sourceTree = "<group>"; };
+		6069A84020537F2F00EEA1F0 /* NotificationHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationHeader.h; sourceTree = "<group>"; };
 		6082BAB32044DEE900F82B31 /* TTChooseBtnView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTChooseBtnView.h; sourceTree = "<group>"; };
 		6082BAB42044DEE900F82B31 /* TTChooseBtnView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTChooseBtnView.m; sourceTree = "<group>"; };
 		6082BAB62044E28B00F82B31 /* UIView+TTExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+TTExtension.h"; sourceTree = "<group>"; };
@@ -541,6 +551,15 @@
 			path = Signin;
 			sourceTree = "<group>";
 		};
+		6069A83920537C8300EEA1F0 /* BaseModel */ = {
+			isa = PBXGroup;
+			children = (
+				6069A83A20537CB800EEA1F0 /* WXpayData.h */,
+				6069A83B20537CB800EEA1F0 /* WXpayData.m */,
+			);
+			path = BaseModel;
+			sourceTree = "<group>";
+		};
 		6082BACD2044FC7000F82B31 /* SFJSegment */ = {
 			isa = PBXGroup;
 			children = (
@@ -711,6 +730,8 @@
 		60B622C220424C39001DBA43 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				6069A83D20537DAD00EEA1F0 /* NSDictionary+Utility.h */,
+				6069A83E20537DAE00EEA1F0 /* NSDictionary+Utility.m */,
 				60E401692042BE6000EF047E /* Colours.h */,
 				60E4016A2042BE6000EF047E /* Colours.m */,
 				60B622CA20424F43001DBA43 /* commonSet.h */,
@@ -737,6 +758,7 @@
 		60B622C420424C52001DBA43 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6069A83920537C8300EEA1F0 /* BaseModel */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -769,6 +791,8 @@
 		60B622C720424C6E001DBA43 /* Utilites */ = {
 			isa = PBXGroup;
 			children = (
+				6069A8362053620D00EEA1F0 /* aliyunOssUpImage.h */,
+				6069A8372053620D00EEA1F0 /* aliyunOssUpImage.m */,
 			);
 			path = Utilites;
 			sourceTree = "<group>";
@@ -780,6 +804,7 @@
 				60B622CE204252E7001DBA43 /* Defines.h */,
 				6082BAB62044E28B00F82B31 /* UIView+TTExtension.h */,
 				6082BAB72044E28C00F82B31 /* UIView+TTExtension.m */,
+				6069A84020537F2F00EEA1F0 /* NotificationHeader.h */,
 			);
 			path = Configs;
 			sourceTree = "<group>";
@@ -1215,6 +1240,7 @@
 				6082BAD02044FCA300F82B31 /* ZFJSegmentedControl.m in Sources */,
 				60B79E33204E34200006FE70 /* baseAuditController.m in Sources */,
 				6023854C2050E10900B2FA4F /* addUserInfoController.m in Sources */,
+				6069A8382053620D00EEA1F0 /* aliyunOssUpImage.m in Sources */,
 				60F978E220423FF900E79007 /* main.m in Sources */,
 				604353FF204A9820002E24C9 /* addHouseDetailsController.m in Sources */,
 				6044465F20465D63008F09C7 /* zsViewController.m in Sources */,
@@ -1229,6 +1255,7 @@
 				60E4016B2042BE6000EF047E /* Colours.m in Sources */,
 				604446782046B32C008F09C7 /* UpImgCell.m in Sources */,
 				D4C7D5B32046E7A40008F09A /* loginController.m in Sources */,
+				6069A83F20537DAE00EEA1F0 /* NSDictionary+Utility.m in Sources */,
 				6021A2F3204CE0BB00FF189E /* houseDetailsTextCell.m in Sources */,
 				6044465A204655E9008F09C7 /* cxMoneyController.m in Sources */,
 				60B622CC20424F43001DBA43 /* commonSet.m in Sources */,
@@ -1262,6 +1289,7 @@
 				6021A2FD204CE50F00FF189E /* houseSignCell.m in Sources */,
 				60E401622042B9CA00EF047E /* ComputerController.m in Sources */,
 				6021A2E9204CDBC000FF189E /* houseDetaiseCellOne.m in Sources */,
+				6069A83C20537CB800EEA1F0 /* WXpayData.m in Sources */,
 				6082BAC62044EB3900F82B31 /* XgContentTableViewCell.m in Sources */,
 				6021A313204D32A000FF189E /* HouseRankCell.m in Sources */,
 				6021A31D204D3DC400FF189E /* sourceAddressCell.m in Sources */,
