@@ -84,11 +84,28 @@
     }];
 }
 - (IBAction)signinAction:(UIButton *)sender {
-    addUserInfoController *user = [[addUserInfoController alloc] init];
     
-    UpInfoController *upinfo = [[UpInfoController alloc] init];
-    [self.navigationController pushViewController:upinfo animated:YES];
-}
+    
+    NSString *URL = [NSString stringWithFormat:@"%@/Register/SavePhone",BaseUrl];
+    URL = [URL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSDictionary *params = @{@"Phone":_phone.text,@"Code":_code.text,@"Source":@"ios"};
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    [manager POST:URL parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
+        NSLog(@"%@",dic);
+        NSString *token = [dic objectForKey:@"Data"];
+        UpInfoController *upinfo = [[UpInfoController alloc] init];
+        upinfo.token = token;
+        [self.navigationController pushViewController:upinfo animated:YES];
+
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+    }];
+     
+//    addUserInfoController *user = [[addUserInfoController alloc] init];
+//
+    }
 
 - (void)pay {
     NSDictionary *dic;

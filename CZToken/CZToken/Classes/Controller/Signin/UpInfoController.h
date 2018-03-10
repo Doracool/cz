@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface UpInfoController : BaseViewController
-
+@property (nonatomic, copy) NSString *token;
 @end

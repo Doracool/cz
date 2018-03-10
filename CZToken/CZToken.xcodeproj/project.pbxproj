@@ -1435,7 +1435,7 @@
 					"$(PROJECT_DIR)/CZToken/Classes/ThirdTools/Map",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "/Users/jlc/Desktop/Other/cz/CZToken/CZToken/CZToken-Prefix.pch";
+				GCC_PREFIX_HEADER = "/Users/ighibli/Desktop/我的/cz/CZToken/CZToken/CZToken-Prefix.pch";
 				INFOPLIST_FILE = CZToken/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1457,7 +1457,7 @@
 					"$(PROJECT_DIR)/CZToken/Classes/ThirdTools/Map",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "/Users/jlc/Desktop/Other/cz/CZToken/CZToken/CZToken-Prefix.pch";
+				GCC_PREFIX_HEADER = "/Users/ighibli/Desktop/我的/cz/CZToken/CZToken/CZToken-Prefix.pch";
 				INFOPLIST_FILE = CZToken/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
