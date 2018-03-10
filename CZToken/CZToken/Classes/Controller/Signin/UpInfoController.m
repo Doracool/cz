@@ -22,6 +22,7 @@
     BOOL _isSelectOriginalPhoto;
 }
 @property (strong, nonatomic) IBOutlet UIButton *imgBtn;
+@property (strong, nonatomic) IBOutlet UIView *headView;
 @property (nonatomic, strong) UIImagePickerController *imagePicker;
 @end
 
@@ -29,6 +30,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _headView.layer.cornerRadius = 5.0f;
+    _headView.layer.masksToBounds = YES;
     // Do any additional setup after loading the view from its nib.
 }
 

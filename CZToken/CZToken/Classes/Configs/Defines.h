@@ -57,6 +57,15 @@
 #define iPhone6 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(750, 1336), [[UIScreen mainScreen] currentMode].size) : NO)
 #define iPhone6Plus ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1080, 1920), [[UIScreen mainScreen] currentMode].size) : NO)
 
+// 第三方
+
+#define KWeChatKey @"" // 微信AppId
+
+#define KWeChatAppSecret @"" // 微信appSecretkey
+
+#define KShareURL @"" // 回调URL（微信）
+
+
 //----------------------------------------------------------------------------
 //有关时间
 //----------------------------------------------------------------------------

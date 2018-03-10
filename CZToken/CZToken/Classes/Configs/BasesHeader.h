@@ -22,6 +22,8 @@
 #import "Colours.h"
 #import "TTChooseBtnView.h"
 #import "UIView+TTExtension.h"
+#import "NSDictionary+Utility.h"
+#import "NotificationHeader.h"
 
 /***************** 加载公共常量 *********************/
 #import "BaseViewController.h"
@@ -54,7 +56,9 @@
 
 // ali oss
 #import <AliyunOSSiOS/OSSService.h>
+#import "WXApi.h"
 
+#define BaseUrl @"http://test.api.cz1222.com/Passport/swagger"
 
 /***************** 加载公共常量 *********************/
 
