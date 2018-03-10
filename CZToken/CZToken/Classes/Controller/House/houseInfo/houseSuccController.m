@@ -16,7 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self leftNavBarItemWithImage:@"duigou"];
+    [self leftNavBarItemWithImage:@"返回"];
     // Do any additional setup after loading the view from its nib.
 }
 

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,21 +20,17 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Z7X-XE-Y00">
-                    <rect key="frame" x="15" y="150" width="20" height="20"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="20" id="REu-oE-D8t"/>
-                        <constraint firstAttribute="height" constant="20" id="ZH7-By-nGH"/>
-                    </constraints>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="图层15" translatesAutoresizingMaskIntoConstraints="NO" id="Z7X-XE-Y00">
+                    <rect key="frame" x="15" y="150" width="14" height="16"/>
                 </imageView>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入用户名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Jf-y6-eaG">
-                    <rect key="frame" x="45" y="151.5" width="300" height="17"/>
+                    <rect key="frame" x="39" y="149.5" width="306" height="17"/>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z3i-CH-neg">
-                    <rect key="frame" x="15" y="173.5" width="345" height="1"/>
+                    <rect key="frame" x="15" y="171.5" width="345" height="1"/>
                     <color key="backgroundColor" red="0.94903922080993652" green="0.94900357723236084" blue="0.94902777671813965" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="1" id="ghc-sK-GKu"/>
@@ -43,21 +39,17 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="58b-ls-mRH">
-                    <rect key="frame" x="15" y="194.5" width="20" height="20"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="20" id="3tb-zj-GTF"/>
-                        <constraint firstAttribute="width" constant="20" id="RCk-Nq-S4O"/>
-                    </constraints>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="图层16" translatesAutoresizingMaskIntoConstraints="NO" id="58b-ls-mRH">
+                    <rect key="frame" x="15" y="192.5" width="14" height="16"/>
                 </imageView>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UMs-45-ATN">
-                    <rect key="frame" x="45" y="196" width="300" height="17"/>
+                    <rect key="frame" x="39" y="192" width="306" height="17"/>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TKf-kH-nFq">
-                    <rect key="frame" x="15" y="218" width="345" height="1"/>
+                    <rect key="frame" x="15" y="214" width="345" height="1"/>
                     <color key="backgroundColor" red="0.94903922080000003" green="0.94900357719999995" blue="0.94902777670000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="1" id="V1r-BS-4jg"/>
@@ -66,21 +58,17 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cGv-Tt-Zv2">
-                    <rect key="frame" x="15" y="239" width="20" height="20"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="20" id="6hO-cS-xRb"/>
-                        <constraint firstAttribute="height" constant="20" id="cjz-ME-0J3"/>
-                    </constraints>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="组2" translatesAutoresizingMaskIntoConstraints="NO" id="cGv-Tt-Zv2">
+                    <rect key="frame" x="15" y="235" width="15" height="15"/>
                 </imageView>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入验证码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YgT-gp-G5D">
-                    <rect key="frame" x="45" y="240.5" width="100" height="17"/>
+                    <rect key="frame" x="40" y="234" width="102" height="17"/>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mkj-eq-jCM">
-                    <rect key="frame" x="15" y="262.5" width="150" height="1"/>
+                    <rect key="frame" x="15" y="256" width="147" height="1"/>
                     <color key="backgroundColor" red="0.94903922080000003" green="0.94900357719999995" blue="0.94902777670000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="1" id="4Oq-rS-pR1"/>
@@ -90,27 +78,31 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rUO-Yg-Mey">
-                    <rect key="frame" x="175" y="234" width="38" height="30"/>
+                    <rect key="frame" x="172" y="227.5" width="38" height="30"/>
                     <state key="normal" title="3948"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bBW-0q-eyS">
-                    <rect key="frame" x="218" y="234" width="62" height="30"/>
+                    <rect key="frame" x="215" y="227.5" width="62" height="30"/>
                     <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
                     <state key="normal" title="更换图片"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mUJ-xo-4TD">
-                    <rect key="frame" x="20" y="293.5" width="67" height="28"/>
+                    <rect key="frame" x="20" y="287" width="67" height="28"/>
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                    <state key="normal" title="记住手机号"/>
+                    <state key="normal" title="记住手机号">
+                        <color key="titleColor" red="0.82531470060000001" green="0.31434515120000001" blue="0.309785068" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </state>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J9b-1P-UDz">
-                    <rect key="frame" x="291" y="293.5" width="54" height="28"/>
+                    <rect key="frame" x="291" y="287" width="54" height="28"/>
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                    <state key="normal" title="忘记密码"/>
+                    <state key="normal" title="忘记密码">
+                        <color key="titleColor" red="0.82531470060000001" green="0.31434515120000001" blue="0.309785068" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </state>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8pX-HB-9QW">
-                    <rect key="frame" x="30" y="384" width="315" height="40"/>
-                    <color key="backgroundColor" red="0.89411764709999997" green="0.26274509800000001" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <rect key="frame" x="30" y="377.5" width="315" height="40"/>
+                    <color key="backgroundColor" red="0.82531470060000001" green="0.31434515120000001" blue="0.309785068" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="1wb-J5-njs"/>
                     </constraints>
@@ -119,15 +111,24 @@
                     </state>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kYT-gf-nQI">
-                    <rect key="frame" x="30" y="444" width="315" height="40"/>
+                    <rect key="frame" x="30" y="437.5" width="315" height="40"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="JxO-Oz-L1T"/>
                     </constraints>
                     <state key="normal" title="免费注册">
-                        <color key="titleColor" red="0.89411764709999997" green="0.26274509800000001" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="titleColor" red="0.82531470060000001" green="0.31434515120000001" blue="0.309785068" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </state>
                 </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="诚值LOGO" translatesAutoresizingMaskIntoConstraints="NO" id="zcR-PU-Ghx">
+                    <rect key="frame" x="143" y="32.5" width="89" height="57"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="诚信创造价值" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KZD-r5-FuJ">
+                    <rect key="frame" x="135.5" y="94.5" width="104" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.58432185650000001" green="0.58429920670000002" blue="0.58431458469999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -140,18 +141,22 @@
                 <constraint firstItem="z3i-CH-neg" firstAttribute="top" secondItem="8Jf-y6-eaG" secondAttribute="bottom" constant="5" id="6lk-qZ-mQC"/>
                 <constraint firstItem="UMs-45-ATN" firstAttribute="centerY" secondItem="58b-ls-mRH" secondAttribute="centerY" id="7UN-jn-rd7"/>
                 <constraint firstItem="cGv-Tt-Zv2" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="8Ak-7s-VOH"/>
+                <constraint firstItem="8Jf-y6-eaG" firstAttribute="top" secondItem="zcR-PU-Ghx" secondAttribute="bottom" constant="60" id="8o3-vi-WFe"/>
                 <constraint firstItem="bBW-0q-eyS" firstAttribute="centerY" secondItem="rUO-Yg-Mey" secondAttribute="centerY" id="Box-qp-hNM"/>
                 <constraint firstItem="mUJ-xo-4TD" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="Cj3-r7-c3U"/>
                 <constraint firstItem="YgT-gp-G5D" firstAttribute="centerY" secondItem="cGv-Tt-Zv2" secondAttribute="centerY" id="KJ5-UP-NEp"/>
                 <constraint firstItem="TKf-kH-nFq" firstAttribute="top" secondItem="UMs-45-ATN" secondAttribute="bottom" constant="5" id="Kit-KL-G3f"/>
                 <constraint firstItem="J9b-1P-UDz" firstAttribute="centerY" secondItem="mUJ-xo-4TD" secondAttribute="centerY" id="M5j-Il-9ar"/>
                 <constraint firstAttribute="trailing" secondItem="z3i-CH-neg" secondAttribute="trailing" constant="15" id="MWD-lw-lDS"/>
+                <constraint firstItem="zcR-PU-Ghx" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Q2U-Ta-65K"/>
                 <constraint firstItem="8Jf-y6-eaG" firstAttribute="centerY" secondItem="Z7X-XE-Y00" secondAttribute="centerY" id="Q3o-Lk-oKK"/>
+                <constraint firstItem="KZD-r5-FuJ" firstAttribute="top" secondItem="zcR-PU-Ghx" secondAttribute="bottom" constant="5" id="Q5r-db-6YZ"/>
                 <constraint firstItem="YgT-gp-G5D" firstAttribute="leading" secondItem="cGv-Tt-Zv2" secondAttribute="trailing" constant="10" id="TrD-XI-kzf"/>
                 <constraint firstItem="rUO-Yg-Mey" firstAttribute="leading" secondItem="YgT-gp-G5D" secondAttribute="trailing" constant="30" id="UNp-pq-07v"/>
                 <constraint firstAttribute="trailing" secondItem="8pX-HB-9QW" secondAttribute="trailing" constant="30" id="UxA-uU-twt"/>
                 <constraint firstAttribute="trailing" secondItem="TKf-kH-nFq" secondAttribute="trailing" constant="15" id="WwV-Yl-Xb1"/>
                 <constraint firstItem="58b-ls-mRH" firstAttribute="top" secondItem="z3i-CH-neg" secondAttribute="bottom" constant="20" id="Zxo-cL-Z0Q"/>
+                <constraint firstItem="KZD-r5-FuJ" firstAttribute="centerX" secondItem="zcR-PU-Ghx" secondAttribute="centerX" id="dS7-zQ-ckx"/>
                 <constraint firstItem="mkj-eq-jCM" firstAttribute="trailing" secondItem="YgT-gp-G5D" secondAttribute="trailing" constant="20" id="dSs-JI-SUL"/>
                 <constraint firstItem="58b-ls-mRH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="hAd-07-Izl"/>
                 <constraint firstAttribute="trailing" secondItem="UMs-45-ATN" secondAttribute="trailing" constant="30" id="iGl-Ex-yC8"/>
@@ -173,4 +178,10 @@
             <point key="canvasLocation" x="33.5" y="53.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="图层15" width="14" height="16"/>
+        <image name="图层16" width="14" height="16"/>
+        <image name="组2" width="15" height="15"/>
+        <image name="诚值LOGO" width="89" height="57"/>
+    </resources>
 </document>

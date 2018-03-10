@@ -56,6 +56,8 @@
         
     }];
     
+    self.title = @"验证身份";
+    
     // Do any additional setup after loading the view from its nib.
 }
 

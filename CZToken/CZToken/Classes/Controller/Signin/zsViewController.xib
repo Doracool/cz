@@ -27,9 +27,11 @@
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uEd-pp-woA">
                     <rect key="frame" x="295" y="13.5" width="50" height="27"/>
-                    <color key="backgroundColor" red="1" green="0.1215686275" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.82531470060000001" green="0.31434515120000001" blue="0.309785068" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                    <state key="normal" title="上传头像"/>
+                    <state key="normal" title="上传头像">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
                 </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qbS-CV-HpM">
                     <rect key="frame" x="50" y="90.5" width="275" height="150"/>
@@ -39,11 +41,13 @@
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6hR-5t-xEg">
                     <rect key="frame" x="30" y="290.5" width="315" height="40"/>
-                    <color key="backgroundColor" red="1" green="0.1215686275" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.82531470060000001" green="0.31434515120000001" blue="0.309785068" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="VXO-YS-oi0"/>
                     </constraints>
-                    <state key="normal" title="分享"/>
+                    <state key="normal" title="分享">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
                     <connections>
                         <action selector="SignAction:" destination="-1" eventType="touchUpInside" id="EgK-Cq-A3e"/>
                     </connections>

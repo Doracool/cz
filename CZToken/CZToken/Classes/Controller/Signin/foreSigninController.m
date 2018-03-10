@@ -35,6 +35,7 @@
     _moneyIconBtn.hidden = YES;
     _moenyText.hidden = YES;
     _money.hidden = YES;
+    self.title = @"注册";
     // Do any additional setup after loading the view from its nib.
 }
 

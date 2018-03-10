@@ -20,42 +20,38 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请拍摄您的营业执照和委托书，并录入信息" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aad-zB-XdO">
-                    <rect key="frame" x="80.5" y="94" width="214" height="13.5"/>
+                    <rect key="frame" x="80.5" y="50" width="214" height="13.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                    <nil key="textColor"/>
+                    <color key="textColor" red="0.58432185650000001" green="0.58429920670000002" blue="0.58431458469999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9j4-4U-Lx2">
-                    <rect key="frame" x="30" y="132.5" width="315" height="100"/>
-                    <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9j4-4U-Lx2">
+                    <rect key="frame" x="30" y="88.5" width="315" height="170"/>
+                    <color key="backgroundColor" red="0.94903236627578735" green="0.94899672269821167" blue="0.94902092218399048" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="100" id="kaL-zK-89g"/>
+                        <constraint firstAttribute="height" constant="170" id="kaL-zK-89g"/>
                     </constraints>
-                    <state key="normal" title="Button"/>
+                    <state key="normal" image="人物证件icon"/>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bcc-55-Nvx">
-                    <rect key="frame" x="30" y="257.5" width="315" height="100"/>
-                    <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bcc-55-Nvx">
+                    <rect key="frame" x="30" y="283.5" width="315" height="170"/>
+                    <color key="backgroundColor" red="0.94903236627578735" green="0.94899672269821167" blue="0.94902092218399048" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="100" id="kj1-7r-tfc"/>
+                        <constraint firstAttribute="height" constant="170" id="kj1-7r-tfc"/>
                     </constraints>
-                    <state key="normal" title="Button"/>
+                    <state key="normal" image="人物证件icon"/>
                 </button>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QJN-Ze-6If">
-                    <rect key="frame" x="30" y="382.5" width="20" height="20"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="20" id="Rs6-90-XSk"/>
-                        <constraint firstAttribute="height" constant="20" id="Zhx-1f-A3A"/>
-                    </constraints>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="保障icon" translatesAutoresizingMaskIntoConstraints="NO" id="QJN-Ze-6If">
+                    <rect key="frame" x="30" y="478.5" width="15" height="15"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="信息安全保护中，水印自动保护您的资料" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DIo-Nd-T7A">
-                    <rect key="frame" x="55" y="386" width="221" height="14.5"/>
+                    <rect key="frame" x="50" y="479.5" width="221" height="14.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                    <nil key="textColor"/>
+                    <color key="textColor" red="0.58432185650000001" green="0.58429920670000002" blue="0.58431458469999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dsS-l5-1eJ">
-                    <rect key="frame" x="12" y="430.5" width="351" height="40"/>
+                    <rect key="frame" x="12" y="524" width="351" height="40"/>
                     <color key="backgroundColor" red="0.96235281230000003" green="0.42924373589999998" blue="0.4080162148" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="bC5-4H-4HI"/>
@@ -76,7 +72,7 @@
                 <constraint firstItem="bcc-55-Nvx" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="WYo-Xh-pP2"/>
                 <constraint firstItem="9j4-4U-Lx2" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="Xce-K3-q3p"/>
                 <constraint firstItem="9j4-4U-Lx2" firstAttribute="top" secondItem="aad-zB-XdO" secondAttribute="bottom" constant="25" id="buP-Lr-Zns"/>
-                <constraint firstItem="aad-zB-XdO" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="94" id="kT5-AG-1FJ"/>
+                <constraint firstItem="aad-zB-XdO" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="50" id="kT5-AG-1FJ"/>
                 <constraint firstAttribute="trailing" secondItem="bcc-55-Nvx" secondAttribute="trailing" constant="30" id="m7i-Gb-R57"/>
                 <constraint firstItem="aad-zB-XdO" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="nfe-zt-i6m"/>
                 <constraint firstItem="bcc-55-Nvx" firstAttribute="top" secondItem="9j4-4U-Lx2" secondAttribute="bottom" constant="25" id="pLw-WD-O3E"/>
@@ -87,4 +83,8 @@
             <point key="canvasLocation" x="33.5" y="54.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="人物证件icon" width="143" height="93"/>
+        <image name="保障icon" width="15" height="15"/>
+    </resources>
 </document>
