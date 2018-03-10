@@ -59,7 +59,7 @@
 #import "WXApi.h"
 #import "aliyunOssUpImage.h"
 
-#define BaseUrl @"http://test.api.cz1222.com/Passport/swagger"
+#define BaseUrl @"http://test.api.cz1222.com/Passport"
 
 /***************** 加载公共常量 *********************/
 

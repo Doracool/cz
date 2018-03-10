@@ -16,6 +16,7 @@
 @property (strong, nonatomic) IBOutlet UIButton *codeBtn;
 @property (strong, nonatomic) IBOutlet UILabel *money;
 @property (strong, nonatomic) IBOutlet UIImageView *moneyIcon;
+@property (strong, nonatomic) IBOutlet UIButton *moneyIconBtn;
 @property (strong, nonatomic) IBOutlet UILabel *moenyText;
 @property (strong, nonatomic) IBOutlet UIButton *signin;
 
@@ -31,6 +32,9 @@
     _codeBtn.layer.masksToBounds = YES;
     _signin.layer.cornerRadius = 5.0f;
     _signin.layer.masksToBounds = YES;
+    _moneyIconBtn.hidden = YES;
+    _moenyText.hidden = YES;
+    _money.hidden = YES;
     // Do any additional setup after loading the view from its nib.
 }
 

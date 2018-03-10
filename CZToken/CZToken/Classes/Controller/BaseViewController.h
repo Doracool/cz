@@ -100,4 +100,9 @@
  * 手机号验证
  */
 - (BOOL)isValidateMobile:(NSString *)mobile;
+
+/**
+ * 身份证号验证
+ */
+- (BOOL)CheckIsIdentityCard:(NSString *)identityCard;
 @end

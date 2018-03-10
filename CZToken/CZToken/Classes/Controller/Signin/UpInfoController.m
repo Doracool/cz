@@ -21,6 +21,10 @@
     NSMutableArray *_selectedAssets;
     BOOL _isSelectOriginalPhoto;
 }
+@property (strong, nonatomic) IBOutlet UITextField *idCardNum;
+@property (strong, nonatomic) IBOutlet UIView *viewOne;
+@property (strong, nonatomic) IBOutlet UIView *viewTwo;
+@property (strong, nonatomic) IBOutlet UIImageView *upImageView;
 @property (strong, nonatomic) IBOutlet UIButton *imgBtn;
 @property (strong, nonatomic) IBOutlet UIView *headView;
 @property (nonatomic, strong) UIImagePickerController *imagePicker;
@@ -32,6 +36,11 @@
     [super viewDidLoad];
     _headView.layer.cornerRadius = 5.0f;
     _headView.layer.masksToBounds = YES;
+    _viewOne.layer.cornerRadius = 5.0f;
+    _viewOne.layer.masksToBounds = YES;
+    _viewTwo.layer.cornerRadius = 5.0f;
+    _viewTwo.layer.masksToBounds = YES;
+    [_idCardNum addTarget:self action:@selector(textFiledChange:) forControlEvents:UIControlEventEditingChanged];
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -43,6 +52,14 @@
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     [self tabbarShow];
+}
+
+- (void)textFiledChange:(UITextField *)sender {
+    if ([self CheckIsIdentityCard:_idCardNum.text]) {
+        
+    } else {
+        
+    }
 }
 
 - (void)test {
