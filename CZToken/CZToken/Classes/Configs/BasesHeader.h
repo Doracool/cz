@@ -58,5 +58,8 @@
 
 /***************** 加载公共常量 *********************/
 
+#define AccessKey @"LTAIX3szjle1ec1B"
+#define SecretKey @"1oxIvk61bczwmLv4Vc9FDChNb4b6ja"
+
 /***************** 加载公共常量 *********************/
 #endif /* BasesHeader_h */
