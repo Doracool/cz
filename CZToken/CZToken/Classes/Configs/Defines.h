@@ -12,6 +12,8 @@
 //配置常量
 #define kDefaultDatabase     [[SystemSupport share] databaseName]
 
+#define TOKNE [[NSUserDefaults standardUserDefaults]objectForKey:@"token"]
+
 
 //--------------------------------------------------------------------
 //系统相关设置
