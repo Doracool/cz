@@ -9,5 +9,11 @@
 #import "commonSet.h"
 
 @implementation commonSet
-
+- (NSMutableAttributedString *)AttributeName {
+    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:@""];
+    
+    [attributedString addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:30.0f] range:NSMakeRange(0, 1)];
+    
+    return attributedString;
+}
 @end

@@ -23,6 +23,17 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 }
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self tabbarHidden];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [self tabbarShow];
+}
+
 - (IBAction)changeType:(UIButton *)sender {
     if (sender.tag == 0) {
         jjrViewController *jjr = [[jjrViewController alloc] init];

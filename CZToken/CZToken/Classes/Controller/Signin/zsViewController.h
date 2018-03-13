@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface zsViewController : UIViewController
+@interface zsViewController : BaseViewController
 
 @end
