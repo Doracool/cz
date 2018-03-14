@@ -9,6 +9,7 @@
 #import "ComputerController.h"
 #import "calculateController.h"
 @interface ComputerController ()
+@property (strong, nonatomic) IBOutlet UILabel *ads;
 
 @end
 
@@ -17,6 +18,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+}
+- (IBAction)myAction:(UIButton *)sender {
+    calculateController *calcu = [[calculateController alloc] init];
+    [self.navigationController pushViewController:calcu animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

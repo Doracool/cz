@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ComputerController">
             <connections>
+                <outlet property="ads" destination="Tu6-Bn-pZj" id="BhY-5g-ywj"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -74,6 +75,9 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pn6-wa-12k">
                     <rect key="frame" x="0.0" y="125" width="75" height="80"/>
                     <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="myAction:" destination="-1" eventType="touchUpInside" id="E3B-2S-3gR"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cub-A0-LLL">
                     <rect key="frame" x="75" y="125" width="75" height="80"/>
@@ -259,7 +263,7 @@
                 <constraint firstItem="Weo-nd-nUj" firstAttribute="top" secondItem="Tu6-Bn-pZj" secondAttribute="bottom" constant="20" id="z7q-bb-GJ7"/>
                 <constraint firstItem="K8C-MS-I8W" firstAttribute="centerX" secondItem="laC-ka-ox0" secondAttribute="centerX" id="zx0-zr-10J"/>
             </constraints>
-            <point key="canvasLocation" x="-54" y="45"/>
+            <point key="canvasLocation" x="-180" y="-1"/>
         </view>
     </objects>
     <resources>
