@@ -19,6 +19,7 @@
                 <outlet property="money" destination="gp2-0R-kNm" id="Cw8-eZ-jUr"/>
                 <outlet property="moneyIcon" destination="sRS-yZ-2nC" id="8WD-Qc-qOl"/>
                 <outlet property="moneyIconBtn" destination="Fin-XL-nt0" id="QVF-X7-dtE"/>
+                <outlet property="myText" destination="net-Q2-lVg" id="g8L-Na-m1z"/>
                 <outlet property="phone" destination="ScL-hL-2Jq" id="vIB-BT-R8E"/>
                 <outlet property="signin" destination="ymf-7K-Qgb" id="vLc-JY-rSe"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>

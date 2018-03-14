@@ -114,6 +114,12 @@
 		6082BAD5204558A400F82B31 /* daikuan.m in Sources */ = {isa = PBXBuildFile; fileRef = 6082BAD4204558A400F82B31 /* daikuan.m */; };
 		6082BAD720455E0F00F82B31 /* zige.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6082BAD620455E0F00F82B31 /* zige.xib */; };
 		6082BADA20455E1F00F82B31 /* zige.m in Sources */ = {isa = PBXBuildFile; fileRef = 6082BAD920455E1F00F82B31 /* zige.m */; };
+		609697CB2058C48600088E31 /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 609697C82058C48500088E31 /* UIBarButtonItem+Extension.m */; };
+		609697D02058C78E00088E31 /* ChangeAddressController.m in Sources */ = {isa = PBXBuildFile; fileRef = 609697CE2058C78E00088E31 /* ChangeAddressController.m */; };
+		609697D12058C78E00088E31 /* ChangeAddressController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 609697CF2058C78E00088E31 /* ChangeAddressController.xib */; };
+		609697D62058C9BF00088E31 /* ComputerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 609697D42058C9BF00088E31 /* ComputerController.xib */; };
+		609697DA20590FC600088E31 /* calculateController.m in Sources */ = {isa = PBXBuildFile; fileRef = 609697D820590FC600088E31 /* calculateController.m */; };
+		609697DB20590FC600088E31 /* calculateController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 609697D920590FC600088E31 /* calculateController.xib */; };
 		6098760420439E8000243079 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6098760220439E8000243079 /* HomeViewController.m */; };
 		6098760520439E8000243079 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6098760320439E8000243079 /* HomeViewController.xib */; };
 		6098760820439F4700243079 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6098760720439F4700243079 /* BaseViewController.m */; };
@@ -154,10 +160,10 @@
 		60B79E53204E73580006FE70 /* refundMoneyController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60B79E51204E73580006FE70 /* refundMoneyController.xib */; };
 		60E4015E2042B9CA00EF047E /* UserSourceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E401552042B9C900EF047E /* UserSourceController.m */; };
 		60E4015F2042B9CA00EF047E /* HouseSourceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E401572042B9C900EF047E /* HouseSourceController.m */; };
-		60E401622042B9CA00EF047E /* ComputerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E4015C2042B9CA00EF047E /* ComputerController.m */; };
 		60E401652042BA3000EF047E /* CZTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E401632042BA3000EF047E /* CZTabBarController.m */; };
 		60E401682042BE1200EF047E /* AppDelegate+MainUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E401672042BE1200EF047E /* AppDelegate+MainUI.m */; };
 		60E4016B2042BE6000EF047E /* Colours.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E4016A2042BE6000EF047E /* Colours.m */; };
+		60ED124F20591D3900CB1A43 /* ComputerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60ED124D20591D3800CB1A43 /* ComputerController.m */; };
 		60F978D420423FF900E79007 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F978D320423FF900E79007 /* AppDelegate.m */; };
 		60F978D720423FF900E79007 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F978D620423FF900E79007 /* ViewController.m */; };
 		60F978DA20423FF900E79007 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60F978D820423FF900E79007 /* Main.storyboard */; };
@@ -348,6 +354,15 @@
 		6082BAD620455E0F00F82B31 /* zige.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = zige.xib; sourceTree = "<group>"; };
 		6082BAD820455E1F00F82B31 /* zige.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = zige.h; sourceTree = "<group>"; };
 		6082BAD920455E1F00F82B31 /* zige.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = zige.m; sourceTree = "<group>"; };
+		609697C82058C48500088E31 /* UIBarButtonItem+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extension.m"; sourceTree = "<group>"; };
+		609697C92058C48500088E31 /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
+		609697CD2058C78E00088E31 /* ChangeAddressController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChangeAddressController.h; sourceTree = "<group>"; };
+		609697CE2058C78E00088E31 /* ChangeAddressController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChangeAddressController.m; sourceTree = "<group>"; };
+		609697CF2058C78E00088E31 /* ChangeAddressController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChangeAddressController.xib; sourceTree = "<group>"; };
+		609697D42058C9BF00088E31 /* ComputerController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ComputerController.xib; sourceTree = "<group>"; };
+		609697D720590FC600088E31 /* calculateController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = calculateController.h; sourceTree = "<group>"; };
+		609697D820590FC600088E31 /* calculateController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = calculateController.m; sourceTree = "<group>"; };
+		609697D920590FC600088E31 /* calculateController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = calculateController.xib; sourceTree = "<group>"; };
 		6098760120439E8000243079 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		6098760220439E8000243079 /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		6098760320439E8000243079 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
@@ -413,14 +428,14 @@
 		60E401562042B9C900EF047E /* HouseSourceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HouseSourceController.h; sourceTree = "<group>"; };
 		60E401572042B9C900EF047E /* HouseSourceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HouseSourceController.m; sourceTree = "<group>"; };
 		60E4015A2042B9CA00EF047E /* UserSourceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserSourceController.h; sourceTree = "<group>"; };
-		60E4015C2042B9CA00EF047E /* ComputerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComputerController.m; sourceTree = "<group>"; };
-		60E4015D2042B9CA00EF047E /* ComputerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComputerController.h; sourceTree = "<group>"; };
 		60E401632042BA3000EF047E /* CZTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZTabBarController.m; sourceTree = "<group>"; };
 		60E401642042BA3000EF047E /* CZTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZTabBarController.h; sourceTree = "<group>"; };
 		60E401662042BE1200EF047E /* AppDelegate+MainUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+MainUI.h"; sourceTree = "<group>"; };
 		60E401672042BE1200EF047E /* AppDelegate+MainUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+MainUI.m"; sourceTree = "<group>"; };
 		60E401692042BE6000EF047E /* Colours.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Colours.h; sourceTree = "<group>"; };
 		60E4016A2042BE6000EF047E /* Colours.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Colours.m; sourceTree = "<group>"; };
+		60ED124D20591D3800CB1A43 /* ComputerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComputerController.m; sourceTree = "<group>"; };
+		60ED124E20591D3800CB1A43 /* ComputerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComputerController.h; sourceTree = "<group>"; };
 		60F978CF20423FF800E79007 /* CZToken.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CZToken.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60F978D220423FF800E79007 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = "../New Group/AppDelegate.h"; sourceTree = "<group>"; };
 		60F978D320423FF900E79007 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -584,6 +599,9 @@
 				6082BAC82044F84100F82B31 /* loansViewController.h */,
 				6082BAC92044F84100F82B31 /* loansViewController.m */,
 				6082BACA2044F84100F82B31 /* loansViewController.xib */,
+				609697CD2058C78E00088E31 /* ChangeAddressController.h */,
+				609697CE2058C78E00088E31 /* ChangeAddressController.m */,
+				609697CF2058C78E00088E31 /* ChangeAddressController.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -638,8 +656,12 @@
 		60987620204404EA00243079 /* Computer */ = {
 			isa = PBXGroup;
 			children = (
-				60E4015D2042B9CA00EF047E /* ComputerController.h */,
-				60E4015C2042B9CA00EF047E /* ComputerController.m */,
+				60ED124E20591D3800CB1A43 /* ComputerController.h */,
+				60ED124D20591D3800CB1A43 /* ComputerController.m */,
+				609697D42058C9BF00088E31 /* ComputerController.xib */,
+				609697D720590FC600088E31 /* calculateController.h */,
+				609697D820590FC600088E31 /* calculateController.m */,
+				609697D920590FC600088E31 /* calculateController.xib */,
 			);
 			path = Computer;
 			sourceTree = "<group>";
@@ -730,6 +752,8 @@
 		60B622C220424C39001DBA43 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				609697C92058C48500088E31 /* UIBarButtonItem+Extension.h */,
+				609697C82058C48500088E31 /* UIBarButtonItem+Extension.m */,
 				6069A83D20537DAD00EEA1F0 /* NSDictionary+Utility.h */,
 				6069A83E20537DAE00EEA1F0 /* NSDictionary+Utility.m */,
 				60E401692042BE6000EF047E /* Colours.h */,
@@ -1115,6 +1139,7 @@
 				604353FB204A883A002E24C9 /* addHouseInfoController.xib in Resources */,
 				6041A76E20526EEB00EDB119 /* homeHotSeaCell.xib in Resources */,
 				60987627204405F700243079 /* XgViewController.xib in Resources */,
+				609697DB20590FC600088E31 /* calculateController.xib in Resources */,
 				602B68CB2048F67700748562 /* writeLogController.xib in Resources */,
 				6062BAB5204FF30D00258BFA /* auditHeadCell.xib in Resources */,
 				602B68D0204929E200748562 /* LogListController.xib in Resources */,
@@ -1127,6 +1152,7 @@
 				60B79E49204E3B3A0006FE70 /* AuditSuccController.xib in Resources */,
 				6039C067204AB08800A7FD99 /* houseAuditController.xib in Resources */,
 				604446792046B32C008F09C7 /* UpImgCell.xib in Resources */,
+				609697D12058C78E00088E31 /* ChangeAddressController.xib in Resources */,
 				604446742046A037008F09C7 /* rzyzViewController.xib in Resources */,
 				6021A30F204D253F00FF189E /* houseInfoMoreCell.xib in Resources */,
 				60B79E39204E36F80006FE70 /* impAuditController.xib in Resources */,
@@ -1142,6 +1168,7 @@
 				6098760520439E8000243079 /* HomeViewController.xib in Resources */,
 				602B68C62048F0C300748562 /* OwnerInfoCell.xib in Resources */,
 				604353F6204A8644002E24C9 /* payForSeeController.xib in Resources */,
+				609697D62058C9BF00088E31 /* ComputerController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1200,10 +1227,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60ED124F20591D3900CB1A43 /* ComputerController.m in Sources */,
 				60B79E38204E36F80006FE70 /* impAuditController.m in Sources */,
 				6082BAB82044E28C00F82B31 /* UIView+TTExtension.m in Sources */,
 				6021A318204D3D0800FF189E /* houseAddressController.m in Sources */,
 				60B79E18204E24640006FE70 /* houseImpTwoController.m in Sources */,
+				609697D02058C78E00088E31 /* ChangeAddressController.m in Sources */,
 				6021A2DA204CCA5C00FF189E /* userSearchController.m in Sources */,
 				6082BADA20455E1F00F82B31 /* zige.m in Sources */,
 				6041A75E2052257900EDB119 /* meScoreCell.m in Sources */,
@@ -1218,6 +1247,7 @@
 				609876162043AE8400243079 /* NewsViewCell.m in Sources */,
 				6041A76D20526EEB00EDB119 /* homeHotSeaCell.m in Sources */,
 				6039C066204AB08800A7FD99 /* houseAuditController.m in Sources */,
+				609697DA20590FC600088E31 /* calculateController.m in Sources */,
 				60B79E1D204E2EEC0006FE70 /* houseImgController.m in Sources */,
 				6098760C2043A7D700243079 /* HomeIconCell.m in Sources */,
 				60B79E3E204E38620006FE70 /* houseImgCell.m in Sources */,
@@ -1249,6 +1279,7 @@
 				6021A2DF204CCBAF00FF189E /* searchCell.m in Sources */,
 				D4C7D5BF2047E1EE0008F09A /* houseSourceCell.m in Sources */,
 				60F978D420423FF900E79007 /* AppDelegate.m in Sources */,
+				609697CB2058C48600088E31 /* UIBarButtonItem+Extension.m in Sources */,
 				60E4015E2042B9CA00EF047E /* UserSourceController.m in Sources */,
 				6044466920468F2B008F09C7 /* jjrViewController.m in Sources */,
 				604446732046A037008F09C7 /* rzyzViewController.m in Sources */,
@@ -1287,7 +1318,6 @@
 				6021A2EE204CDCDD00FF189E /* houseDetailsCellTwo.m in Sources */,
 				604446642046818E008F09C7 /* SignController.m in Sources */,
 				6021A2FD204CE50F00FF189E /* houseSignCell.m in Sources */,
-				60E401622042B9CA00EF047E /* ComputerController.m in Sources */,
 				6021A2E9204CDBC000FF189E /* houseDetaiseCellOne.m in Sources */,
 				6069A83C20537CB800EEA1F0 /* WXpayData.m in Sources */,
 				6082BAC62044EB3900F82B31 /* XgContentTableViewCell.m in Sources */,

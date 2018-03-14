@@ -11,6 +11,7 @@
 #import "addUserInfoController.h"
 #import "WXpayData.h"
 @interface foreSigninController ()
+@property (strong, nonatomic) IBOutlet UILabel *myText;
 @property (strong, nonatomic) IBOutlet UITextField *phone;
 @property (strong, nonatomic) IBOutlet UITextField *code;
 @property (strong, nonatomic) IBOutlet UIButton *codeBtn;
@@ -26,6 +27,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _myText.attributedText = [commonSet AttributeNameFont:20 Color:[UIColor redColor] Space:5 qingxie:0.5 text:_myText.text Range:NSMakeRange(0, _myText.text.length)];
      [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(weixinPayReturn:) name:WXPAY_NOTIFICATION object:nil];
     [_phone addTarget:self action:@selector(textFiledDidChange:) forControlEvents:UIControlEventEditingChanged];
     _codeBtn.layer.cornerRadius = 5.0f;

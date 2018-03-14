@@ -1,18 +1,18 @@
 //
-//  ComputerController.m
+//  ChangeAddressController.m
 //  CZToken
 //
 //  Created by jlc on 2018/3/14.
 //  Copyright © 2018年 NYHZ. All rights reserved.
 //
 
-#import "ComputerController.h"
-#import "calculateController.h"
-@interface ComputerController ()
+#import "ChangeAddressController.h"
+
+@interface ChangeAddressController ()
 
 @end
 
-@implementation ComputerController
+@implementation ChangeAddressController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

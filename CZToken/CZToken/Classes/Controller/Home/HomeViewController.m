@@ -21,6 +21,7 @@
 @interface HomeViewController ()<BMKLocationServiceDelegate,BMKGeoCodeSearchDelegate>
 {
     UIImageView *barImageView;
+    UIButton *addressBtn;
 }
 @property (nonatomic, strong) BMKLocationService *locService;
 @property (nonatomic, strong) BMKGeoCodeSearch *geocodesearch;
@@ -32,10 +33,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    addressBtn = [[UIButton alloc] initWithFrame:CGRectMake(-20, 0, 80, 40)];
+    [addressBtn addTarget:self action:@selector(changeAddress:) forControlEvents:UIControlEventTouchUpInside];
+    addressBtn.titleLabel.font = [UIFont systemFontOfSize:13.0f];
+    [addressBtn setImage:[UIImage imageNamed:@"dw"] forState:UIControlStateNormal];
+//    addressBtn.size = addressBtn.currentBackgroundImage.size;
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:addressBtn];
     _myTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     barImageView = self.navigationController.navigationBar.subviews.firstObject;
     barImageView.alpha = 0;
-    [self leftNavBarItemWithImage:@"dw"];
     [self rightNavBarItemWithImage:@"tz" AndSel:@selector(addressClick)];
     UITextField *search = [[UITextField alloc] initWithFrame:CGRectMake(50, 10, screenW-120, 30)];
     self.navigationItem.titleView = search;
@@ -54,6 +61,9 @@
     // Do any additional setup after loading the view from its nib.
 }
 
+- (void)changeAddress:(UIButton *)sender {
+    
+}
 
 - (void)didUpdateBMKUserLocation:(BMKUserLocation *)userLocation{
     //地理反编码
@@ -75,7 +85,7 @@
             if (placemark != nil) {
                 NSString *city = placemark.locality;
                 // 获取当前的城市
-                [self leftNavBarItemWithTitle:city AndSel:@selector(addressClick)];
+                [addressBtn setTitle:city forState:UIControlStateNormal];
             }
         }
     }];

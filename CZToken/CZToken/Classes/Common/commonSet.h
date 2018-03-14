@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface commonSet : NSObject
-    
++ (NSMutableAttributedString *)AttributeNameFont:(CGFloat )font Color:(UIColor *)color Space:(CGFloat )space qingxie:(CGFloat )qingxie text:(NSString *)Str Range:(NSRange )myRange;
 @end

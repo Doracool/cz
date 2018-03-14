@@ -1,5 +1,5 @@
 //
-//  ComputerController.h
+//  calculateController.h
 //  CZToken
 //
 //  Created by jlc on 2018/3/14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ComputerController : UIViewController
+@interface calculateController : UIViewController
 
 @end
