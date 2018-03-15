@@ -231,7 +231,7 @@
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LMV-Wo-lg9">
                         <rect key="frame" x="30" y="277.5" width="132" height="40"/>
-                        <color key="backgroundColor" red="0.89411764709999997" green="0.26274509800000001" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.82745098039999998" green="0.31372549020000001" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="40" id="obl-xm-9Vn"/>
                         </constraints>
@@ -241,7 +241,7 @@
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UiA-XL-Ya8">
                         <rect key="frame" x="234" y="277" width="132" height="40"/>
-                        <color key="backgroundColor" red="0.89411764709999997" green="0.26274509800000001" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.82745098039999998" green="0.31372549020000001" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <state key="normal" title="跟进">
                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </state>

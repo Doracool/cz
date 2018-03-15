@@ -20,6 +20,8 @@
                 <outlet property="moneyIcon" destination="sRS-yZ-2nC" id="8WD-Qc-qOl"/>
                 <outlet property="moneyIconBtn" destination="Fin-XL-nt0" id="QVF-X7-dtE"/>
                 <outlet property="myText" destination="net-Q2-lVg" id="g8L-Na-m1z"/>
+                <outlet property="password" destination="Cjb-VG-Iqc" id="ZVD-Gf-9Zu"/>
+                <outlet property="password2" destination="Ssg-Am-7Qi" id="QdY-Xn-OfX"/>
                 <outlet property="phone" destination="ScL-hL-2Jq" id="vIB-BT-R8E"/>
                 <outlet property="signin" destination="ymf-7K-Qgb" id="vLc-JY-rSe"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -67,7 +69,7 @@
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kl4-4h-MR7">
                     <rect key="frame" x="252" y="286.5" width="93" height="30"/>
-                    <color key="backgroundColor" red="0.78043252229690552" green="0.78040283918380737" blue="0.78042292594909668" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <color key="backgroundColor" red="0.89411764705882346" green="0.2627450980392157" blue="0.28627450980392155" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="displayP3"/>
                     <state key="normal" title="  获取验证码  ">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -102,7 +104,7 @@
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ymf-7K-Qgb">
                     <rect key="frame" x="30" y="547" width="315" height="40"/>
-                    <color key="backgroundColor" red="0.78043252230000004" green="0.78040283919999998" blue="0.78042292589999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <color key="backgroundColor" red="0.89411764709999997" green="0.26274509800000001" blue="0.28627450980000002" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="PWr-cn-7QT"/>
                     </constraints>

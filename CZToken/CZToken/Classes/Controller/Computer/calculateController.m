@@ -20,6 +20,12 @@
 }
 - (IBAction)jisuanAction:(UIButton *)sender {
 }
+- (IBAction)selectHuan:(UIButton *)sender {
+    _neihuan.selected = NO;
+    _neiorwai.selected = NO;
+    _waihuan.selected = NO;
+    sender.selected = YES;
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

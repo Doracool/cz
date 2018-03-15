@@ -90,7 +90,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 3;
+    return 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -102,6 +102,21 @@
     typeOne.frame = CGRectMake(0, 0, yuegong.dklbView.width-20, yuegong.dklbView.height);
     [typeOne setPressedHandler:^(NSUInteger index) {
         NSLog(@"switch to index: %lu",(unsigned long)index);
+        if (index != 2) {
+            yuegong.zuheViewOne.hidden = YES;
+            yuegong.zuheViewTwo.hidden = YES;
+            yuegong.oneHeight.constant = 0;
+            yuegong.viewoneTop.constant = 0;
+            yuegong.viewtwoTop.constant = 0;
+            tableView.rowHeight = 400;
+        } else {
+            yuegong.zuheViewOne.hidden = NO;
+            yuegong.zuheViewTwo.hidden = NO;
+            yuegong.oneHeight.constant = 40;
+            yuegong.viewoneTop.constant = 20;
+            yuegong.viewtwoTop.constant = 20;
+            tableView.rowHeight = 550;
+        }
     }];
     
     DVSwitch *typeTwo = [[DVSwitch alloc] initWithStringsArray:@[@"等额本息",@"等额本金"]];
@@ -133,6 +148,11 @@
     shangdai.frame = CGRectMake(0, 90, screenW, 500);
     [_secondView addSubview:shangdai];
     shangdai.hidden = YES;
+    [shangdai.sbtn addTarget:self action:@selector(stfClick:) forControlEvents:UIControlEventTouchUpInside];
+    [shangdai.fbtn addTarget:self action:@selector(stfClick:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [shangdai.ptBtn addTarget:self action:@selector(fwlxClick:) forControlEvents:UIControlEventTouchUpInside];
+    [shangdai.fptBtn addTarget:self action:@selector(fwlxClick:) forControlEvents:UIControlEventTouchUpInside];
     
     _text1 = [[UILabel alloc] initWithFrame:CGRectMake(20, 100, size.width, 30)];
     _text1.text = @"月缴额";
@@ -201,6 +221,18 @@
     bz.numberOfLines = 0;
     bz.text = @"以上结果来自第三方置业担保机构\n结果仅供参考可贷额度以实际为准";
     bz.font = [UIFont systemFontOfSize:11.0f];
+}
+
+- (void)stfClick:(UIButton *)sender {
+    shangdai.sbtn.selected = NO;
+    shangdai.fbtn.selected = NO;
+    sender.selected = YES;
+}
+
+- (void)fwlxClick:(UIButton *)sender {
+    shangdai.ptBtn.selected = NO;
+    shangdai.fptBtn.selected = NO;
+    sender.selected = YES;
 }
 
 - (void)change:(UISegmentedControl *)sender {

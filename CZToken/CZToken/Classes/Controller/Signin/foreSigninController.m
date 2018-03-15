@@ -15,6 +15,8 @@
 @property (strong, nonatomic) IBOutlet UITextField *phone;
 @property (strong, nonatomic) IBOutlet UITextField *code;
 @property (strong, nonatomic) IBOutlet UIButton *codeBtn;
+@property (strong, nonatomic) IBOutlet UITextField *password;
+@property (strong, nonatomic) IBOutlet UITextField *password2;
 @property (strong, nonatomic) IBOutlet UILabel *money;
 @property (strong, nonatomic) IBOutlet UIImageView *moneyIcon;
 @property (strong, nonatomic) IBOutlet UIButton *moneyIconBtn;
@@ -27,7 +29,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _myText.attributedText = [commonSet AttributeNameFont:20 Color:[UIColor redColor] Space:5 qingxie:0.5 text:_myText.text Range:NSMakeRange(0, _myText.text.length)];
+    _myText.attributedText = [commonSet AttributeNameFont:20 Color:[UIColor colorWithHexString:@"666666"] Space:5 qingxie:0.5 text:_myText.text Range:NSMakeRange(0, _myText.text.length)];
      [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(weixinPayReturn:) name:WXPAY_NOTIFICATION object:nil];
     [_phone addTarget:self action:@selector(textFiledDidChange:) forControlEvents:UIControlEventEditingChanged];
     _codeBtn.layer.cornerRadius = 5.0f;
@@ -46,8 +48,9 @@
     if (!mobile) {
         _codeBtn.userInteractionEnabled = NO;
         _signin.userInteractionEnabled = NO;
-        [_codeBtn setBackgroundColor:[UIColor colorWithHexString:@"c6c6c6"]];
-        [_signin setBackgroundColor:[UIColor colorWithHexString:@"c6c6c6"]];
+        [_codeBtn setBackgroundColor:[UIColor colorWithRed:288/255 green:67/255 blue:73/255 alpha:0.4]];
+        
+        [_signin setBackgroundColor:[UIColor colorWithRed:288/255 green:67/255 blue:73/255 alpha:0.4]];
     } else {
         _codeBtn.userInteractionEnabled = YES;
         _signin.userInteractionEnabled = YES;
@@ -91,7 +94,10 @@
     
     NSString *URL = [NSString stringWithFormat:@"%@/Register/SavePhone",BaseUrl];
     URL = [URL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    NSDictionary *params = @{@"Phone":_phone.text,@"Code":_code.text,@"Source":@"ios"};
+    if (_phone.text.length == 0) {
+        
+    }
+    NSDictionary *params = @{@"Phone":_phone.text,@"Code":_code.text,@"Source":@"ios",@"Password":_password.text,@"Password2":_password2.text};
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
     [manager POST:URL parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {

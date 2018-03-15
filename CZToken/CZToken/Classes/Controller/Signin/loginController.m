@@ -10,6 +10,8 @@
 
 @interface loginController ()
 
+@property (strong, nonatomic) IBOutlet UITextField *userName;
+@property (strong, nonatomic) IBOutlet UITextField *password;
 @end
 
 @implementation loginController
@@ -17,6 +19,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+}
+- (IBAction)loginAction:(UIButton *)sender {
+    NSString *URL = [NSString stringWithFormat:@"%@/Login/Login",BaseUrl];
+    NSDictionary *params = @{@"LoginId":_userName.text,@"Password":_password.text,@"Source":@"ios"};
+    URL = [URL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    [manager POST:URL parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
+        NSLog(@"%@",dic);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

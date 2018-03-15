@@ -15,7 +15,7 @@
             <rect key="frame" x="0.0" y="0.0" width="443" height="432"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="443" height="431.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="443" height="432"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="房源地址" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fhU-Zk-wCd">
@@ -152,7 +152,7 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="小区名称查询" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K28-76-Ogv">
+                    <textField opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="小区名称查询" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K28-76-Ogv">
                         <rect key="frame" x="176.5" y="48" width="236.5" height="30"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="30" id="b7w-wB-BTe"/>
@@ -161,41 +161,47 @@
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>
-                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="viY-bq-m6O">
+                    <textField opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="viY-bq-m6O">
                         <rect key="frame" x="176.5" y="84" width="236.5" height="30"/>
                         <nil key="textColor"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>
-                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2xL-d8-sGS">
+                    <textField opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2xL-d8-sGS">
                         <rect key="frame" x="176.5" y="123.5" width="236.5" height="30"/>
                         <nil key="textColor"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>
-                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入楼号" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nTO-Ny-LZT">
+                    <textField opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入楼号" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nTO-Ny-LZT">
                         <rect key="frame" x="176.5" y="162" width="236.5" height="30"/>
                         <nil key="textColor"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>
-                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入房号" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GXN-YR-cSB">
+                    <textField opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入房号" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GXN-YR-cSB">
                         <rect key="frame" x="176.5" y="201" width="236.5" height="30"/>
                         <nil key="textColor"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>
-                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请选择物业类型" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wvw-0M-gqy">
+                    <textField opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请选择物业类型" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wvw-0M-gqy">
                         <rect key="frame" x="176.5" y="254.5" width="236.5" height="30"/>
                         <nil key="textColor"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits"/>
+                        <connections>
+                            <outlet property="delegate" destination="-1" id="JrL-IM-fAT"/>
+                        </connections>
                     </textField>
-                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请选择交易类型" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g3A-lJ-xVW">
+                    <textField opaque="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请选择交易类型" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g3A-lJ-xVW">
                         <rect key="frame" x="176.5" y="293.5" width="236.5" height="30"/>
                         <nil key="textColor"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits"/>
+                        <connections>
+                            <outlet property="delegate" destination="-1" id="X0u-Dw-w0c"/>
+                        </connections>
                     </textField>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ozR-eh-vb8">
                         <rect key="frame" x="76.5" y="54.5" width="7.5" height="21"/>
@@ -239,7 +245,7 @@
                         <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入委托价格" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J0u-ec-wNE">
+                    <textField opaque="NO" tag="17" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入委托价格" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J0u-ec-wNE">
                         <rect key="frame" x="140.5" y="332" width="236.5" height="30"/>
                         <nil key="textColor"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -336,7 +342,18 @@
                     <constraint firstItem="Bvt-PC-1fZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="xYU-EI-O7M"/>
                 </constraints>
             </tableViewCellContentView>
-            <point key="canvasLocation" x="86.5" y="246"/>
+            <connections>
+                <outlet property="cq" destination="viY-bq-m6O" id="z2w-kV-Rte"/>
+                <outlet property="fh" destination="GXN-YR-cSB" id="ZkU-Bj-MxE"/>
+                <outlet property="jylx" destination="g3A-lJ-xVW" id="kDj-yh-NJC"/>
+                <outlet property="lh" destination="nTO-Ny-LZT" id="DVu-6V-kom"/>
+                <outlet property="sq" destination="2xL-d8-sGS" id="aNR-f4-r3D"/>
+                <outlet property="wtdw" destination="Rt9-ER-wZi" id="SXq-4p-7da"/>
+                <outlet property="wtjg" destination="J0u-ec-wNE" id="xPk-TO-GNz"/>
+                <outlet property="wylx" destination="wvw-0M-gqy" id="whg-8J-dYa"/>
+                <outlet property="xqmc" destination="K28-76-Ogv" id="gKH-by-GSJ"/>
+            </connections>
+            <point key="canvasLocation" x="-324" y="234"/>
         </tableViewCell>
     </objects>
 </document>

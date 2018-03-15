@@ -10,4 +10,7 @@
 
 @interface calculateController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UIButton *neihuan;
+@property (strong, nonatomic) IBOutlet UIButton *neiorwai;
+@property (strong, nonatomic) IBOutlet UIButton *waihuan;
 @end

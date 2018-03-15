@@ -21,9 +21,13 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M3l-tQ-BaZ">
-                    <rect key="frame" x="272" y="15.5" width="30" height="30"/>
-                    <state key="normal" title="否"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M3l-tQ-BaZ">
+                    <rect key="frame" x="251" y="21.5" width="37" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" title="  否" image="unselected">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" image="selected"/>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="房屋类型" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ghj-Pw-JCB">
                     <rect key="frame" x="12" y="61" width="70" height="21"/>
@@ -31,17 +35,29 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P0c-mU-2iw">
-                    <rect key="frame" x="272" y="56.5" width="46" height="30"/>
-                    <state key="normal" title="非普通"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P0c-mU-2iw">
+                    <rect key="frame" x="251" y="62.5" width="67" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" title="  非普通" image="unselected">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" image="selected"/>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wiw-8z-Zt9">
-                    <rect key="frame" x="221" y="56" width="31" height="30"/>
-                    <state key="normal" title="普通"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wiw-8z-Zt9">
+                    <rect key="frame" x="179" y="62" width="52" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" title="  普通" image="unselected">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" image="selected"/>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qlH-VD-75C">
-                    <rect key="frame" x="221" y="15.5" width="30" height="30"/>
-                    <state key="normal" title="是"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qlH-VD-75C">
+                    <rect key="frame" x="179" y="21.5" width="37" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" title="  是" image="unselected">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" image="selected"/>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="合同价" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s8Q-sL-dFZ">
                     <rect key="frame" x="12" y="102" width="52" height="21"/>
@@ -56,24 +72,29 @@
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KjB-fN-cIY">
-                    <rect key="frame" x="12" y="162" width="314" height="30"/>
-                    <color key="backgroundColor" red="1" green="0.1215686275" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
-                    <state key="normal" title="开始计算"/>
+                    <rect key="frame" x="12" y="162" width="314" height="40"/>
+                    <color key="backgroundColor" red="0.89411764709999997" green="0.26274509800000001" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="kGa-or-MgE"/>
+                    </constraints>
+                    <state key="normal" title="开始计算">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="计算结果" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nFl-92-kit">
-                    <rect key="frame" x="12" y="217" width="70" height="21"/>
+                    <rect key="frame" x="12" y="227" width="70" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="可贷额度：60万元" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vie-Hb-Vb3">
-                    <rect key="frame" x="97.5" y="262" width="143" height="21"/>
+                    <rect key="frame" x="97.5" y="272" width="143" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="以上结果仅供参考" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="auW-A1-t9b">
-                    <rect key="frame" x="124.5" y="298" width="90" height="13.5"/>
+                    <rect key="frame" x="124.5" y="308" width="90" height="13.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -113,9 +134,17 @@
             <connections>
                 <outlet property="ActionBtn" destination="KjB-fN-cIY" id="2qE-Pu-JgH"/>
                 <outlet property="edu" destination="vie-Hb-Vb3" id="WfX-uY-ole"/>
+                <outlet property="fbtn" destination="M3l-tQ-BaZ" id="oLz-GJ-ayY"/>
+                <outlet property="fptBtn" destination="P0c-mU-2iw" id="jRb-9Z-nqI"/>
                 <outlet property="htjTF" destination="3Kk-Fq-HWi" id="LL9-ao-Fem"/>
+                <outlet property="ptBtn" destination="Wiw-8z-Zt9" id="dfc-Ui-IKF"/>
+                <outlet property="sbtn" destination="qlH-VD-75C" id="jHQ-DZ-PFA"/>
             </connections>
-            <point key="canvasLocation" x="-226" y="-115"/>
+            <point key="canvasLocation" x="-426" y="-107"/>
         </view>
     </objects>
+    <resources>
+        <image name="selected" width="13" height="13"/>
+        <image name="unselected" width="13" height="13"/>
+    </resources>
 </document>

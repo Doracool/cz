@@ -12,9 +12,11 @@
 #import "addLinkCell.h"
 #import "houseImpInfoController.h"
 #import "houseImpTwoController.h"
-@interface houseAddressController ()
+#import "searchAddressController.h"
+@interface houseAddressController ()<xiaoquNameDelegate,UITextFieldDelegate>
 @property (strong, nonatomic) IBOutlet UITableView *myTableView;
 @property (nonatomic, assign) NSInteger rows;
+@property (nonatomic, copy) NSString *xqmcStr;
 @end
 
 @implementation houseAddressController
@@ -22,6 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     _rows = 3;
+    _xqmcStr = @"";
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -42,6 +45,8 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row == 0) {
         sourceAddressCell *cell = [[NSBundle mainBundle] loadNibNamed:@"sourceAddressCell" owner:self options:nil][0];
+        cell.xqmc.delegate = self;
+        cell.xqmc.text = _xqmcStr;
         tableView.rowHeight = 400;
         return cell;
     } else if (indexPath.row == _rows-1) {
@@ -70,6 +75,42 @@
     houseImpInfoController *impInfo = [[houseImpInfoController alloc] init];
     houseImpTwoController *impTwo = [[houseImpTwoController alloc] init];
     [self.navigationController pushViewController:impInfo animated:YES];
+    
+}
+- (void)textFieldDidBeginEditing:(UITextField *)textField {
+    [[[UIApplication sharedApplication] keyWindow] endEditing:YES];
+    if (textField.tag == 10) {
+        
+        searchAddressController *search = [[searchAddressController alloc] init];
+        search.addressDelegate = self;
+        
+        [self.navigationController pushViewController:search animated:YES];
+    } else if (textField.tag == 15) {
+        ZHPickView *pickView = [[ZHPickView alloc] init];
+        [pickView setDataViewWithItem:@[@"住宅",@"商铺",@"办公楼"] title:@"物业类型"];
+        [pickView showPickView:self];
+        pickView.block = ^(NSString *selectedStr)
+        {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"You have chooseed:" message:selectedStr delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+            [alert show];
+        };
+    } else if (textField.tag == 16) {
+        ZHPickView *pickView = [[ZHPickView alloc] init];
+        [pickView setDataViewWithItem:@[@"租",@"售"] title:@"交易类型"];
+        [pickView showPickView:self];
+        pickView.block = ^(NSString *selectedStr)
+        {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"You have chooseed:" message:selectedStr delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+            [alert show];
+        };
+    }
+}
+
+
+- (void)selectedName:(NSInteger)index {
+    NSLog(@"selected -- index %ld",(long)index);
+    _xqmcStr = [NSString stringWithFormat:@"%ld",index];
+    [_myTableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
