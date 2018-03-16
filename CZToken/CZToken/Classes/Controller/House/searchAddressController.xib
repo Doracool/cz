@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="searchAddressController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZtJ-PF-FDB">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i1I-q1-Rfm">
+                            <rect key="frame" x="20" y="8" width="335" height="34"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rss" translatesAutoresizingMaskIntoConstraints="NO" id="IVJ-6u-I3Z">
+                                    <rect key="frame" x="5" y="10.5" width="13" height="13"/>
+                                </imageView>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yuyin" translatesAutoresizingMaskIntoConstraints="NO" id="e3B-uj-pvN">
+                                    <rect key="frame" x="323" y="10" width="7" height="14"/>
+                                </imageView>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="搜索房源" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ime-Rm-IZS">
+                                    <rect key="frame" x="28" y="8.5" width="285" height="17"/>
+                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="IVJ-6u-I3Z" firstAttribute="leading" secondItem="i1I-q1-Rfm" secondAttribute="leading" constant="5" id="9zZ-S3-x0o"/>
+                                <constraint firstItem="e3B-uj-pvN" firstAttribute="centerY" secondItem="i1I-q1-Rfm" secondAttribute="centerY" id="DZL-uP-j7r"/>
+                                <constraint firstItem="e3B-uj-pvN" firstAttribute="leading" secondItem="Ime-Rm-IZS" secondAttribute="trailing" constant="10" id="E8y-cu-7To"/>
+                                <constraint firstItem="Ime-Rm-IZS" firstAttribute="centerY" secondItem="IVJ-6u-I3Z" secondAttribute="centerY" id="LOh-XB-WXA"/>
+                                <constraint firstAttribute="trailing" secondItem="e3B-uj-pvN" secondAttribute="trailing" constant="5" id="Tro-FW-xyu"/>
+                                <constraint firstItem="IVJ-6u-I3Z" firstAttribute="centerY" secondItem="i1I-q1-Rfm" secondAttribute="centerY" id="j0K-Aa-6Lv"/>
+                                <constraint firstItem="Ime-Rm-IZS" firstAttribute="leading" secondItem="IVJ-6u-I3Z" secondAttribute="trailing" constant="10" id="x3X-wm-EZY"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.82745098039999998" green="0.31372549020000001" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="i1I-q1-Rfm" secondAttribute="trailing" constant="20" id="4F0-cc-Zre"/>
+                        <constraint firstItem="i1I-q1-Rfm" firstAttribute="top" secondItem="ZtJ-PF-FDB" secondAttribute="top" constant="8" id="9NY-0d-0v1"/>
+                        <constraint firstAttribute="height" constant="50" id="9Y5-Dq-2XQ"/>
+                        <constraint firstAttribute="bottom" secondItem="i1I-q1-Rfm" secondAttribute="bottom" constant="8" id="CfV-sA-aPZ"/>
+                        <constraint firstItem="i1I-q1-Rfm" firstAttribute="leading" secondItem="ZtJ-PF-FDB" secondAttribute="leading" constant="20" id="fn0-zN-5cr"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="u20-H7-qTZ">
+                    <rect key="frame" x="0.0" y="50" width="375" height="617"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Mlq-aa-z8y"/>
+                        <outlet property="delegate" destination="-1" id="Zuj-Vr-VnE"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="u20-H7-qTZ" secondAttribute="trailing" id="3Fh-71-miT"/>
+                <constraint firstItem="ZtJ-PF-FDB" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="7wv-rA-VrV"/>
+                <constraint firstItem="u20-H7-qTZ" firstAttribute="top" secondItem="ZtJ-PF-FDB" secondAttribute="bottom" id="HSa-G0-YEt"/>
+                <constraint firstAttribute="bottom" secondItem="u20-H7-qTZ" secondAttribute="bottom" id="W9l-Py-VWO"/>
+                <constraint firstItem="u20-H7-qTZ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Wb0-pD-GzF"/>
+                <constraint firstItem="ZtJ-PF-FDB" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="u7Y-hf-nus"/>
+                <constraint firstAttribute="trailing" secondItem="ZtJ-PF-FDB" secondAttribute="trailing" id="z6F-dp-md3"/>
+            </constraints>
+            <point key="canvasLocation" x="33.5" y="54.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="rss" width="13" height="13"/>
+        <image name="yuyin" width="7" height="14"/>
+    </resources>
+</document>

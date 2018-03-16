@@ -10,6 +10,10 @@
 
 @interface daikuan : UIView
 
+@property (strong, nonatomic) IBOutlet UIButton *sbtn;
+@property (strong, nonatomic) IBOutlet UIButton *fbtn;
+@property (strong, nonatomic) IBOutlet UIButton *ptBtn;
+@property (strong, nonatomic) IBOutlet UIButton *fptBtn;
 @property (strong, nonatomic) IBOutlet UITextField *htjTF;
 @property (strong, nonatomic) IBOutlet UIButton *ActionBtn;
 @property (strong, nonatomic) IBOutlet UILabel *edu;

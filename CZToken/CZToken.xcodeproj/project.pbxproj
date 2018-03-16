@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		600AD70C205A0B9B006B320A /* searchAddressController.m in Sources */ = {isa = PBXBuildFile; fileRef = 600AD70A205A0B9B006B320A /* searchAddressController.m */; };
+		600AD70D205A0B9B006B320A /* searchAddressController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 600AD70B205A0B9B006B320A /* searchAddressController.xib */; };
 		6021A2DA204CCA5C00FF189E /* userSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6021A2D8204CCA5C00FF189E /* userSearchController.m */; };
 		6021A2DB204CCA5D00FF189E /* userSearchController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6021A2D9204CCA5C00FF189E /* userSearchController.xib */; };
 		6021A2DF204CCBAF00FF189E /* searchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6021A2DD204CCBAF00FF189E /* searchCell.m */; };
@@ -94,6 +96,7 @@
 		604446742046A037008F09C7 /* rzyzViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 604446722046A037008F09C7 /* rzyzViewController.xib */; };
 		604446782046B32C008F09C7 /* UpImgCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 604446762046B32C008F09C7 /* UpImgCell.m */; };
 		604446792046B32C008F09C7 /* UpImgCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 604446772046B32C008F09C7 /* UpImgCell.xib */; };
+		60482C78205B77C700F2FF9D /* cxjModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 60482C77205B77C700F2FF9D /* cxjModel.m */; };
 		6062BAB4204FF30D00258BFA /* auditHeadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6062BAB2204FF30D00258BFA /* auditHeadCell.m */; };
 		6062BAB5204FF30D00258BFA /* auditHeadCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6062BAB3204FF30D00258BFA /* auditHeadCell.xib */; };
 		6069A8382053620D00EEA1F0 /* aliyunOssUpImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 6069A8372053620D00EEA1F0 /* aliyunOssUpImage.m */; };
@@ -189,6 +192,9 @@
 
 /* Begin PBXFileReference section */
 		5E4F68D696251ABCA40F72E7 /* libPods-CZToken.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CZToken.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		600AD709205A0B9B006B320A /* searchAddressController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = searchAddressController.h; sourceTree = "<group>"; };
+		600AD70A205A0B9B006B320A /* searchAddressController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = searchAddressController.m; sourceTree = "<group>"; };
+		600AD70B205A0B9B006B320A /* searchAddressController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = searchAddressController.xib; sourceTree = "<group>"; };
 		6021A2D7204CCA5C00FF189E /* userSearchController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = userSearchController.h; sourceTree = "<group>"; };
 		6021A2D8204CCA5C00FF189E /* userSearchController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = userSearchController.m; sourceTree = "<group>"; };
 		6021A2D9204CCA5C00FF189E /* userSearchController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = userSearchController.xib; sourceTree = "<group>"; };
@@ -320,6 +326,8 @@
 		604446752046B32C008F09C7 /* UpImgCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UpImgCell.h; sourceTree = "<group>"; };
 		604446762046B32C008F09C7 /* UpImgCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UpImgCell.m; sourceTree = "<group>"; };
 		604446772046B32C008F09C7 /* UpImgCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpImgCell.xib; sourceTree = "<group>"; };
+		60482C76205B77C700F2FF9D /* cxjModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cxjModel.h; sourceTree = "<group>"; };
+		60482C77205B77C700F2FF9D /* cxjModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = cxjModel.m; sourceTree = "<group>"; };
 		6062BAB1204FF30D00258BFA /* auditHeadCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = auditHeadCell.h; sourceTree = "<group>"; };
 		6062BAB2204FF30D00258BFA /* auditHeadCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = auditHeadCell.m; sourceTree = "<group>"; };
 		6062BAB3204FF30D00258BFA /* auditHeadCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = auditHeadCell.xib; sourceTree = "<group>"; };
@@ -566,6 +574,15 @@
 			path = Signin;
 			sourceTree = "<group>";
 		};
+		60482C75205B776A00F2FF9D /* signPay */ = {
+			isa = PBXGroup;
+			children = (
+				60482C76205B77C700F2FF9D /* cxjModel.h */,
+				60482C77205B77C700F2FF9D /* cxjModel.m */,
+			);
+			path = signPay;
+			sourceTree = "<group>";
+		};
 		6069A83920537C8300EEA1F0 /* BaseModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -609,6 +626,9 @@
 		6098761E204404D600243079 /* House */ = {
 			isa = PBXGroup;
 			children = (
+				600AD709205A0B9B006B320A /* searchAddressController.h */,
+				600AD70A205A0B9B006B320A /* searchAddressController.m */,
+				600AD70B205A0B9B006B320A /* searchAddressController.xib */,
 				60B79E2F204E33FE0006FE70 /* houseAudit */,
 				60B79E1F204E30AA0006FE70 /* houseInfo */,
 				60E401562042B9C900EF047E /* HouseSourceController.h */,
@@ -782,6 +802,7 @@
 		60B622C420424C52001DBA43 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				60482C75205B776A00F2FF9D /* signPay */,
 				6069A83920537C8300EEA1F0 /* BaseModel */,
 			);
 			path = Model;
@@ -1166,6 +1187,7 @@
 				D422578620483169003D146B /* HouseDetailsController.xib in Resources */,
 				6021A30A204D246C00FF189E /* buyHouseCell.xib in Resources */,
 				6098760520439E8000243079 /* HomeViewController.xib in Resources */,
+				600AD70D205A0B9B006B320A /* searchAddressController.xib in Resources */,
 				602B68C62048F0C300748562 /* OwnerInfoCell.xib in Resources */,
 				604353F6204A8644002E24C9 /* payForSeeController.xib in Resources */,
 				609697D62058C9BF00088E31 /* ComputerController.xib in Resources */,
@@ -1269,6 +1291,7 @@
 				6021A305204CF64000FF189E /* LPCarouselViewCell.m in Sources */,
 				6082BAD02044FCA300F82B31 /* ZFJSegmentedControl.m in Sources */,
 				60B79E33204E34200006FE70 /* baseAuditController.m in Sources */,
+				60482C78205B77C700F2FF9D /* cxjModel.m in Sources */,
 				6023854C2050E10900B2FA4F /* addUserInfoController.m in Sources */,
 				6069A8382053620D00EEA1F0 /* aliyunOssUpImage.m in Sources */,
 				60F978E220423FF900E79007 /* main.m in Sources */,
@@ -1313,6 +1336,7 @@
 				6021A304204CF64000FF189E /* LPCarouselView.m in Sources */,
 				6062BAB4204FF30D00258BFA /* auditHeadCell.m in Sources */,
 				6082BACB2044F84100F82B31 /* loansViewController.m in Sources */,
+				600AD70C205A0B9B006B320A /* searchAddressController.m in Sources */,
 				6021A322204D4C2A00FF189E /* UserlinkCell.m in Sources */,
 				60B79E23204E30FA0006FE70 /* houseSuccController.m in Sources */,
 				6021A2EE204CDCDD00FF189E /* houseDetailsCellTwo.m in Sources */,

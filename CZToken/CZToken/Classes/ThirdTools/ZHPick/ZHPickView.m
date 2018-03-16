@@ -55,23 +55,23 @@
     UILabel *titleLbl = [[UILabel alloc] initWithFrame:CGRectMake(40, 0, SCREENSIZE.width - 80, 39.5)];
     titleLbl.text = title;
     titleLbl.textAlignment = NSTextAlignmentCenter;
-    titleLbl.textColor = [self getColor:@"FF8000"];
+    titleLbl.textColor = [self getColor:@"444444"];
     titleLbl.font = [UIFont fontWithName:@"Helvetica-Bold" size:17.0];
     [header addSubview:titleLbl];
     
     
     
-    UIButton *submit = [[UIButton alloc] initWithFrame:CGRectMake(SCREENSIZE.width - 50, 10, 50 ,29.5)];
+    UIButton *submit = [[UIButton alloc] initWithFrame:CGRectMake(SCREENSIZE.width - 50, 5, 50 ,29.5)];
     [submit setTitle:@"确定" forState:UIControlStateNormal];
-    [submit setTitleColor:[UIColor greenColor] forState:UIControlStateNormal];
+    [submit setTitleColor:[UIColor colorWithHexString:@"333333"] forState:UIControlStateNormal];
     submit.backgroundColor = [UIColor whiteColor];
     submit.titleLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:15.0];
     [submit addTarget:self action:@selector(submit:) forControlEvents:UIControlEventTouchUpInside];
     [header addSubview:submit];
     
-    UIButton *cancel = [[UIButton alloc] initWithFrame:CGRectMake(0, 10, 50 ,29.5)];
+    UIButton *cancel = [[UIButton alloc] initWithFrame:CGRectMake(0, 5, 50 ,29.5)];
     [cancel setTitle:@"取消" forState:UIControlStateNormal];
-    [cancel setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+    [cancel setTitleColor:[UIColor colorWithHexString:@"666666"] forState:UIControlStateNormal];
     cancel.backgroundColor = [UIColor whiteColor];
     cancel.titleLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:15.0];
     [cancel addTarget:self action:@selector(cancel:) forControlEvents:UIControlEventTouchUpInside];
@@ -109,12 +109,12 @@
     isDate = NO;
     proTitleList = items;
     UIView *header = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREENSIZE.width, 39.5)];
-    header.backgroundColor = [UIColor whiteColor];
+    header.backgroundColor = [UIColor colorWithHexString:@"F7EEEF"];
     
     UILabel *titleLbl = [[UILabel alloc] initWithFrame:CGRectMake(40, 0, SCREENSIZE.width - 80, 39.5)];
     titleLbl.text = title;
     titleLbl.textAlignment = NSTextAlignmentCenter;
-    titleLbl.textColor = [self getColor:@"FF8000"];
+    titleLbl.textColor = [self getColor:@"444444"];
     titleLbl.font = [UIFont fontWithName:@"Helvetica-Bold" size:17.0];
     [header addSubview:titleLbl];
     
@@ -122,16 +122,16 @@
     
     UIButton *submit = [[UIButton alloc] initWithFrame:CGRectMake(SCREENSIZE.width - 50, 10, 50 ,29.5)];
     [submit setTitle:@"确定" forState:UIControlStateNormal];
-    [submit setTitleColor:[UIColor greenColor] forState:UIControlStateNormal];
-    submit.backgroundColor = [UIColor whiteColor];
+    [submit setTitleColor:[UIColor colorWithHexString:@"333333"] forState:UIControlStateNormal];
+    submit.backgroundColor = [UIColor colorWithHexString:@"F7EEEF"];
     submit.titleLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:15.0];
     [submit addTarget:self action:@selector(submit:) forControlEvents:UIControlEventTouchUpInside];
     [header addSubview:submit];
     
     UIButton *cancel = [[UIButton alloc] initWithFrame:CGRectMake(0, 10, 50 ,29.5)];
     [cancel setTitle:@"取消" forState:UIControlStateNormal];
-    [cancel setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
-    cancel.backgroundColor = [UIColor whiteColor];
+    [cancel setTitleColor:[UIColor colorWithHexString:@"666666"] forState:UIControlStateNormal];
+    cancel.backgroundColor = [UIColor colorWithHexString:@"F7EEEF"];
     cancel.titleLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:15.0];
     [cancel addTarget:self action:@selector(cancel:) forControlEvents:UIControlEventTouchUpInside];
     [header addSubview:cancel];
@@ -140,7 +140,7 @@
     UIPickerView *pick = [[UIPickerView alloc] initWithFrame:CGRectMake(0, 40, SCREENSIZE.width, 270)];
     
     pick.delegate = self;
-    pick.backgroundColor = [UIColor whiteColor];
+    pick.backgroundColor = [UIColor colorWithHexString:@"F7EEEF"];
     [self addSubview:pick];
     
     

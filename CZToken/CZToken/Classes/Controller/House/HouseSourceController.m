@@ -31,10 +31,10 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor whiteColor];
-    self.arr1 = @[@"区域",@"爱迪生2",@"恶趣味3",@"爱的4"];
-    self.arr2 = @[@"排序",@"33",@"44",@"5"];
-    self.arr3 = @[@"类型",@"qew",@"sdfad",@"sfd"];
-    self.arr4 = @[@"更多",@"gdfs",@"rew",@"ter"];
+    self.arr1 = @[@"区域",@"全部",@"宝山",@"普陀"];
+    self.arr2 = @[@"排序",@"总价降序",@"总价升序",@"单价降序",@"单价升序",@"面积降序",@"面积升序"];
+    self.arr3 = @[@"交易",@"全部",@"出租",@"出售"];
+    self.arr4 = @[@"类型",@"全部",@"住宅",@"别墅",@"其他"];
     
     UITextField *search = [[UITextField alloc] initWithFrame:CGRectMake(15, 25, screenW-120, 35)];
     [self.view addSubview:search];
@@ -74,11 +74,11 @@
     _myTableView.rowHeight = 120;
     _myTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     // Do any additional setup after loading the view.
-    self.add = [[UIButton alloc] initWithFrame:CGRectMake(screenW-50, screenH-150, 30, 30)];
+    self.add = [[UIButton alloc] initWithFrame:CGRectMake(screenW-80, screenH-200, 50, 50)];
     [self.view addSubview:self.add];
     [_add setTitle:@"+" forState:UIControlStateNormal];
     [_add setBackgroundColor:[UIColor redColor]];
-    _add.layer.cornerRadius = 15.0f;
+    _add.layer.cornerRadius = 25.0f;
     _add.layer.masksToBounds = YES;
     [_add setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [_add addTarget:self action:@selector(addHouse) forControlEvents:UIControlEventTouchUpInside];
@@ -139,8 +139,8 @@
         cell.iconImg.image = [UIImage imageNamed:@"01"];
         cell.chatBtn.width = 40;
         cell.chatBtn.layer.borderWidth = 1.0f;
-        cell.chatBtn.layer.borderColor = [UIColor colorWithHexString:@"59A89F"].CGColor;
-        cell.chatBtn.layer.cornerRadius = 2.0f;
+        cell.chatBtn.layer.borderColor = [UIColor colorWithHexString:@"D3504F"].CGColor;
+        cell.chatBtn.layer.cornerRadius = 4.0f;
         
         
         NSArray *tips = @[@"上海单身",@"上海户口"];
@@ -159,7 +159,7 @@
     
     houseAddressController *address = [[houseAddressController alloc] init];
     baseAuditController *audit = [[baseAuditController alloc] init];
-    [self.navigationController pushViewController:address animated:YES];
+    [self.navigationController pushViewController:details animated:YES];
 }
 
 - (void)searchAction:(UIButton *)sender {
