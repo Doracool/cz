@@ -8,14 +8,7 @@
 
 #import "UpInfoController.h"
 #import "cxMoneyController.h"
-#import "TZVideoPlayerController.h"
-#import <Photos/Photos.h>
-#import <AssetsLibrary/ALAsset.h>
-#import <AssetsLibrary/ALAssetsLibrary.h>
 
-#import <AssetsLibrary/ALAssetsGroup.h>
-
-#import <AssetsLibrary/ALAssetRepresentation.h>
 @interface UpInfoController ()<TZImagePickerControllerDelegate,UIActionSheetDelegate,UIImagePickerControllerDelegate>{
     NSMutableArray *_selectedPhotos;
     NSMutableArray *_selectedAssets;
@@ -43,18 +36,6 @@
     _viewTwo.layer.cornerRadius = 5.0f;
     _viewTwo.layer.masksToBounds = YES;
     [_idCardNum addTarget:self action:@selector(textFiledChange:) forControlEvents:UIControlEventEditingChanged];
-    
-    NSString *URL = [NSString stringWithFormat:@"%@/Register/GetPayData",BaseUrl];
-    URL = [URL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    NSDictionary *params = @{@"Token":_token,@"Source":@"ios"};
-    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
-    [manager POST:URL parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
-        NSLog(@"%@",dic);
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        
-    }];
     
     self.title = @"验证身份";
     
@@ -256,15 +237,9 @@
     }
     
     
-//    [self submitToUploadPictures];
+    
     UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, screenW, 400)];
-//    [_imgBtn addSubview:imgView];
-//    if (_selectedPhotos.count > 0) {
-//        imgView.image = _selectedPhotos[0];
-//    }
-//    if (_selectedAssets.count > 0) {
-//        imgView.image = _selectedAssets[0];
-//    }
+    
     if (_selectedPhotos.count > 0) {
         
         // 加水印

@@ -106,6 +106,7 @@
         NSString *token = [dic objectForKey:@"Data"];
         UpInfoController *upinfo = [[UpInfoController alloc] init];
         upinfo.token = token;
+        [[NSUserDefaults standardUserDefaults] setObject:token forKey:@"token"];
         [self.navigationController pushViewController:upinfo animated:YES];
 
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {

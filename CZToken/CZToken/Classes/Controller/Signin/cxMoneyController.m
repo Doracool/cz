@@ -9,13 +9,31 @@
 #import "cxMoneyController.h"
 #import "zsViewController.h"
 @interface cxMoneyController ()
-
+{
+    NSDictionary *dataDic;
+}
 @end
 
 @implementation cxMoneyController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    NSString *URL = [NSString stringWithFormat:@"%@/Register/GetPayData",BaseUrl];
+    URL = [URL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSDictionary *params = @{@"Token":TOKNE,@"Source":@"ios"};
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    [manager POST:URL parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
+        dataDic = [NSDictionary dictionary];
+        dataDic = dic;
+        _money.text = [NSString stringWithFormat:@"￥%@",[[dataDic objectForKey:@"Data"] objectForKey:@"Amount"]];
+        NSLog(@"%@",dic);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+    }];
+    
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -29,6 +47,11 @@
     [self tabbarShow];
 }
 
+- (IBAction)cxxyAction:(id)sender {
+    UIWebView *webView = [[UIWebView alloc] initWithFrame:self.view.bounds];
+    [self.view addSubview:webView];
+    [webView loadHTMLString:[[dataDic objectForKey:@"Data"] objectForKey:@"Agreement"] baseURL:nil];
+}
 
 - (IBAction)SignAction:(UIButton *)sender {
     zsViewController *zs = [[zsViewController alloc] init];

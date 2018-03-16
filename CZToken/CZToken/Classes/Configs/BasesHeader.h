@@ -56,6 +56,16 @@
 #import <BaiduMapAPI_Search/BMKGeocodeSearch.h>
 #import <BaiduMapAPI_Search/BMKSearchComponent.h>
 
+
+#import "TZVideoPlayerController.h"
+#import <Photos/Photos.h>
+#import <AssetsLibrary/ALAsset.h>
+#import <AssetsLibrary/ALAssetsLibrary.h>
+
+#import <AssetsLibrary/ALAssetsGroup.h>
+
+#import <AssetsLibrary/ALAssetRepresentation.h>
+
 // ali oss
 #import <AliyunOSSiOS/OSSService.h>
 #import "WXApi.h"
