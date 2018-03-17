@@ -70,6 +70,7 @@
 #import <AliyunOSSiOS/OSSService.h>
 #import "WXApi.h"
 #import "aliyunOssUpImage.h"
+#import <AlipaySDK/AlipaySDK.h>
 
 #define BaseUrl @"http://test.api.cz1222.com/Passport"
 
