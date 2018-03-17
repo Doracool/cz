@@ -173,6 +173,10 @@
 		60DEE85F205CF5F000012F8B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60DEE85E205CF5EC00012F8B /* Foundation.framework */; };
 		60DEE861205CF5FE00012F8B /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60DEE860205CF5F800012F8B /* CFNetwork.framework */; };
 		60DEE863205CF61300012F8B /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60DEE862205CF60B00012F8B /* CoreMotion.framework */; };
+		60DEE866205D082300012F8B /* topSearch.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60DEE865205D082300012F8B /* topSearch.xib */; };
+		60DEE869205D08D000012F8B /* topSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 60DEE868205D08D000012F8B /* topSearch.m */; };
+		60DEE86D205D0C4900012F8B /* userHouseInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60DEE86B205D0C4900012F8B /* userHouseInfoCell.m */; };
+		60DEE86E205D0C4900012F8B /* userHouseInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60DEE86C205D0C4900012F8B /* userHouseInfoCell.xib */; };
 		60E4015E2042B9CA00EF047E /* UserSourceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E401552042B9C900EF047E /* UserSourceController.m */; };
 		60E4015F2042B9CA00EF047E /* HouseSourceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E401572042B9C900EF047E /* HouseSourceController.m */; };
 		60E401652042BA3000EF047E /* CZTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E401632042BA3000EF047E /* CZTabBarController.m */; };
@@ -456,6 +460,12 @@
 		60DEE85E205CF5EC00012F8B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		60DEE860205CF5F800012F8B /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		60DEE862205CF60B00012F8B /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		60DEE865205D082300012F8B /* topSearch.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = topSearch.xib; sourceTree = "<group>"; };
+		60DEE867205D08D000012F8B /* topSearch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = topSearch.h; sourceTree = "<group>"; };
+		60DEE868205D08D000012F8B /* topSearch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = topSearch.m; sourceTree = "<group>"; };
+		60DEE86A205D0C4900012F8B /* userHouseInfoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = userHouseInfoCell.h; sourceTree = "<group>"; };
+		60DEE86B205D0C4900012F8B /* userHouseInfoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = userHouseInfoCell.m; sourceTree = "<group>"; };
+		60DEE86C205D0C4900012F8B /* userHouseInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = userHouseInfoCell.xib; sourceTree = "<group>"; };
 		60E401552042B9C900EF047E /* UserSourceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserSourceController.m; sourceTree = "<group>"; };
 		60E401562042B9C900EF047E /* HouseSourceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HouseSourceController.h; sourceTree = "<group>"; };
 		60E401572042B9C900EF047E /* HouseSourceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HouseSourceController.m; sourceTree = "<group>"; };
@@ -846,6 +856,7 @@
 		60B622C520424C5C001DBA43 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				60DEE864205D07F500012F8B /* User */,
 				6041A7502052204900EDB119 /* Me */,
 				D4C7D5BB2047E1C10008F09A /* House */,
 				609876222044052C00243079 /* Home */,
@@ -960,6 +971,19 @@
 				60DEE84C205CF53300012F8B /* AlipaySDK.framework */,
 			);
 			path = AliPay;
+			sourceTree = "<group>";
+		};
+		60DEE864205D07F500012F8B /* User */ = {
+			isa = PBXGroup;
+			children = (
+				60DEE865205D082300012F8B /* topSearch.xib */,
+				60DEE867205D08D000012F8B /* topSearch.h */,
+				60DEE868205D08D000012F8B /* topSearch.m */,
+				60DEE86A205D0C4900012F8B /* userHouseInfoCell.h */,
+				60DEE86B205D0C4900012F8B /* userHouseInfoCell.m */,
+				60DEE86C205D0C4900012F8B /* userHouseInfoCell.xib */,
+			);
+			path = User;
 			sourceTree = "<group>";
 		};
 		60F978C620423FF800E79007 = {
@@ -1170,6 +1194,7 @@
 				60B79E2E204E337A0006FE70 /* doublebtnCell.xib in Resources */,
 				604353F1204A822A002E24C9 /* logListCell.xib in Resources */,
 				6021A2EA204CDBC000FF189E /* houseDetaiseCellOne.xib in Resources */,
+				60DEE866205D082300012F8B /* topSearch.xib in Resources */,
 				6082BAD720455E0F00F82B31 /* zige.xib in Resources */,
 				D422578B204D8053003D146B /* houseImpInfoController.xib in Resources */,
 				602385482050C1E600B2FA4F /* houseAddressComCell.xib in Resources */,
@@ -1207,6 +1232,7 @@
 				609876122043ADE600243079 /* TitleIconCell.xib in Resources */,
 				D4C7D5C02047E1EE0008F09A /* houseSourceCell.xib in Resources */,
 				6021A2F9204CE12700FF189E /* houseDetailsInfoCell.xib in Resources */,
+				60DEE86E205D0C4900012F8B /* userHouseInfoCell.xib in Resources */,
 				6044466A20468F2B008F09C7 /* jjrViewController.xib in Resources */,
 				60F978DA20423FF900E79007 /* Main.storyboard in Resources */,
 				6023854D2050E10900B2FA4F /* addUserInfoController.xib in Resources */,
@@ -1332,6 +1358,7 @@
 				6041A7632052267B00EDB119 /* meMoreActionCell.m in Sources */,
 				609876112043ADE600243079 /* TitleIconCell.m in Sources */,
 				6021A309204D246C00FF189E /* buyHouseCell.m in Sources */,
+				60DEE869205D08D000012F8B /* topSearch.m in Sources */,
 				60F978D720423FF900E79007 /* ViewController.m in Sources */,
 				60B79E52204E73580006FE70 /* refundMoneyController.m in Sources */,
 				6098761B2043BAC700243079 /* iconCell.m in Sources */,
@@ -1375,6 +1402,7 @@
 				6021A327204D510100FF189E /* addLinkCell.m in Sources */,
 				6021A2E4204CD93E00FF189E /* affirmCell.m in Sources */,
 				604353FA204A883A002E24C9 /* addHouseInfoController.m in Sources */,
+				60DEE86D205D0C4900012F8B /* userHouseInfoCell.m in Sources */,
 				6082BAC12044EAF500F82B31 /* xgTitleViewCell.m in Sources */,
 				602B68CA2048F67700748562 /* writeLogController.m in Sources */,
 				6098760820439F4700243079 /* BaseViewController.m in Sources */,
