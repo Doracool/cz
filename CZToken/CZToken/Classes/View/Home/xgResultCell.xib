@@ -24,17 +24,26 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="以上结果仅供参考" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LZ9-bK-vwd">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="还能卖几套房" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SLd-gm-DyF">
+                        <rect key="frame" x="110.5" y="90" width="104" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="以上结果仅供参考" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LZ9-bK-vwd">
                         <rect key="frame" x="93" y="116" width="139" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="LZ9-bK-vwd" firstAttribute="top" secondItem="SLd-gm-DyF" secondAttribute="bottom" constant="5" id="FCA-TG-BmM"/>
                     <constraint firstItem="9Wg-bW-bbV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="IL4-W8-bqu"/>
+                    <constraint firstItem="LZ9-bK-vwd" firstAttribute="centerX" secondItem="SLd-gm-DyF" secondAttribute="centerX" id="JdO-NR-pV2"/>
+                    <constraint firstItem="SLd-gm-DyF" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="gwi-jy-nQy"/>
                     <constraint firstItem="9Wg-bW-bbV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="lz6-NY-tbF"/>
+                    <constraint firstItem="SLd-gm-DyF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="90" id="yLG-jl-BTI"/>
                 </constraints>
             </tableViewCellContentView>
             <point key="canvasLocation" x="-104" y="121"/>

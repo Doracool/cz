@@ -11,6 +11,8 @@
 #import "xgChooseCell.h"
 #import "xgResultCell.h"
 #import "houseSignCell.h"
+#import "textCell.h"
+
 @interface XgViewController ()<TTTagsDelegate>
 
 @property (strong, nonatomic) IBOutlet NSLayoutConstraint *viewHeight;
@@ -22,6 +24,8 @@
 @property (nonatomic, assign) int IsBothAll;
 @property (nonatomic, assign) int IsTallage;
 @property (nonatomic, assign) int IsPact;
+@property (nonatomic, assign) int fangchan;
+@property (nonatomic, assign) int fangchanNum;
 @property (nonatomic, assign) int MyHouseQty;
 @end
 
@@ -31,6 +35,7 @@
     [super viewDidLoad];
     [self tabbarHidden];
     _tips = @[@"上海单身",@"外地人",@"驻沪军官",@"港澳同胞",@"台湾同胞",@"外籍人士"];
+    _hujiType = 1;
     NSMutableArray *arr = [NSMutableArray arrayWithCapacity:0];
     [arr addObjectsFromArray:_tips];
     TTChooseBtnView *view = [[TTChooseBtnView alloc] initWithFrame:CGRectMake(12, 10, screenW-24, 50) andTags:_tips andTitleColor:[UIColor lineColor] andFonts:13];
@@ -41,7 +46,7 @@
     _viewHeight.constant = view.frame.size.height + 10;
     view.delegate = self;
     [_tipsView addSubview:view];
-    // Do any additional setup after loading the view from its nib.
+    _myTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -62,20 +67,26 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     if (_hujiType == 1) {
-        return 3;
+        return 6;
     } else if (_hujiType == 2) {
-        return 3;
+        return 6;
+    } else if (_hujiType > 2) {
+        return 5;
     } else {
-        return 2;
+        return 6;
     }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    UITableViewCell *cell = [[UITableViewCell alloc] init];
-//    cell.textLabel.text = @"哈哈";
     xgChooseCell *cell = [[NSBundle mainBundle] loadNibNamed:@"xgChooseCell" owner:self options:nil][0];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     xgResultCell *resultCell = [[NSBundle mainBundle] loadNibNamed:@"xgResultCell" owner:self options:nil][0];
+    resultCell.selectionStyle = UITableViewCellSelectionStyleNone;
     houseSignCell *clickCell = [[NSBundle mainBundle] loadNibNamed:@"houseSignCell" owner:self options:nil][0];
+    clickCell.selectionStyle = UITableViewCellSelectionStyleNone;
+    textCell *txtCell = [[NSBundle mainBundle] loadNibNamed:@"textCell" owner:self options:nil][0];
+    txtCell.selectionStyle = UITableViewCellSelectionStyleNone;
+    tableView.rowHeight = 50;
     if (_hujiType == 1) {
         if (indexPath.row == 0) {
             cell.chooseTitel.text = @"婚姻状况";
@@ -83,83 +94,240 @@
             [cell.chooseRight setTitle:@" 未婚" forState:UIControlStateNormal];
             [cell.chooseLeft addTarget:self action:@selector(chooseClick:) forControlEvents:UIControlEventTouchUpInside];
             [cell.chooseRight addTarget:self action:@selector(chooseClick:) forControlEvents:UIControlEventTouchUpInside];
+            BOOL Sel = cell.chooseRight.tag == _IsMarriage ? YES : NO;
+            cell.chooseRight.selected = Sel;
+            cell.chooseLeft.selected = !Sel;
         } else if (indexPath.row == 1) {
             cell.chooseTitel.text = @"是否双方全部上海户籍";
             [cell.chooseLeft setTitle:@" 一方" forState:UIControlStateNormal];
             [cell.chooseRight setTitle:@" 双方" forState:UIControlStateNormal];
+            [cell.chooseLeft addTarget:self action:@selector(shanghaihuji:) forControlEvents:UIControlEventTouchUpInside];
+            [cell.chooseRight addTarget:self action:@selector(shanghaihuji:) forControlEvents:UIControlEventTouchUpInside];
+            BOOL Sel = cell.chooseRight.tag == _IsBothAll ? YES : NO;
+            cell.chooseRight.selected = Sel;
+            cell.chooseLeft.selected = !Sel;
         } else if (indexPath.row == 2) {
             cell.chooseTitel.text = @"家庭在沪有无住宅";
             [cell.chooseLeft setTitle:@" 有" forState:UIControlStateNormal];
             [cell.chooseRight setTitle:@" 无" forState:UIControlStateNormal];
+            [cell.chooseLeft addTarget:self action:@selector(fangchan:) forControlEvents:UIControlEventTouchUpInside];
+            [cell.chooseRight addTarget:self action:@selector(fangchan:) forControlEvents:UIControlEventTouchUpInside];
+            BOOL Sel = cell.chooseRight.tag == _fangchan/10 ? YES : NO;
+            cell.chooseRight.selected = Sel;
+            cell.chooseLeft.selected = !Sel;
         } else if (indexPath.row == 3) {
+            txtCell.text.text = @"有几套房子";
+            [txtCell.content addTarget:self action:@selector(textFieldChange:) forControlEvents:UIControlEventEditingChanged];
+            if (_fangchan == 10) {
+                txtCell.text.hidden = NO;
+                txtCell.content.hidden = NO;
+                txtCell.content.text = @"1";
+            } else {
+                txtCell.text.hidden = YES;
+                txtCell.content.hidden = YES;
+            }
+            return txtCell;
+        } else if (indexPath.row == 4) {
             [clickCell.signInBtn setTitle:@"开始计算" forState:UIControlStateNormal];
             [clickCell.signInBtn addTarget:self action:@selector(startJisuan:) forControlEvents:UIControlEventTouchUpInside];
+            tableView.rowHeight = 100;
+            return clickCell;
+        } else if (indexPath.row == 5) {
+            tableView.rowHeight = 120;
+            if (_fangchan == 10) {
+                resultCell.hidden = NO;
+            } else {
+                resultCell.hidden = YES;
+            }
+            return resultCell;
         }
     } else if (_hujiType == 2) {
         if (indexPath.row == 0) {
             cell.chooseTitel.text = @"婚姻状况";
             [cell.chooseLeft setTitle:@" 已婚" forState:UIControlStateNormal];
             [cell.chooseRight setTitle:@" 未婚" forState:UIControlStateNormal];
+            [cell.chooseLeft addTarget:self action:@selector(chooseClick:) forControlEvents:UIControlEventTouchUpInside];
+            [cell.chooseRight addTarget:self action:@selector(chooseClick:) forControlEvents:UIControlEventTouchUpInside];
+            BOOL Sel = cell.chooseRight.tag == _IsMarriage ? YES : NO;
+            cell.chooseRight.selected = Sel;
+            cell.chooseLeft.selected = !Sel;
         } else if (indexPath.row == 1) {
             cell.chooseTitel.text = @"63个月内满60个月的社保或税单";
             [cell.chooseLeft setTitle:@" 已满" forState:UIControlStateNormal];
             [cell.chooseRight setTitle:@" 未满" forState:UIControlStateNormal];
+            [cell.chooseLeft addTarget:self action:@selector(shebao:) forControlEvents:UIControlEventTouchUpInside];
+            [cell.chooseRight addTarget:self action:@selector(shebao:) forControlEvents:UIControlEventTouchUpInside];
+            BOOL Sel = cell.chooseRight.tag == _IsTallage ? YES : NO;
+            cell.chooseRight.selected = Sel;
+            cell.chooseLeft.selected = !Sel;
         } else if (indexPath.row == 2) {
             cell.chooseTitel.text = @"家庭在沪有无住宅";
             [cell.chooseLeft setTitle:@" 有" forState:UIControlStateNormal];
             [cell.chooseRight setTitle:@" 无" forState:UIControlStateNormal];
+            [cell.chooseLeft addTarget:self action:@selector(fangchan:) forControlEvents:UIControlEventTouchUpInside];
+            [cell.chooseRight addTarget:self action:@selector(fangchan:) forControlEvents:UIControlEventTouchUpInside];
+            BOOL Sel = cell.chooseRight.tag == _fangchan/10 ? YES : NO;
+            cell.chooseRight.selected = Sel;
+            cell.chooseLeft.selected = !Sel;
         } else if (indexPath.row == 3) {
+            txtCell.text.text = @"有几套房子";
+            [txtCell.content addTarget:self action:@selector(textFieldChange:) forControlEvents:UIControlEventEditingChanged];
+            if (_fangchan == 10) {
+                txtCell.text.hidden = NO;
+                txtCell.content.hidden = NO;
+                txtCell.content.text = @"1";
+            } else {
+                txtCell.text.hidden = YES;
+                txtCell.content.hidden = YES;
+            }
+            return txtCell;
+        } else if (indexPath.row == 4) {
             [clickCell.signInBtn setTitle:@"开始计算" forState:UIControlStateNormal];
             [clickCell.signInBtn addTarget:self action:@selector(startJisuan:) forControlEvents:UIControlEventTouchUpInside];
+            tableView.rowHeight = 100;
+            return clickCell;
+        } else if (indexPath.row == 5) {
+            tableView.rowHeight = 120;
+            if (_fangchan == 10) {
+                resultCell.hidden = NO;
+            } else {
+                resultCell.hidden = YES;
+            }
+            return resultCell;
         }
     } else {
         if (indexPath.row == 0) {
             cell.chooseTitel.text = @"在沪劳动合同已满一年";
             [cell.chooseLeft setTitle:@" 已满" forState:UIControlStateNormal];
             [cell.chooseRight setTitle:@" 未满" forState:UIControlStateNormal];
+            [cell.chooseLeft addTarget:self action:@selector(laodonghetong:) forControlEvents:UIControlEventTouchUpInside];
+            [cell.chooseRight addTarget:self action:@selector(laodonghetong:) forControlEvents:UIControlEventTouchUpInside];
+            BOOL Sel = cell.chooseRight.tag == _IsPact ? YES : NO;
+            cell.chooseRight.selected = Sel;
+            cell.chooseLeft.selected = !Sel;
         } else if (indexPath.row == 1) {
             cell.chooseTitel.text = @"家庭在沪有无住宅";
             [cell.chooseLeft setTitle:@" 有" forState:UIControlStateNormal];
             [cell.chooseRight setTitle:@" 无" forState:UIControlStateNormal];
+            [cell.chooseLeft addTarget:self action:@selector(fangchan:) forControlEvents:UIControlEventTouchUpInside];
+            [cell.chooseRight addTarget:self action:@selector(fangchan:) forControlEvents:UIControlEventTouchUpInside];
+            BOOL Sel = cell.chooseRight.tag == _fangchan/10 ? YES : NO;
+            cell.chooseRight.selected = Sel;
+            cell.chooseLeft.selected = !Sel;
         } else if (indexPath.row == 2) {
+            txtCell.text.text = @"有几套房子";
+            [txtCell.content addTarget:self action:@selector(textFieldChange:) forControlEvents:UIControlEventEditingChanged];
+            if (_fangchan == 10) {
+                txtCell.text.hidden = NO;
+                txtCell.content.hidden = NO;
+                txtCell.content.text = @"1";
+            } else {
+                txtCell.text.hidden = YES;
+                txtCell.content.hidden = YES;
+            }
+            return txtCell;
+        } else if (indexPath.row == 3) {
             [clickCell.signInBtn setTitle:@"开始计算" forState:UIControlStateNormal];
             [clickCell.signInBtn addTarget:self action:@selector(startJisuan:) forControlEvents:UIControlEventTouchUpInside];
+            tableView.rowHeight = 100;
+            return clickCell;
+        } else if (indexPath.row == 4) {
+            tableView.rowHeight = 120;
+            if (_fangchan == 10) {
+                resultCell.hidden = NO;
+            } else {
+                resultCell.hidden = YES;
+            }
+            return resultCell;
         }
     }
     return cell;
 }
 
 - (void)chooseClick:(UIButton *)sender {
+    NSArray *subs = [sender.superview subviews];
+    ((UIButton *) subs[2]).selected = NO;
+    ((UIButton *) subs[3]).selected = NO;
+    sender.selected = YES;
     _IsMarriage = sender.tag == 1 ? 1 : 0;
 }
 
 - (void)shanghaihuji:(UIButton *)sender {
+    NSArray *subs = [sender.superview subviews];
+    ((UIButton *) subs[2]).selected = NO;
+    ((UIButton *) subs[3]).selected = NO;
+    sender.selected = YES;
     _IsBothAll = sender.tag == 1 ? 1 : 0;
 }
 
 - (void)shebao:(UIButton *)sender {
+    NSArray *subs = [sender.superview subviews];
+    ((UIButton *) subs[2]).selected = NO;
+    ((UIButton *) subs[3]).selected = NO;
+    sender.selected = YES;
     _IsTallage = sender.tag == 1 ? 1 : 0;
 }
 
 - (void)laodonghetong:(UIButton *)sender {
+    NSArray *subs = [sender.superview subviews];
+    ((UIButton *) subs[2]).selected = NO;
+    ((UIButton *) subs[3]).selected = NO;
+    sender.selected = YES;
     _IsPact = sender.tag == 1 ? 1 : 0;
 }
 
 - (void)fangchan:(UIButton *)sender {
+    NSArray *subs = [sender.superview subviews];
+    ((UIButton *) subs[2]).selected = NO;
+    ((UIButton *) subs[3]).selected = NO;
+    sender.selected = YES;
+    if (sender.tag == 1) {
+        _fangchan = 10;
+    } else {
+        _fangchan = 5;
+    }
+    [_myTableView reloadData];
     
 }
 
+
+- (void)textFieldChange:(UITextField *)sender {
+    _fangchanNum = [sender.text intValue];
+}
+
 - (void)startJisuan:(UIButton *)sender {
-    NSDictionary *params = [NSDictionary dictionary];
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
     if (_hujiType == 1) {
-        params = @{@"ComFrom":_tips[_hujiType],@"ComFromType":@(_hujiType),@"IsMarriage":@(_IsMarriage),@"IsBothAll":@(_IsBothAll)};
+        [params setValue:_tips[_hujiType] forKey:@"ComFrom"];
+        [params setValue:@(_hujiType) forKey:@"ComFromType"];
+        [params setValue:@(_IsMarriage) forKey:@"IsMarriage"];
+        [params setValue:@(_IsBothAll) forKey:@"IsBothAll"];
+        if (_fangchan == 10) {
+            [params setValue:@(_fangchanNum) forKey:@"MyHouseQty"];
+        }
     } else if (_hujiType == 2) {
-        params = @{@"ComFrom":_tips[_hujiType],@"ComFromType":@(_hujiType),@"IsMarriage":@(_IsMarriage),@"IsBothAll":@(_IsBothAll)};
+        [params setValue:_tips[_hujiType] forKey:@"ComFrom"];
+        [params setValue:@(_hujiType) forKey:@"ComFromType"];
+        [params setValue:@(_IsMarriage) forKey:@"IsMarriage"];
+        [params setValue:@(_IsTallage) forKey:@"IsBothAll"];
+        if (_fangchan == 10) {
+            [params setValue:@(_fangchanNum) forKey:@"MyHouseQty"];
+        }
     } else if (_hujiType > 2) {
         
     } else {
         
     }
+    NSString *URL = [NSString stringWithFormat:@"http://test.api.cz1222.com/Trade/Limitation/Add?token=%@",TOKNE];
+    URL = [URL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    [manager POST:URL parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
+        NSLog(@"%@",dic);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+    }];
 }
 
 - (IBAction)calculateAction:(UIButton *)sender {

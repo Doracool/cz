@@ -25,7 +25,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ujh-Ol-IWb">
-                        <rect key="frame" x="0.0" y="76" width="467" height="1"/>
+                        <rect key="frame" x="20" y="76" width="427" height="1"/>
                         <color key="backgroundColor" red="0.78827464579999995" green="0.78824472430000003" blue="0.78826498990000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="1" id="Cll-LM-fY2"/>
@@ -55,13 +55,13 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="nTv-r6-oec" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="5YN-fW-WSL"/>
-                    <constraint firstItem="ujh-Ol-IWb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="8cw-9v-nVi"/>
+                    <constraint firstItem="ujh-Ol-IWb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="8cw-9v-nVi"/>
                     <constraint firstItem="yr0-0y-fHK" firstAttribute="centerY" secondItem="TqS-r8-cCJ" secondAttribute="centerY" id="GH6-ka-nUN"/>
                     <constraint firstAttribute="trailing" secondItem="TqS-r8-cCJ" secondAttribute="trailing" constant="15" id="H2r-54-cwa"/>
                     <constraint firstItem="TqS-r8-cCJ" firstAttribute="leading" secondItem="yr0-0y-fHK" secondAttribute="trailing" constant="15" id="THW-WN-zIh"/>
                     <constraint firstItem="nTv-r6-oec" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="UMv-4i-pMY"/>
                     <constraint firstAttribute="bottom" secondItem="ujh-Ol-IWb" secondAttribute="bottom" id="jkH-5m-j4h"/>
-                    <constraint firstAttribute="trailing" secondItem="ujh-Ol-IWb" secondAttribute="trailing" id="kA2-dd-jpQ"/>
+                    <constraint firstAttribute="trailing" secondItem="ujh-Ol-IWb" secondAttribute="trailing" constant="20" id="kA2-dd-jpQ"/>
                     <constraint firstItem="TqS-r8-cCJ" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="l1O-Ne-9jP"/>
                 </constraints>
             </tableViewCellContentView>
@@ -70,7 +70,7 @@
                 <outlet property="chooseRight" destination="TqS-r8-cCJ" id="Xul-av-5Dk"/>
                 <outlet property="chooseTitel" destination="nTv-r6-oec" id="lTn-yW-qGD"/>
             </connections>
-            <point key="canvasLocation" x="-332" y="-15"/>
+            <point key="canvasLocation" x="-239" y="-41"/>
         </tableViewCell>
     </objects>
     <resources>
