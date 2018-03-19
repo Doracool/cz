@@ -131,10 +131,14 @@
 
 - (void)chooseTags:(UIButton *)sender {
     // 单选
+    [_chooseTagsArr removeAllObjects];
     for (NSInteger i = 0 ; i < count ; i++) {
         if (sender.tag == i) {
+            NSNumber *tagNum = [NSNumber numberWithInteger:i];
+            [_chooseTagsArr addObject:tagNum];
             [sender setBackgroundColor:[UIColor redColor]];
             [sender setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+            [self.delegate chooseTagsArr:_chooseTagsArr];
             continue;
         }
         UIButton *other = (UIButton *)self.subviews[i];
