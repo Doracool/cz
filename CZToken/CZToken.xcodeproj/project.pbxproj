@@ -106,6 +106,7 @@
 		607208AE205F564E00DD5335 /* xgChooseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607208AC205F564E00DD5335 /* xgChooseCell.xib */; };
 		607208B2205F576800DD5335 /* xgResultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 607208B0205F576800DD5335 /* xgResultCell.m */; };
 		607208B3205F576800DD5335 /* xgResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607208B1205F576800DD5335 /* xgResultCell.xib */; };
+		607208B7205FB1A000DD5335 /* areaModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 607208B6205FB1A000DD5335 /* areaModel.m */; };
 		6082BAB52044DEE900F82B31 /* TTChooseBtnView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6082BAB42044DEE900F82B31 /* TTChooseBtnView.m */; };
 		6082BAB82044E28C00F82B31 /* UIView+TTExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6082BAB72044E28C00F82B31 /* UIView+TTExtension.m */; };
 		6082BABC2044EAA700F82B31 /* XgShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6082BABA2044EAA700F82B31 /* XgShareViewController.m */; };
@@ -364,6 +365,8 @@
 		607208AF205F576800DD5335 /* xgResultCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = xgResultCell.h; sourceTree = "<group>"; };
 		607208B0205F576800DD5335 /* xgResultCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = xgResultCell.m; sourceTree = "<group>"; };
 		607208B1205F576800DD5335 /* xgResultCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = xgResultCell.xib; sourceTree = "<group>"; };
+		607208B5205FB1A000DD5335 /* areaModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = areaModel.h; sourceTree = "<group>"; };
+		607208B6205FB1A000DD5335 /* areaModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = areaModel.m; sourceTree = "<group>"; };
 		6082BAB32044DEE900F82B31 /* TTChooseBtnView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTChooseBtnView.h; sourceTree = "<group>"; };
 		6082BAB42044DEE900F82B31 /* TTChooseBtnView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTChooseBtnView.m; sourceTree = "<group>"; };
 		6082BAB62044E28B00F82B31 /* UIView+TTExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+TTExtension.h"; sourceTree = "<group>"; };
@@ -647,6 +650,15 @@
 			path = BaseModel;
 			sourceTree = "<group>";
 		};
+		607208B4205FB16300DD5335 /* House */ = {
+			isa = PBXGroup;
+			children = (
+				607208B5205FB1A000DD5335 /* areaModel.h */,
+				607208B6205FB1A000DD5335 /* areaModel.m */,
+			);
+			path = House;
+			sourceTree = "<group>";
+		};
 		6082BACD2044FC7000F82B31 /* SFJSegment */ = {
 			isa = PBXGroup;
 			children = (
@@ -863,6 +875,7 @@
 		60B622C420424C52001DBA43 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				607208B4205FB16300DD5335 /* House */,
 				60482C75205B776A00F2FF9D /* signPay */,
 				6069A83920537C8300EEA1F0 /* BaseModel */,
 			);
@@ -1405,6 +1418,7 @@
 				D4C7D5BF2047E1EE0008F09A /* houseSourceCell.m in Sources */,
 				60F978D420423FF900E79007 /* AppDelegate.m in Sources */,
 				609697CB2058C48600088E31 /* UIBarButtonItem+Extension.m in Sources */,
+				607208B7205FB1A000DD5335 /* areaModel.m in Sources */,
 				60E4015E2042B9CA00EF047E /* UserSourceController.m in Sources */,
 				6044466920468F2B008F09C7 /* jjrViewController.m in Sources */,
 				604446732046A037008F09C7 /* rzyzViewController.m in Sources */,

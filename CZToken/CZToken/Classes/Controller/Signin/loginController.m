@@ -21,7 +21,7 @@
     // Do any additional setup after loading the view from its nib.
 }
 - (IBAction)loginAction:(UIButton *)sender {
-    NSString *URL = [NSString stringWithFormat:@"%@/Login/Login",BaseUrl];
+    NSString *URL = [NSString stringWithFormat:@"%@/Passport/Login/Login",BaseUrl];
     NSDictionary *params = @{@"LoginId":_userName.text,@"Password":_password.text,@"Source":@"ios"};
     URL = [URL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];

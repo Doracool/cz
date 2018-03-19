@@ -77,7 +77,7 @@
 }
 
 - (IBAction)codeAction:(UIButton *)sender {
-    NSString *URL = [NSString stringWithFormat:@"%@/Register/VerificationCode",BaseUrl];
+    NSString *URL = [NSString stringWithFormat:@"%@/Passport/Register/VerificationCode",BaseUrl];
     URL = [URL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     NSDictionary *params = @{@"Phone":_phone.text,@"Source":@"ios"};
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
@@ -92,7 +92,7 @@
 - (IBAction)signinAction:(UIButton *)sender {
     
     
-    NSString *URL = [NSString stringWithFormat:@"%@/Register/SavePhone",BaseUrl];
+    NSString *URL = [NSString stringWithFormat:@"%@/Passport/Register/SavePhone",BaseUrl];
     URL = [URL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     if (_phone.text.length == 0) {
         
