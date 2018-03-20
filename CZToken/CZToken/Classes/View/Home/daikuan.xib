@@ -21,7 +21,7 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M3l-tQ-BaZ">
+                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M3l-tQ-BaZ">
                     <rect key="frame" x="251" y="21.5" width="37" height="18"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <state key="normal" title="  否" image="unselected">
@@ -35,7 +35,7 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P0c-mU-2iw">
+                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P0c-mU-2iw">
                     <rect key="frame" x="251" y="62.5" width="67" height="18"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <state key="normal" title="  非普通" image="unselected">
@@ -43,7 +43,7 @@
                     </state>
                     <state key="selected" image="selected"/>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wiw-8z-Zt9">
+                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wiw-8z-Zt9">
                     <rect key="frame" x="179" y="62" width="52" height="18"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <state key="normal" title="  普通" image="unselected">
@@ -51,7 +51,7 @@
                     </state>
                     <state key="selected" image="selected"/>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qlH-VD-75C">
+                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qlH-VD-75C">
                     <rect key="frame" x="179" y="21.5" width="37" height="18"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <state key="normal" title="  是" image="unselected">
@@ -87,8 +87,8 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="可贷额度：60万元" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vie-Hb-Vb3">
-                    <rect key="frame" x="97.5" y="272" width="143" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="可贷额度：0元" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vie-Hb-Vb3">
+                    <rect key="frame" x="111.5" y="272" width="115" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>

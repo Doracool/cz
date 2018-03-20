@@ -77,7 +77,7 @@
 }
 
 - (IBAction)codeAction:(UIButton *)sender {
-    NSString *URL = [NSString stringWithFormat:@"%@/Register/VerificationCode",BaseUrl];
+    NSString *URL = [NSString stringWithFormat:@"%@/Passport/Register/VerificationCode",BaseUrl];
     URL = [URL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     NSDictionary *params = @{@"Phone":_phone.text,@"Source":@"ios"};
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
@@ -92,7 +92,7 @@
 - (IBAction)signinAction:(UIButton *)sender {
     
     
-    NSString *URL = [NSString stringWithFormat:@"%@/Register/SavePhone",BaseUrl];
+    NSString *URL = [NSString stringWithFormat:@"%@/Passport/Register/SavePhone",BaseUrl];
     URL = [URL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     if (_phone.text.length == 0) {
         
@@ -137,6 +137,40 @@
     } else {
         NSLog(@"WeChat Failed");
     }
+}
+
+- (void)aliPay {
+    NSString *appScheme = @"alisdkdemo";
+    [[AlipaySDK defaultService] payOrder:@"" fromScheme:appScheme callback:^(NSDictionary *resultDic) {
+        NSLog(@"reslut = %@",resultDic);
+        
+        int staute = [resultDic intValueForKey:@"resultStatus"];
+        
+        NSString *dic = [resultDic objectForKey:@"result"];
+        
+        switch (staute) {
+            case 9000: {
+                //支付完成的回调
+            }
+                break;
+            case 8000:
+                SHOW_MESSAGE_VIEW(nil, @"正在处理中", @"确定", nil);
+                break;
+            case 4000:
+                SHOW_MESSAGE_VIEW(nil, @"订单支付失败", @"确定", nil);
+                break;
+            case 6001:
+                SHOW_MESSAGE_VIEW(nil, @"用户中途取消", @"确定", nil);
+                break;
+            case 6002:
+                SHOW_MESSAGE_VIEW(nil, @"网络连接出错", @"确定", nil);
+                break;
+            default:
+                break;
+        }
+        
+    }];
+    
 }
 
 - (void)weixinPayReturn:(NSNotification *)info {

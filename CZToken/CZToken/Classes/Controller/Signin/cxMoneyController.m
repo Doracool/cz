@@ -19,9 +19,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSString *URL = [NSString stringWithFormat:@"%@/Register/GetPayData",BaseUrl];
+    NSString *URL = [NSString stringWithFormat:@"%@/Passport/Register/GetPayData",BaseUrl];
     URL = [URL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    NSDictionary *params = @{@"Token":TOKNE,@"Source":@"ios"};
+    NSDictionary *params = @{@"Token":TOKEN,@"Source":@"ios"};
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
     [manager POST:URL parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {

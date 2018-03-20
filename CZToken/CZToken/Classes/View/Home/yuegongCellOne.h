@@ -23,6 +23,12 @@
 @property (strong, nonatomic) IBOutlet UIView *zuheViewTwo;
 @property (strong, nonatomic) IBOutlet NSLayoutConstraint *oneHeight;
 @property (strong, nonatomic) IBOutlet UITextField *onegjjtf;
+@property (strong, nonatomic) IBOutlet UITextField *sylvTF;
+@property (strong, nonatomic) IBOutlet UITextField *sylvBeishu;
 @property (strong, nonatomic) IBOutlet NSLayoutConstraint *viewoneTop;
 @property (strong, nonatomic) IBOutlet NSLayoutConstraint *viewtwoTop;
+@property (strong, nonatomic) IBOutlet UILabel *dkjeLabel;
+@property (strong, nonatomic) IBOutlet UILabel *dklvLabel;
+@property (strong, nonatomic) IBOutlet UILabel *lvResult;
+@property (strong, nonatomic) IBOutlet UILabel *sdlvResult;
 @end

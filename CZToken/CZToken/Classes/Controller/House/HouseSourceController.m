@@ -14,7 +14,7 @@
 #import "houseAddressController.h"
 #import "baseAuditController.h"
 #import "houseAddressController.h"
-
+#import "areaModel.h"
 @interface HouseSourceController ()<DOPDropDownMenuDelegate,DOPDropDownMenuDataSource,UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) NSArray *arr1;
 @property (nonatomic, strong) NSArray *arr2;
@@ -82,6 +82,23 @@
     _add.layer.masksToBounds = YES;
     [_add setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [_add addTarget:self action:@selector(addHouse) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self requestArea];
+}
+
+- (void)requestArea {
+    NSString *URL = [NSString stringWithFormat:@"%@/Trade/TradeArea/Get?token=%@",BaseUrl,TOKEN];
+    URL = [URL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    [manager POST:URL parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
+        NSLog(@"%@",dic);
+        areaModel *model = [areaModel mj_objectWithKeyValues:dic];
+        NSLog(@"%@",model);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+    }];
 }
 
 - (void)viewWillAppear:(BOOL)animated {

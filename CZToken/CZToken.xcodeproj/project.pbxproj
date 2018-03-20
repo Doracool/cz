@@ -45,6 +45,10 @@
 		602385482050C1E600B2FA4F /* houseAddressComCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 602385462050C1E600B2FA4F /* houseAddressComCell.xib */; };
 		6023854C2050E10900B2FA4F /* addUserInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6023854A2050E10900B2FA4F /* addUserInfoController.m */; };
 		6023854D2050E10900B2FA4F /* addUserInfoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6023854B2050E10900B2FA4F /* addUserInfoController.xib */; };
+		602B68472060EA6600E714E7 /* centerTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 602B68452060EA6600E714E7 /* centerTextCell.m */; };
+		602B68482060EA6600E714E7 /* centerTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 602B68462060EA6600E714E7 /* centerTextCell.xib */; };
+		602B684A2060FC8200E714E7 /* yuegongView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 602B68492060FC8200E714E7 /* yuegongView.xib */; };
+		602B684D206100B400E714E7 /* yuegongView.m in Sources */ = {isa = PBXBuildFile; fileRef = 602B684C206100B400E714E7 /* yuegongView.m */; };
 		602B68C02048EE6700748562 /* lookOwnerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 602B68BE2048EE6700748562 /* lookOwnerController.m */; };
 		602B68C12048EE6700748562 /* lookOwnerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 602B68BF2048EE6700748562 /* lookOwnerController.xib */; };
 		602B68C52048F0C300748562 /* OwnerInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 602B68C32048F0C300748562 /* OwnerInfoCell.m */; };
@@ -102,6 +106,11 @@
 		6069A8382053620D00EEA1F0 /* aliyunOssUpImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 6069A8372053620D00EEA1F0 /* aliyunOssUpImage.m */; };
 		6069A83C20537CB800EEA1F0 /* WXpayData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6069A83B20537CB800EEA1F0 /* WXpayData.m */; };
 		6069A83F20537DAE00EEA1F0 /* NSDictionary+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 6069A83E20537DAE00EEA1F0 /* NSDictionary+Utility.m */; };
+		607208AD205F564E00DD5335 /* xgChooseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 607208AB205F564E00DD5335 /* xgChooseCell.m */; };
+		607208AE205F564E00DD5335 /* xgChooseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607208AC205F564E00DD5335 /* xgChooseCell.xib */; };
+		607208B2205F576800DD5335 /* xgResultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 607208B0205F576800DD5335 /* xgResultCell.m */; };
+		607208B3205F576800DD5335 /* xgResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607208B1205F576800DD5335 /* xgResultCell.xib */; };
+		607208B7205FB1A000DD5335 /* areaModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 607208B6205FB1A000DD5335 /* areaModel.m */; };
 		6082BAB52044DEE900F82B31 /* TTChooseBtnView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6082BAB42044DEE900F82B31 /* TTChooseBtnView.m */; };
 		6082BAB82044E28C00F82B31 /* UIView+TTExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6082BAB72044E28C00F82B31 /* UIView+TTExtension.m */; };
 		6082BABC2044EAA700F82B31 /* XgShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6082BABA2044EAA700F82B31 /* XgShareViewController.m */; };
@@ -161,6 +170,22 @@
 		60B79E4E204E45A60006FE70 /* houseAddressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60B79E4C204E45A60006FE70 /* houseAddressCell.xib */; };
 		60B79E52204E73580006FE70 /* refundMoneyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B79E50204E73580006FE70 /* refundMoneyController.m */; };
 		60B79E53204E73580006FE70 /* refundMoneyController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60B79E51204E73580006FE70 /* refundMoneyController.xib */; };
+		60DEE84E205CF53700012F8B /* AlipaySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60DEE84C205CF53300012F8B /* AlipaySDK.framework */; };
+		60DEE84F205CF53700012F8B /* AlipaySDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 60DEE84D205CF53700012F8B /* AlipaySDK.bundle */; };
+		60DEE851205CF56E00012F8B /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 60DEE850205CF56E00012F8B /* libc++.tbd */; };
+		60DEE853205CF57900012F8B /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 60DEE852205CF57900012F8B /* libz.tbd */; };
+		60DEE856205CF5A400012F8B /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60DEE854205CF58500012F8B /* CoreTelephony.framework */; };
+		60DEE857205CF5AA00012F8B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60DEE855205CF59100012F8B /* QuartzCore.framework */; };
+		60DEE859205CF5BE00012F8B /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60DEE858205CF5B500012F8B /* CoreText.framework */; };
+		60DEE85B205CF5D100012F8B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60DEE85A205CF5C700012F8B /* CoreGraphics.framework */; };
+		60DEE85D205CF5E200012F8B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60DEE85C205CF5DA00012F8B /* UIKit.framework */; };
+		60DEE85F205CF5F000012F8B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60DEE85E205CF5EC00012F8B /* Foundation.framework */; };
+		60DEE861205CF5FE00012F8B /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60DEE860205CF5F800012F8B /* CFNetwork.framework */; };
+		60DEE863205CF61300012F8B /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60DEE862205CF60B00012F8B /* CoreMotion.framework */; };
+		60DEE866205D082300012F8B /* topSearch.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60DEE865205D082300012F8B /* topSearch.xib */; };
+		60DEE869205D08D000012F8B /* topSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 60DEE868205D08D000012F8B /* topSearch.m */; };
+		60DEE86D205D0C4900012F8B /* userHouseInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60DEE86B205D0C4900012F8B /* userHouseInfoCell.m */; };
+		60DEE86E205D0C4900012F8B /* userHouseInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60DEE86C205D0C4900012F8B /* userHouseInfoCell.xib */; };
 		60E4015E2042B9CA00EF047E /* UserSourceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E401552042B9C900EF047E /* UserSourceController.m */; };
 		60E4015F2042B9CA00EF047E /* HouseSourceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E401572042B9C900EF047E /* HouseSourceController.m */; };
 		60E401652042BA3000EF047E /* CZTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E401632042BA3000EF047E /* CZTabBarController.m */; };
@@ -250,6 +275,12 @@
 		602385492050E10900B2FA4F /* addUserInfoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = addUserInfoController.h; sourceTree = "<group>"; };
 		6023854A2050E10900B2FA4F /* addUserInfoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = addUserInfoController.m; sourceTree = "<group>"; };
 		6023854B2050E10900B2FA4F /* addUserInfoController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = addUserInfoController.xib; sourceTree = "<group>"; };
+		602B68442060EA6600E714E7 /* centerTextCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = centerTextCell.h; sourceTree = "<group>"; };
+		602B68452060EA6600E714E7 /* centerTextCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = centerTextCell.m; sourceTree = "<group>"; };
+		602B68462060EA6600E714E7 /* centerTextCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = centerTextCell.xib; sourceTree = "<group>"; };
+		602B68492060FC8200E714E7 /* yuegongView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = yuegongView.xib; sourceTree = "<group>"; };
+		602B684B206100B400E714E7 /* yuegongView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = yuegongView.h; sourceTree = "<group>"; };
+		602B684C206100B400E714E7 /* yuegongView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = yuegongView.m; sourceTree = "<group>"; };
 		602B68BD2048EE6700748562 /* lookOwnerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lookOwnerController.h; sourceTree = "<group>"; };
 		602B68BE2048EE6700748562 /* lookOwnerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = lookOwnerController.m; sourceTree = "<group>"; };
 		602B68BF2048EE6700748562 /* lookOwnerController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = lookOwnerController.xib; sourceTree = "<group>"; };
@@ -338,6 +369,14 @@
 		6069A83D20537DAD00EEA1F0 /* NSDictionary+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Utility.h"; sourceTree = "<group>"; };
 		6069A83E20537DAE00EEA1F0 /* NSDictionary+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Utility.m"; sourceTree = "<group>"; };
 		6069A84020537F2F00EEA1F0 /* NotificationHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationHeader.h; sourceTree = "<group>"; };
+		607208AA205F564E00DD5335 /* xgChooseCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = xgChooseCell.h; sourceTree = "<group>"; };
+		607208AB205F564E00DD5335 /* xgChooseCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = xgChooseCell.m; sourceTree = "<group>"; };
+		607208AC205F564E00DD5335 /* xgChooseCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = xgChooseCell.xib; sourceTree = "<group>"; };
+		607208AF205F576800DD5335 /* xgResultCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = xgResultCell.h; sourceTree = "<group>"; };
+		607208B0205F576800DD5335 /* xgResultCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = xgResultCell.m; sourceTree = "<group>"; };
+		607208B1205F576800DD5335 /* xgResultCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = xgResultCell.xib; sourceTree = "<group>"; };
+		607208B5205FB1A000DD5335 /* areaModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = areaModel.h; sourceTree = "<group>"; };
+		607208B6205FB1A000DD5335 /* areaModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = areaModel.m; sourceTree = "<group>"; };
 		6082BAB32044DEE900F82B31 /* TTChooseBtnView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTChooseBtnView.h; sourceTree = "<group>"; };
 		6082BAB42044DEE900F82B31 /* TTChooseBtnView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTChooseBtnView.m; sourceTree = "<group>"; };
 		6082BAB62044E28B00F82B31 /* UIView+TTExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+TTExtension.h"; sourceTree = "<group>"; };
@@ -432,6 +471,24 @@
 		60B79E4F204E73580006FE70 /* refundMoneyController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = refundMoneyController.h; sourceTree = "<group>"; };
 		60B79E50204E73580006FE70 /* refundMoneyController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = refundMoneyController.m; sourceTree = "<group>"; };
 		60B79E51204E73580006FE70 /* refundMoneyController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = refundMoneyController.xib; sourceTree = "<group>"; };
+		60DEE84C205CF53300012F8B /* AlipaySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlipaySDK.framework; sourceTree = "<group>"; };
+		60DEE84D205CF53700012F8B /* AlipaySDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AlipaySDK.bundle; sourceTree = "<group>"; };
+		60DEE850205CF56E00012F8B /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		60DEE852205CF57900012F8B /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		60DEE854205CF58500012F8B /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		60DEE855205CF59100012F8B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		60DEE858205CF5B500012F8B /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		60DEE85A205CF5C700012F8B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		60DEE85C205CF5DA00012F8B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		60DEE85E205CF5EC00012F8B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		60DEE860205CF5F800012F8B /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		60DEE862205CF60B00012F8B /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		60DEE865205D082300012F8B /* topSearch.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = topSearch.xib; sourceTree = "<group>"; };
+		60DEE867205D08D000012F8B /* topSearch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = topSearch.h; sourceTree = "<group>"; };
+		60DEE868205D08D000012F8B /* topSearch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = topSearch.m; sourceTree = "<group>"; };
+		60DEE86A205D0C4900012F8B /* userHouseInfoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = userHouseInfoCell.h; sourceTree = "<group>"; };
+		60DEE86B205D0C4900012F8B /* userHouseInfoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = userHouseInfoCell.m; sourceTree = "<group>"; };
+		60DEE86C205D0C4900012F8B /* userHouseInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = userHouseInfoCell.xib; sourceTree = "<group>"; };
 		60E401552042B9C900EF047E /* UserSourceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserSourceController.m; sourceTree = "<group>"; };
 		60E401562042B9C900EF047E /* HouseSourceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HouseSourceController.h; sourceTree = "<group>"; };
 		60E401572042B9C900EF047E /* HouseSourceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HouseSourceController.m; sourceTree = "<group>"; };
@@ -485,7 +542,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60DEE863205CF61300012F8B /* CoreMotion.framework in Frameworks */,
+				60DEE861205CF5FE00012F8B /* CFNetwork.framework in Frameworks */,
+				60DEE85F205CF5F000012F8B /* Foundation.framework in Frameworks */,
+				60DEE85D205CF5E200012F8B /* UIKit.framework in Frameworks */,
+				60DEE85B205CF5D100012F8B /* CoreGraphics.framework in Frameworks */,
+				60DEE859205CF5BE00012F8B /* CoreText.framework in Frameworks */,
+				60DEE857205CF5AA00012F8B /* QuartzCore.framework in Frameworks */,
+				60DEE856205CF5A400012F8B /* CoreTelephony.framework in Frameworks */,
 				6041A7722052901200EDB119 /* SystemConfiguration.framework in Frameworks */,
+				60DEE853205CF57900012F8B /* libz.tbd in Frameworks */,
+				60DEE851205CF56E00012F8B /* libc++.tbd in Frameworks */,
+				60DEE84E205CF53700012F8B /* AlipaySDK.framework in Frameworks */,
 				AA6D2A9B724FAEC47113B680 /* libPods-CZToken.a in Frameworks */,
 				6041A77020528FFD00EDB119 /* libresolv.tbd in Frameworks */,
 			);
@@ -590,6 +658,15 @@
 				6069A83B20537CB800EEA1F0 /* WXpayData.m */,
 			);
 			path = BaseModel;
+			sourceTree = "<group>";
+		};
+		607208B4205FB16300DD5335 /* House */ = {
+			isa = PBXGroup;
+			children = (
+				607208B5205FB1A000DD5335 /* areaModel.h */,
+				607208B6205FB1A000DD5335 /* areaModel.m */,
+			);
+			path = House;
 			sourceTree = "<group>";
 		};
 		6082BACD2044FC7000F82B31 /* SFJSegment */ = {
@@ -738,6 +815,18 @@
 				6041A76A20526EEB00EDB119 /* homeHotSeaCell.h */,
 				6041A76B20526EEB00EDB119 /* homeHotSeaCell.m */,
 				6041A76C20526EEB00EDB119 /* homeHotSeaCell.xib */,
+				607208AA205F564E00DD5335 /* xgChooseCell.h */,
+				607208AB205F564E00DD5335 /* xgChooseCell.m */,
+				607208AC205F564E00DD5335 /* xgChooseCell.xib */,
+				607208AF205F576800DD5335 /* xgResultCell.h */,
+				607208B0205F576800DD5335 /* xgResultCell.m */,
+				607208B1205F576800DD5335 /* xgResultCell.xib */,
+				602B68442060EA6600E714E7 /* centerTextCell.h */,
+				602B68452060EA6600E714E7 /* centerTextCell.m */,
+				602B68462060EA6600E714E7 /* centerTextCell.xib */,
+				602B68492060FC8200E714E7 /* yuegongView.xib */,
+				602B684B206100B400E714E7 /* yuegongView.h */,
+				602B684C206100B400E714E7 /* yuegongView.m */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -802,6 +891,7 @@
 		60B622C420424C52001DBA43 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				607208B4205FB16300DD5335 /* House */,
 				60482C75205B776A00F2FF9D /* signPay */,
 				6069A83920537C8300EEA1F0 /* BaseModel */,
 			);
@@ -811,6 +901,7 @@
 		60B622C520424C5C001DBA43 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				60DEE864205D07F500012F8B /* User */,
 				6041A7502052204900EDB119 /* Me */,
 				D4C7D5BB2047E1C10008F09A /* House */,
 				609876222044052C00243079 /* Home */,
@@ -821,6 +912,7 @@
 		60B622C620424C63001DBA43 /* ThirdTools */ = {
 			isa = PBXGroup;
 			children = (
+				60DEE84B205CF4E600012F8B /* AliPay */,
 				6023854E20512A5000B2FA4F /* Map */,
 				D422578C204EE9DF003D146B /* ZHPick */,
 				6021A2FF204CF63F00FF189E /* LPCarouselView */,
@@ -917,6 +1009,28 @@
 			path = houseAudit;
 			sourceTree = "<group>";
 		};
+		60DEE84B205CF4E600012F8B /* AliPay */ = {
+			isa = PBXGroup;
+			children = (
+				60DEE84D205CF53700012F8B /* AlipaySDK.bundle */,
+				60DEE84C205CF53300012F8B /* AlipaySDK.framework */,
+			);
+			path = AliPay;
+			sourceTree = "<group>";
+		};
+		60DEE864205D07F500012F8B /* User */ = {
+			isa = PBXGroup;
+			children = (
+				60DEE865205D082300012F8B /* topSearch.xib */,
+				60DEE867205D08D000012F8B /* topSearch.h */,
+				60DEE868205D08D000012F8B /* topSearch.m */,
+				60DEE86A205D0C4900012F8B /* userHouseInfoCell.h */,
+				60DEE86B205D0C4900012F8B /* userHouseInfoCell.m */,
+				60DEE86C205D0C4900012F8B /* userHouseInfoCell.xib */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
 		60F978C620423FF800E79007 = {
 			isa = PBXGroup;
 			children = (
@@ -955,6 +1069,16 @@
 		73D7B805941FD54F52B249C7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				60DEE862205CF60B00012F8B /* CoreMotion.framework */,
+				60DEE860205CF5F800012F8B /* CFNetwork.framework */,
+				60DEE85E205CF5EC00012F8B /* Foundation.framework */,
+				60DEE85C205CF5DA00012F8B /* UIKit.framework */,
+				60DEE85A205CF5C700012F8B /* CoreGraphics.framework */,
+				60DEE858205CF5B500012F8B /* CoreText.framework */,
+				60DEE855205CF59100012F8B /* QuartzCore.framework */,
+				60DEE854205CF58500012F8B /* CoreTelephony.framework */,
+				60DEE852205CF57900012F8B /* libz.tbd */,
+				60DEE850205CF56E00012F8B /* libc++.tbd */,
 				6041A7712052900700EDB119 /* SystemConfiguration.framework */,
 				6041A76F20528FFD00EDB119 /* libresolv.tbd */,
 				5E4F68D696251ABCA40F72E7 /* libPods-CZToken.a */,
@@ -1115,6 +1239,7 @@
 				60B79E2E204E337A0006FE70 /* doublebtnCell.xib in Resources */,
 				604353F1204A822A002E24C9 /* logListCell.xib in Resources */,
 				6021A2EA204CDBC000FF189E /* houseDetaiseCellOne.xib in Resources */,
+				60DEE866205D082300012F8B /* topSearch.xib in Resources */,
 				6082BAD720455E0F00F82B31 /* zige.xib in Resources */,
 				D422578B204D8053003D146B /* houseImpInfoController.xib in Resources */,
 				602385482050C1E600B2FA4F /* houseAddressComCell.xib in Resources */,
@@ -1122,6 +1247,7 @@
 				60B79E34204E34200006FE70 /* baseAuditController.xib in Resources */,
 				602B68C12048EE6700748562 /* lookOwnerController.xib in Resources */,
 				6082BACC2044F84100F82B31 /* loansViewController.xib in Resources */,
+				60DEE84F205CF53700012F8B /* AlipaySDK.bundle in Resources */,
 				6021A2E0204CCBAF00FF189E /* searchCell.xib in Resources */,
 				6082BAC72044EB3900F82B31 /* XgContentTableViewCell.xib in Resources */,
 				6044465120464B00008F09C7 /* foreSigninController.xib in Resources */,
@@ -1129,6 +1255,7 @@
 				6044466020465D63008F09C7 /* zsViewController.xib in Resources */,
 				609876172043AE8400243079 /* NewsViewCell.xib in Resources */,
 				6044466F20469EE3008F09C7 /* textCell.xib in Resources */,
+				607208B3205F576800DD5335 /* xgResultCell.xib in Resources */,
 				D4C7D5B42046E7A40008F09A /* loginController.xib in Resources */,
 				60B79E19204E24650006FE70 /* houseImpTwoController.xib in Resources */,
 				6021A31E204D3DC400FF189E /* sourceAddressCell.xib in Resources */,
@@ -1139,6 +1266,7 @@
 				6021A314204D32A000FF189E /* HouseRankCell.xib in Resources */,
 				6044465B204655E9008F09C7 /* cxMoneyController.xib in Resources */,
 				60F978DF20423FF900E79007 /* LaunchScreen.storyboard in Resources */,
+				607208AE205F564E00DD5335 /* xgChooseCell.xib in Resources */,
 				6082BAC22044EAF500F82B31 /* xgTitleViewCell.xib in Resources */,
 				6021A2EF204CDCDD00FF189E /* houseDetailsCellTwo.xib in Resources */,
 				6044465620464FEB008F09C7 /* UpInfoController.xib in Resources */,
@@ -1151,6 +1279,7 @@
 				609876122043ADE600243079 /* TitleIconCell.xib in Resources */,
 				D4C7D5C02047E1EE0008F09A /* houseSourceCell.xib in Resources */,
 				6021A2F9204CE12700FF189E /* houseDetailsInfoCell.xib in Resources */,
+				60DEE86E205D0C4900012F8B /* userHouseInfoCell.xib in Resources */,
 				6044466A20468F2B008F09C7 /* jjrViewController.xib in Resources */,
 				60F978DA20423FF900E79007 /* Main.storyboard in Resources */,
 				6023854D2050E10900B2FA4F /* addUserInfoController.xib in Resources */,
@@ -1169,6 +1298,7 @@
 				6021A328204D510100FF189E /* addLinkCell.xib in Resources */,
 				6021A2FE204CE50F00FF189E /* houseSignCell.xib in Resources */,
 				60B79E29204E32AE0006FE70 /* houseTextCell.xib in Resources */,
+				602B68482060EA6600E714E7 /* centerTextCell.xib in Resources */,
 				6041A7552052208C00EDB119 /* MeController.xib in Resources */,
 				60B79E49204E3B3A0006FE70 /* AuditSuccController.xib in Resources */,
 				6039C067204AB08800A7FD99 /* houseAuditController.xib in Resources */,
@@ -1185,6 +1315,7 @@
 				6098761C2043BAC700243079 /* iconCell.xib in Resources */,
 				6021A323204D4C2A00FF189E /* UserlinkCell.xib in Resources */,
 				D422578620483169003D146B /* HouseDetailsController.xib in Resources */,
+				602B684A2060FC8200E714E7 /* yuegongView.xib in Resources */,
 				6021A30A204D246C00FF189E /* buyHouseCell.xib in Resources */,
 				6098760520439E8000243079 /* HomeViewController.xib in Resources */,
 				600AD70D205A0B9B006B320A /* searchAddressController.xib in Resources */,
@@ -1267,6 +1398,7 @@
 				60B79E28204E32AE0006FE70 /* houseTextCell.m in Sources */,
 				604353F0204A822A002E24C9 /* logListCell.m in Sources */,
 				609876162043AE8400243079 /* NewsViewCell.m in Sources */,
+				607208B2205F576800DD5335 /* xgResultCell.m in Sources */,
 				6041A76D20526EEB00EDB119 /* homeHotSeaCell.m in Sources */,
 				6039C066204AB08800A7FD99 /* houseAuditController.m in Sources */,
 				609697DA20590FC600088E31 /* calculateController.m in Sources */,
@@ -1276,6 +1408,7 @@
 				6041A7632052267B00EDB119 /* meMoreActionCell.m in Sources */,
 				609876112043ADE600243079 /* TitleIconCell.m in Sources */,
 				6021A309204D246C00FF189E /* buyHouseCell.m in Sources */,
+				60DEE869205D08D000012F8B /* topSearch.m in Sources */,
 				60F978D720423FF900E79007 /* ViewController.m in Sources */,
 				60B79E52204E73580006FE70 /* refundMoneyController.m in Sources */,
 				6098761B2043BAC700243079 /* iconCell.m in Sources */,
@@ -1303,6 +1436,7 @@
 				D4C7D5BF2047E1EE0008F09A /* houseSourceCell.m in Sources */,
 				60F978D420423FF900E79007 /* AppDelegate.m in Sources */,
 				609697CB2058C48600088E31 /* UIBarButtonItem+Extension.m in Sources */,
+				607208B7205FB1A000DD5335 /* areaModel.m in Sources */,
 				60E4015E2042B9CA00EF047E /* UserSourceController.m in Sources */,
 				6044466920468F2B008F09C7 /* jjrViewController.m in Sources */,
 				604446732046A037008F09C7 /* rzyzViewController.m in Sources */,
@@ -1319,6 +1453,7 @@
 				6021A327204D510100FF189E /* addLinkCell.m in Sources */,
 				6021A2E4204CD93E00FF189E /* affirmCell.m in Sources */,
 				604353FA204A883A002E24C9 /* addHouseInfoController.m in Sources */,
+				60DEE86D205D0C4900012F8B /* userHouseInfoCell.m in Sources */,
 				6082BAC12044EAF500F82B31 /* xgTitleViewCell.m in Sources */,
 				602B68CA2048F67700748562 /* writeLogController.m in Sources */,
 				6098760820439F4700243079 /* BaseViewController.m in Sources */,
@@ -1330,14 +1465,17 @@
 				D4C7D5BA2047DD270008F09A /* DOPDropDownMenu.m in Sources */,
 				602385472050C1E600B2FA4F /* houseAddressComCell.m in Sources */,
 				6082BABC2044EAA700F82B31 /* XgShareViewController.m in Sources */,
+				602B68472060EA6600E714E7 /* centerTextCell.m in Sources */,
 				D422578A204D8053003D146B /* houseImpInfoController.m in Sources */,
 				6044465020464B00008F09C7 /* foreSigninController.m in Sources */,
 				6044466E20469EE3008F09C7 /* textCell.m in Sources */,
 				6021A304204CF64000FF189E /* LPCarouselView.m in Sources */,
 				6062BAB4204FF30D00258BFA /* auditHeadCell.m in Sources */,
 				6082BACB2044F84100F82B31 /* loansViewController.m in Sources */,
+				607208AD205F564E00DD5335 /* xgChooseCell.m in Sources */,
 				600AD70C205A0B9B006B320A /* searchAddressController.m in Sources */,
 				6021A322204D4C2A00FF189E /* UserlinkCell.m in Sources */,
+				602B684D206100B400E714E7 /* yuegongView.m in Sources */,
 				60B79E23204E30FA0006FE70 /* houseSuccController.m in Sources */,
 				6021A2EE204CDCDD00FF189E /* houseDetailsCellTwo.m in Sources */,
 				604446642046818E008F09C7 /* SignController.m in Sources */,
@@ -1487,9 +1625,34 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/CZToken/Classes/ThirdTools/Map",
+					"$(PROJECT_DIR)/CZToken/Classes/ThirdTools/AliPay",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+<<<<<<< HEAD
 				GCC_PREFIX_HEADER = "/Users/ighibli/Desktop/我的/cz/CZToken/CZToken/CZToken-Prefix.pch";
+=======
+				GCC_PREFIX_HEADER = "/Users/jlc/Desktop/Other/cz/CZToken/CZToken/CZToken-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
+					"\"${PODS_ROOT}/Headers/Public/AliyunOSSiOS\"",
+					"\"${PODS_ROOT}/Headers/Public/BaiduMapKit\"",
+					"\"${PODS_ROOT}/Headers/Public/FDFullscreenPopGesture\"",
+					"\"${PODS_ROOT}/Headers/Public/IQKeyboardManager\"",
+					"\"${PODS_ROOT}/Headers/Public/MBProgressHUD\"",
+					"\"${PODS_ROOT}/Headers/Public/MJExtension\"",
+					"\"${PODS_ROOT}/Headers/Public/MJRefresh\"",
+					"\"${PODS_ROOT}/Headers/Public/Masonry\"",
+					"\"${PODS_ROOT}/Headers/Public/RCRunkeeperSwitch\"",
+					"\"${PODS_ROOT}/Headers/Public/SDWebImage\"",
+					"\"${PODS_ROOT}/Headers/Public/SVProgressHUD\"",
+					"\"${PODS_ROOT}/Headers/Public/TZImagePickerController\"",
+					"\"${PODS_ROOT}/Headers/Public/WebViewJavascriptBridge\"",
+					"\"${PODS_ROOT}/Headers/Public/WechatOpenSDK\"",
+					"$(SRCROOT)/CZToken",
+				);
+>>>>>>> 043d8120b7fa322da4fb9cc68598eb04a3053526
 				INFOPLIST_FILE = CZToken/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1509,9 +1672,30 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/CZToken/Classes/ThirdTools/Map",
+					"$(PROJECT_DIR)/CZToken/Classes/ThirdTools/AliPay",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "/Users/ighibli/Desktop/我的/cz/CZToken/CZToken/CZToken-Prefix.pch";
+				GCC_PREFIX_HEADER = "/Users/jlc/Desktop/Other/cz/CZToken/CZToken/CZToken-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
+					"\"${PODS_ROOT}/Headers/Public/AliyunOSSiOS\"",
+					"\"${PODS_ROOT}/Headers/Public/BaiduMapKit\"",
+					"\"${PODS_ROOT}/Headers/Public/FDFullscreenPopGesture\"",
+					"\"${PODS_ROOT}/Headers/Public/IQKeyboardManager\"",
+					"\"${PODS_ROOT}/Headers/Public/MBProgressHUD\"",
+					"\"${PODS_ROOT}/Headers/Public/MJExtension\"",
+					"\"${PODS_ROOT}/Headers/Public/MJRefresh\"",
+					"\"${PODS_ROOT}/Headers/Public/Masonry\"",
+					"\"${PODS_ROOT}/Headers/Public/RCRunkeeperSwitch\"",
+					"\"${PODS_ROOT}/Headers/Public/SDWebImage\"",
+					"\"${PODS_ROOT}/Headers/Public/SVProgressHUD\"",
+					"\"${PODS_ROOT}/Headers/Public/TZImagePickerController\"",
+					"\"${PODS_ROOT}/Headers/Public/WebViewJavascriptBridge\"",
+					"\"${PODS_ROOT}/Headers/Public/WechatOpenSDK\"",
+					"$(SRCROOT)/CZToken",
+				);
 				INFOPLIST_FILE = CZToken/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
