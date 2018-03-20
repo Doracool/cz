@@ -24,9 +24,19 @@
 @property (nonatomic, strong) UIView *secondView;
 @property (nonatomic, strong) UILabel *text1;
 @property (nonatomic, strong) UILabel *text2;
+@property (nonatomic, strong) UILabel *text3;
+@property (nonatomic, strong) UILabel *text4;
 @property (nonatomic, strong) UITextField *textField1;
 @property (nonatomic, strong) UITextField *textField2;
+@property (nonatomic, strong) UITextField *textField3;
+@property (nonatomic, strong) UIButton *yesBtn;
+@property (nonatomic, strong) UIButton *noBtn;
 @property (nonatomic, strong) UITableView *myTableView;
+
+@property (nonatomic, assign) int IsFirst;
+@property (nonatomic, assign) int HouseType;
+@property (nonatomic, assign) double ContractPrice;
+@property (nonatomic, assign) int yesOrNo;
 
 @end
 
@@ -154,6 +164,10 @@
     [shangdai.ptBtn addTarget:self action:@selector(fwlxClick:) forControlEvents:UIControlEventTouchUpInside];
     [shangdai.fptBtn addTarget:self action:@selector(fwlxClick:) forControlEvents:UIControlEventTouchUpInside];
     
+    [shangdai.htjTF addTarget:self action:@selector(htjTextChange:) forControlEvents:UIControlEventEditingChanged];
+    
+    [shangdai.ActionBtn addTarget:self action:@selector(sdJsAction:) forControlEvents:UIControlEventTouchUpInside];
+    
     _text1 = [[UILabel alloc] initWithFrame:CGRectMake(20, 100, size.width, 30)];
     _text1.text = @"月缴额";
     _text1.font = [UIFont systemFontOfSize:14.0f];
@@ -176,15 +190,51 @@
     _textField2.borderStyle = UITextBorderStyleRoundedRect;
     [_secondView addSubview:_textField2];
     
+    _text3 = [[UILabel alloc] initWithFrame:CGRectMake(20, 200, size.width*2, 30)];
+    _text3.text = @"可贷期限";
+    _text3.font = [UIFont systemFontOfSize:14.0f];
+    [_secondView addSubview:_text3];
+    
+    _textField3 = [[UITextField alloc] initWithFrame:CGRectMake(size.width + 40, 200, screenW - 60 - size.width, 30)];
+    _textField3.placeholder = @"";
+    _textField3.borderStyle = UITextBorderStyleRoundedRect;
+    [_secondView addSubview:_textField3];
+    
+    _text4 = [[UILabel alloc] initWithFrame:CGRectMake(20, 250, size.width*3, 30)];
+    _text4.text = @"是否有补充公积金";
+    _text4.font = [UIFont systemFontOfSize:14.0f];
+    [_secondView addSubview:_text4];
+    
+    _yesBtn = [[UIButton alloc] initWithFrame:CGRectMake(size.width*3 + 50, 250, 40, 40)];
+    [_secondView addSubview:_yesBtn];
+    [_yesBtn setTitle:@" 是" forState:UIControlStateNormal];
+    [_yesBtn setTitleColor:[UIColor colorWithHexString:@"333333"] forState:UIControlStateNormal];
+    _yesBtn.titleLabel.font = [UIFont systemFontOfSize:14.0f];
+    [_yesBtn setImage:[UIImage imageNamed:@"unselected"] forState:UIControlStateNormal];
+    [_yesBtn setImage:[UIImage imageNamed:@"selected"] forState:UIControlStateSelected];
+    _yesBtn.tag = 1;
+    
+    _noBtn = [[UIButton alloc] initWithFrame:CGRectMake(size.width*3 + 100, 250, 40, 40)];
+    [_secondView addSubview:_noBtn];
+    [_noBtn setTitle:@" 否" forState:UIControlStateNormal];
+    [_noBtn setTitleColor:[UIColor colorWithHexString:@"333333"] forState:UIControlStateNormal];
+    _noBtn.titleLabel.font = [UIFont systemFontOfSize:14.0f];
+    [_noBtn setImage:[UIImage imageNamed:@"unselected"] forState:UIControlStateNormal];
+    [_noBtn setImage:[UIImage imageNamed:@"selected"] forState:UIControlStateSelected];
+    [_yesBtn addTarget:self action:@selector(chooseClick:) forControlEvents:UIControlEventTouchUpInside];
+    [_noBtn addTarget:self action:@selector(chooseClick:) forControlEvents:UIControlEventTouchUpInside];
+    _noBtn.tag = 2;
+    
     jsBtn = [[UIButton alloc] init];
     [_secondView addSubview:jsBtn];
     [jsBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.leading.offset(20);
-        make.top.equalTo(_textField2.mas_bottom).offset(20);
+        make.top.equalTo(_text4.mas_bottom).offset(20);
         make.trailing.offset(-20);
         make.height.offset(40);
     }];
-    jsBtn.backgroundColor = [UIColor redColor];
+    jsBtn.backgroundColor = [UIColor navbackgroundColor];
+    [jsBtn addTarget:self action:@selector(jsAction:) forControlEvents:UIControlEventTouchUpInside];
     
     jsjg = [[UILabel alloc] init];
     [_secondView addSubview:jsjg];
@@ -197,6 +247,7 @@
     jsjg.textAlignment = NSTextAlignmentCenter;
     jsjg.text = @"测算结果";
     
+    
     kded = [[UILabel alloc] init];
     [_secondView addSubview:kded];
     [kded mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -207,7 +258,7 @@
     }];
     kded.textAlignment = NSTextAlignmentCenter;
     kded.textColor = [UIColor redColor];
-    kded.text = @"预测结果： 300万";
+    kded.text = @"预测结果： 0元";
     
     bz = [[UILabel alloc] init];
     [_secondView addSubview:bz];
@@ -227,20 +278,39 @@
     shangdai.sbtn.selected = NO;
     shangdai.fbtn.selected = NO;
     sender.selected = YES;
+    if (sender.tag == 1) {
+        _IsFirst = 1;
+    } else {
+        _IsFirst = 0;
+    }
 }
 
 - (void)fwlxClick:(UIButton *)sender {
     shangdai.ptBtn.selected = NO;
     shangdai.fptBtn.selected = NO;
     sender.selected = YES;
+    if (sender.tag == 1) {
+        _HouseType = 1;
+    } else {
+        _HouseType = 0;
+    }
+}
+
+- (void)htjTextChange:(UITextField *)sender {
+    _ContractPrice = [sender.text doubleValue];
 }
 
 - (void)change:(UISegmentedControl *)sender {
     if (sender.selectedSegmentIndex == 1) {
         _text1.hidden = YES;
         _text2.hidden = YES;
+        _text3.hidden = YES;
+        _text4.hidden = YES;
         _textField1.hidden = YES;
         _textField2.hidden = YES;
+        _textField3.hidden = YES;
+        _yesBtn.hidden = YES;
+        _noBtn.hidden = YES;
         jsBtn.hidden = YES;
         jsjg.hidden = YES;
         kded.hidden = YES;
@@ -249,14 +319,66 @@
     } else {
         _text1.hidden = NO;
         _text2.hidden = NO;
+        _text3.hidden = NO;
+        _text4.hidden = NO;
         _textField1.hidden = NO;
         _textField2.hidden = NO;
+        _textField3.hidden = NO;
+        _yesBtn.hidden = NO;
+        _noBtn.hidden = NO;
         jsBtn.hidden = NO;
         jsjg.hidden = NO;
         kded.hidden = NO;
         bz.hidden = NO;
         shangdai.hidden = YES;
     }
+}
+
+- (void)chooseClick:(UIButton *)sender {
+    _yesBtn.selected = NO;
+    _noBtn.selected = NO;
+    sender.selected = YES;
+    if (sender.tag == 1) {
+        _yesOrNo = 1;
+    } else {
+        _yesOrNo = 2;
+    }
+    
+}
+
+- (void)jsAction:(UIButton *)sender {
+    NSDictionary *params = @{@"LoansType":@(1),@"MonthlyPayment":@([_textField1.text doubleValue]),@"Balance":@([_textField2.text doubleValue]),@"LoanTerm":@([_textField3.text intValue]),@"IsSupplement":@(_yesOrNo)};
+    NSString *URL = [NSString stringWithFormat:@"%@/Trade/LoansLimit/CalLoansLimit",BaseUrl];
+    URL = [URL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    [manager POST:URL parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
+        NSLog(@"%@",dic);
+        if ([dic intValueForKey:@"Code"] == 0) {
+            kded.text = [NSString stringWithFormat:@"预测结果： %@元",[dic objectForKey:@"Data"]];
+        }
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+    }];
+}
+
+- (void)sdJsAction:(UIButton *)sender {
+    NSDictionary *params = @{@"LoansType":@(2),@"IsFirst":@(_IsFirst),@"HouseType":@(_HouseType),@"ContractPrice":@(_ContractPrice)};
+    NSString *URL = [NSString stringWithFormat:@"%@/Trade/LoansLimit/CalLoansLimit",BaseUrl];
+    URL = [URL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    [manager POST:URL parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
+        NSLog(@"%@",dic);
+        if ([dic intValueForKey:@"Code"] == 0) {
+            shangdai.edu.text = [NSString stringWithFormat:@"预测结果： %@元",[dic objectForKey:@"Data"]];
+        }
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
