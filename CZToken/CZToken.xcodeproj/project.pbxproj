@@ -204,6 +204,8 @@
 		D422578A204D8053003D146B /* houseImpInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4225788204D8053003D146B /* houseImpInfoController.m */; };
 		D422578B204D8053003D146B /* houseImpInfoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4225789204D8053003D146B /* houseImpInfoController.xib */; };
 		D422578F204EE9F0003D146B /* ZHPickView.m in Sources */ = {isa = PBXBuildFile; fileRef = D422578D204EE9EF003D146B /* ZHPickView.m */; };
+		D4269A1B206151DD007523F0 /* homeTradeController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4269A19206151DD007523F0 /* homeTradeController.m */; };
+		D4269A1C206151DD007523F0 /* homeTradeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4269A1A206151DD007523F0 /* homeTradeController.xib */; };
 		D4C7D5A9204597010008F09A /* yuegongCellOne.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C7D5A7204597010008F09A /* yuegongCellOne.m */; };
 		D4C7D5AA204597010008F09A /* yuegongCellOne.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4C7D5A8204597010008F09A /* yuegongCellOne.xib */; };
 		D4C7D5AE2046E3E70008F09A /* rzshViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C7D5AC2046E3E70008F09A /* rzshViewController.m */; };
@@ -521,6 +523,9 @@
 		D4225789204D8053003D146B /* houseImpInfoController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = houseImpInfoController.xib; sourceTree = "<group>"; };
 		D422578D204EE9EF003D146B /* ZHPickView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHPickView.m; sourceTree = "<group>"; };
 		D422578E204EE9F0003D146B /* ZHPickView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHPickView.h; sourceTree = "<group>"; };
+		D4269A18206151DD007523F0 /* homeTradeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = homeTradeController.h; sourceTree = "<group>"; };
+		D4269A19206151DD007523F0 /* homeTradeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = homeTradeController.m; sourceTree = "<group>"; };
+		D4269A1A206151DD007523F0 /* homeTradeController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = homeTradeController.xib; sourceTree = "<group>"; };
 		D4C7D5A6204597010008F09A /* yuegongCellOne.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = yuegongCellOne.h; sourceTree = "<group>"; };
 		D4C7D5A7204597010008F09A /* yuegongCellOne.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = yuegongCellOne.m; sourceTree = "<group>"; };
 		D4C7D5A8204597010008F09A /* yuegongCellOne.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = yuegongCellOne.xib; sourceTree = "<group>"; };
@@ -696,6 +701,9 @@
 				609697CD2058C78E00088E31 /* ChangeAddressController.h */,
 				609697CE2058C78E00088E31 /* ChangeAddressController.m */,
 				609697CF2058C78E00088E31 /* ChangeAddressController.xib */,
+				D4269A18206151DD007523F0 /* homeTradeController.h */,
+				D4269A19206151DD007523F0 /* homeTradeController.m */,
+				D4269A1A206151DD007523F0 /* homeTradeController.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -1261,6 +1269,7 @@
 				6021A31E204D3DC400FF189E /* sourceAddressCell.xib in Resources */,
 				6021A2E5204CD93E00FF189E /* affirmCell.xib in Resources */,
 				6041A76920526DF000EDB119 /* homeHistoryCell.xib in Resources */,
+				D4269A1C206151DD007523F0 /* homeTradeController.xib in Resources */,
 				6021A2DB204CCA5D00FF189E /* userSearchController.xib in Resources */,
 				6021A2F4204CE0BB00FF189E /* houseDetailsTextCell.xib in Resources */,
 				6021A314204D32A000FF189E /* HouseRankCell.xib in Resources */,
@@ -1455,6 +1464,7 @@
 				604353FA204A883A002E24C9 /* addHouseInfoController.m in Sources */,
 				60DEE86D205D0C4900012F8B /* userHouseInfoCell.m in Sources */,
 				6082BAC12044EAF500F82B31 /* xgTitleViewCell.m in Sources */,
+				D4269A1B206151DD007523F0 /* homeTradeController.m in Sources */,
 				602B68CA2048F67700748562 /* writeLogController.m in Sources */,
 				6098760820439F4700243079 /* BaseViewController.m in Sources */,
 				D422578F204EE9F0003D146B /* ZHPickView.m in Sources */,
@@ -1628,8 +1638,7 @@
 					"$(PROJECT_DIR)/CZToken/Classes/ThirdTools/AliPay",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-
-				GCC_PREFIX_HEADER = "/Users/jlc/Desktop/Other/cz/CZToken/CZToken/CZToken-Prefix.pch";
+				GCC_PREFIX_HEADER = "/Users/ighibli/Desktop/我的/cz/CZToken/CZToken/CZToken-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/Headers/Public\"",
@@ -1650,7 +1659,6 @@
 					"\"${PODS_ROOT}/Headers/Public/WechatOpenSDK\"",
 					"$(SRCROOT)/CZToken",
 				);
-
 				INFOPLIST_FILE = CZToken/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1673,7 +1681,7 @@
 					"$(PROJECT_DIR)/CZToken/Classes/ThirdTools/AliPay",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "/Users/jlc/Desktop/Other/cz/CZToken/CZToken/CZToken-Prefix.pch";
+				GCC_PREFIX_HEADER = "/Users/ighibli/Desktop/我的/cz/CZToken/CZToken/CZToken-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/Headers/Public\"",
