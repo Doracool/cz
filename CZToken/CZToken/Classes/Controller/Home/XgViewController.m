@@ -318,7 +318,8 @@
     } else {
         
     }
-    NSString *URL = [NSString stringWithFormat:@"http://test.api.cz1222.com/Trade/Limitation/Add?token=%@",TOKEN];
+    [params setValue:TOKEN forKey:@"token"];
+    NSString *URL = [NSString stringWithFormat:@"%@/Trade/Limitation/Add",BaseUrl];
     URL = [URL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];

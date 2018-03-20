@@ -45,6 +45,10 @@
 		602385482050C1E600B2FA4F /* houseAddressComCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 602385462050C1E600B2FA4F /* houseAddressComCell.xib */; };
 		6023854C2050E10900B2FA4F /* addUserInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6023854A2050E10900B2FA4F /* addUserInfoController.m */; };
 		6023854D2050E10900B2FA4F /* addUserInfoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6023854B2050E10900B2FA4F /* addUserInfoController.xib */; };
+		602B68472060EA6600E714E7 /* centerTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 602B68452060EA6600E714E7 /* centerTextCell.m */; };
+		602B68482060EA6600E714E7 /* centerTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 602B68462060EA6600E714E7 /* centerTextCell.xib */; };
+		602B684A2060FC8200E714E7 /* yuegongView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 602B68492060FC8200E714E7 /* yuegongView.xib */; };
+		602B684D206100B400E714E7 /* yuegongView.m in Sources */ = {isa = PBXBuildFile; fileRef = 602B684C206100B400E714E7 /* yuegongView.m */; };
 		602B68C02048EE6700748562 /* lookOwnerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 602B68BE2048EE6700748562 /* lookOwnerController.m */; };
 		602B68C12048EE6700748562 /* lookOwnerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 602B68BF2048EE6700748562 /* lookOwnerController.xib */; };
 		602B68C52048F0C300748562 /* OwnerInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 602B68C32048F0C300748562 /* OwnerInfoCell.m */; };
@@ -271,6 +275,12 @@
 		602385492050E10900B2FA4F /* addUserInfoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = addUserInfoController.h; sourceTree = "<group>"; };
 		6023854A2050E10900B2FA4F /* addUserInfoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = addUserInfoController.m; sourceTree = "<group>"; };
 		6023854B2050E10900B2FA4F /* addUserInfoController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = addUserInfoController.xib; sourceTree = "<group>"; };
+		602B68442060EA6600E714E7 /* centerTextCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = centerTextCell.h; sourceTree = "<group>"; };
+		602B68452060EA6600E714E7 /* centerTextCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = centerTextCell.m; sourceTree = "<group>"; };
+		602B68462060EA6600E714E7 /* centerTextCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = centerTextCell.xib; sourceTree = "<group>"; };
+		602B68492060FC8200E714E7 /* yuegongView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = yuegongView.xib; sourceTree = "<group>"; };
+		602B684B206100B400E714E7 /* yuegongView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = yuegongView.h; sourceTree = "<group>"; };
+		602B684C206100B400E714E7 /* yuegongView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = yuegongView.m; sourceTree = "<group>"; };
 		602B68BD2048EE6700748562 /* lookOwnerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lookOwnerController.h; sourceTree = "<group>"; };
 		602B68BE2048EE6700748562 /* lookOwnerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = lookOwnerController.m; sourceTree = "<group>"; };
 		602B68BF2048EE6700748562 /* lookOwnerController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = lookOwnerController.xib; sourceTree = "<group>"; };
@@ -811,6 +821,12 @@
 				607208AF205F576800DD5335 /* xgResultCell.h */,
 				607208B0205F576800DD5335 /* xgResultCell.m */,
 				607208B1205F576800DD5335 /* xgResultCell.xib */,
+				602B68442060EA6600E714E7 /* centerTextCell.h */,
+				602B68452060EA6600E714E7 /* centerTextCell.m */,
+				602B68462060EA6600E714E7 /* centerTextCell.xib */,
+				602B68492060FC8200E714E7 /* yuegongView.xib */,
+				602B684B206100B400E714E7 /* yuegongView.h */,
+				602B684C206100B400E714E7 /* yuegongView.m */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -1282,6 +1298,7 @@
 				6021A328204D510100FF189E /* addLinkCell.xib in Resources */,
 				6021A2FE204CE50F00FF189E /* houseSignCell.xib in Resources */,
 				60B79E29204E32AE0006FE70 /* houseTextCell.xib in Resources */,
+				602B68482060EA6600E714E7 /* centerTextCell.xib in Resources */,
 				6041A7552052208C00EDB119 /* MeController.xib in Resources */,
 				60B79E49204E3B3A0006FE70 /* AuditSuccController.xib in Resources */,
 				6039C067204AB08800A7FD99 /* houseAuditController.xib in Resources */,
@@ -1298,6 +1315,7 @@
 				6098761C2043BAC700243079 /* iconCell.xib in Resources */,
 				6021A323204D4C2A00FF189E /* UserlinkCell.xib in Resources */,
 				D422578620483169003D146B /* HouseDetailsController.xib in Resources */,
+				602B684A2060FC8200E714E7 /* yuegongView.xib in Resources */,
 				6021A30A204D246C00FF189E /* buyHouseCell.xib in Resources */,
 				6098760520439E8000243079 /* HomeViewController.xib in Resources */,
 				600AD70D205A0B9B006B320A /* searchAddressController.xib in Resources */,
@@ -1447,6 +1465,7 @@
 				D4C7D5BA2047DD270008F09A /* DOPDropDownMenu.m in Sources */,
 				602385472050C1E600B2FA4F /* houseAddressComCell.m in Sources */,
 				6082BABC2044EAA700F82B31 /* XgShareViewController.m in Sources */,
+				602B68472060EA6600E714E7 /* centerTextCell.m in Sources */,
 				D422578A204D8053003D146B /* houseImpInfoController.m in Sources */,
 				6044465020464B00008F09C7 /* foreSigninController.m in Sources */,
 				6044466E20469EE3008F09C7 /* textCell.m in Sources */,
@@ -1456,6 +1475,7 @@
 				607208AD205F564E00DD5335 /* xgChooseCell.m in Sources */,
 				600AD70C205A0B9B006B320A /* searchAddressController.m in Sources */,
 				6021A322204D4C2A00FF189E /* UserlinkCell.m in Sources */,
+				602B684D206100B400E714E7 /* yuegongView.m in Sources */,
 				60B79E23204E30FA0006FE70 /* houseSuccController.m in Sources */,
 				6021A2EE204CDCDD00FF189E /* houseDetailsCellTwo.m in Sources */,
 				604446642046818E008F09C7 /* SignController.m in Sources */,

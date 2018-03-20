@@ -11,6 +11,10 @@
 #import "zige.h"
 
 #import "yuegongCellOne.h"
+#import "centerTextCell.h"
+#import "XgContentTableViewCell.h"
+#import "yuegongView.h"
+
 @interface loansViewController ()<UITableViewDelegate,UITableViewDataSource>{
     UIButton *jsBtn;
     UILabel *jsjg;
@@ -18,6 +22,9 @@
     UILabel *bz;
     daikuan *shangdai;
     zige *zigeView;
+//    yuegongCellOne *yuegong;
+    NSDictionary *ygDic;
+    yuegongView *yuegong;
 }
 @property (nonatomic, strong) UIScrollView *baseScroll;
 @property (nonatomic, strong) UIView *firstView;
@@ -38,6 +45,24 @@
 @property (nonatomic, assign) double ContractPrice;
 @property (nonatomic, assign) int yesOrNo;
 
+@property (nonatomic, assign) int dklx;
+@property (nonatomic, assign) int dklb;
+@property (nonatomic, assign) int hkfs;
+
+@property (nonatomic, assign) double dkjeNum;
+@property (nonatomic, assign) int dkqxNum;
+@property (nonatomic, assign) double dklvNum;
+@property (nonatomic, assign) double dkbsNum;
+@property (nonatomic, assign) double lvNum;
+@property (nonatomic, assign) double slvNum;
+
+
+@property (nonatomic, assign) double sdjeNum;
+@property (nonatomic, assign) double sdlvNum;
+@property (nonatomic, assign) double sdbsNum;
+
+
+
 @end
 
 @implementation loansViewController
@@ -45,6 +70,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     NSArray *array = @[@"资格",@"额度",@"月供"];
+    _dklb = 2;
+    _hkfs = 1;
+    ygDic = [NSDictionary dictionary];
     ZFJSegmentedControl *zvc = [[ZFJSegmentedControl alloc] initwithTitleArr:array iconArr:nil SCType:SCType_Underline];
     [self.view addSubview:zvc];
     zvc.frame = CGRectMake(0, 64, screenW, 40);
@@ -78,15 +106,14 @@
     [_baseScroll addSubview:_secondView];
     
     
-    _myTableView = [[UITableView alloc] initWithFrame:CGRectMake(screenW*2, 0, screenW, screenH-104) style:UITableViewStylePlain];
-    [_baseScroll addSubview:_myTableView];
-    _myTableView.delegate = self;
-    _myTableView.dataSource = self;
     
-//    _secondView.backgroundColor = [UIColor yellowColor];
+//    _myTableView = [[UITableView alloc] initWithFrame:CGRectMake(screenW*2, 0, screenW, screenH-104) style:UITableViewStylePlain];
+//    [_baseScroll addSubview:_myTableView];
+//    _myTableView.delegate = self;
+//    _myTableView.dataSource = self;
+    
     [self createSecond];
-    
-    // Do any additional setup after loading the view from its nib.
+    [self createThird];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -99,45 +126,117 @@
     [self tabbarShow];
 }
 
+/*
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1;
+    return 7;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    yuegongCellOne *yuegong = [[NSBundle mainBundle] loadNibNamed:@"yuegongCellOne" owner:self options:nil][0];
-    tableView.rowHeight = 400;
-    DVSwitch *typeOne = [[DVSwitch alloc] initWithStringsArray:@[@"商业",@"公积金",@"组合"]];
-    typeOne.frame = yuegong.dklbView.frame;
-    [yuegong.dklbView addSubview:typeOne];
-    typeOne.frame = CGRectMake(0, 0, yuegong.dklbView.width-20, yuegong.dklbView.height);
-    [typeOne setPressedHandler:^(NSUInteger index) {
-        NSLog(@"switch to index: %lu",(unsigned long)index);
-        if (index != 2) {
-            yuegong.zuheViewOne.hidden = YES;
-            yuegong.zuheViewTwo.hidden = YES;
-            yuegong.oneHeight.constant = 0;
-            yuegong.viewoneTop.constant = 0;
-            yuegong.viewtwoTop.constant = 0;
-            tableView.rowHeight = 400;
+    yuegong = [[NSBundle mainBundle] loadNibNamed:@"yuegongCellOne" owner:self options:nil][0];
+    XgContentTableViewCell *textCell = [[NSBundle mainBundle] loadNibNamed:@"XgContentTableViewCell" owner:self options:nil][0];
+    centerTextCell *titleCell = [[NSBundle mainBundle] loadNibNamed:@"centerTextCell" owner:self options:nil][0];
+    if (indexPath.row > 0) {
+        if (ygDic != nil) {
+            if (indexPath.row == 1) {
+                titleCell.title.text = @"月供结息";
+                tableView.rowHeight = 50;
+                return titleCell;
+            } else if (indexPath.row == 2) {
+                textCell.titleLabel.text = @"还款总额";
+                textCell.answer.text = @"";
+                tableView.rowHeight = 50;
+                return textCell;
+            } else if (indexPath.row == 3) {
+                textCell.titleLabel.text = @"贷款月数";
+                textCell.answer.text = @"";
+                tableView.rowHeight = 50;
+                return textCell;
+            } else if (indexPath.row == 4) {
+                textCell.titleLabel.text = @"支付利息";
+                textCell.answer.text = @"";
+                tableView.rowHeight = 50;
+                return textCell;
+            } else if (indexPath.row == 5) {
+                textCell.titleLabel.text = @"每月还款";
+                textCell.answer.text = @"";
+                tableView.rowHeight = 50;
+                return textCell;
+            } else if (indexPath.row == 6) {
+                titleCell.title.text = @"以上结果仅供参考";
+                tableView.rowHeight = 50;
+                return titleCell;
+            }
         } else {
-            yuegong.zuheViewOne.hidden = NO;
-            yuegong.zuheViewTwo.hidden = NO;
-            yuegong.oneHeight.constant = 40;
-            yuegong.viewoneTop.constant = 20;
-            yuegong.viewtwoTop.constant = 20;
-            tableView.rowHeight = 550;
+            UITableViewCell *cell = [[UITableViewCell alloc] init];
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            tableView.rowHeight = 5;
+            return cell;
         }
-    }];
-    
-    DVSwitch *typeTwo = [[DVSwitch alloc] initWithStringsArray:@[@"等额本息",@"等额本金"]];
-    [yuegong.hkfsView addSubview:typeTwo];
-    typeTwo.frame = CGRectMake(0, 0, yuegong.hkfsView.width-20, yuegong.hkfsView.height);
-    [typeTwo setPressedHandler:^(NSUInteger index) {
-        NSLog(@"switch is %lu",(unsigned long)index);
-    }];
-    return yuegong;
-}
+    }
 
+    if (indexPath.row == 0) {
+        tableView.rowHeight = 450;
+        DVSwitch *typeOne = [[DVSwitch alloc] initWithStringsArray:@[@"商业",@"公积金",@"组合"]];
+        typeOne.frame = yuegong.dklbView.frame;
+        [yuegong.dklbView addSubview:typeOne];
+        typeOne.frame = CGRectMake(0, 0, yuegong.dklbView.width-20, yuegong.dklbView.height);
+        [typeOne setPressedHandler:^(NSUInteger index) {
+            NSLog(@"switch to index: %lu",(unsigned long)index);
+            if (index != 2) {
+                yuegong.zuheViewOne.hidden = YES;
+                yuegong.zuheViewTwo.hidden = YES;
+                yuegong.oneHeight.constant = 0;
+                yuegong.viewoneTop.constant = 0;
+                yuegong.viewtwoTop.constant = 0;
+                tableView.rowHeight = 400;
+                yuegong.dkjeLabel.text = @"贷款金额";
+                yuegong.dklvLabel.text = @"贷款利率";
+                if (index == 0) {
+                    _dklb = 2;
+                } else {
+                    _dklb = 1;
+                }
+            } else {
+                _dklb = 3;
+                yuegong.zuheViewOne.hidden = NO;
+                yuegong.zuheViewTwo.hidden = NO;
+                yuegong.oneHeight.constant = 40;
+                yuegong.viewoneTop.constant = 20;
+                yuegong.viewtwoTop.constant = 20;
+                yuegong.dkjeLabel.text = @"公积金贷款金额";
+                yuegong.dklvLabel.text = @"公积金贷款利率";
+                tableView.rowHeight =450;
+            }
+        }];
+        
+        [yuegong.dkjeTF addTarget:self action:@selector(yuegongTFChange:) forControlEvents:UIControlEventEditingChanged];
+        [yuegong.dkqxTF addTarget:self action:@selector(yuegongTFChange:) forControlEvents:UIControlEventEditingChanged];
+        [yuegong.lvTfOne addTarget:self action:@selector(yuegongTFChange:) forControlEvents:UIControlEventEditingChanged];
+        [yuegong.LvYearTF addTarget:self action:@selector(yuegongTFChange:) forControlEvents:UIControlEventEditingChanged];
+        
+        [yuegong.onegjjtf addTarget:self action:@selector(yuegongTFChange:) forControlEvents:UIControlEventEditingChanged];
+        [yuegong.sylvTF addTarget:self action:@selector(yuegongTFChange:) forControlEvents:UIControlEventEditingChanged];
+        [yuegong.sylvBeishu addTarget:self action:@selector(yuegongTFChange:) forControlEvents:UIControlEventEditingChanged];
+        
+        DVSwitch *typeTwo = [[DVSwitch alloc] initWithStringsArray:@[@"等额本息",@"等额本金"]];
+        [yuegong.hkfsView addSubview:typeTwo];
+        typeTwo.frame = CGRectMake(0, 0, yuegong.hkfsView.width-20, yuegong.hkfsView.height);
+        [typeTwo setPressedHandler:^(NSUInteger index) {
+            NSLog(@"switch is %lu",(unsigned long)index);
+            if (index == 0) {
+                _hkfs = 1;
+            } else {
+                _hkfs = 2;
+            }
+        }];
+        [yuegong.jsBtn addTarget:self action:@selector(ygJsAction:) forControlEvents:UIControlEventTouchUpInside];
+        return yuegong;
+    }
+    
+    
+    return nil;
+}
+*/
 - (void)createSecond {
     NSArray *segment = @[@"公积金",@"商贷"];
     UISegmentedControl *segmentControl = [[UISegmentedControl alloc] initWithItems:segment];
@@ -364,6 +463,66 @@
     }];
 }
 
+
+- (void)createThird {
+    yuegong = [[NSBundle mainBundle] loadNibNamed:@"yuegongView" owner:self options:nil][0];
+    yuegong.frame = CGRectMake(screenW*2, 0, screenW, screenH-64);
+    [_baseScroll addSubview:yuegong];
+    DVSwitch *typeOne = [[DVSwitch alloc] initWithStringsArray:@[@"商业",@"公积金",@"组合"]];
+    typeOne.frame = yuegong.dklbView.frame;
+    [yuegong.dklbView addSubview:typeOne];
+    typeOne.frame = CGRectMake(0, 0, yuegong.dklbView.width-20, yuegong.dklbView.height);
+    [typeOne setPressedHandler:^(NSUInteger index) {
+        NSLog(@"switch to index: %lu",(unsigned long)index);
+        if (index != 2) {
+            yuegong.zuheViewOne.hidden = YES;
+            yuegong.zuheViewTwo.hidden = YES;
+            yuegong.oneHeight.constant = 0;
+            yuegong.viewoneTop.constant = 0;
+            yuegong.viewtwoTop.constant = 0;
+            yuegong.dkjeLabel.text = @"贷款金额";
+            yuegong.dklvLabel.text = @"贷款利率";
+            if (index == 0) {
+                _dklb = 2;
+            } else {
+                _dklb = 1;
+            }
+        } else {
+            _dklb = 3;
+            yuegong.zuheViewOne.hidden = NO;
+            yuegong.zuheViewTwo.hidden = NO;
+            yuegong.oneHeight.constant = 40;
+            yuegong.viewoneTop.constant = 20;
+            yuegong.viewtwoTop.constant = 20;
+            yuegong.dkjeLabel.text = @"公积金贷款金额";
+            yuegong.dklvLabel.text = @"公积金贷款利率";
+        }
+    }];
+    
+    [yuegong.dkjeTF addTarget:self action:@selector(yuegongTFChange:) forControlEvents:UIControlEventEditingChanged];
+    [yuegong.dkqxTF addTarget:self action:@selector(yuegongTFChange:) forControlEvents:UIControlEventEditingChanged];
+    [yuegong.lvTfOne addTarget:self action:@selector(yuegongTFChange:) forControlEvents:UIControlEventEditingChanged];
+    [yuegong.LvYearTF addTarget:self action:@selector(yuegongTFChange:) forControlEvents:UIControlEventEditingChanged];
+    
+    [yuegong.onegjjtf addTarget:self action:@selector(yuegongTFChange:) forControlEvents:UIControlEventEditingChanged];
+    [yuegong.sylvTF addTarget:self action:@selector(yuegongTFChange:) forControlEvents:UIControlEventEditingChanged];
+    [yuegong.sylvBeishu addTarget:self action:@selector(yuegongTFChange:) forControlEvents:UIControlEventEditingChanged];
+    
+    DVSwitch *typeTwo = [[DVSwitch alloc] initWithStringsArray:@[@"等额本息",@"等额本金"]];
+    [yuegong.hkfsView addSubview:typeTwo];
+    typeTwo.frame = CGRectMake(0, 0, yuegong.hkfsView.width-20, yuegong.hkfsView.height);
+    [typeTwo setPressedHandler:^(NSUInteger index) {
+        NSLog(@"switch is %lu",(unsigned long)index);
+        if (index == 0) {
+            _hkfs = 1;
+        } else {
+            _hkfs = 2;
+        }
+    }];
+    [yuegong.jsBtn addTarget:self action:@selector(ygJsAction:) forControlEvents:UIControlEventTouchUpInside];
+    
+}
+
 - (void)sdJsAction:(UIButton *)sender {
     NSDictionary *params = @{@"LoansType":@(2),@"IsFirst":@(_IsFirst),@"HouseType":@(_HouseType),@"ContractPrice":@(_ContractPrice)};
     NSString *URL = [NSString stringWithFormat:@"%@/Trade/LoansLimit/CalLoansLimit",BaseUrl];
@@ -375,6 +534,79 @@
         NSLog(@"%@",dic);
         if ([dic intValueForKey:@"Code"] == 0) {
             shangdai.edu.text = [NSString stringWithFormat:@"预测结果： %@元",[dic objectForKey:@"Data"]];
+        }
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+    }];
+}
+
+//
+
+- (void)yuegongTFChange:(UITextField *)sender {
+    if (sender.tag == 10) {
+        _dkjeNum = [sender.text doubleValue];
+    } else if (sender.tag == 11) {
+        _dkqxNum = [sender.text intValue];
+    } else if (sender.tag == 12) {
+        _dklvNum = [sender.text doubleValue];
+        yuegong.lvResult.text = [NSString stringWithFormat:@"= %.2f%%",_dklvNum*_dkbsNum];
+        _lvNum = _dklvNum*_dkbsNum;
+    } else if (sender.tag == 13) {
+        _dkbsNum = [sender.text doubleValue];
+        yuegong.lvResult.text = [NSString stringWithFormat:@"= %.2f%%",_dklvNum*_dkbsNum];
+        _lvNum = _dklvNum*_dkbsNum;
+    } else if (sender.tag == 14) {
+        _sdjeNum = [sender.text doubleValue];
+    } else if (sender.tag == 15) {
+        _sdlvNum = [sender.text doubleValue];
+        yuegong.sdlvResult.text = [NSString stringWithFormat:@"= %.2f%%",_sdlvNum*_sdbsNum];
+        _slvNum = _sdlvNum*_sdbsNum;
+    } else if (sender.tag == 16) {
+        _sdbsNum = [sender.text doubleValue];
+        yuegong.sdlvResult.text = [NSString stringWithFormat:@"= %.2f%%",_sdlvNum*_sdbsNum];
+        _slvNum = _sdlvNum*_sdbsNum;
+    }
+}
+
+- (void)ygJsAction:(UIButton *)sender {
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    [params setObject:@(_dklb) forKey:@"LoansType"];
+    [params setObject:@(_hkfs) forKey:@"RepayType"];
+    if (_dklb != 3) {
+        [params setObject:@(_dkjeNum) forKey:@"LoansAmount"];
+        [params setObject:@(_lvNum) forKey:@"RateMultiple"];
+    }
+    [params setObject:@(_dkqxNum) forKey:@"LoansYear"];
+    if (_dklb == 2) {
+        [params setObject:@(_dklvNum) forKey:@"BankLoansRate"];
+    } else if (_dklb == 1) {
+        [params setObject:@(_dklvNum) forKey:@"FunLoansRate"];
+    }
+    
+    
+    if (_dklb == 3) {
+        [params setObject:@(_dkjeNum) forKey:@"FundAmount"];
+        [params setObject:@(_sdjeNum) forKey:@"BusinessAmoun"];
+        [params setObject:@(_lvNum) forKey:@"FunLoansRate"];
+        [params setObject:@(_slvNum) forKey:@"BankLoansRate"];
+    }
+    
+    NSString *URL = [NSString stringWithFormat:@"%@/Trade/LoansMonthly/CalLoansMonthly",BaseUrl];
+    URL = [URL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    [manager POST:URL parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
+        NSLog(@"%@",dic);
+        ygDic = dic;
+        if ([dic intValueForKey:@"Code"] == 0) {
+            yuegong.bottomView.hidden = NO;
+            NSString *hkzeStr = [NSString stringWithFormat:@"%@",[[dic objectForKey:@"Data"] objectForKey:@"TotalRepay"]];
+            yuegong.hkze.attributedText = [commonSet AttributeNameFont:16.0 Color:[UIColor navbackgroundColor] Space:0 qingxie:0 text:hkzeStr Range:NSMakeRange(0, hkzeStr.length)];
+            yuegong.hkze.text = [NSString stringWithFormat:@"%@",[[dic objectForKey:@"Data"] objectForKey:@"TotalRepay"]];
+            yuegong.dkys.text = [NSString stringWithFormat:@"%@",[[dic objectForKey:@"Data"] objectForKey:@"Number"]];
+            yuegong.zflx.text = [NSString stringWithFormat:@"%@",[[dic objectForKey:@"Data"] objectForKey:@"TotalInterest"]];
+            yuegong.myhk.text = [NSString stringWithFormat:@"%@",[[dic objectForKey:@"Data"] objectForKey:@"RepayMonthly"]];
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         

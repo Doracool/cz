@@ -1,15 +1,14 @@
 //
-//  yuegongCellOne.h
+//  yuegongView.h
 //  CZToken
 //
-//  Created by 周帅杰 on 2018/2/27.
+//  Created by jlc on 2018/3/20.
 //  Copyright © 2018年 NYHZ. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface yuegongCellOne : UITableViewCell
-
+@interface yuegongView : UIView
 @property (strong, nonatomic) IBOutlet UIView *dklbView;
 @property (strong, nonatomic) IBOutlet UIView *hkfsView;
 @property (strong, nonatomic) IBOutlet UITextField *dkjeTF;
@@ -31,4 +30,9 @@
 @property (strong, nonatomic) IBOutlet UILabel *dklvLabel;
 @property (strong, nonatomic) IBOutlet UILabel *lvResult;
 @property (strong, nonatomic) IBOutlet UILabel *sdlvResult;
+@property (strong, nonatomic) IBOutlet UIView *bottomView;
+@property (strong, nonatomic) IBOutlet UILabel *hkze;
+@property (strong, nonatomic) IBOutlet UILabel *dkys;
+@property (strong, nonatomic) IBOutlet UILabel *zflx;
+@property (strong, nonatomic) IBOutlet UILabel *myhk;
 @end
