@@ -17,6 +17,7 @@
 #import "foreSigninController.h"
 #import "UpInfoController.h"
 #import "loginController.h"
+#import "homeTradeController.h"
 
 @interface HomeViewController ()<BMKLocationServiceDelegate,BMKGeoCodeSearchDelegate>
 {
@@ -173,6 +174,9 @@
     } else if (tag == 4) {
         loginController *login = [[loginController alloc] init];
         [self.navigationController pushViewController:login animated:YES];
+    } else if (tag == 5) {
+        homeTradeController *trade = [[homeTradeController alloc] init];
+        [self.navigationController pushViewController:trade animated:YES];
     } else {
         ZHPickView *pickView = [[ZHPickView alloc] init];
 //        [pickView setDataViewWithItem:@[@"item1",@"item2",@"item3"] title:@"DataTitle"];

@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		600AD70C205A0B9B006B320A /* searchAddressController.m in Sources */ = {isa = PBXBuildFile; fileRef = 600AD70A205A0B9B006B320A /* searchAddressController.m */; };
 		600AD70D205A0B9B006B320A /* searchAddressController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 600AD70B205A0B9B006B320A /* searchAddressController.xib */; };
+		6018869A206201CD00F2F428 /* jyzxModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 60188699206201CD00F2F428 /* jyzxModel.m */; };
+		6018869C20620B8800F2F428 /* cqUserView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6018869B20620B8800F2F428 /* cqUserView.xib */; };
+		601886A220620D4B00F2F428 /* cqUserView.m in Sources */ = {isa = PBXBuildFile; fileRef = 601886A120620D4B00F2F428 /* cqUserView.m */; };
 		6021A2DA204CCA5C00FF189E /* userSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6021A2D8204CCA5C00FF189E /* userSearchController.m */; };
 		6021A2DB204CCA5D00FF189E /* userSearchController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6021A2D9204CCA5C00FF189E /* userSearchController.xib */; };
 		6021A2DF204CCBAF00FF189E /* searchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6021A2DD204CCBAF00FF189E /* searchCell.m */; };
@@ -222,6 +225,11 @@
 		600AD709205A0B9B006B320A /* searchAddressController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = searchAddressController.h; sourceTree = "<group>"; };
 		600AD70A205A0B9B006B320A /* searchAddressController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = searchAddressController.m; sourceTree = "<group>"; };
 		600AD70B205A0B9B006B320A /* searchAddressController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = searchAddressController.xib; sourceTree = "<group>"; };
+		60188698206201CD00F2F428 /* jyzxModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = jyzxModel.h; sourceTree = "<group>"; };
+		60188699206201CD00F2F428 /* jyzxModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = jyzxModel.m; sourceTree = "<group>"; };
+		6018869B20620B8800F2F428 /* cqUserView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = cqUserView.xib; sourceTree = "<group>"; };
+		601886A020620D4B00F2F428 /* cqUserView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cqUserView.h; sourceTree = "<group>"; };
+		601886A120620D4B00F2F428 /* cqUserView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = cqUserView.m; sourceTree = "<group>"; };
 		6021A2D7204CCA5C00FF189E /* userSearchController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = userSearchController.h; sourceTree = "<group>"; };
 		6021A2D8204CCA5C00FF189E /* userSearchController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = userSearchController.m; sourceTree = "<group>"; };
 		6021A2D9204CCA5C00FF189E /* userSearchController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = userSearchController.xib; sourceTree = "<group>"; };
@@ -670,6 +678,8 @@
 			children = (
 				607208B5205FB1A000DD5335 /* areaModel.h */,
 				607208B6205FB1A000DD5335 /* areaModel.m */,
+				60188698206201CD00F2F428 /* jyzxModel.h */,
+				60188699206201CD00F2F428 /* jyzxModel.m */,
 			);
 			path = House;
 			sourceTree = "<group>";
@@ -835,6 +845,9 @@
 				602B68492060FC8200E714E7 /* yuegongView.xib */,
 				602B684B206100B400E714E7 /* yuegongView.h */,
 				602B684C206100B400E714E7 /* yuegongView.m */,
+				6018869B20620B8800F2F428 /* cqUserView.xib */,
+				601886A020620D4B00F2F428 /* cqUserView.h */,
+				601886A120620D4B00F2F428 /* cqUserView.m */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -1297,6 +1310,7 @@
 				D4C7D5AF2046E3E70008F09A /* rzshViewController.xib in Resources */,
 				604353FB204A883A002E24C9 /* addHouseInfoController.xib in Resources */,
 				6041A76E20526EEB00EDB119 /* homeHotSeaCell.xib in Resources */,
+				6018869C20620B8800F2F428 /* cqUserView.xib in Resources */,
 				60987627204405F700243079 /* XgViewController.xib in Resources */,
 				609697DB20590FC600088E31 /* calculateController.xib in Resources */,
 				602B68CB2048F67700748562 /* writeLogController.xib in Resources */,
@@ -1440,6 +1454,7 @@
 				604353FF204A9820002E24C9 /* addHouseDetailsController.m in Sources */,
 				6044465F20465D63008F09C7 /* zsViewController.m in Sources */,
 				D4C7D5A9204597010008F09A /* yuegongCellOne.m in Sources */,
+				601886A220620D4B00F2F428 /* cqUserView.m in Sources */,
 				6041A76820526DF000EDB119 /* homeHistoryCell.m in Sources */,
 				6021A2DF204CCBAF00FF189E /* searchCell.m in Sources */,
 				D4C7D5BF2047E1EE0008F09A /* houseSourceCell.m in Sources */,
@@ -1461,6 +1476,7 @@
 				6021A2F8204CE12700FF189E /* houseDetailsInfoCell.m in Sources */,
 				6021A327204D510100FF189E /* addLinkCell.m in Sources */,
 				6021A2E4204CD93E00FF189E /* affirmCell.m in Sources */,
+				6018869A206201CD00F2F428 /* jyzxModel.m in Sources */,
 				604353FA204A883A002E24C9 /* addHouseInfoController.m in Sources */,
 				60DEE86D205D0C4900012F8B /* userHouseInfoCell.m in Sources */,
 				6082BAC12044EAF500F82B31 /* xgTitleViewCell.m in Sources */,
@@ -1638,7 +1654,7 @@
 					"$(PROJECT_DIR)/CZToken/Classes/ThirdTools/AliPay",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "/Users/ighibli/Desktop/我的/cz/CZToken/CZToken/CZToken-Prefix.pch";
+				GCC_PREFIX_HEADER = "/Users/jlc/Desktop/Other/cz/CZToken/CZToken/CZToken-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/Headers/Public\"",
@@ -1681,7 +1697,7 @@
 					"$(PROJECT_DIR)/CZToken/Classes/ThirdTools/AliPay",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "/Users/ighibli/Desktop/我的/cz/CZToken/CZToken/CZToken-Prefix.pch";
+				GCC_PREFIX_HEADER = "/Users/jlc/Desktop/Other/cz/CZToken/CZToken/CZToken-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/Headers/Public\"",

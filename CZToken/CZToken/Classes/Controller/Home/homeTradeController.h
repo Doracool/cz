@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface homeTradeController : UIViewController
+@interface homeTradeController : BaseViewController
 
 @property (weak, nonatomic) IBOutlet UIView *view1;
 @property (weak, nonatomic) IBOutlet UIView *view2;
@@ -21,8 +21,12 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *small2Height;
 @property (weak, nonatomic) IBOutlet UIView *view4;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *view4Height;
+@property (strong, nonatomic) IBOutlet UIButton *view4addBtn;
+@property (strong, nonatomic) IBOutlet UIButton *view4lessBtn;
 @property (weak, nonatomic) IBOutlet UIView *view5;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *view5Height;
+@property (strong, nonatomic) IBOutlet UIButton *view5addBtn;
+@property (strong, nonatomic) IBOutlet UIButton *view5lessbtn;
 @property (weak, nonatomic) IBOutlet UIButton *jsBtn;
 @property (weak, nonatomic) IBOutlet UIView *view6;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *view6Height;

@@ -19,6 +19,7 @@
 @property (nonatomic, strong) UIView *tagsView;
 @property (nonatomic, strong) UIColor *titlesColor;
 @property (nonatomic, strong) NSMutableArray *chooseTagsArr;
+@property (strong, nonatomic) void (^handlerBlock)(NSUInteger index);
 @end
 
 @implementation TTChooseBtnView
@@ -127,7 +128,15 @@
     return self;
 }
 
+- (void)setPressedHandler:(void (^)(NSUInteger))handler {
+    self.handlerBlock = handler;
+}
 
++ (void)chooseTags:(UIImage *)image complete:(void(^)(NSArray<NSString *> *names,UploadImage state))complete {
+    NSMutableArray *callBackNames = [NSMutableArray array];
+    [callBackNames addObject:@"3"];
+    complete([NSArray arrayWithArray:callBackNames], UploadImageSucces);
+}
 
 - (void)chooseTags:(UIButton *)sender {
     // 单选
@@ -139,6 +148,7 @@
             [sender setBackgroundColor:[UIColor redColor]];
             [sender setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
             [self.delegate chooseTagsArr:_chooseTagsArr];
+            self.handlerBlock(i);
             continue;
         }
         UIButton *other = (UIButton *)self.subviews[i];
@@ -147,6 +157,7 @@
         [other setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         
     }
+    
     /*
     if (![_chooseTagsArr containsObject:[NSString stringWithFormat:@"%ld",sender.tag]]) {
         [sender setBackgroundColor:[UIColor redColor]];
