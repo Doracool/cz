@@ -185,8 +185,8 @@
                                             <rect key="frame" x="20" y="110" width="77" height="30"/>
                                             <state key="normal" title="增加产权人"/>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ar-fP-dqA">
-                                            <rect key="frame" x="137" y="110" width="77" height="30"/>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ar-fP-dqA">
+                                            <rect key="frame" x="122" y="110" width="77" height="30"/>
                                             <state key="normal" title="删除产权人"/>
                                         </button>
                                     </subviews>

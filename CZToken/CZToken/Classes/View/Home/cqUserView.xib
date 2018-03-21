@@ -45,7 +45,7 @@
                     <state key="normal" title="-"/>
                 </button>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.2059651317" green="1" blue="0.1461674825" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <constraints>
                 <constraint firstItem="0xP-Z4-cxf" firstAttribute="leading" secondItem="K8h-oM-H1I" secondAttribute="trailing" id="3IK-Dt-auy"/>
                 <constraint firstItem="sbW-dT-6xa" firstAttribute="centerY" secondItem="K8h-oM-H1I" secondAttribute="centerY" id="3VR-39-clc"/>

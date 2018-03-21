@@ -71,16 +71,20 @@
 }
 
 - (void)addcqUser {
+    _view4Height.constant += 50;
     cqUserView *view = [[NSBundle mainBundle] loadNibNamed:@"cqUserView" owner:self options:nil][0];
     NSArray *subviews = _view4.subviews;
     NSInteger count = 0;
     for (NSInteger i = 0; i < subviews.count; i++) {
         if ([subviews[i] isKindOfClass:[cqUserView class]]) {
             count++;
+            ((cqUserView *) subviews[i]).height = 35;
         }
     }
-    view.frame = CGRectMake(0, count*50 + 50, screenW, 50);
+    view.frame = CGRectMake(0, count*50 + 40, screenW, 35);
     [_view4 addSubview:view];
+    
+    
 }
 
 - (void)requestArea:(NSString *)areaID {
