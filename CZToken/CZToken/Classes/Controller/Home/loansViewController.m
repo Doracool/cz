@@ -14,6 +14,7 @@
 #import "centerTextCell.h"
 #import "XgContentTableViewCell.h"
 #import "yuegongView.h"
+#import "loansDetailsController.h"
 
 @interface loansViewController ()<UITableViewDelegate,UITableViewDataSource>{
     UIButton *jsBtn;
@@ -586,7 +587,7 @@
     
     if (_dklb == 3) {
         [params setObject:@(_dkjeNum) forKey:@"FundAmount"];
-        [params setObject:@(_sdjeNum) forKey:@"BusinessAmoun"];
+        [params setObject:@(_sdjeNum) forKey:@"BusinessAmount"];
         [params setObject:@(_lvNum) forKey:@"FunLoansRate"];
         [params setObject:@(_slvNum) forKey:@"BankLoansRate"];
     }
@@ -607,10 +608,17 @@
             yuegong.dkys.text = [NSString stringWithFormat:@"%@",[[dic objectForKey:@"Data"] objectForKey:@"Number"]];
             yuegong.zflx.text = [NSString stringWithFormat:@"%@",[[dic objectForKey:@"Data"] objectForKey:@"TotalInterest"]];
             yuegong.myhk.text = [NSString stringWithFormat:@"%@",[[dic objectForKey:@"Data"] objectForKey:@"RepayMonthly"]];
+            [yuegong.moreBtn addTarget:self action:@selector(moreAction:) forControlEvents:UIControlEventTouchUpInside];
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
     }];
+}
+
+- (void)moreAction:(UIButton *)sender {
+    loansDetailsController *details = [[loansDetailsController alloc] init];
+    details.monthId = [NSString stringWithFormat:@"%@",[[ygDic objectForKey:@"Data"] objectForKey:@"Id"]];
+    [self.navigationController pushViewController:details animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

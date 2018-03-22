@@ -12,6 +12,8 @@
 		6018869A206201CD00F2F428 /* jyzxModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 60188699206201CD00F2F428 /* jyzxModel.m */; };
 		6018869C20620B8800F2F428 /* cqUserView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6018869B20620B8800F2F428 /* cqUserView.xib */; };
 		601886A220620D4B00F2F428 /* cqUserView.m in Sources */ = {isa = PBXBuildFile; fileRef = 601886A120620D4B00F2F428 /* cqUserView.m */; };
+		601CE56A206395DA008B09AD /* loansDetailsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 601CE569206395DA008B09AD /* loansDetailsController.m */; };
+		601CE56E20639BC5008B09AD /* loansDetailsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 601CE56D20639BC5008B09AD /* loansDetailsModel.m */; };
 		6021A2DA204CCA5C00FF189E /* userSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6021A2D8204CCA5C00FF189E /* userSearchController.m */; };
 		6021A2DB204CCA5D00FF189E /* userSearchController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6021A2D9204CCA5C00FF189E /* userSearchController.xib */; };
 		6021A2DF204CCBAF00FF189E /* searchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6021A2DD204CCBAF00FF189E /* searchCell.m */; };
@@ -230,6 +232,10 @@
 		6018869B20620B8800F2F428 /* cqUserView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = cqUserView.xib; sourceTree = "<group>"; };
 		601886A020620D4B00F2F428 /* cqUserView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cqUserView.h; sourceTree = "<group>"; };
 		601886A120620D4B00F2F428 /* cqUserView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = cqUserView.m; sourceTree = "<group>"; };
+		601CE568206395DA008B09AD /* loansDetailsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = loansDetailsController.h; sourceTree = "<group>"; };
+		601CE569206395DA008B09AD /* loansDetailsController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = loansDetailsController.m; sourceTree = "<group>"; };
+		601CE56C20639BC5008B09AD /* loansDetailsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = loansDetailsModel.h; sourceTree = "<group>"; };
+		601CE56D20639BC5008B09AD /* loansDetailsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = loansDetailsModel.m; sourceTree = "<group>"; };
 		6021A2D7204CCA5C00FF189E /* userSearchController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = userSearchController.h; sourceTree = "<group>"; };
 		6021A2D8204CCA5C00FF189E /* userSearchController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = userSearchController.m; sourceTree = "<group>"; };
 		6021A2D9204CCA5C00FF189E /* userSearchController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = userSearchController.xib; sourceTree = "<group>"; };
@@ -575,6 +581,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		601CE56B20639B69008B09AD /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				601CE56C20639BC5008B09AD /* loansDetailsModel.h */,
+				601CE56D20639BC5008B09AD /* loansDetailsModel.m */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		6021A2FF204CF63F00FF189E /* LPCarouselView */ = {
 			isa = PBXGroup;
 			children = (
@@ -714,6 +729,8 @@
 				D4269A18206151DD007523F0 /* homeTradeController.h */,
 				D4269A19206151DD007523F0 /* homeTradeController.m */,
 				D4269A1A206151DD007523F0 /* homeTradeController.xib */,
+				601CE568206395DA008B09AD /* loansDetailsController.h */,
+				601CE569206395DA008B09AD /* loansDetailsController.m */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -912,6 +929,7 @@
 		60B622C420424C52001DBA43 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				601CE56B20639B69008B09AD /* Home */,
 				607208B4205FB16300DD5335 /* House */,
 				60482C75205B776A00F2FF9D /* signPay */,
 				6069A83920537C8300EEA1F0 /* BaseModel */,
@@ -1421,6 +1439,7 @@
 				60B79E28204E32AE0006FE70 /* houseTextCell.m in Sources */,
 				604353F0204A822A002E24C9 /* logListCell.m in Sources */,
 				609876162043AE8400243079 /* NewsViewCell.m in Sources */,
+				601CE56A206395DA008B09AD /* loansDetailsController.m in Sources */,
 				607208B2205F576800DD5335 /* xgResultCell.m in Sources */,
 				6041A76D20526EEB00EDB119 /* homeHotSeaCell.m in Sources */,
 				6039C066204AB08800A7FD99 /* houseAuditController.m in Sources */,
@@ -1494,6 +1513,7 @@
 				602B68472060EA6600E714E7 /* centerTextCell.m in Sources */,
 				D422578A204D8053003D146B /* houseImpInfoController.m in Sources */,
 				6044465020464B00008F09C7 /* foreSigninController.m in Sources */,
+				601CE56E20639BC5008B09AD /* loansDetailsModel.m in Sources */,
 				6044466E20469EE3008F09C7 /* textCell.m in Sources */,
 				6021A304204CF64000FF189E /* LPCarouselView.m in Sources */,
 				6062BAB4204FF30D00258BFA /* auditHeadCell.m in Sources */,

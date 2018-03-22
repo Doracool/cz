@@ -35,4 +35,5 @@
 @property (strong, nonatomic) IBOutlet UILabel *dkys;
 @property (strong, nonatomic) IBOutlet UILabel *zflx;
 @property (strong, nonatomic) IBOutlet UILabel *myhk;
+@property (strong, nonatomic) IBOutlet UIButton *moreBtn;
 @end
