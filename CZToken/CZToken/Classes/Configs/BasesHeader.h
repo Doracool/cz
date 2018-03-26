@@ -35,6 +35,7 @@
 #import "SDImageCache.h"
 #import "UIImageView+WebCache.h"
 #import "ZFJSegmentedControl.h"
+#import "MQVerCodeImageView.h"
 
 #import "MJRefresh.h"
 #import <IQKeyboardManager.h>

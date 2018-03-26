@@ -112,6 +112,7 @@
 		6069A83C20537CB800EEA1F0 /* WXpayData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6069A83B20537CB800EEA1F0 /* WXpayData.m */; };
 		6069A83F20537DAE00EEA1F0 /* NSDictionary+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 6069A83E20537DAE00EEA1F0 /* NSDictionary+Utility.m */; };
 		606C2C2C20687CC400D040CF /* calculateModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 606C2C2B20687CC400D040CF /* calculateModel.m */; };
+		606C2C3020689A0500D040CF /* MQVerCodeImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 606C2C2E20689A0500D040CF /* MQVerCodeImageView.m */; };
 		607208AD205F564E00DD5335 /* xgChooseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 607208AB205F564E00DD5335 /* xgChooseCell.m */; };
 		607208AE205F564E00DD5335 /* xgChooseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607208AC205F564E00DD5335 /* xgChooseCell.xib */; };
 		607208B2205F576800DD5335 /* xgResultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 607208B0205F576800DD5335 /* xgResultCell.m */; };
@@ -388,6 +389,8 @@
 		6069A84020537F2F00EEA1F0 /* NotificationHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationHeader.h; sourceTree = "<group>"; };
 		606C2C2A20687CC400D040CF /* calculateModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = calculateModel.h; sourceTree = "<group>"; };
 		606C2C2B20687CC400D040CF /* calculateModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = calculateModel.m; sourceTree = "<group>"; };
+		606C2C2E20689A0500D040CF /* MQVerCodeImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MQVerCodeImageView.m; sourceTree = "<group>"; };
+		606C2C2F20689A0500D040CF /* MQVerCodeImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MQVerCodeImageView.h; sourceTree = "<group>"; };
 		607208AA205F564E00DD5335 /* xgChooseCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = xgChooseCell.h; sourceTree = "<group>"; };
 		607208AB205F564E00DD5335 /* xgChooseCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = xgChooseCell.m; sourceTree = "<group>"; };
 		607208AC205F564E00DD5335 /* xgChooseCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = xgChooseCell.xib; sourceTree = "<group>"; };
@@ -700,6 +703,15 @@
 			path = Computer;
 			sourceTree = "<group>";
 		};
+		606C2C2D206899F200D040CF /* VerCode */ = {
+			isa = PBXGroup;
+			children = (
+				606C2C2F20689A0500D040CF /* MQVerCodeImageView.h */,
+				606C2C2E20689A0500D040CF /* MQVerCodeImageView.m */,
+			);
+			path = VerCode;
+			sourceTree = "<group>";
+		};
 		607208B4205FB16300DD5335 /* House */ = {
 			isa = PBXGroup;
 			children = (
@@ -964,6 +976,7 @@
 		60B622C620424C63001DBA43 /* ThirdTools */ = {
 			isa = PBXGroup;
 			children = (
+				606C2C2D206899F200D040CF /* VerCode */,
 				60DEE84B205CF4E600012F8B /* AliPay */,
 				6023854E20512A5000B2FA4F /* Map */,
 				D422578C204EE9DF003D146B /* ZHPick */,
@@ -1524,6 +1537,7 @@
 				D4C7D5BA2047DD270008F09A /* DOPDropDownMenu.m in Sources */,
 				602385472050C1E600B2FA4F /* houseAddressComCell.m in Sources */,
 				6082BABC2044EAA700F82B31 /* XgShareViewController.m in Sources */,
+				606C2C3020689A0500D040CF /* MQVerCodeImageView.m in Sources */,
 				602B68472060EA6600E714E7 /* centerTextCell.m in Sources */,
 				D422578A204D8053003D146B /* houseImpInfoController.m in Sources */,
 				6044465020464B00008F09C7 /* foreSigninController.m in Sources */,

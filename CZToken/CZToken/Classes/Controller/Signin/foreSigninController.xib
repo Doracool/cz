@@ -103,7 +103,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ymf-7K-Qgb">
-                    <rect key="frame" x="30" y="547" width="315" height="40"/>
+                    <rect key="frame" x="30" y="507" width="315" height="40"/>
                     <color key="backgroundColor" red="0.89411764709999997" green="0.26274509800000001" blue="0.28627450980000002" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="PWr-cn-7QT"/>
@@ -208,7 +208,7 @@
                 <constraint firstItem="gXz-LV-oAf" firstAttribute="leading" secondItem="VnI-8I-4Wa" secondAttribute="leading" id="VHy-nQ-Eqm"/>
                 <constraint firstItem="Cjb-VG-Iqc" firstAttribute="height" secondItem="ScL-hL-2Jq" secondAttribute="height" id="VmO-9k-cD4"/>
                 <constraint firstItem="Kl4-4h-MR7" firstAttribute="trailing" secondItem="ScL-hL-2Jq" secondAttribute="trailing" id="XbW-vf-I8Q"/>
-                <constraint firstAttribute="bottom" secondItem="ymf-7K-Qgb" secondAttribute="bottom" constant="80" id="Zim-4E-pID"/>
+                <constraint firstAttribute="bottom" secondItem="ymf-7K-Qgb" secondAttribute="bottom" constant="120" id="Zim-4E-pID"/>
                 <constraint firstItem="sRS-yZ-2nC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="a1U-I4-NO7"/>
                 <constraint firstItem="gp2-0R-kNm" firstAttribute="centerY" secondItem="Rri-cx-UYX" secondAttribute="centerY" id="bFN-93-UHf"/>
                 <constraint firstAttribute="trailing" secondItem="gsg-R9-MYF" secondAttribute="trailing" constant="25" id="bKl-82-Rho"/>
