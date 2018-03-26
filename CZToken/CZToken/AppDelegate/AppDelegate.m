@@ -8,6 +8,18 @@
 
 #import "AppDelegate.h"
 #import "AppDelegate+MainUI.h"
+#import "ShareSDK/ShareSDK.h"
+#import "ShareSDKConnector/ShareSDKConnector.h"
+//腾讯开放平台（对应QQ和QQ空间）SDK头文件
+#import <TencentOpenAPI/TencentOAuth.h>
+#import <TencentOpenAPI/QQApiInterface.h>
+
+//微信SDK头文件
+#import "WXApi.h"
+
+//新浪微博SDK头文件
+#import "WeiboSDK.h"
+
 @interface AppDelegate ()<WXApiDelegate>
 {
     BMKMapManager *_mapManager;
@@ -46,6 +58,37 @@
         // 设置状态栏的样式  LightContent 字体为白色
         [application setStatusBarStyle:UIStatusBarStyleLightContent];
     }
+    
+    [ShareSDK registerActivePlatforms:@[@(SSDKPlatformTypeQQ),@(SSDKPlatformTypeSinaWeibo),@(SSDKPlatformTypeWechat)] onImport:^(SSDKPlatformType platformType) {
+        switch (platformType) {
+            case SSDKPlatformTypeWechat:
+                [ShareSDKConnector connectWeChat:[WXApi class]];
+                break;
+            case SSDKPlatformTypeQQ:
+                [ShareSDKConnector connectQQ:[QQApiInterface class] tencentOAuthClass:[TencentOAuth class]];
+                break;
+            case SSDKPlatformTypeSinaWeibo:
+                [ShareSDKConnector connectWeibo:[WeiboSDK class]];
+                break;
+            default:
+                break;
+        }
+    } onConfiguration:^(SSDKPlatformType platformType, NSMutableDictionary *appInfo) {
+        switch (platformType) {
+            case SSDKPlatformTypeSinaWeibo:
+                [appInfo SSDKSetupSinaWeiboByAppKey:@"" appSecret:@"" redirectUri:@"" authType:SSDKAuthTypeBoth];
+                break;
+            case SSDKPlatformTypeWechat:
+                [appInfo SSDKSetupWeChatByAppId:@"" appSecret:@""];
+                break;
+            case SSDKPlatformTypeQQ:
+                [appInfo SSDKSetupQQByAppId:@"" appKey:@"" authType:SSDKAuthTypeBoth];
+                break;
+            default:
+                break;
+        }
+    }];
+    
     return YES;
 }
 

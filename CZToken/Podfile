@@ -20,5 +20,4 @@ pod 'WebViewJavascriptBridge', '~> 6.0'
 pod 'TZImagePickerController'
 pod 'BaiduMapKit'
 pod 'AliyunOSSiOS'
-pod 'WechatOpenSDK'
 end
