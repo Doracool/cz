@@ -310,8 +310,8 @@
 }
 
 - (IBAction)signinAction:(UIButton *)sender {
-    /*
-    NSString *URL = [NSString stringWithFormat:@"%@//Register/SaveIdentity",BaseUrl];
+    
+    NSString *URL = [NSString stringWithFormat:@"%@/Passport/Register/SaveIdentity",BaseUrl];
     URL = [URL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     NSDictionary *params = @{@"Name":_trueName.text,@"Image":imagePath,@"Number":_idCardNum.text,@"Token":_token,@"Source":@"ios"};
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
@@ -319,13 +319,14 @@
     [manager POST:URL parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
         NSLog(@"%@",dic);
+        cxMoneyController *action = [[cxMoneyController alloc] init];
+        [self.navigationController pushViewController:action animated:YES];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
     }];
-    */
     
-    cxMoneyController *action = [[cxMoneyController alloc] init];
-    [self.navigationController pushViewController:action animated:YES];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {

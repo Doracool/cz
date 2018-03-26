@@ -79,10 +79,10 @@
                 [appInfo SSDKSetupSinaWeiboByAppKey:@"" appSecret:@"" redirectUri:@"" authType:SSDKAuthTypeBoth];
                 break;
             case SSDKPlatformTypeWechat:
-                [appInfo SSDKSetupWeChatByAppId:@"" appSecret:@""];
+                [appInfo SSDKSetupWeChatByAppId:KWeChatKey appSecret:KWeChatAppSecret];
                 break;
             case SSDKPlatformTypeQQ:
-                [appInfo SSDKSetupQQByAppId:@"" appKey:@"" authType:SSDKAuthTypeBoth];
+                [appInfo SSDKSetupQQByAppId:KQQAppId appKey:KQQAppkey authType:SSDKAuthTypeBoth];
                 break;
             default:
                 break;

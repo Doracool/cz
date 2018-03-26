@@ -75,6 +75,10 @@
 
 #define BaseUrl @"http://test.api.cz1222.com"
 
+
+#import <ShareSDK/ShareSDK.h>
+#import <ShareSDKUI/ShareSDK+SSUI.h>
+
 /***************** 加载公共常量 *********************/
 
 #define AccessKey @"LTAIX3szjle1ec1B"

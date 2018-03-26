@@ -166,8 +166,12 @@
                                     <rect key="frame" x="38" y="469" width="15" height="22"/>
                                     <state key="normal" image="保障icon"/>
                                 </button>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="诚值LOGO" translatesAutoresizingMaskIntoConstraints="NO" id="FeJ-cP-8sB">
-                                    <rect key="frame" x="143" y="33" width="89" height="57"/>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo(2)" translatesAutoresizingMaskIntoConstraints="NO" id="FeJ-cP-8sB">
+                                    <rect key="frame" x="127.5" y="14.5" width="120" height="75.5"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="FeJ-cP-8sB" secondAttribute="height" multiplier="89:56" id="HTZ-oH-QKc"/>
+                                        <constraint firstAttribute="width" constant="120" id="re9-5A-ANn"/>
+                                    </constraints>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="诚信改变生活" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5TI-cC-OX7">
                                     <rect key="frame" x="135.5" y="95" width="104" height="21"/>
@@ -221,10 +225,10 @@
         </view>
     </objects>
     <resources>
+        <image name="logo(2)" width="178" height="112"/>
         <image name="保障icon" width="15" height="15"/>
         <image name="姓名icon" width="13" height="13"/>
         <image name="拍摄持证照" width="343" height="206"/>
         <image name="证件icon" width="19" height="13"/>
-        <image name="诚值LOGO" width="89" height="57"/>
     </resources>
 </document>

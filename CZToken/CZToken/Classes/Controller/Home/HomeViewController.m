@@ -176,8 +176,30 @@
         loginController *login = [[loginController alloc] init];
         [self.navigationController pushViewController:login animated:YES];
     } else if (tag == 5) {
-        homeTradeController *trade = [[homeTradeController alloc] init];
-        [self.navigationController pushViewController:trade animated:YES];
+//        homeTradeController *trade = [[homeTradeController alloc] init];
+//        [self.navigationController pushViewController:trade animated:YES];
+        
+        NSMutableDictionary *shareParams = [NSMutableDictionary dictionary];
+        [shareParams SSDKSetupShareParamsByText:@"文本" images:nil url:[NSURL URLWithString:@"http://m.cz1222.com/QRCode/Certificate?sn=1"] title:@"title" type:SSDKContentTypeAuto];
+//        [shareParams SSDKEnableExtensionShare];
+        
+        [ShareSDK showShareActionSheet:nil items:nil shareParams:shareParams onShareStateChanged:^(SSDKResponseState state, SSDKPlatformType platformType, NSDictionary *userData, SSDKContentEntity *contentEntity, NSError *error, BOOL end) {
+            switch (state) {
+                case SSDKResponseStateSuccess:
+                    {
+                        SHOW_MESSAGE_VIEW(@"提示", @"分享成功", @"确定", nil);
+                    }
+                    break;
+                case SSDKResponseStateFail:
+                {
+                    SHOW_MESSAGE_VIEW(@"提示", @"分享失败", @"确定", nil);
+                }
+                    break;
+                default:
+                    break;
+                }
+            }];
+        
     } else {
         ZHPickView *pickView = [[ZHPickView alloc] init];
 //        [pickView setDataViewWithItem:@[@"item1",@"item2",@"item3"] title:@"DataTitle"];

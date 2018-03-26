@@ -61,12 +61,15 @@
 
 // 第三方
 
-#define KWeChatKey @"" // 微信AppId
+#define KWeChatKey @"wx93ddc83de8dd07bc" // 微信AppId
 
-#define KWeChatAppSecret @"" // 微信appSecretkey
+#define KWeChatAppSecret @"b691a419be74c872b47a4f42baa4fc50" // 微信appSecretkey
 
 #define KShareURL @"" // 回调URL（微信）
 
+#define KQQAppId @"1106802724"
+
+#define KQQAppkey @"FBVoVW55u7H1qFCy"
 
 //----------------------------------------------------------------------------
 //有关时间
