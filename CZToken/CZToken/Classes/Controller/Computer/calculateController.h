@@ -27,4 +27,21 @@
 @property (strong, nonatomic) IBOutlet UITextField *fwmjTf;
 @property (strong, nonatomic) IBOutlet UITextField *mjdjTf;
 @property (strong, nonatomic) IBOutlet UITextField *ssjgTf;
+@property (strong, nonatomic) IBOutlet UIView *ershouView;
+@property (strong, nonatomic) IBOutlet NSLayoutConstraint *ershouHeight;
+@property (strong, nonatomic) IBOutlet UILabel *maiqs;
+@property (strong, nonatomic) IBOutlet UILabel *maiths;
+@property (strong, nonatomic) IBOutlet UILabel *maijysxf;
+@property (strong, nonatomic) IBOutlet UILabel *maidjs;
+@property (strong, nonatomic) IBOutlet UILabel *maiptf;
+@property (strong, nonatomic) IBOutlet UILabel *maiczyhs;
+@property (strong, nonatomic) IBOutlet UILabel *maidydjf;
+@property (strong, nonatomic) IBOutlet UILabel *maiallmoney;
+@property (strong, nonatomic) IBOutlet UILabel *selljysxf;
+@property (strong, nonatomic) IBOutlet UILabel *sellhtyhs;
+@property (strong, nonatomic) IBOutlet UILabel *sellzzsfj;
+@property (strong, nonatomic) IBOutlet UILabel *sellfcs;
+@property (strong, nonatomic) IBOutlet UILabel *selltdzzs;
+@property (strong, nonatomic) IBOutlet UILabel *sellgrsds;
+@property (strong, nonatomic) IBOutlet UILabel *sellallMoney;
 @end

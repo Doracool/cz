@@ -39,11 +39,11 @@
                         <constraint firstAttribute="width" constant="15" id="OVQ-hI-o4P"/>
                     </constraints>
                 </imageView>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入手机号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ScL-hL-2Jq">
-                    <rect key="frame" x="55" y="253" width="290" height="17"/>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入手机号" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ScL-hL-2Jq">
+                    <rect key="frame" x="55" y="252" width="290" height="19"/>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                     <connections>
                         <outlet property="delegate" destination="-1" id="e79-hI-8tP"/>
                     </connections>
@@ -61,8 +61,8 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Tfn-n3-CXE">
                     <rect key="frame" x="30" y="294.5" width="15" height="24"/>
                 </imageView>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入验证码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XYi-3G-Etk">
-                    <rect key="frame" x="55" y="298" width="145" height="17"/>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入验证码" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="XYi-3G-Etk">
+                    <rect key="frame" x="55" y="297" width="145" height="19"/>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
@@ -115,8 +115,12 @@
                         <action selector="signinAction:" destination="-1" eventType="touchUpInside" id="52z-Vm-85u"/>
                     </connections>
                 </button>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="诚值LOGO" translatesAutoresizingMaskIntoConstraints="NO" id="lVF-w1-pcB">
-                    <rect key="frame" x="143" y="116" width="89" height="57"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo(2)" translatesAutoresizingMaskIntoConstraints="NO" id="lVF-w1-pcB">
+                    <rect key="frame" x="127.5" y="96.5" width="120" height="75.5"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="120" id="GUs-s3-Cx9"/>
+                        <constraint firstAttribute="width" secondItem="lVF-w1-pcB" secondAttribute="height" multiplier="89:56" id="OnT-sb-4XW"/>
+                    </constraints>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gbZ-sY-UnY">
                     <rect key="frame" x="31.5" y="251" width="12" height="22"/>
@@ -130,46 +134,39 @@
                     <rect key="frame" x="30" y="446" width="15" height="22"/>
                     <state key="normal" image="钱icon"/>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="net-Q2-lVg">
-                    <rect key="frame" x="135" y="178" width="104" height="17"/>
-                    <attributedString key="attributedText">
-                        <fragment content="诚信创造价值">
-                            <attributes>
-                                <color key="NSColor" red="0.60006266829999999" green="0.60003942249999997" blue="0.60005521770000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <font key="NSFont" size="17" name=".PingFangSC-Regular"/>
-                                <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                            </attributes>
-                        </fragment>
-                    </attributedString>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="诚信创造价值" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="net-Q2-lVg">
+                    <rect key="frame" x="126" y="177" width="122.5" height="24"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="手机icon" translatesAutoresizingMaskIntoConstraints="NO" id="gXz-LV-oAf">
                     <rect key="frame" x="30.5" y="339.5" width="12" height="19"/>
                 </imageView>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cjb-VG-Iqc">
-                    <rect key="frame" x="55" y="340.5" width="290" height="17"/>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入密码" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Cjb-VG-Iqc">
+                    <rect key="frame" x="55" y="339.5" width="290" height="19"/>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                 </textField>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8u4-2A-2RR">
-                    <rect key="frame" x="25" y="367.5" width="325" height="1"/>
+                    <rect key="frame" x="25" y="368.5" width="325" height="1"/>
                     <color key="backgroundColor" red="0.92237460609999999" green="0.91392856840000003" blue="0.91752052309999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="手机icon" translatesAutoresizingMaskIntoConstraints="NO" id="9ES-0R-eBT">
-                    <rect key="frame" x="30.5" y="383.5" width="12" height="19"/>
+                    <rect key="frame" x="30.5" y="384.5" width="12" height="19"/>
                 </imageView>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="再次输入密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ssg-Am-7Qi">
-                    <rect key="frame" x="55" y="384.5" width="290" height="17"/>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="再次输入密码" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Ssg-Am-7Qi">
+                    <rect key="frame" x="55" y="384.5" width="290" height="19"/>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                 </textField>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vdS-zP-yPa">
-                    <rect key="frame" x="25" y="411.5" width="325" height="1"/>
+                    <rect key="frame" x="25" y="413.5" width="325" height="1"/>
                     <color key="backgroundColor" red="0.92237460609999999" green="0.91392856840000003" blue="0.91752052309999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
@@ -245,9 +242,9 @@
         </view>
     </objects>
     <resources>
+        <image name="logo(2)" width="178" height="112"/>
         <image name="手机icon" width="12" height="19"/>
         <image name="组2" width="15" height="15"/>
-        <image name="诚值LOGO" width="89" height="57"/>
         <image name="钱icon" width="15" height="15"/>
     </resources>
 </document>

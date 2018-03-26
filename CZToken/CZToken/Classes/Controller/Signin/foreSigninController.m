@@ -29,7 +29,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _myText.attributedText = [commonSet AttributeNameFont:20 Color:[UIColor colorWithHexString:@"666666"] Space:5 qingxie:0.5 text:_myText.text Range:NSMakeRange(0, _myText.text.length)];
+    _myText.attributedText = [commonSet AttributeNameFont:20 Color:[UIColor colorWithHexString:@"666666"] Space:5 qingxie:0 text:_myText.text Range:NSMakeRange(0, _myText.text.length)];
+    _myText.attributedText = [commonSet AttributeNameFont:14 Color:[UIColor colorWithHexString:@"999999"] Space:0 qingxie:0 text:_myText.text Range:NSMakeRange(1, _myText.text.length-2)];
      [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(weixinPayReturn:) name:WXPAY_NOTIFICATION object:nil];
     [_phone addTarget:self action:@selector(textFiledDidChange:) forControlEvents:UIControlEventEditingChanged];
     _codeBtn.layer.cornerRadius = 5.0f;
@@ -94,8 +95,12 @@
     
     NSString *URL = [NSString stringWithFormat:@"%@/Passport/Register/SavePhone",BaseUrl];
     URL = [URL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    if (_phone.text.length == 0) {
-        
+    if (_password.text.length == 0 || _password2.text.length == 0) {
+        SHOW_MESSAGE_VIEW(@"提示", @"请填写密码", @"确认", nil);
+        return;
+    } else if (_password.text != _password2.text) {
+        SHOW_MESSAGE_VIEW(@"提示", @"两次密码不一致", @"确认", nil);
+        return;
     }
     NSDictionary *params = @{@"Phone":_phone.text,@"Code":_code.text,@"Source":@"ios",@"Password":_password.text,@"Password2":_password2.text};
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];

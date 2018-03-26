@@ -160,6 +160,7 @@
 }
 
 - (void)iconClick:(NSNotification *)notification {
+    barImageView.alpha = 1;
     NSInteger tag = [notification.userInfo[@"tag"] intValue];
     NSLog(@"%ld",(long)tag);
     if (tag == 2) {

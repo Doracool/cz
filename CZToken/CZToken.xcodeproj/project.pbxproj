@@ -111,6 +111,7 @@
 		6069A8382053620D00EEA1F0 /* aliyunOssUpImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 6069A8372053620D00EEA1F0 /* aliyunOssUpImage.m */; };
 		6069A83C20537CB800EEA1F0 /* WXpayData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6069A83B20537CB800EEA1F0 /* WXpayData.m */; };
 		6069A83F20537DAE00EEA1F0 /* NSDictionary+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 6069A83E20537DAE00EEA1F0 /* NSDictionary+Utility.m */; };
+		606C2C2C20687CC400D040CF /* calculateModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 606C2C2B20687CC400D040CF /* calculateModel.m */; };
 		607208AD205F564E00DD5335 /* xgChooseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 607208AB205F564E00DD5335 /* xgChooseCell.m */; };
 		607208AE205F564E00DD5335 /* xgChooseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607208AC205F564E00DD5335 /* xgChooseCell.xib */; };
 		607208B2205F576800DD5335 /* xgResultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 607208B0205F576800DD5335 /* xgResultCell.m */; };
@@ -385,6 +386,8 @@
 		6069A83D20537DAD00EEA1F0 /* NSDictionary+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Utility.h"; sourceTree = "<group>"; };
 		6069A83E20537DAE00EEA1F0 /* NSDictionary+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Utility.m"; sourceTree = "<group>"; };
 		6069A84020537F2F00EEA1F0 /* NotificationHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationHeader.h; sourceTree = "<group>"; };
+		606C2C2A20687CC400D040CF /* calculateModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = calculateModel.h; sourceTree = "<group>"; };
+		606C2C2B20687CC400D040CF /* calculateModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = calculateModel.m; sourceTree = "<group>"; };
 		607208AA205F564E00DD5335 /* xgChooseCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = xgChooseCell.h; sourceTree = "<group>"; };
 		607208AB205F564E00DD5335 /* xgChooseCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = xgChooseCell.m; sourceTree = "<group>"; };
 		607208AC205F564E00DD5335 /* xgChooseCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = xgChooseCell.xib; sourceTree = "<group>"; };
@@ -688,6 +691,15 @@
 			path = BaseModel;
 			sourceTree = "<group>";
 		};
+		606C2C2920687C9300D040CF /* Computer */ = {
+			isa = PBXGroup;
+			children = (
+				606C2C2A20687CC400D040CF /* calculateModel.h */,
+				606C2C2B20687CC400D040CF /* calculateModel.m */,
+			);
+			path = Computer;
+			sourceTree = "<group>";
+		};
 		607208B4205FB16300DD5335 /* House */ = {
 			isa = PBXGroup;
 			children = (
@@ -929,6 +941,7 @@
 		60B622C420424C52001DBA43 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				606C2C2920687C9300D040CF /* Computer */,
 				601CE56B20639B69008B09AD /* Home */,
 				607208B4205FB16300DD5335 /* House */,
 				60482C75205B776A00F2FF9D /* signPay */,
@@ -1479,6 +1492,7 @@
 				D4C7D5BF2047E1EE0008F09A /* houseSourceCell.m in Sources */,
 				60F978D420423FF900E79007 /* AppDelegate.m in Sources */,
 				609697CB2058C48600088E31 /* UIBarButtonItem+Extension.m in Sources */,
+				606C2C2C20687CC400D040CF /* calculateModel.m in Sources */,
 				607208B7205FB1A000DD5335 /* areaModel.m in Sources */,
 				60E4015E2042B9CA00EF047E /* UserSourceController.m in Sources */,
 				6044466920468F2B008F09C7 /* jjrViewController.m in Sources */,
@@ -1667,7 +1681,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3AAV5C4X4L;
+				DEVELOPMENT_TEAM = QSFD55DMKS;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/CZToken/Classes/ThirdTools/Map",
@@ -1698,7 +1712,7 @@
 				INFOPLIST_FILE = CZToken/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.nyhz.CZToken;
+				PRODUCT_BUNDLE_IDENTIFIER = com.king1222.CZToken;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1710,7 +1724,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3AAV5C4X4L;
+				DEVELOPMENT_TEAM = QSFD55DMKS;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/CZToken/Classes/ThirdTools/Map",
@@ -1741,7 +1755,7 @@
 				INFOPLIST_FILE = CZToken/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.nyhz.CZToken;
+				PRODUCT_BUNDLE_IDENTIFIER = com.king1222.CZToken;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
