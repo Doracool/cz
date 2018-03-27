@@ -15,4 +15,11 @@
 @property (strong, nonatomic) IBOutlet UIButton *question;
 @property (strong, nonatomic) IBOutlet UIButton *question2;
 @property (strong, nonatomic) IBOutlet UIButton *rule;
+@property (strong, nonatomic) IBOutlet UIButton *aliPay;
+@property (strong, nonatomic) IBOutlet UIImageView *aliBg;
+@property (strong, nonatomic) IBOutlet UIButton *weChatPay;
+@property (strong, nonatomic) IBOutlet UIImageView *weChatBg;
+@property (strong, nonatomic) IBOutlet UIButton *cxjBtn;
+@property (strong, nonatomic) IBOutlet UIButton *csrBtn;
+@property (strong, nonatomic) IBOutlet UIButton *yuedu;
 @end

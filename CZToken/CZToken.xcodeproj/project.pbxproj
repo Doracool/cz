@@ -155,6 +155,7 @@
 		6082BAD5204558A400F82B31 /* daikuan.m in Sources */ = {isa = PBXBuildFile; fileRef = 6082BAD4204558A400F82B31 /* daikuan.m */; };
 		6082BAD720455E0F00F82B31 /* zige.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6082BAD620455E0F00F82B31 /* zige.xib */; };
 		6082BADA20455E1F00F82B31 /* zige.m in Sources */ = {isa = PBXBuildFile; fileRef = 6082BAD920455E1F00F82B31 /* zige.m */; };
+		6093DB4C2069E34300465F4B /* orderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6093DB4B2069E34300465F4B /* orderModel.m */; };
 		609697CB2058C48600088E31 /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 609697C82058C48500088E31 /* UIBarButtonItem+Extension.m */; };
 		609697D02058C78E00088E31 /* ChangeAddressController.m in Sources */ = {isa = PBXBuildFile; fileRef = 609697CE2058C78E00088E31 /* ChangeAddressController.m */; };
 		609697D12058C78E00088E31 /* ChangeAddressController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 609697CF2058C78E00088E31 /* ChangeAddressController.xib */; };
@@ -472,6 +473,8 @@
 		6082BAD620455E0F00F82B31 /* zige.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = zige.xib; sourceTree = "<group>"; };
 		6082BAD820455E1F00F82B31 /* zige.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = zige.h; sourceTree = "<group>"; };
 		6082BAD920455E1F00F82B31 /* zige.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = zige.m; sourceTree = "<group>"; };
+		6093DB4A2069E34300465F4B /* orderModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = orderModel.h; sourceTree = "<group>"; };
+		6093DB4B2069E34300465F4B /* orderModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = orderModel.m; sourceTree = "<group>"; };
 		609697C82058C48500088E31 /* UIBarButtonItem+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extension.m"; sourceTree = "<group>"; };
 		609697C92058C48500088E31 /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
 		609697CD2058C78E00088E31 /* ChangeAddressController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChangeAddressController.h; sourceTree = "<group>"; };
@@ -747,6 +750,8 @@
 			children = (
 				60482C76205B77C700F2FF9D /* cxjModel.h */,
 				60482C77205B77C700F2FF9D /* cxjModel.m */,
+				6093DB4A2069E34300465F4B /* orderModel.h */,
+				6093DB4B2069E34300465F4B /* orderModel.m */,
 			);
 			path = signPay;
 			sourceTree = "<group>";
@@ -1701,6 +1706,7 @@
 				609697CB2058C48600088E31 /* UIBarButtonItem+Extension.m in Sources */,
 				606C2C2C20687CC400D040CF /* calculateModel.m in Sources */,
 				607208B7205FB1A000DD5335 /* areaModel.m in Sources */,
+				6093DB4C2069E34300465F4B /* orderModel.m in Sources */,
 				60E4015E2042B9CA00EF047E /* UserSourceController.m in Sources */,
 				6044466920468F2B008F09C7 /* jjrViewController.m in Sources */,
 				604446732046A037008F09C7 /* rzyzViewController.m in Sources */,

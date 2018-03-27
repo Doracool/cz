@@ -148,7 +148,7 @@
             [sender setBackgroundColor:[UIColor redColor]];
             [sender setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
             [self.delegate chooseTagsArr:_chooseTagsArr];
-            self.handlerBlock(i);
+//            self.handlerBlock(i);
             continue;
         }
         UIButton *other = (UIButton *)self.subviews[i];

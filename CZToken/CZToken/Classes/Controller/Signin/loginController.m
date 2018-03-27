@@ -70,7 +70,12 @@
     [manager POST:URL parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
         NSLog(@"%@",dic);
-        [[NSUserDefaults standardUserDefaults] setObject:[[dic objectForKey:@"Data"] objectForKey:@"AccessToken"] forKey:@"token"];
+        if ([dic intValueForKey:@"Code"] == 0) {
+            [[NSUserDefaults standardUserDefaults] setObject:[[dic objectForKey:@"Data"] objectForKey:@"AccessToken"] forKey:@"token"];
+        } else {
+            
+        }
+        
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
     }];

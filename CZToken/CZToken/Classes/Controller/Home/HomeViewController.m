@@ -18,6 +18,7 @@
 #import "UpInfoController.h"
 #import "loginController.h"
 #import "homeTradeController.h"
+#import "cxMoneyController.h"
 
 @interface HomeViewController ()<BMKLocationServiceDelegate,BMKGeoCodeSearchDelegate>
 {
@@ -170,8 +171,11 @@
         loansViewController *loans = [[loansViewController alloc] init];
         [self.navigationController pushViewController:loans animated:YES];
     } else if (tag == 1) {
-        foreSigninController *signin = [[foreSigninController alloc] init];
-        [self.navigationController pushViewController:signin animated:YES];
+        cxMoneyController *cx =[[cxMoneyController alloc] init];
+        
+        
+//        foreSigninController *signin = [[foreSigninController alloc] init];
+        [self.navigationController pushViewController:cx animated:YES];
     } else if (tag == 4) {
         loginController *login = [[loginController alloc] init];
         [self.navigationController pushViewController:login animated:YES];
@@ -181,7 +185,7 @@
         
         NSMutableDictionary *shareParams = [NSMutableDictionary dictionary];
         [shareParams SSDKSetupShareParamsByText:@"文本" images:nil url:[NSURL URLWithString:@"http://m.cz1222.com/QRCode/Certificate?sn=1"] title:@"title" type:SSDKContentTypeAuto];
-//        [shareParams SSDKEnableExtensionShare];
+        [shareParams SSDKEnableExtensionShare];
         
         [ShareSDK showShareActionSheet:nil items:nil shareParams:shareParams onShareStateChanged:^(SSDKResponseState state, SSDKPlatformType platformType, NSDictionary *userData, SSDKContentEntity *contentEntity, NSError *error, BOOL end) {
             switch (state) {

@@ -8,6 +8,7 @@
 
 #import "cxMoneyController.h"
 #import "zsViewController.h"
+#import "orderModel.h"
 @interface cxMoneyController ()
 {
     NSDictionary *dataDic;
@@ -18,7 +19,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _aliBg.layer.cornerRadius = 4.0f;
+    _aliBg.layer.masksToBounds = YES;
     
+    _weChatBg.layer.cornerRadius = 4.0f;
+    _weChatBg.layer.masksToBounds = YES;
     NSString *URL = [NSString stringWithFormat:@"%@/Passport/Register/GetPayData",BaseUrl];
     URL = [URL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     NSDictionary *params = @{@"Token":TOKEN,@"Source":@"ios"};
@@ -55,10 +60,57 @@
 }
 
 - (IBAction)SignAction:(UIButton *)sender {
+    
+    NSDictionary *params = @{@"Amount":@(0.01),@"InitialAmount":@(0),@"PayType":@"微信",@"Token":TOKEN,@"Source":@"ios"};
+    
+    NSString *URL = [NSString stringWithFormat:@"%@/Passport/Register/SetPayOrder",BaseUrl];
+    URL = [URL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    [manager POST:URL parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
+        NSLog(@"%@",dic);
+        if ([dic intValueForKey:@"Code"] == 0) {
+            orderDateModel *model = [orderDateModel mj_objectWithKeyValues:[dic objectForKey:@"Data"]];
+            [self checkOrder:model];
+        }
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+    }];
+    
     zsViewController *zs = [[zsViewController alloc] init];
     [self.navigationController pushViewController:zs animated:YES];
 }
 
+- (void)checkOrder:(orderDateModel *)model {
+    NSString *URL = [NSString stringWithFormat:@"%@/Passport/Register/CheckOrder",BaseUrl];
+    NSDictionary *params = @{@"SN":model.SN,@"Token":TOKEN,@"Source":@"ios"};
+    URL = [URL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    [manager POST:URL parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
+        NSLog(@"%@",dic);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+    }];
+}
+
+- (IBAction)PayChange:(UIButton *)sender {
+    _aliPay.selected = NO;
+    _weChatPay.selected = NO;
+    sender.selected = YES;
+    if (sender.tag == 12) {
+        [_aliBg setBackgroundColor:[UIColor navbackgroundColor]];
+        [_weChatBg setBackgroundColor:[UIColor lineColor]];
+    } else {
+        [_weChatBg setBackgroundColor:[UIColor navbackgroundColor]];
+        [_aliBg setBackgroundColor:[UIColor lineColor]];
+    }
+}
+- (IBAction)moneyChange:(UIButton *)sender {
+    sender.selected = !sender.selected;
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
