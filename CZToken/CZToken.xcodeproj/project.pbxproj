@@ -157,6 +157,8 @@
 		6082BADA20455E1F00F82B31 /* zige.m in Sources */ = {isa = PBXBuildFile; fileRef = 6082BAD920455E1F00F82B31 /* zige.m */; };
 		6093DB4C2069E34300465F4B /* orderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6093DB4B2069E34300465F4B /* orderModel.m */; };
 		6093DB4F206A395400465F4B /* loadWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6093DB4E206A395400465F4B /* loadWebView.m */; };
+		6093DB58206A498D00465F4B /* addUserSourceInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6093DB56206A498D00465F4B /* addUserSourceInfoController.m */; };
+		6093DB59206A498D00465F4B /* addUserSourceInfoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6093DB57206A498D00465F4B /* addUserSourceInfoController.xib */; };
 		609697CB2058C48600088E31 /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 609697C82058C48500088E31 /* UIBarButtonItem+Extension.m */; };
 		609697D02058C78E00088E31 /* ChangeAddressController.m in Sources */ = {isa = PBXBuildFile; fileRef = 609697CE2058C78E00088E31 /* ChangeAddressController.m */; };
 		609697D12058C78E00088E31 /* ChangeAddressController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 609697CF2058C78E00088E31 /* ChangeAddressController.xib */; };
@@ -478,6 +480,9 @@
 		6093DB4B2069E34300465F4B /* orderModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = orderModel.m; sourceTree = "<group>"; };
 		6093DB4D206A395300465F4B /* loadWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = loadWebView.h; sourceTree = "<group>"; };
 		6093DB4E206A395400465F4B /* loadWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = loadWebView.m; sourceTree = "<group>"; };
+		6093DB55206A498D00465F4B /* addUserSourceInfoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = addUserSourceInfoController.h; sourceTree = "<group>"; };
+		6093DB56206A498D00465F4B /* addUserSourceInfoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = addUserSourceInfoController.m; sourceTree = "<group>"; };
+		6093DB57206A498D00465F4B /* addUserSourceInfoController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = addUserSourceInfoController.xib; sourceTree = "<group>"; };
 		609697C82058C48500088E31 /* UIBarButtonItem+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extension.m"; sourceTree = "<group>"; };
 		609697C92058C48500088E31 /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
 		609697CD2058C78E00088E31 /* ChangeAddressController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChangeAddressController.h; sourceTree = "<group>"; };
@@ -996,6 +1001,9 @@
 			children = (
 				60E4015A2042B9CA00EF047E /* UserSourceController.h */,
 				60E401552042B9C900EF047E /* UserSourceController.m */,
+				6093DB55206A498D00465F4B /* addUserSourceInfoController.h */,
+				6093DB56206A498D00465F4B /* addUserSourceInfoController.m */,
+				6093DB57206A498D00465F4B /* addUserSourceInfoController.xib */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -1585,6 +1593,7 @@
 				60B79E53204E73580006FE70 /* refundMoneyController.xib in Resources */,
 				6098761C2043BAC700243079 /* iconCell.xib in Resources */,
 				6021A323204D4C2A00FF189E /* UserlinkCell.xib in Resources */,
+				6093DB59206A498D00465F4B /* addUserSourceInfoController.xib in Resources */,
 				D422578620483169003D146B /* HouseDetailsController.xib in Resources */,
 				602B684A2060FC8200E714E7 /* yuegongView.xib in Resources */,
 				6021A30A204D246C00FF189E /* buyHouseCell.xib in Resources */,
@@ -1698,6 +1707,7 @@
 				60B79E33204E34200006FE70 /* baseAuditController.m in Sources */,
 				60482C78205B77C700F2FF9D /* cxjModel.m in Sources */,
 				6023854C2050E10900B2FA4F /* addUserInfoController.m in Sources */,
+				6093DB58206A498D00465F4B /* addUserSourceInfoController.m in Sources */,
 				6069A8382053620D00EEA1F0 /* aliyunOssUpImage.m in Sources */,
 				60F978E220423FF900E79007 /* main.m in Sources */,
 				604353FF204A9820002E24C9 /* addHouseDetailsController.m in Sources */,

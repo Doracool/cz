@@ -9,6 +9,7 @@
 #import "UserSourceController.h"
 #import "topSearch.h"
 #import "userHouseInfoCell.h"
+#import "addUserSourceInfoController.h"
 @interface UserSourceController ()<DOPDropDownMenuDelegate,DOPDropDownMenuDataSource,UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) NSArray *arr1;
 @property (nonatomic, strong) NSArray *arr2;
@@ -32,6 +33,8 @@
     topSearch.frame = CGRectMake(0, 64, screenW, 50);
     [self.view addSubview:topSearch];
     
+    
+    
     self.arr1 = @[@"交易",@"全部",@"宝山",@"普陀"];
     self.arr2 = @[@"状态",@"总价降序",@"总价升序",@"单价降序",@"单价升序",@"面积降序",@"面积升序"];
     self.arr3 = @[@"筛选",@"全部",@"出租",@"出售"];
@@ -51,6 +54,20 @@
     _myTableView.delegate = self;
     _myTableView.dataSource = self;
     [self.view addSubview:_myTableView];
+    
+    UIButton *addInfo = [[UIButton alloc] initWithFrame:CGRectMake(screenW-80, screenH-80, 40, 40)];
+    [self.view addSubview:addInfo];
+    addInfo.backgroundColor = [UIColor navbackgroundColor];
+    [addInfo setTitle:@"+" forState:UIControlStateNormal];
+    [addInfo setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [addInfo addTarget:self action:@selector(addUserInfo:) forControlEvents:UIControlEventTouchUpInside];
+    addInfo.layer.cornerRadius = 20.0f;
+    addInfo.layer.masksToBounds = YES;
+}
+
+- (void)addUserInfo:(UIButton *)sender {
+    addUserSourceInfoController *userScoure = [[addUserSourceInfoController alloc] init];
+    [self.navigationController pushViewController:userScoure animated:YES];
 }
 
 - (NSInteger)numberOfColumnsInMenu:(DOPDropDownMenu *)menu {
