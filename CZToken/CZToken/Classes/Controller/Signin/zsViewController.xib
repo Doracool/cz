@@ -6,11 +6,13 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="zsViewController">
             <connections>
+                <outlet property="touxiang" destination="8vt-u2-Qjd" id="FRY-NJ-HDl"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -38,6 +40,9 @@
                                     <state key="normal" title="上传头像">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
+                                    <connections>
+                                        <action selector="upLoadImage:" destination="-1" eventType="touchUpInside" id="qaj-aM-BYA"/>
+                                    </connections>
                                 </button>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="形状69" translatesAutoresizingMaskIntoConstraints="NO" id="d1k-TH-ijq">
                                     <rect key="frame" x="-2" y="36" width="379" height="491"/>
@@ -55,12 +60,21 @@
                                         <action selector="SignAction:" destination="-1" eventType="touchUpInside" id="qtn-gn-9J1"/>
                                     </connections>
                                 </button>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8vt-u2-Qjd">
+                                    <rect key="frame" x="102.5" y="212" width="45" height="45"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="45" id="KIK-4v-Y0g"/>
+                                        <constraint firstAttribute="height" constant="45" id="el5-hu-47r"/>
+                                    </constraints>
+                                </imageView>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstItem="d1k-TH-ijq" firstAttribute="top" secondItem="SiO-le-TgR" secondAttribute="bottom" id="4Fv-dp-FL6"/>
+                                <constraint firstItem="8vt-u2-Qjd" firstAttribute="centerY" secondItem="d1k-TH-ijq" secondAttribute="centerY" multiplier="5/6" id="4HO-6x-MKx"/>
                                 <constraint firstItem="aud-c6-064" firstAttribute="top" secondItem="hJD-pM-5r1" secondAttribute="top" constant="15" id="7v6-Ph-Luz"/>
                                 <constraint firstAttribute="height" constant="700" id="AT5-qL-T9T"/>
+                                <constraint firstItem="8vt-u2-Qjd" firstAttribute="centerX" secondItem="d1k-TH-ijq" secondAttribute="centerX" multiplier="2/3" id="BZx-w1-DYh"/>
                                 <constraint firstAttribute="trailing" secondItem="wmR-0f-4uE" secondAttribute="trailing" constant="30" id="JZy-gY-xKx"/>
                                 <constraint firstItem="SiO-le-TgR" firstAttribute="centerY" secondItem="aud-c6-064" secondAttribute="centerY" id="Ky1-60-hXF"/>
                                 <constraint firstAttribute="trailing" secondItem="SiO-le-TgR" secondAttribute="trailing" constant="30" id="TYC-KK-8Yj"/>

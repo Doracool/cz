@@ -61,7 +61,7 @@
 
 // 第三方
 
-#define KWeChatKey @"wx93ddc83de8dd07bc" // 微信AppId
+#define KWeChatKey @"wx04455e4bb0dc6b10" // 微信AppId
 
 #define KWeChatAppSecret @"b691a419be74c872b47a4f42baa4fc50" // 微信appSecretkey
 
