@@ -174,7 +174,7 @@
         cxMoneyController *cx =[[cxMoneyController alloc] init];
         
         
-//        foreSigninController *signin = [[foreSigninController alloc] init];
+        foreSigninController *signin = [[foreSigninController alloc] init];
         [self.navigationController pushViewController:cx animated:YES];
     } else if (tag == 4) {
         loginController *login = [[loginController alloc] init];

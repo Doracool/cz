@@ -14,7 +14,11 @@
     BOOL _isSelectOriginalPhoto;
     NSString *imagePath;
 }
+@property (strong, nonatomic) IBOutlet UILabel *name;
+@property (strong, nonatomic) IBOutlet UILabel *timeLabel;
+@property (strong, nonatomic) IBOutlet UILabel *userCode;
 @property (strong, nonatomic) IBOutlet UIImageView *touxiang;
+@property (strong, nonatomic) IBOutlet UIImageView *codeImg;
 
 @end
 
@@ -26,6 +30,7 @@
     _touxiang.layer.masksToBounds = YES;
     _touxiang.layer.borderColor = [UIColor navbackgroundColor].CGColor;
     _touxiang.layer.borderWidth = 1.0f;
+    [self requestInfoPay];
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -150,7 +155,7 @@
         NSLog(@"%@",dic);
         if ([dic intValueForKey:@"Code"] == 0) {
             NSLog(@"%@",[dic objectForKey:@"Data"]);
-            [self requestInfoPay];
+            
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
@@ -166,6 +171,13 @@
     [manager POST:URL parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
         NSLog(@"%@",dic);
+        if ([dic intValueForKey:@"Code"] == 0) {
+            [_touxiang sd_setImageWithURL:[NSURL URLWithString:[[dic objectForKey:@"Data"] objectForKey:@"HeadImage"]]];
+            _name.text = [[dic objectForKey:@"Data"] objectForKey:@"Name"];
+            _timeLabel.text = [[dic objectForKey:@"Data"] objectForKey:@"Time"];
+            [_codeImg sd_setImageWithURL:[NSURL URLWithString:[[dic objectForKey:@"Data"] objectForKey:@"QRCode"]]];
+            _userCode.text = [[dic objectForKey:@"Data"] objectForKey:@"SN"];
+        }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
     }];

@@ -16,6 +16,14 @@
 @end
 
 @interface orderDateModel : NSObject
+@property (nonatomic, copy) NSString *AppId;
+@property (nonatomic, copy) NSString *NonceStr;
+@property (nonatomic, copy) NSString *Package;
+@property (nonatomic, copy) NSString *PartnerId;
+@property (nonatomic, copy) NSString *PrepayId;
+@property (nonatomic, copy) NSString *Sign;
+@property (nonatomic, copy) NSString *SignType;
+@property (nonatomic, copy) NSString *TimeStamp;
 @property (nonatomic, copy) NSString *Amount;
 @property (nonatomic, copy) NSString *SN;
 @end
