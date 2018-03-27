@@ -15,6 +15,7 @@
             <connections>
                 <outlet property="aliBg" destination="ccv-7d-eak" id="OSR-f7-j8U"/>
                 <outlet property="aliPay" destination="7iW-xL-f1R" id="QUd-Wv-hPy"/>
+                <outlet property="allMoney" destination="MjT-oo-6cU" id="6X8-Hr-MGa"/>
                 <outlet property="csrBtn" destination="pKk-uD-5Bd" id="snm-GN-Hkd"/>
                 <outlet property="cxjBtn" destination="FE4-1T-8sB" id="Tn4-OK-b2C"/>
                 <outlet property="money" destination="QwX-ww-2dH" id="hY2-4e-2gd"/>
@@ -67,7 +68,7 @@
                                 </label>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ccv-7d-eak">
                                     <rect key="frame" x="40" y="434.5" width="125" height="30"/>
-                                    <color key="backgroundColor" red="0.78043252230000004" green="0.78040283919999998" blue="0.78042292589999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="backgroundColor" red="0.9619753360748291" green="0.94934821128845215" blue="0.95285892486572266" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="30" id="jfZ-2i-vnH"/>
                                     </constraints>
@@ -78,14 +79,16 @@
                                     <state key="normal" title="  支付宝支付" image="支付宝">
                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
-                                    <state key="selected" title="  支付宝支付" image="支付宝"/>
+                                    <state key="selected" title="  支付宝支付" image="支付宝">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
                                     <connections>
                                         <action selector="PayChange:" destination="-1" eventType="touchUpInside" id="LU6-IG-LHi"/>
                                     </connections>
                                 </button>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="w3m-mD-e4b">
                                     <rect key="frame" x="210" y="434.5" width="125" height="30"/>
-                                    <color key="backgroundColor" red="0.78043252230000004" green="0.78040283919999998" blue="0.78042292589999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="backgroundColor" red="0.9619753360748291" green="0.94934821128845215" blue="0.95285892486572266" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </imageView>
                                 <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zL9-10-EPE">
                                     <rect key="frame" x="210" y="439.5" width="125" height="20"/>
@@ -93,7 +96,9 @@
                                     <state key="normal" title="  微信支付" image="微信">
                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
-                                    <state key="selected" title="  微信支付" image="微信支付"/>
+                                    <state key="selected" title="  微信支付" image="微信支付">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
                                     <connections>
                                         <action selector="PayChange:" destination="-1" eventType="touchUpInside" id="Gei-6B-1KU"/>
                                     </connections>
@@ -175,9 +180,12 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mgq-uA-6Vb">
+                                <button opaque="NO" tag="20" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mgq-uA-6Vb">
                                     <rect key="frame" x="339" y="224.5" width="16" height="22"/>
                                     <state key="normal" image="详细icon-1"/>
+                                    <connections>
+                                        <action selector="questionAction:" destination="-1" eventType="touchUpInside" id="iD0-0b-wkO"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pKk-uD-5Bd">
                                     <rect key="frame" x="20" y="271.5" width="13" height="22"/>
@@ -196,9 +204,12 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OoN-PK-kvL">
+                                <button opaque="NO" tag="21" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OoN-PK-kvL">
                                     <rect key="frame" x="339" y="272.5" width="16" height="22"/>
                                     <state key="normal" image="详细icon-1"/>
+                                    <connections>
+                                        <action selector="questionAction:" destination="-1" eventType="touchUpInside" id="qqQ-V4-Jd3"/>
+                                    </connections>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="￥100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QwX-ww-2dH">
                                     <rect key="frame" x="273" y="272.5" width="46" height="21"/>

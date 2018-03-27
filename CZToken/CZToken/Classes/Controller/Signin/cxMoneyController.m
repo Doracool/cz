@@ -9,6 +9,7 @@
 #import "cxMoneyController.h"
 #import "zsViewController.h"
 #import "orderModel.h"
+#import "loadWebView.h"
 @interface cxMoneyController ()
 {
     NSDictionary *dataDic;
@@ -34,7 +35,7 @@
         dataDic = [NSDictionary dictionary];
         dataDic = dic;
         _text.text = [NSString stringWithFormat:@"￥%@",[[dataDic objectForKey:@"Data"] objectForKey:@"Amount"]];
-        _money.text = [NSString stringWithFormat:@"￥%@",[[dataDic objectForKey:@"Data"] objectForKey:@"Amount"]];
+        _money.text = [NSString stringWithFormat:@"￥%@",[[dataDic objectForKey:@"Data"] objectForKey:@"InitialAmount"]];
         NSLog(@"%@",dic);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
@@ -52,11 +53,20 @@
     [super viewWillDisappear:animated];
     [self tabbarShow];
 }
+- (IBAction)questionAction:(UIButton *)sender {
+    loadWebView *webView = [[loadWebView alloc] init];
+    if (sender.tag == 20) {
+        webView.HTMLSTR = [[dataDic objectForKey:@"Data"] objectForKey:@"AmountContent"];
+    } else {
+        webView.HTMLSTR = [[dataDic objectForKey:@"Data"] objectForKey:@"InitialContent"];
+    }
+    [self.navigationController pushViewController:webView animated:YES];
+}
 
 - (IBAction)cxxyAction:(id)sender {
-    UIWebView *webView = [[UIWebView alloc] initWithFrame:self.view.bounds];
-    [self.view addSubview:webView];
-    [webView loadHTMLString:[[dataDic objectForKey:@"Data"] objectForKey:@"Agreement"] baseURL:nil];
+    loadWebView *webView = [[loadWebView alloc] init];
+    webView.HTMLSTR = [[dataDic objectForKey:@"Data"] objectForKey:@"Agreement"];
+    [self.navigationController pushViewController:webView animated:YES];
 }
 
 - (IBAction)SignAction:(UIButton *)sender {
@@ -102,14 +112,21 @@
     sender.selected = YES;
     if (sender.tag == 12) {
         [_aliBg setBackgroundColor:[UIColor navbackgroundColor]];
-        [_weChatBg setBackgroundColor:[UIColor lineColor]];
+        [_weChatBg setBackgroundColor:[UIColor colorWithHexString:@"f5f3f2"]];
     } else {
         [_weChatBg setBackgroundColor:[UIColor navbackgroundColor]];
-        [_aliBg setBackgroundColor:[UIColor lineColor]];
+        [_aliBg setBackgroundColor:[UIColor colorWithHexString:@"f5f3f2"]];
     }
 }
 - (IBAction)moneyChange:(UIButton *)sender {
     sender.selected = !sender.selected;
+    if (sender.tag == 11) {
+        if (sender.selected) {
+            _allMoney.text = [NSString stringWithFormat:@"%.2f",[[[dataDic objectForKey:@"Data"] objectForKey:@"Amount"] floatValue] + [[[dataDic objectForKey:@"Data"] objectForKey:@"InitialAmount"] floatValue]];
+        } else {
+            _allMoney.text = [NSString stringWithFormat:@"%.2f",[[[dataDic objectForKey:@"Data"] objectForKey:@"Amount"] floatValue]];
+        }
+    }
 }
 
 - (void)didReceiveMemoryWarning {
