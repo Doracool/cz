@@ -27,7 +27,7 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="这就是一个不重要的标题" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bF8-Jl-cMH">
-                        <rect key="frame" x="138.5" y="11" width="168.5" height="18"/>
+                        <rect key="frame" x="138.5" y="11" width="162.5" height="18"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <nil key="highlightedColor"/>
@@ -66,6 +66,7 @@
                     <constraint firstItem="eW7-hs-9ec" firstAttribute="top" secondItem="bF8-Jl-cMH" secondAttribute="top" id="JTa-e6-D1J"/>
                     <constraint firstItem="egL-hb-Hcb" firstAttribute="centerY" secondItem="uv7-0T-dm4" secondAttribute="centerY" id="Jqg-jf-JEc"/>
                     <constraint firstItem="9V8-Ac-fRl" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="NZC-JI-Qr2"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="bF8-Jl-cMH" secondAttribute="trailing" constant="120" id="Ngh-y2-mGI"/>
                     <constraint firstAttribute="trailingMargin" secondItem="eW7-hs-9ec" secondAttribute="trailing" constant="12" id="OAq-I0-snl"/>
                     <constraint firstItem="TsH-gL-hgN" firstAttribute="bottom" secondItem="9V8-Ac-fRl" secondAttribute="bottom" id="XG1-SS-RDr"/>
                     <constraint firstAttribute="bottomMargin" secondItem="9V8-Ac-fRl" secondAttribute="bottom" constant="3" id="XkN-7A-oXu"/>

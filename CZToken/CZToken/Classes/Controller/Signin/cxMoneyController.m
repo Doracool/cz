@@ -34,8 +34,11 @@
         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
         dataDic = [NSDictionary dictionary];
         dataDic = dic;
-        _text.text = [NSString stringWithFormat:@"￥%@",[[dataDic objectForKey:@"Data"] objectForKey:@"Amount"]];
-        _money.text = [NSString stringWithFormat:@"￥%@",[[dataDic objectForKey:@"Data"] objectForKey:@"InitialAmount"]];
+        if ([dic intValueForKey:@"Code"] == 0) {
+            _text.text = [NSString stringWithFormat:@"￥%@",[[dataDic objectForKey:@"Data"] objectForKey:@"Amount"]];
+            _money.text = [NSString stringWithFormat:@"￥%@",[[dataDic objectForKey:@"Data"] objectForKey:@"InitialAmount"]];
+        }
+        
         NSLog(@"%@",dic);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
@@ -71,9 +74,10 @@
 
 - (IBAction)SignAction:(UIButton *)sender {
     
-    NSDictionary *params = @{@"Amount":@(0.01),@"InitialAmount":@(0),@"PayType":@"微信支付",@"Token":TOKEN,@"Source":@"ios",@"OpenId":[[dataDic objectForKey:@"Data"] objectForKey:@"OpenId"]};
+    NSDictionary *params = @{@"Amount":@(0.01),@"InitialAmount":@(0),@"PayType":@"支付宝",@"Token":TOKEN,@"Source":@"ios",@"OpenId":[[dataDic objectForKey:@"Data"] objectForKey:@"OpenId"]};
     
     NSString *URL = [NSString stringWithFormat:@"%@/Passport/Register/SetPayOrder",BaseUrl];
+    
     URL = [URL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
@@ -82,14 +86,72 @@
         NSLog(@"%@",dic);
         if ([dic intValueForKey:@"Code"] == 0) {
             orderDateModel *model = [orderDateModel mj_objectWithKeyValues:[dic objectForKey:@"Data"]];
-            [self checkOrder:model];
+//            [self checkOrder:model];
+            [[NSUserDefaults standardUserDefaults] setObject:model.SN forKey:@"orderNum"];
+            [self payAction:dic];
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
     }];
     
-    zsViewController *zs = [[zsViewController alloc] init];
-    [self.navigationController pushViewController:zs animated:YES];
+//    zsViewController *zs = [[zsViewController alloc] init];
+//    [self.navigationController pushViewController:zs animated:YES];
+}
+
+- (void)payAction:(NSDictionary *)dic {
+    NSString *key = @"111";
+    NSString *appScheme = @"alisdkdemo";
+    
+    NSString *params = [[dic objectForKey:@"Data"] objectForKey:@"Content"];
+    __weak __typeof(self) weakSelf = self;
+    [[AlipaySDK defaultService] payOrder:params fromScheme:appScheme callback:^(NSDictionary *resultDic) {
+        NSLog(@"reslut = %@",resultDic);
+        int  staute = [resultDic intValueForKey:@"resultStatus"];
+        NSLog(@"stauts = %d",staute);
+        NSString *dic = [resultDic objectForKey:@"result"];
+        
+        switch (staute) {
+            case 9000:{
+                NSLog(@"9000 的回调");
+                [weakSelf requsetPay:dic andorderNum:@""];
+            }
+                
+                break;
+            case 8000:
+                SHOW_MESSAGE_VIEW(nil, @"正在处理中", @"确定", nil);
+                break;
+            case 4000:
+                SHOW_MESSAGE_VIEW(nil, @"订单支付失败", @"确定", nil);
+                break;
+            case 6001:
+                SHOW_MESSAGE_VIEW(nil, @"用户中途取消", @"确定", nil);
+                break;
+            case 6002:
+                SHOW_MESSAGE_VIEW(nil, @"网络连接出错", @"确定", nil);
+                break;
+            default:
+                break;
+        }
+    }];
+}
+
+#pragma mark 回调事件
+-(void)requsetPay:(NSString *)sign andorderNum:(NSString *)ordernum {
+    NSString *orderNum = [[NSUserDefaults standardUserDefaults] objectForKey:@"orderNum"];
+    NSString *URL = [NSString stringWithFormat:@"%@/Passport/Register/CheckOrder",BaseUrl];
+    NSDictionary *params = @{@"SN":orderNum,@"Token":TOKEN,@"Source":@"ios"};
+    URL = [URL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    [manager POST:URL parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
+        NSLog(@"%@",dic);
+        if ([dic intValueForKey:@"Code"] == 0) {
+            SHOW_MESSAGE_VIEW(nil, @"支付成功", @"确定", nil);
+        }
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+    }];
 }
 
 - (void)checkOrder:(orderDateModel *)model {

@@ -73,12 +73,13 @@
 #import "aliyunOssUpImage.h"
 #import <AlipaySDK/AlipaySDK.h>
 
-//#define BaseUrl @"http://test.api.cz1222.com"
+#define BaseUrl @"http://test.api.cz1222.com"
 
-#define BaseUrl @"http://api.cz1222.com"
+//#define BaseUrl @"http://api.cz1222.com"
 
 #import <ShareSDK/ShareSDK.h>
 #import <ShareSDKUI/ShareSDK+SSUI.h>
+#import "loadWebView.h"
 
 /***************** 加载公共常量 *********************/
 

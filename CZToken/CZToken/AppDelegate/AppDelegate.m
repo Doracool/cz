@@ -20,7 +20,7 @@
 //新浪微博SDK头文件
 #import "WeiboSDK.h"
 
-@interface AppDelegate ()<WXApiDelegate>
+@interface AppDelegate ()<WXApiDelegate,NSURLConnectionDelegate>
 {
     BMKMapManager *_mapManager;
 }
@@ -99,6 +99,98 @@
     } else if ([resp isKindOfClass:[SendAuthResp class]]) {
         // 第三方登录
     }
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    if ([url.host isEqualToString:@"safepay"]) {
+        [[AlipaySDK defaultService] processOrderWithPaymentResult:url standbyCallback:^(NSDictionary *resultDic) {
+            NSLog(@"result = %@",resultDic);
+            
+            NSString *dic = [resultDic objectForKey:@"result"];
+            NSData *jsonData = [dic dataUsingEncoding:NSUTF8StringEncoding];
+            NSDictionary *jsonDic = [NSJSONSerialization JSONObjectWithData:jsonData
+                                                                    options:NSJSONReadingMutableContainers
+                                                                      error:nil];
+            
+            int  staute = [resultDic intValueForKey:@"resultStatus"];
+            switch (staute) {
+                case 9000:
+                    [self requsetPay:[jsonDic objectForKey:@"sign"]];
+                    SHOW_MESSAGE_VIEW(nil, @"支付成功", @"确定", nil);
+                    break;
+                case 8000:
+                    SHOW_MESSAGE_VIEW(nil, @"正在处理中", @"确定", nil);
+                    break;
+                case 4000:
+                    SHOW_MESSAGE_VIEW(nil, @"订单支付失败", @"确定", nil);
+                    break;
+                case 6001:
+                    SHOW_MESSAGE_VIEW(nil, @"用户中途取消", @"确定", nil);
+                    break;
+                case 6002:
+                    SHOW_MESSAGE_VIEW(nil, @"网络连接出错", @"确定", nil);
+                    break;
+                default:
+                    break;
+            }
+        }];
+    }
+    return YES;
+}
+
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
+    if ([url.host isEqualToString:@"safepay"]) {
+        [[AlipaySDK defaultService] processOrderWithPaymentResult:url standbyCallback:^(NSDictionary *resultDic) {
+            NSLog(@"result = %@",resultDic);
+            
+            NSString *dic = [resultDic objectForKey:@"result"];
+            NSData *jsonData = [dic dataUsingEncoding:NSUTF8StringEncoding];
+            NSDictionary *jsonDic = [NSJSONSerialization JSONObjectWithData:jsonData
+                                                                    options:NSJSONReadingMutableContainers
+                                                                      error:nil];
+            
+            int  staute = [resultDic intValueForKey:@"resultStatus"];
+            switch (staute) {
+                case 9000:
+                    [self requsetPay:[jsonDic objectForKey:@"sign"]];
+                    break;
+                case 8000:
+                    SHOW_MESSAGE_VIEW(nil, @"正在处理中", @"确定", nil);
+                    break;
+                case 4000:
+                    SHOW_MESSAGE_VIEW(nil, @"订单支付失败", @"确定", nil);
+                    break;
+                case 6001:
+                    SHOW_MESSAGE_VIEW(nil, @"用户中途取消", @"确定", nil);
+                    break;
+                case 6002:
+                    SHOW_MESSAGE_VIEW(nil, @"网络连接出错", @"确定", nil);
+                    break;
+                default:
+                    break;
+            }
+        }];
+    }
+    return YES;
+}
+
+-(void)requsetPay:(NSString *)sign {
+    NSString *orderNum = [[NSUserDefaults standardUserDefaults] objectForKey:@"orderNum"];
+    NSString *URL = [NSString stringWithFormat:@"%@/Passport/Register/CheckOrder",BaseUrl];
+    NSDictionary *params = @{@"SN":orderNum,@"Token":TOKEN,@"Source":@"ios"};
+    URL = [URL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    [manager POST:URL parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
+        NSLog(@"%@",dic);
+        if ([dic intValueForKey:@"Code"] == 0) {
+            SHOW_MESSAGE_VIEW(nil, @"支付成功", @"确定", nil);
+        }
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+    }];
+    
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

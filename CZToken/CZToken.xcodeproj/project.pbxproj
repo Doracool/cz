@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		600AD70C205A0B9B006B320A /* searchAddressController.m in Sources */ = {isa = PBXBuildFile; fileRef = 600AD70A205A0B9B006B320A /* searchAddressController.m */; };
 		600AD70D205A0B9B006B320A /* searchAddressController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 600AD70B205A0B9B006B320A /* searchAddressController.xib */; };
+		6012124E206B739800A42D4E /* newListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6012124D206B739800A42D4E /* newListModel.m */; };
+		60121251206B7CC400A42D4E /* newsDetailsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 60121250206B7CC400A42D4E /* newsDetailsModel.m */; };
 		6018869A206201CD00F2F428 /* jyzxModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 60188699206201CD00F2F428 /* jyzxModel.m */; };
 		6018869C20620B8800F2F428 /* cqUserView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6018869B20620B8800F2F428 /* cqUserView.xib */; };
 		601886A220620D4B00F2F428 /* cqUserView.m in Sources */ = {isa = PBXBuildFile; fileRef = 601886A120620D4B00F2F428 /* cqUserView.m */; };
@@ -255,6 +257,10 @@
 		600AD709205A0B9B006B320A /* searchAddressController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = searchAddressController.h; sourceTree = "<group>"; };
 		600AD70A205A0B9B006B320A /* searchAddressController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = searchAddressController.m; sourceTree = "<group>"; };
 		600AD70B205A0B9B006B320A /* searchAddressController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = searchAddressController.xib; sourceTree = "<group>"; };
+		6012124C206B739800A42D4E /* newListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = newListModel.h; sourceTree = "<group>"; };
+		6012124D206B739800A42D4E /* newListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = newListModel.m; sourceTree = "<group>"; };
+		6012124F206B7CC400A42D4E /* newsDetailsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = newsDetailsModel.h; sourceTree = "<group>"; };
+		60121250206B7CC400A42D4E /* newsDetailsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = newsDetailsModel.m; sourceTree = "<group>"; };
 		60188698206201CD00F2F428 /* jyzxModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = jyzxModel.h; sourceTree = "<group>"; };
 		60188699206201CD00F2F428 /* jyzxModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = jyzxModel.m; sourceTree = "<group>"; };
 		6018869B20620B8800F2F428 /* cqUserView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = cqUserView.xib; sourceTree = "<group>"; };
@@ -915,6 +921,10 @@
 				607208B6205FB1A000DD5335 /* areaModel.m */,
 				60188698206201CD00F2F428 /* jyzxModel.h */,
 				60188699206201CD00F2F428 /* jyzxModel.m */,
+				6012124C206B739800A42D4E /* newListModel.h */,
+				6012124D206B739800A42D4E /* newListModel.m */,
+				6012124F206B7CC400A42D4E /* newsDetailsModel.h */,
+				60121250206B7CC400A42D4E /* newsDetailsModel.m */,
 			);
 			path = House;
 			sourceTree = "<group>";
@@ -1685,6 +1695,7 @@
 				609697DA20590FC600088E31 /* calculateController.m in Sources */,
 				60B79E1D204E2EEC0006FE70 /* houseImgController.m in Sources */,
 				6098760C2043A7D700243079 /* HomeIconCell.m in Sources */,
+				6012124E206B739800A42D4E /* newListModel.m in Sources */,
 				60B79E3E204E38620006FE70 /* houseImgCell.m in Sources */,
 				6041A7632052267B00EDB119 /* meMoreActionCell.m in Sources */,
 				609876112043ADE600243079 /* TitleIconCell.m in Sources */,
@@ -1700,6 +1711,7 @@
 				602B68C02048EE6700748562 /* lookOwnerController.m in Sources */,
 				6082BAD5204558A400F82B31 /* daikuan.m in Sources */,
 				60E4015F2042B9CA00EF047E /* HouseSourceController.m in Sources */,
+				60121251206B7CC400A42D4E /* newsDetailsModel.m in Sources */,
 				60E401682042BE1200EF047E /* AppDelegate+MainUI.m in Sources */,
 				602B68CF204929E200748562 /* LogListController.m in Sources */,
 				6021A305204CF64000FF189E /* LPCarouselViewCell.m in Sources */,

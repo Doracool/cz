@@ -19,7 +19,8 @@
 #import "loginController.h"
 #import "homeTradeController.h"
 #import "cxMoneyController.h"
-
+#import "newListModel.h"
+#import "newsDetailsModel.h"
 @interface HomeViewController ()<BMKLocationServiceDelegate,BMKGeoCodeSearchDelegate>
 {
     UIImageView *barImageView;
@@ -28,6 +29,8 @@
 @property (nonatomic, strong) BMKLocationService *locService;
 @property (nonatomic, strong) BMKGeoCodeSearch *geocodesearch;
 @property (strong, nonatomic) IBOutlet UITableView *myTableView;
+@property (strong, nonatomic) NSMutableArray *newsArray;
+@property (strong, nonatomic) NSMutableArray *newsDetailsArr;
 
 @end
 
@@ -60,6 +63,9 @@
     self.locService.delegate = self;
     _geocodesearch = [[BMKGeoCodeSearch alloc] init];
     _geocodesearch.delegate = self;
+    self.newsArray = [NSMutableArray arrayWithCapacity:0];
+    self.newsDetailsArr = [NSMutableArray arrayWithCapacity:0];
+    [self requestNewList];
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -116,6 +122,7 @@
     NewsViewCell *newCell = [[NSBundle mainBundle] loadNibNamed:@"NewsViewCell" owner:self options:nil][0];
     newCell.selectionStyle = UITableViewCellSelectionStyleNone;
     iconCell *iconCell = [[NSBundle mainBundle] loadNibNamed:@"iconCell" owner:self options:nil][0];
+    newsDetailsDataModel *model = [[newsDetailsDataModel alloc] init];
     iconCell.selectionStyle = UITableViewCellSelectionStyleNone;
     if (indexPath.row == 0) {
         tableView.rowHeight = 280;
@@ -138,8 +145,14 @@
         titleCell.titleName.titleLabel.attributedText = attributeStr;
         return titleCell;
     } else if (indexPath.row == 2) {
-        newCell.myNewsImg.image = [UIImage imageNamed:@"03"];
+        if (_newsDetailsArr.count > 0) {
+            model = [newsDetailsDataModel mj_objectWithKeyValues:_newsDetailsArr[0]];
+        }
+        [newCell.myNewsImg sd_setImageWithURL:[NSURL URLWithString:model.CoverImage]];
         newCell.myType.text = @"置业安家";
+        newCell.myDetails.text = model.Abstracts;
+        newCell.titleLabel.text = model.Title;
+        newCell.time.text = model.IssueTime;
         tableView.rowHeight = 90;
         return newCell;
     } else if (indexPath.row == 3) {
@@ -160,6 +173,71 @@
     return homeCell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    barImageView.alpha = 1;
+    if (indexPath.row == 2) {
+        newsDetailsDataModel *model = [newsDetailsDataModel mj_objectWithKeyValues:_newsDetailsArr[0]];
+        [self reauestInfomation:model.Information];
+    }
+}
+
+- (void)requestNewList {
+    NSString *URL = [NSString stringWithFormat:@"%@/News/Information/Category",BaseUrl];
+    URL = [URL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    [manager GET:URL parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
+        NSLog(@"%@",dic);
+        if ([dic intValueForKey:@"Code"] == 0) {
+            newListModel *model = [newListModel mj_objectWithKeyValues:dic];
+            _newsArray = model.Data;
+            newListDataModel *newModel = [newListDataModel mj_objectWithKeyValues:_newsArray[2]];
+            [self requestCategory:newModel.Id];
+        }
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+    }];
+    
+}
+
+- (void)requestCategory:(NSString *)categoryId {
+    NSString *URL = [NSString stringWithFormat:@"%@/News/Information/PostResult/DataForList",BaseUrl];
+    NSDictionary *params = @{@"CategoryId":categoryId,@"Keyword":@"",@"Page":@(0),@"PageSize":@(10),@"Token":TOKEN,@"Source":@"ios"};
+    URL = [URL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    [manager POST:URL parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
+        NSLog(@"%@",dic);
+        newsDetailsModel *model = [newsDetailsModel mj_objectWithKeyValues:dic];
+        _newsDetailsArr = model.Data;
+        [_myTableView reloadData];
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+    }];
+}
+
+- (void)reauestInfomation:(NSString *)NewId {
+    NSString *URL = [NSString stringWithFormat:@"%@/News/Information/Info",BaseUrl];
+    NSDictionary *params = @{@"Id":NewId,@"Token":TOKEN,@"Source":@"ios"};
+    URL = [URL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    [manager POST:URL parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
+        NSLog(@"%@",dic);
+        if ([dic intValueForKey:@"Code"] == 0) {
+            loadWebView *webView = [[loadWebView alloc] init];
+            webView.HTMLSTR = [[dic objectForKey:@"Data"] objectForKey:@"Content"];
+            [self.navigationController pushViewController:webView animated:YES];
+        }
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+    }];
+}
+
 - (void)iconClick:(NSNotification *)notification {
     barImageView.alpha = 1;
     NSInteger tag = [notification.userInfo[@"tag"] intValue];
@@ -175,7 +253,7 @@
         
         
         foreSigninController *signin = [[foreSigninController alloc] init];
-        [self.navigationController pushViewController:cx animated:YES];
+        [self.navigationController pushViewController:signin animated:YES];
     } else if (tag == 4) {
         loginController *login = [[loginController alloc] init];
         [self.navigationController pushViewController:login animated:YES];
