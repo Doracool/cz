@@ -283,15 +283,15 @@
             }];
         
     } else {
-        ZHPickView *pickView = [[ZHPickView alloc] init];
-//        [pickView setDataViewWithItem:@[@"item1",@"item2",@"item3"] title:@"DataTitle"];
-        [pickView setDateViewWithTitle:@"Date"];
-        [pickView showPickView:self];
-        pickView.block = ^(NSString *selectedStr)
-        {
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"You have chooseed:" message:selectedStr delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-            [alert show];
-        };
+//        ZHPickView *pickView = [[ZHPickView alloc] init];
+////        [pickView setDataViewWithItem:@[@"item1",@"item2",@"item3"] title:@"DataTitle"];
+//        [pickView setDateViewWithTitle:@"Date"];
+//        [pickView showPickView:self];
+//        pickView.block = ^(NSString *selectedStr)
+//        {
+//            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"You have chooseed:" message:selectedStr delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+//            [alert show];
+//        };
     }
     
 }

@@ -15,6 +15,7 @@
 #import "baseAuditController.h"
 #import "houseAddressController.h"
 #import "areaModel.h"
+#import "houseSourceModel.h"
 @interface HouseSourceController ()<DOPDropDownMenuDelegate,DOPDropDownMenuDataSource,UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) NSArray *arr1;
 @property (nonatomic, strong) NSArray *arr2;
@@ -23,6 +24,7 @@
 @property (nonatomic, strong) UIButton *add;
 @property (nonatomic, weak) DOPDropDownMenu *menu;
 @property (nonatomic, strong) UITableView *myTableView;
+@property (nonatomic, strong) NSMutableArray *sourceArray;
 @end
 
 @implementation HouseSourceController
@@ -86,12 +88,20 @@
     [self requestArea];
 }
 
+- (NSMutableArray *)sourceArray {
+    if (!_sourceArray) {
+        _sourceArray = [NSMutableArray arrayWithCapacity:0];
+    }
+    return _sourceArray;
+}
+
 - (void)requestArea {
-    NSString *URL = [NSString stringWithFormat:@"%@/Trade/TradeArea/Get?token=%@",BaseUrl,TOKEN];
+    NSString *URL = [NSString stringWithFormat:@"%@/Trade/TradeArea/Get",BaseUrl];
+    NSDictionary *params = @{@"token":TOKEN};
     URL = [URL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
-    [manager POST:URL parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    [manager POST:URL parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
         NSLog(@"%@",dic);
         areaModel *model = [areaModel mj_objectWithKeyValues:dic];
@@ -104,6 +114,51 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self navigationBarHidden];
+    [self requestHouseSourceInfo];
+}
+
+- (void)requestHouseSourceInfo {
+    NSString *URL = [NSString stringWithFormat:@"%@/trade/Housing/GetListHousingInfoByPage",BaseUrl];
+    
+    NSDictionary *params = @{
+                             @"CityArea": @"",
+                             @"OrderBy": @"",
+                             @"SaleOrRental": @(0),
+                             @"IsCollect": @(0),
+                             @"IsPayment": @(0),
+                             @"BuildingNo": @"",
+                             @"RoomNo": @"",
+                             @"HowmanyRooms": @(0),
+                             @"FloorAreaMin": @(0),
+                             @"FloorAreaMax": @(0),
+                             @"PropertyRight": @(0),
+                             @"Label": @"",
+                             @"Feature": @(0),
+                             @"WhichFloor": @(0),
+                             @"PropertyType": @(0),
+                             @"Decoration": @(0),
+                             @"HousingAge": @(0),
+                             @"LoopLine": @(0),
+                             @"PageSize": @(10),
+                             @"PageIndex": @(0),
+                             @"memberId": @(0),
+                             @"SearchKey": @"",
+                             @"Source": @"ios",
+                             @"Token": TOKEN
+                             };
+    
+    URL = [URL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    [manager POST:URL parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
+        NSLog(@"%@",dic);
+        houseDataModel *model = [houseDataModel mj_objectWithKeyValues:[dic objectForKey:@"Data"]];
+        self.sourceArray = model.data;
+        [_myTableView reloadData];
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+    }];
 }
 
 - (void)addHouse {
@@ -145,21 +200,31 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
+    return self.sourceArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *identifier = @"cell";
+    sourceDataModel *model = [sourceDataModel mj_objectWithKeyValues:self.sourceArray[indexPath.row]];
     houseSourceCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     if (cell == nil) {
         cell = [[NSBundle mainBundle] loadNibNamed:@"houseSourceCell" owner:self options:nil][0];
-        cell.iconImg.image = [UIImage imageNamed:@"01"];
+        [cell.iconImg sd_setImageWithURL:[NSURL URLWithString:model.PictureUrl]];
         cell.chatBtn.width = 40;
         cell.chatBtn.layer.borderWidth = 1.0f;
         cell.chatBtn.layer.borderColor = [UIColor colorWithHexString:@"D3504F"].CGColor;
         cell.chatBtn.layer.cornerRadius = 4.0f;
-        
-        
+        cell.addressDetail.text = [NSString stringWithFormat:@"%@-%@",model.CityArea,model.BusinessArea];
+        cell.address.text = [NSString stringWithFormat:@"%@  %@号  %@",model.CommunityName,model.BuildingNo,model.RoomNo];
+        cell.mianji.text = [NSString stringWithFormat:@"%@㎡",model.FloorArea];
+        cell.daxiao.text = [NSString stringWithFormat:@"%@室%@厅",model.HowmanyRooms,model.HowmanyHalls];
+        cell.price.text = [NSString stringWithFormat:@"%@万元",model.Price];
+        cell.jinjia.text = [NSString stringWithFormat:@"%@/㎡",model.UnitPrice];
+        if ([model.IsCollect isEqualToString:@"1"]) {
+            [cell.star setTitle:@"已关注" forState:UIControlStateNormal];
+        } else {
+            [cell.star setTitle:@"关注" forState:UIControlStateNormal];
+        }
         NSArray *tips = @[@"上海单身",@"上海户口"];
         NSMutableArray *arr = [NSMutableArray arrayWithCapacity:0];
         [arr addObjectsFromArray:tips];
