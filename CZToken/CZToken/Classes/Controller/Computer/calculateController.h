@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface calculateController : UIViewController
+@interface calculateController : BaseViewController
 
 @property (strong, nonatomic) IBOutlet UIButton *neihuan;
 @property (strong, nonatomic) IBOutlet UIButton *neiorwai;

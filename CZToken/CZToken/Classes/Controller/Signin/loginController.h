@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "CZTabBarController.h"
 @interface loginController : UIViewController
-
+@property (nonatomic, strong) CZTabBarController *mainTab;
 @end

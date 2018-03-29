@@ -8,6 +8,7 @@
 
 #import "loginController.h"
 #import "foreSigninController.h"
+#import "AppDelegate+MainUI.h"
 @interface loginController ()
 
 @property (strong, nonatomic) IBOutlet UILabel *myText;
@@ -47,6 +48,16 @@
     // Do any additional setup after loading the view from its nib.
 }
 
+//- (void)viewWillAppear:(BOOL)animated {
+//    [super viewWillAppear:animated];
+//    [self tabbarHidden];
+//}
+//
+//- (void)viewWillDisappear:(BOOL)animated {
+//    [super viewWillDisappear:animated];
+//    [self tabbarShow];
+//}
+
 - (void)changeVerClick {
     [_verCode freshVerCode];
 }
@@ -62,6 +73,7 @@
         SHOW_MESSAGE_VIEW(@"提示", @"请输入密码", @"确定", nil);
         return;
     }
+    
     NSString *URL = [NSString stringWithFormat:@"%@/Passport/Login/Login",BaseUrl];
     NSDictionary *params = @{@"LoginId":_userName.text,@"Password":_password.text,@"Source":@"ios"};
     URL = [URL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
@@ -72,6 +84,7 @@
         NSLog(@"%@",dic);
         if ([dic intValueForKey:@"Code"] == 0) {
             [[NSUserDefaults standardUserDefaults] setObject:[[dic objectForKey:@"Data"] objectForKey:@"AccessToken"] forKey:@"token"];
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"rootView" object:nil userInfo:nil];
         } else {
             
         }

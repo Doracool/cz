@@ -319,8 +319,13 @@
     [manager POST:URL parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
         NSLog(@"%@",dic);
-        cxMoneyController *action = [[cxMoneyController alloc] init];
-        [self.navigationController pushViewController:action animated:YES];
+        if ([dic intValueForKey:@"Code"] != 0) {
+            SHOW_MESSAGE_VIEW(nil, [dic objectForKey:@"Message"], @"确定", nil);
+        } else {
+            cxMoneyController *action = [[cxMoneyController alloc] init];
+            [self.navigationController pushViewController:action animated:YES];
+        }
+        
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
     }];

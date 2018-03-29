@@ -19,6 +19,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *userCode;
 @property (strong, nonatomic) IBOutlet UIImageView *touxiang;
 @property (strong, nonatomic) IBOutlet UIImageView *codeImg;
+@property (copy ,nonatomic) NSString *shareURL;
 
 @end
 
@@ -26,6 +27,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _shareURL = @"";
     _touxiang.layer.cornerRadius = 22.5f;
     _touxiang.layer.masksToBounds = YES;
     _touxiang.layer.borderColor = [UIColor navbackgroundColor].CGColor;
@@ -177,6 +179,7 @@
             _timeLabel.text = [[dic objectForKey:@"Data"] objectForKey:@"Time"];
             [_codeImg sd_setImageWithURL:[NSURL URLWithString:[[dic objectForKey:@"Data"] objectForKey:@"QRCode"]]];
             _userCode.text = [[dic objectForKey:@"Data"] objectForKey:@"SN"];
+            _shareURL = [NSString stringWithFormat:@"http://m.cz1222.com/QRCode/Certificate?sn=%@",[[dic objectForKey:@"Data"] objectForKey:@"SN"]];
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
@@ -189,10 +192,34 @@
 
 - (IBAction)SignAction:(UIButton *)sender {
     
+    if (_shareURL.length == 0) {
+        SHOW_MESSAGE_VIEW(nil, @"请先上传头像", @"确定", nil);
+    } else {
+        NSMutableDictionary *shareParams = [NSMutableDictionary dictionary];
+        [shareParams SSDKSetupShareParamsByText:@"诚信证书分享" images:[UIImage imageNamed:@"logo(2)"] url:[NSURL URLWithString:_shareURL] title:@"我的诚信证书" type:SSDKContentTypeAuto];
+        //        [shareParams SSDKEnableExtensionShare];
+        
+        [ShareSDK showShareActionSheet:nil items:nil shareParams:shareParams onShareStateChanged:^(SSDKResponseState state, SSDKPlatformType platformType, NSDictionary *userData, SSDKContentEntity *contentEntity, NSError *error, BOOL end) {
+            switch (state) {
+                case SSDKResponseStateSuccess:
+                {
+                    SHOW_MESSAGE_VIEW(@"提示", @"分享成功", @"确定", nil);
+                }
+                    break;
+                case SSDKResponseStateFail:
+                {
+                    SHOW_MESSAGE_VIEW(@"提示", @"分享失败", @"确定", nil);
+                }
+                    break;
+                default:
+                    break;
+            }
+        }];
+    }
+
     
-    
-    SignController *sign = [[SignController alloc] init];
-    [self.navigationController pushViewController:sign animated:YES];
+//    SignController *sign = [[SignController alloc] init];
+//    [self.navigationController pushViewController:sign animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

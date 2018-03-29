@@ -74,26 +74,21 @@
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pn6-wa-12k">
                     <rect key="frame" x="0.0" y="125" width="75" height="80"/>
-                    <state key="normal" title="Button"/>
                     <connections>
                         <action selector="myAction:" destination="-1" eventType="touchUpInside" id="E3B-2S-3gR"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cub-A0-LLL">
                     <rect key="frame" x="75" y="125" width="75" height="80"/>
-                    <state key="normal" title="Button"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fvb-xz-aLH">
                     <rect key="frame" x="146" y="125" width="75" height="80"/>
-                    <state key="normal" title="Button"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SbX-Cx-5ws">
                     <rect key="frame" x="221" y="125" width="75" height="80"/>
-                    <state key="normal" title="Button"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UrC-bL-j1J">
                     <rect key="frame" x="296" y="125" width="75" height="80"/>
-                    <state key="normal" title="Button"/>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="非住宅" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ryt-p3-d8Y">
                     <rect key="frame" x="20" y="225" width="52" height="21"/>
@@ -121,11 +116,9 @@
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Dz-7L-Gm7">
                     <rect key="frame" x="150" y="266" width="75" height="80"/>
-                    <state key="normal" title="Button"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eHw-W6-hPb">
                     <rect key="frame" x="75" y="266" width="75" height="80"/>
-                    <state key="normal" title="Button"/>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="经济适用房" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6oB-qy-X2D">
                     <rect key="frame" x="304" y="310" width="67" height="16"/>
@@ -147,11 +140,9 @@
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vEf-ub-VrP">
                     <rect key="frame" x="0.0" y="266" width="75" height="80"/>
-                    <state key="normal" title="Button"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VUu-oi-kc2">
                     <rect key="frame" x="225" y="266" width="75" height="80"/>
-                    <state key="normal" title="Button"/>
                 </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="贷款icon" translatesAutoresizingMaskIntoConstraints="NO" id="zo8-ac-3E8">
                     <rect key="frame" x="247" y="266" width="31" height="29"/>
@@ -164,7 +155,6 @@
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cgT-3C-O4d">
                     <rect key="frame" x="300" y="266" width="75" height="80"/>
-                    <state key="normal" title="Button"/>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="拍卖房" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fx3-4F-6VB">
                     <rect key="frame" x="20" y="366" width="52" height="21"/>

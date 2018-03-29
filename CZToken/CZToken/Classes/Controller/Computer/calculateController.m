@@ -31,6 +31,16 @@
     // Do any additional setup after loading the view from its nib.
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self tabbarHidden];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [self tabbarShow];
+}
+
 - (void)createBaseUI {
     DVSwitch *typeOne = [[DVSwitch alloc] initWithStringsArray:@[@"一手",@"二手"]];
     typeOne.frame = _jylxView.frame;

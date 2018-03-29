@@ -20,6 +20,8 @@
 //新浪微博SDK头文件
 #import "WeiboSDK.h"
 
+#import "loginController.h"
+
 @interface AppDelegate ()<WXApiDelegate,NSURLConnectionDelegate>
 {
     BMKMapManager *_mapManager;
@@ -35,8 +37,23 @@
     //启动隐藏状态栏
     [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationFade];
     self.window.backgroundColor = [UIColor blackColor];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(rootView:) name:@"rootView" object:nil];
     self.mainTab = [self fetchTabbarController];
-    self.window.rootViewController = self.mainTab;
+    loginController *loginVC = [[loginController alloc] init];
+    UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:loginVC];
+    
+    navVC.navigationBar.translucent = NO;
+    navVC.navigationBar.barStyle   = UIBarStyleDefault;
+    
+    //更改导航栏背景色
+    navVC.navigationBar.barTintColor = [UIColor navbackgroundColor];
+    //更改导航栏字体颜色
+    [navVC.navigationBar setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:19.0f],NSForegroundColorAttributeName:[UIColor whiteColor]}];
+    
+//    [self.window setRootViewController:navVC];
+    
+    self.window.rootViewController = navVC;
     
     [self.window makeKeyAndVisible];
     // 解决键盘遮挡TextView/TextFiled的工具
@@ -90,6 +107,11 @@
     }];
     
     return YES;
+}
+
+- (void)rootView:(NSNotification *)notification {
+    self.mainTab = [self fetchTabbarController];
+    self.window.rootViewController = self.mainTab;
 }
 
 - (void)onResp:(BaseResp *)resp {
@@ -186,6 +208,7 @@
         NSLog(@"%@",dic);
         if ([dic intValueForKey:@"Code"] == 0) {
             SHOW_MESSAGE_VIEW(nil, @"支付成功", @"确定", nil);
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"paySuc" object:nil userInfo:nil];
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         

@@ -108,11 +108,16 @@
     [manager POST:URL parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
         NSLog(@"%@",dic);
-        NSString *token = [dic objectForKey:@"Data"];
-        UpInfoController *upinfo = [[UpInfoController alloc] init];
-        upinfo.token = token;
-        [[NSUserDefaults standardUserDefaults] setObject:token forKey:@"token"];
-        [self.navigationController pushViewController:upinfo animated:YES];
+        if ([dic intValueForKey:@"Code"] != 0) {
+            SHOW_MESSAGE_VIEW(nil, [dic objectForKey:@"Message"], @"确定", nil);
+        } else {
+            NSString *token = [dic objectForKey:@"Data"];
+            UpInfoController *upinfo = [[UpInfoController alloc] init];
+            upinfo.token = token;
+            [[NSUserDefaults standardUserDefaults] setObject:token forKey:@"token"];
+            [self.navigationController pushViewController:upinfo animated:YES];
+        }
+        
 
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         

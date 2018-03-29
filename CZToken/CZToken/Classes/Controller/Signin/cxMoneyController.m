@@ -14,6 +14,8 @@
 {
     NSDictionary *dataDic;
 }
+@property (nonatomic, copy) NSString *payType;
+@property (nonatomic, copy) NSString *iniyialStr;
 @end
 
 @implementation cxMoneyController
@@ -25,6 +27,11 @@
     
     _weChatBg.layer.cornerRadius = 4.0f;
     _weChatBg.layer.masksToBounds = YES;
+    [_aliBg setBackgroundColor:[UIColor navbackgroundColor]];
+    [_weChatBg setBackgroundColor:[UIColor colorWithHexString:@"f5f3f2"]];
+    _iniyialStr = @"0";
+    _payType = @"支付宝";
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(paySuc:) name:@"paySuc" object:nil];
     NSString *URL = [NSString stringWithFormat:@"%@/Passport/Register/GetPayData",BaseUrl];
     URL = [URL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     NSDictionary *params = @{@"Token":TOKEN,@"Source":@"ios"};
@@ -37,6 +44,7 @@
         if ([dic intValueForKey:@"Code"] == 0) {
             _text.text = [NSString stringWithFormat:@"￥%@",[[dataDic objectForKey:@"Data"] objectForKey:@"Amount"]];
             _money.text = [NSString stringWithFormat:@"￥%@",[[dataDic objectForKey:@"Data"] objectForKey:@"InitialAmount"]];
+            _allMoney.text = [NSString stringWithFormat:@"%.2f",[[[dataDic objectForKey:@"Data"] objectForKey:@"Amount"] floatValue]];
         }
         
         NSLog(@"%@",dic);
@@ -73,8 +81,10 @@
 }
 
 - (IBAction)SignAction:(UIButton *)sender {
-    
-    NSDictionary *params = @{@"Amount":@(0.01),@"InitialAmount":@(0),@"PayType":@"支付宝",@"Token":TOKEN,@"Source":@"ios",@"OpenId":[[dataDic objectForKey:@"Data"] objectForKey:@"OpenId"]};
+    if ([_payType isEqualToString:@"微信支付"]) {
+        SHOW_MESSAGE_VIEW(nil, @"暂不支持", @"确定", nil);
+    } else {
+    NSDictionary *params = @{@"Amount":@([[[dataDic objectForKey:@"Data"] objectForKey:@"Amount"] doubleValue]),@"InitialAmount":@([_iniyialStr doubleValue]),@"PayType":_payType,@"Token":TOKEN,@"Source":@"ios",@"OpenId":[[dataDic objectForKey:@"Data"] objectForKey:@"OpenId"]};
     
     NSString *URL = [NSString stringWithFormat:@"%@/Passport/Register/SetPayOrder",BaseUrl];
     
@@ -93,7 +103,7 @@
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
     }];
-    
+    }
 //    zsViewController *zs = [[zsViewController alloc] init];
 //    [self.navigationController pushViewController:zs animated:YES];
 }
@@ -135,6 +145,11 @@
     }];
 }
 
+- (void)paySuc:(NSNotification *)notification {
+    zsViewController *zs = [[zsViewController alloc] init];
+    [self.navigationController pushViewController:zs animated:YES];
+}
+
 #pragma mark 回调事件
 -(void)requsetPay:(NSString *)sign andorderNum:(NSString *)ordernum {
     NSString *orderNum = [[NSUserDefaults standardUserDefaults] objectForKey:@"orderNum"];
@@ -147,7 +162,11 @@
         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
         NSLog(@"%@",dic);
         if ([dic intValueForKey:@"Code"] == 0) {
+            zsViewController *zs = [[zsViewController alloc] init];
+            [self.navigationController pushViewController:zs animated:YES];
             SHOW_MESSAGE_VIEW(nil, @"支付成功", @"确定", nil);
+        } else {
+            
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
@@ -175,9 +194,11 @@
     if (sender.tag == 12) {
         [_aliBg setBackgroundColor:[UIColor navbackgroundColor]];
         [_weChatBg setBackgroundColor:[UIColor colorWithHexString:@"f5f3f2"]];
+        _payType = @"支付宝";
     } else {
         [_weChatBg setBackgroundColor:[UIColor navbackgroundColor]];
         [_aliBg setBackgroundColor:[UIColor colorWithHexString:@"f5f3f2"]];
+        _payType = @"微信支付";
     }
 }
 - (IBAction)moneyChange:(UIButton *)sender {
@@ -185,8 +206,10 @@
     if (sender.tag == 11) {
         if (sender.selected) {
             _allMoney.text = [NSString stringWithFormat:@"%.2f",[[[dataDic objectForKey:@"Data"] objectForKey:@"Amount"] floatValue] + [[[dataDic objectForKey:@"Data"] objectForKey:@"InitialAmount"] floatValue]];
+            _iniyialStr = [[dataDic objectForKey:@"Data"] objectForKey:@"InitialAmount"];
         } else {
             _allMoney.text = [NSString stringWithFormat:@"%.2f",[[[dataDic objectForKey:@"Data"] objectForKey:@"Amount"] floatValue]];
+            _iniyialStr = @"0";
         }
     }
 }

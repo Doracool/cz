@@ -73,7 +73,7 @@
                                         <constraint firstAttribute="height" constant="30" id="jfZ-2i-vnH"/>
                                     </constraints>
                                 </imageView>
-                                <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7iW-xL-f1R">
+                                <button opaque="NO" tag="12" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7iW-xL-f1R">
                                     <rect key="frame" x="40" y="439.5" width="125" height="20"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                     <state key="normal" title="  支付宝支付" image="支付宝">
@@ -157,9 +157,9 @@
                                     <color key="textColor" red="0.58432185650000001" green="0.58429920670000002" blue="0.58431458469999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FE4-1T-8sB">
+                                <button opaque="NO" tag="10" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FE4-1T-8sB">
                                     <rect key="frame" x="20" y="224.5" width="13" height="22"/>
-                                    <state key="normal" image="勾选框-未选中"/>
+                                    <state key="normal" image="勾选框-选中"/>
                                     <state key="selected" image="勾选框-选中"/>
                                     <connections>
                                         <action selector="moneyChange:" destination="-1" eventType="touchUpInside" id="m8R-CO-K40"/>

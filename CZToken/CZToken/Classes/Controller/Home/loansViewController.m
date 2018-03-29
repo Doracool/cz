@@ -274,7 +274,7 @@
     [_secondView addSubview:_text1];
     
     _textField1 = [[UITextField alloc] initWithFrame:CGRectMake(size.width + 40 , 100, screenW - 60 - size.width, 30)];
-    _textField1.placeholder = @"shufu";
+    _textField1.placeholder = @"";
     _textField1.borderStyle = UITextBorderStyleRoundedRect;
     [_secondView addSubview:_textField1];
     
@@ -286,7 +286,7 @@
     [_secondView addSubview:_text2];
     
     _textField2 = [[UITextField alloc] initWithFrame:CGRectMake(size.width + 40, 150, screenW - 60 - size.width, 30)];
-    _textField2.placeholder = @"shufwx";
+    _textField2.placeholder = @"";
     _textField2.borderStyle = UITextBorderStyleRoundedRect;
     [_secondView addSubview:_textField2];
     
